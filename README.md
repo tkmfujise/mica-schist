@@ -1,7 +1,7 @@
 # Sonic Pi Examples
 
 > [!CAUTION]
-> このリポジトリは現在構築中です。
+> Status: Work in Progress
 
 
 ## Built With
