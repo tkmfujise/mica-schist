@@ -33,6 +33,15 @@ compile '/**/*.adoc' do
 end
 
 
+compile '/**/*.rb' do
+  filter :article
+  layout '/default.*'
+  filter :relativize_paths, type: :html
+
+  write '/' + item.identifier.components[0..-2].join('/') + '/index.html'
+end
+
+
 passthrough '/**/*'
 
 layout '/**/*', :erb
