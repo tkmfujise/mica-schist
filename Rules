@@ -1,4 +1,6 @@
 #!/usr/bin/env ruby
+require 'rouge'
+
 
 passthrough '/robots.txt'
 
@@ -7,6 +9,24 @@ compile '/**/*.html' do
 
   if item.identifier =~ '**/index.*'
     write item.identifier.to_s
+  else
+    write item.identifier.without_ext + '/index.html'
+  end
+end
+
+
+compile '/**/*.adoc' do
+  filter :asciidoctor, \
+    attributes: {
+      'source-highlighter' => 'rouge',
+      'rouge-css' => 'class',
+    }
+
+  layout '/default.*'
+  filter :relativize_paths, type: :html
+
+  if item.identifier =~ '**/index.*'
+    write item.identifier.without_ext + '.html'
   else
     write item.identifier.without_ext + '/index.html'
   end
