@@ -1,0 +1,21 @@
+#!/usr/bin/env ruby
+require 'osc-ruby'
+
+# = Run the following code in Sonic Pi
+#
+# live_loop :eval do
+#   use_real_time
+#   code = sync "/osc*/eval"
+#   eval(code[0])
+# end
+#
+
+file = ARGV.join('')
+if file.empty? or not File.exist?(file)
+  exit 1
+end
+
+client = OSC::Client.new('localhost', 4560)
+client.send OSC::Message.new 'eval', File.read(file)
+
+

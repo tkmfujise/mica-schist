@@ -1,0 +1,2 @@
+#!/bin/sh
+sox -t coreaudio "VB-Cable" output.wav

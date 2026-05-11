@@ -1,0 +1,206 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Sonic Pi Examples - tkmfujise</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+		<link rel="stylesheet" href="../../assets/css/main.css">
+		<link rel="stylesheet" href="../../assets/css/syntax.gessetti.css">
+	</head>
+	<body class="is-preload">
+
+		<!-- Content -->
+		<div id="content">
+			<div class="inner">
+				<article class="box post post-excerpt">
+					<div class="sect1">
+<h2 id="_dash">Dash</h2>
+<div class="sectionbody">
+<div class="audioblock output">
+<div class="content">
+<audio src="output.wav" controls>
+Your browser does not support the audio tag.
+</audio>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">/sfx/dash/dash.rb</div>
+<div class="content">
+<pre class="rouge highlight"><code data-lang="ruby"><span class="n">kdefine</span> <span class="ss">:dash</span> <span class="k">do</span>
+  <span class="n">with_fx</span> <span class="ss">:reverb</span> <span class="k">do</span>
+    <span class="n">sample</span> <span class="ss">:loop_breakbeat</span><span class="p">,</span> <span class="ss">start: </span><span class="mf">0.6</span><span class="p">,</span> <span class="ss">finish: </span><span class="mf">0.75</span><span class="p">,</span> <span class="ss">rate: </span><span class="mf">1.3</span><span class="p">,</span> <span class="ss">cutoff: </span><span class="mi">90</span>
+    <span class="n">sample</span> <span class="ss">:perc_swash</span><span class="p">,</span> <span class="ss">rate: </span><span class="mf">1.0</span><span class="p">,</span> <span class="ss">amp: </span><span class="mf">0.5</span>
+    <span class="n">sample</span> <span class="ss">:sn_zome</span><span class="p">,</span> <span class="ss">amp: </span><span class="mf">0.3</span><span class="p">,</span> <span class="ss">rate: </span><span class="mf">1.2</span>
+
+    <span class="n">use_synth</span> <span class="ss">:sc808_snare</span>
+    <span class="n">use_synth</span> <span class="ss">:bnoise</span>
+    <span class="n">play</span> <span class="ss">:c5</span><span class="p">,</span> <span class="ss">decay: </span><span class="mf">0.1</span><span class="p">,</span> <span class="ss">amp: </span><span class="mf">0.3</span><span class="p">,</span> <span class="ss">release: </span><span class="mf">0.1</span><span class="p">,</span> <span class="ss">sustain: </span><span class="mi">0</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="c1"># live_loop :dash do</span>
+<span class="c1">#   dash</span>
+<span class="c1">#   sleep 1.2</span>
+<span class="c1"># end</span>
+
+<span class="n">dash</span></code></pre>
+</div>
+</div>
+<div class="imageblock spectrogram">
+<div class="content">
+<img src="spectrogram.png" alt="spectrogram">
+</div>
+</div>
+</div>
+</div>
+				</article>
+
+				<!-- Post -->
+				<article class="box post post-excerpt">
+					<header>
+						<h2><a href="#">Welcome to Striped</a></h2>
+						<p>A free, fully responsive HTML5 site template by HTML5 UP</p>
+					</header>
+					<div class="info">
+						<span class="date"><span class="month">Jul<span>y</span></span>
+						<span class="day">14</span><span class="year">, 2014</span></span>
+						<ul class="stats">
+							<li><a href="#" class="icon fa-comment">16</a></li>
+							<li><a href="#" class="icon fa-heart">32</a></li>
+							<li><a href="#" class="icon brands fa-twitter">64</a></li>
+							<li><a href="#" class="icon brands fa-facebook-f">128</a></li>
+						</ul>
+					</div>
+					<a href="#" class="image featured"><img src="images/pic01.jpg" alt=""></a>
+					<p>
+						<strong>Hello!</strong>
+						You're looking at <strong>Striped</strong>, a fully responsive HTML5 site template designed by <a href="http://twitter.com/ajlkn">AJ</a>
+						for <a href="http://html5up.net">HTML5 UP</a>
+						It features a clean, minimalistic design, styling for all basic page elements (including blockquotes, tables and lists), a
+						repositionable sidebar (left or right), and HTML5/CSS3 code designed for quick and easy customization (see code comments for details).
+					</p>
+					<p>
+						Striped is released for free under the <a href="http://html5up.net/license">Creative Commons Attribution license</a>
+						so feel free to use it for personal projects
+						or even commercial ones – just be sure to credit <a href="http://html5up.net">HTML5 UP</a>
+						for the design. If you like what you see here, be sure to check out
+						<a href="http://html5up.net">HTML5 UP</a>
+						for more cool designs or follow me on <a href="http://twitter.com/ajlkn">Twitter</a>
+						for new releases and updates.
+					</p>
+				</article>
+
+				<!-- Post -->
+				<article class="box post post-excerpt">
+					<header>
+						<h2><a href="#">Lorem ipsum dolor sit amet</a></h2>
+						<p>Feugiat interdum sed commodo ipsum consequat dolor nullam metus</p>
+					</header>
+					<div class="info">
+						<span class="date"><span class="month">Jul<span>y</span></span>
+						<span class="day">8</span><span class="year">, 2014</span></span>
+						<ul class="stats">
+							<li><a href="#" class="icon fa-comment">16</a></li>
+							<li><a href="#" class="icon fa-heart">32</a></li>
+							<li><a href="#" class="icon brands fa-twitter">64</a></li>
+							<li><a href="#" class="icon brands fa-facebook-f">128</a></li>
+						</ul>
+					</div>
+					<a href="#" class="image featured"><img src="images/pic02.jpg" alt=""></a>
+					<p>
+						Quisque vel sapien sit amet tellus elementum ultricies. Nunc vel orci turpis. Donec id malesuada metus.
+						Nunc nulla velit, fermentum quis interdum quis, tate etiam commodo lorem ipsum dolor sit amet dolore.
+						Quisque vel sapien sit amet tellus elementum ultricies. Nunc vel orci turpis. Donec id malesuada metus.
+						Nunc nulla velit, fermentum quis interdum quis, convallis eu sapien. Integer sed ipsum ante.
+					</p>
+				</article>
+
+				
+				<!-- Pagination -->
+				<div class="pagination">
+					<!--<a href="#" class="button previous">Previous Page</a>-->
+					<div class="pages">
+						<a href="#" class="active">1</a>
+						<a href="#">2</a>
+						<a href="#">3</a>
+						<a href="#">4</a>
+						<span>…</span>
+						<a href="#">20</a>
+					</div>
+					<a href="#" class="button next">Next Page</a>
+				</div>
+			</div>
+		</div>
+
+		<!-- Sidebar -->
+		<div id="sidebar">
+
+	<!-- Logo -->
+	<h1 id="logo"><a href="../../">Sonic Pi Examples</a></h1>
+
+	<!-- Text -->
+	<section class="box text-style1">
+		<div class="inner">
+			<p>
+				<strong>Author: </strong>
+        <a target="_blank" href="https://tkmfujise.github.io">tkmfujise</a>
+			</p>
+			<p>
+				<strong>Links: </strong>
+        <a target="_blank" href="https://sonic-pi.net/">Sonic Pi</a>
+			</p>
+		</div>
+	</section>
+
+	<!-- Nav -->
+	<nav id="nav">
+		<header>
+			<h2>Categories</h2>
+		</header>
+		<ul>
+			<li class="current"><a href="#">Sound</a></li>
+			<li><a href="#">Archives</a></li>
+			<li><a href="#">About Me</a></li>
+			<li><a href="#">Contact Me</a></li>
+		</ul>
+	</nav>
+
+	<!-- Search -->
+	<section class="box search">
+		<form method="post" action="#">
+			<input type="text" class="text" name="search" placeholder="Search">
+		</form>
+	</section>
+
+	<!-- Recent Posts -->
+	<section class="box recent-posts">
+		<header>
+			<h2>Recent Posts</h2>
+		</header>
+		<ul>
+			<li><a href="#">Lorem ipsum dolor</a></li>
+			<li><a href="#">Feugiat nisl aliquam</a></li>
+			<li><a href="#">Sed dolore magna</a></li>
+			<li><a href="#">Malesuada commodo</a></li>
+			<li><a href="#">Ipsum metus nullam</a></li>
+		</ul>
+	</section>
+
+	<!-- Copyright -->
+	<ul id="copyright">
+		<li>tkmfujise</li>
+<li>Design: <a href="http://html5up.net">HTML5 UP</a>
+</li>
+	</ul>
+</div>
+
+
+
+		<script src="../../assets/js/jquery.min.js"></script>
+		<script src="../../assets/js/browser.min.js"></script>
+		<script src="../../assets/js/breakpoints.min.js"></script>
+		<script src="../../assets/js/util.js"></script>
+		<script src="../../assets/js/main.js"></script>
+	</body>
+</html>

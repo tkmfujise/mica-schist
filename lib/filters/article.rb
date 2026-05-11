@@ -9,6 +9,7 @@ module Nanoc::Filters
     #
     # * Creating an spectrogram by FFmpeg
     #   $ sox output.wav -n spectrogram -y 512 -X 100 -o spectrogram.png
+    #   $ sox output.wav -n spectrogram -h -o spectrogram.png
     #
     def run(content, params = {})
       content = <<~ADOC
