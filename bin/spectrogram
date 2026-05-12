@@ -1,0 +1,2 @@
+#!/bin/sh
+sox $1 -n spectrogram -h -o spectrogram.png

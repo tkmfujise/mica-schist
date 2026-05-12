@@ -15,7 +15,7 @@
 			<div class="inner">
 				<article class="box post post-excerpt">
 					<div class="sect1">
-<h2 id="_ocean">Ocean</h2>
+<h2 id="_crushed">Crushed</h2>
 <div class="sectionbody">
 <div class="audioblock output">
 <div class="content">
@@ -25,15 +25,16 @@ Your browser does not support the audio tag.
 </div>
 </div>
 <div class="listingblock">
-<div class="title">/nature/ocean/ocean.rb</div>
+<div class="title">/incubations/crushed/crushed.rb</div>
 <div class="content">
-<pre class="rouge highlight"><code data-lang="ruby"><span class="c1"># Coded by Sam Aaron</span>
-
-<span class="n">with_fx</span> <span class="ss">:reverb</span><span class="p">,</span> <span class="ss">mix: </span><span class="mf">0.5</span> <span class="k">do</span>
-  <span class="n">live_loop</span> <span class="ss">:oceans</span> <span class="k">do</span>
-    <span class="n">s</span> <span class="o">=</span> <span class="n">synth</span> <span class="p">[</span><span class="ss">:bnoise</span><span class="p">,</span> <span class="ss">:cnoise</span><span class="p">,</span> <span class="ss">:gnoise</span><span class="p">].</span><span class="nf">choose</span><span class="p">,</span> <span class="ss">amp: </span><span class="n">rrand</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">),</span> <span class="ss">attack: </span><span class="n">rrand</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="ss">sustain: </span><span class="n">rrand</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="ss">release: </span><span class="n">rrand</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="ss">cutoff_slide: </span><span class="n">rrand</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="ss">cutoff: </span><span class="n">rrand</span><span class="p">(</span><span class="mi">60</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span> <span class="ss">pan: </span><span class="n">rrand</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="ss">pan_slide: </span><span class="n">rrand</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="ss">amp: </span><span class="n">rrand</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-    <span class="n">control</span> <span class="n">s</span><span class="p">,</span> <span class="ss">pan: </span><span class="n">rrand</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="ss">cutoff: </span><span class="n">rrand</span><span class="p">(</span><span class="mi">60</span><span class="p">,</span> <span class="mi">110</span><span class="p">)</span>
-    <span class="nb">sleep</span> <span class="n">rrand</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<pre class="rouge highlight"><code data-lang="ruby"><span class="n">with_fx</span> <span class="ss">:bitcrusher</span> <span class="k">do</span>
+  <span class="kp">loop</span> <span class="k">do</span>
+    <span class="n">use_synth</span> <span class="ss">:mod_fm</span>
+    <span class="n">play</span> <span class="mi">50</span> <span class="o">+</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">].</span><span class="nf">choose</span><span class="p">,</span> <span class="ss">mod_phase: </span><span class="mf">0.25</span><span class="p">,</span> <span class="ss">release: </span><span class="mi">1</span><span class="p">,</span> <span class="ss">mod_range: </span><span class="p">[</span><span class="mi">24</span><span class="p">,</span> <span class="mi">27</span><span class="p">,</span> <span class="mi">12</span><span class="p">].</span><span class="nf">choose</span>
+    <span class="nb">sleep</span> <span class="mf">0.5</span>
+    <span class="n">use_synth</span> <span class="ss">:mod_dsaw</span>
+    <span class="n">play</span> <span class="mi">50</span><span class="p">,</span> <span class="ss">mod_phase: </span><span class="mf">0.25</span><span class="p">,</span> <span class="ss">release: </span><span class="mf">1.5</span><span class="p">,</span> <span class="ss">mod_range: </span><span class="p">[</span><span class="mi">24</span><span class="p">,</span> <span class="mi">27</span><span class="p">].</span><span class="nf">choose</span><span class="p">,</span> <span class="ss">attack: </span><span class="mf">0.5</span>
+    <span class="nb">sleep</span> <span class="mf">1.5</span>
   <span class="k">end</span>
 <span class="k">end</span></code></pre>
 </div>

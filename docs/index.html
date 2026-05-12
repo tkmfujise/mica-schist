@@ -15,92 +15,31 @@
 			<div class="inner">
 				<article class="box post post-excerpt">
 					<div class="sect1">
-<h2 id="_blimp_zones">Blimp_zones</h2>
+<h2 id="_contents">Contents</h2>
 <div class="sectionbody">
-<div class="sect2">
-<h3 id="_this_is_test">This is test</h3>
-<div class="listingblock">
-<div class="content">
-<pre class="rouge highlight"><code data-lang="ruby"><span class="c1"># Coded by Sam Aaron</span>
-
-<span class="n">use_debug</span> <span class="kp">false</span>
-<span class="n">use_random_seed</span> <span class="mi">667</span>
-<span class="n">load_sample</span> <span class="ss">:ambi_lunar_land</span>
-<span class="nb">sleep</span> <span class="mi">1</span>
-
-<span class="n">live_loop</span> <span class="ss">:foo</span> <span class="k">do</span>
-  <span class="n">with_fx</span> <span class="ss">:reverb</span><span class="p">,</span> <span class="ss">kill_delay: </span><span class="mf">0.2</span><span class="p">,</span> <span class="ss">room: </span><span class="mf">0.3</span> <span class="k">do</span>
-    <span class="mi">4</span><span class="p">.</span><span class="nf">times</span> <span class="k">do</span>
-      <span class="n">use_random_seed</span> <span class="mi">4000</span>
-      <span class="mi">8</span><span class="p">.</span><span class="nf">times</span> <span class="k">do</span>
-        <span class="nb">sleep</span> <span class="mf">0.25</span>
-        <span class="n">play</span> <span class="n">chord</span><span class="p">(</span><span class="ss">:e3</span><span class="p">,</span> <span class="ss">:m7</span><span class="p">).</span><span class="nf">choose</span><span class="p">,</span> <span class="ss">release: </span><span class="mf">0.1</span><span class="p">,</span> <span class="ss">pan: </span><span class="n">rrand</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="ss">res: </span><span class="mf">0.9</span><span class="p">),</span> <span class="ss">amp: </span><span class="mi">1</span>
-      <span class="k">end</span>
-    <span class="k">end</span>
-  <span class="k">end</span>
-<span class="k">end</span>
-
-<span class="n">live_loop</span> <span class="ss">:bar</span><span class="p">,</span> <span class="ss">auto_cue: </span><span class="kp">false</span> <span class="k">do</span>
-  <span class="k">if</span> <span class="nb">rand</span> <span class="o">&lt;</span> <span class="mf">0.25</span>
-    <span class="n">sample</span> <span class="ss">:ambi_lunar_land</span>
-    <span class="nb">puts</span> <span class="ss">:comet_landing</span>
-  <span class="k">end</span>
-  <span class="nb">sleep</span> <span class="mi">8</span>
-<span class="k">end</span>
-
-<span class="n">live_loop</span> <span class="ss">:baz</span><span class="p">,</span> <span class="ss">auto_cue: </span><span class="kp">false</span> <span class="k">do</span>
-  <span class="n">tick</span>
-  <span class="nb">sleep</span> <span class="mf">0.25</span>
-  <span class="n">cue</span> <span class="ss">:beat</span><span class="p">,</span> <span class="ss">count: </span><span class="n">look</span>
-  <span class="n">sample</span> <span class="ss">:bd_haus</span><span class="p">,</span> <span class="ss">amp: </span><span class="n">factor?</span><span class="p">(</span><span class="n">look</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span> <span class="p">?</span> <span class="mi">3</span> <span class="p">:</span> <span class="mi">2</span>
-  <span class="nb">sleep</span> <span class="mf">0.25</span>
-  <span class="n">use_synth</span> <span class="ss">:fm</span>
-  <span class="n">play</span> <span class="ss">:e2</span><span class="p">,</span> <span class="ss">release: </span><span class="mi">1</span><span class="p">,</span> <span class="ss">amp: </span><span class="mi">1</span> <span class="k">if</span> <span class="n">factor?</span><span class="p">(</span><span class="n">look</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
-  <span class="n">synth</span> <span class="ss">:noise</span><span class="p">,</span> <span class="ss">release: </span><span class="mf">0.051</span><span class="p">,</span> <span class="ss">amp: </span><span class="mf">0.5</span>
-<span class="k">end</span></code></pre>
-</div>
-</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="incubations/crushed" class="bare">/incubations/crushed</a></p>
+</li>
+<li>
+<p><a href="nature/ocean" class="bare">/nature/ocean</a></p>
+</li>
+<li>
+<p><a href="sfx/land_snow" class="bare">/sfx/land_snow</a></p>
+</li>
+<li>
+<p><a href="sfx/dash" class="bare">/sfx/dash</a></p>
+</li>
+</ul>
 </div>
 </div>
 </div>
 				</article>
 
-				<!-- Post -->
-				<article class="box post post-excerpt">
-					<header>
-						<h2><a href="#">Welcome to Striped</a></h2>
-						<p>A free, fully responsive HTML5 site template by HTML5 UP</p>
-					</header>
-					<div class="info">
-						<span class="date"><span class="month">Jul<span>y</span></span>
-						<span class="day">14</span><span class="year">, 2014</span></span>
-						<ul class="stats">
-							<li><a href="#" class="icon fa-comment">16</a></li>
-							<li><a href="#" class="icon fa-heart">32</a></li>
-							<li><a href="#" class="icon brands fa-twitter">64</a></li>
-							<li><a href="#" class="icon brands fa-facebook-f">128</a></li>
-						</ul>
-					</div>
-					<a href="#" class="image featured"><img src="images/pic01.jpg" alt=""></a>
-					<p>
-						<strong>Hello!</strong>
-						You're looking at <strong>Striped</strong>, a fully responsive HTML5 site template designed by <a href="http://twitter.com/ajlkn">AJ</a>
-						for <a href="http://html5up.net">HTML5 UP</a>
-						It features a clean, minimalistic design, styling for all basic page elements (including blockquotes, tables and lists), a
-						repositionable sidebar (left or right), and HTML5/CSS3 code designed for quick and easy customization (see code comments for details).
-					</p>
-					<p>
-						Striped is released for free under the <a href="http://html5up.net/license">Creative Commons Attribution license</a>
-						so feel free to use it for personal projects
-						or even commercial ones – just be sure to credit <a href="http://html5up.net">HTML5 UP</a>
-						for the design. If you like what you see here, be sure to check out
-						<a href="http://html5up.net">HTML5 UP</a>
-						for more cool designs or follow me on <a href="http://twitter.com/ajlkn">Twitter</a>
-						for new releases and updates.
-					</p>
-				</article>
 
 				<!-- Post -->
+				<!-- 
 				<article class="box post post-excerpt">
 					<header>
 						<h2><a href="#">Lorem ipsum dolor sit amet</a></h2>
@@ -124,6 +63,7 @@
 						Nunc nulla velit, fermentum quis interdum quis, convallis eu sapien. Integer sed ipsum ante.
 					</p>
 				</article>
+				-->
 
 				
 				<!-- Pagination -->
