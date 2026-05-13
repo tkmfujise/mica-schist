@@ -1,8 +1,13 @@
 ---
-title: Title
+title: Home
 ---
 
-== Contents
+== Mica-Schist マイカシスト
+
+Sonic Pi Examples
+
+
+=== Contents
 
 * link:/incubations/crushed[]
 * link:/nature/ocean[]

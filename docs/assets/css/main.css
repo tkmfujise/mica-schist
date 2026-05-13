@@ -1,6 +1,13 @@
 @import url("fontawesome-all.min.css");
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,700|Open+Sans+Condensed:300,700");
 
+:root {
+	--main-color: #e7845b;
+	--accent-color: #45847f;
+	--stone-color: #4d5568;
+	--emerald-color: #65d53b;
+}
+
 /*
 	Striped by HTML5 UP
 	html5up.net | @ajlkn
@@ -2093,6 +2100,7 @@ input, select, textarea {
 	.box.text-style1 .inner {
 		position: relative;
 		background-color: rgba(0, 0, 0, 0.15);
+		/* background-color: var(--accent-color); */
 		border-radius: 0.4em;
 		padding: 1.25em;
 		box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 0 0.25em 0 rgba(0, 0, 0, 0.25);
@@ -2175,7 +2183,8 @@ input, select, textarea {
 		}
 
 		#nav li.current a {
-			background-color: rgba(0, 0, 0, 0.15) !important;
+			/* background-color: rgba(0, 0, 0, 0.15) !important; */
+			background-color: var(--accent-color);
 			box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 0 0.25em 0 rgba(0, 0, 0, 0.25);
 			font-weight: 700;
 			color: #fff;
@@ -2204,7 +2213,7 @@ input, select, textarea {
 		top: 0;
 		width: 100%;
 		z-index: 10001;
-		background: #364050 url("images/bg01.png");
+		background: var(--main-color) url("images/bg01.png");
 	}
 
 		#titleBar .title {
@@ -2275,7 +2284,7 @@ input, select, textarea {
 		text-shadow: -1px -1px 0px rgba(0, 0, 0, 0.5);
 		width: 14em;
 		padding: 3em 1.35em 1em 1.15em;
-		background: #364050 url("images/bg01.png");
+		background: var(--main-color) url("images/bg01.png");
 		overflow-y: auto;
 		left: 0;
 		box-shadow: inset -0.1em 0em 0.35em 0em rgba(0, 0, 0, 0.15);
@@ -2505,14 +2514,16 @@ input, select, textarea {
 
 				#logo a {
 					display: block;
-					background-color: #c94663;
+					/* background-color: #c94663; */
+					/* color: #fff; */
+					background-color: antiquewhite;
+					color: dodgerblue;
 					background-image: url("images/bg01.png");
-					padding: 0.875em 0.25em;
+					padding: 0.775em 0.25em;
 					border-radius: 0.2em;
 					text-align: center;
 					box-shadow: inset 0px 0px 0px 1px rgba(255, 255, 255, 0.15), 0 0.025em 0.15em 0em rgba(0, 0, 0, 0.25);
 					text-decoration: none;
-					color: #fff;
 				}
 
 		/* Content */

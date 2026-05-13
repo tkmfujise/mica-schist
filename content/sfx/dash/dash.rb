@@ -1,4 +1,4 @@
-kdefine :dash do
+define :dash do
   with_fx :reverb do
     sample :loop_breakbeat, start: 0.6, finish: 0.75, rate: 1.3, cutoff: 90
     sample :perc_swash, rate: 1.0, amp: 0.5
