@@ -32,6 +32,18 @@ header p {
   font-size: 1em;
 }
 
+header a {
+  position: relative;
+  z-index: 2;
+}
+header a, header a:link, header a:visited {
+  text-decoration: none;
+}
+header a>h1 {
+  font-weight: 300;
+  font-size: 2rem;
+}
+
 main {
   max-width: 1000px;
   margin: auto auto;
