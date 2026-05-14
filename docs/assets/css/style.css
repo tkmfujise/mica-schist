@@ -175,7 +175,8 @@ table code {
     padding: 1rem;
     box-sizing: border-box;
     border-right: 1px solid #eee;
-    background-color: aliceblue;
+    background: radial-gradient(at 100% 50%, #ff03, #ff00),
+          linear-gradient(45deg, #80d6f733, #dda7f533);
     position: absolute;
     top: 0;
     left: 0;
