@@ -175,7 +175,7 @@ table code {
     padding: 1rem;
     box-sizing: border-box;
     border-right: 1px solid #eee;
-    background-color: var(--secondary);
+    background-color: aliceblue;
     position: absolute;
     top: 0;
     left: 0;
