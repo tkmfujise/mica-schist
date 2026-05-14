@@ -2,7 +2,7 @@
 title: Home
 ---
 
-== Mica-Schist マイカシスト
+== Mica-Sound マイカサウンド
 
 Sonic Pi Examples
 
