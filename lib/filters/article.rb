@@ -4,9 +4,6 @@ module Nanoc::Filters
     requires 'asciidoctor'
 
     # TODO
-    # * Creating an audio file by SoX
-    #   $ sox -t coreaudio "VB-Cable" output.wav
-    #
     # * Creating an spectrogram by FFmpeg
     #   $ sox output.wav -n spectrogram -y 512 -X 100 -o spectrogram.png
     #   $ sox output.wav -n spectrogram -h -o spectrogram.png

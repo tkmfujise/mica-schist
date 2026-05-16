@@ -9,6 +9,10 @@ Sonic Pi Examples
 
 === Contents
 
+* link:/cc0/sonic_pi/samples/perc_bell[]
+* link:/cc0/sonic_pi/samples/loop_amen_full[]
+* link:/cc0/sonic_pi/samples/loop_mika[]
+* link:/cc0/sonic_pi/samples/loop_garzul[]
 * link:/incubations/crushed[]
 * link:/nature/ocean[]
 * link:/sfx/land_snow[]

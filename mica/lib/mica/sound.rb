@@ -1,6 +1,6 @@
 module Mica
   class Sound
-    attr_accessor :dir, :code
+    attr_accessor :dir, :code, :output
 
     def initialize(path)
       self.code = read(path)
@@ -8,7 +8,11 @@ module Mica
 
 
     def play
-      Recorder.perform(output: dir.join('output.wav'))
+      Recorder.perform(output: dir.join('output.wav')) do |file|
+        self.output = file
+        analyzer = Analyzer.new(file)
+        analyzer.spectrogram
+      end
       Player.current.play(code)
     end
 
