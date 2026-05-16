@@ -3,3 +3,5 @@ tmp/*
 !tmp/.keep
 
 crash.log
+
+content/**/*.wav
