@@ -11,4 +11,9 @@ require "mica"
 # IRB.start(__FILE__)
 
 require 'pry'
+
+def reload!
+  Mica.loader.reload
+end
+
 Pry.start

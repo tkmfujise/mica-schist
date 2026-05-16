@@ -1,8 +1,30 @@
 # frozen_string_literal: true
 
-require_relative "mica/version"
+require 'zeitwerk'
+require 'osc-ruby'
+
 
 module Mica
   class Error < StandardError; end
-  # Your code goes here...
+
+  class << self
+    def configure(&block)
+      yield config
+    end
+
+    def config
+      @_config ||= Configuration.new
+    end
+
+    def loader
+      @_loader ||= begin
+        Zeitwerk::Loader.for_gem.tap do |loader|
+          loader.enable_reloading
+        end
+      end
+    end
+  end
 end
+
+
+Mica.loader.setup
