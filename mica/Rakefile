@@ -2,7 +2,17 @@
 
 require "bundler/gem_tasks"
 require "rspec/core/rake_task"
+require_relative 'lib/mica'
+require 'tempfile'
 
 RSpec::Core::RakeTask.new(:spec)
 
 task default: :spec
+
+
+desc 'Play all files'
+task :batch do
+  Mica::Batch.all.play
+end
+desc 'Alias for `rake batch`'
+task :b => :batch

@@ -3,7 +3,13 @@ module Mica
     META_COMMENTS = {
       recording_time: 'max-recording-time',
     }
-    attr_accessor :dir, :code, :output, :recording_time
+
+    attr_accessor(
+      :dir,
+      :code,
+      :output,
+      :recording_time,
+    )
 
     def initialize(path)
       self.code = read(path)
@@ -24,6 +30,7 @@ module Mica
         self.output = file
         analyzer = Analyzer.new(file)
         analyzer.spectrogram
+        analyzer.stat
       end
       Player.current.play(code)
     end

@@ -2,6 +2,8 @@
 
 require 'zeitwerk'
 require 'osc-ruby'
+require 'open3'
+require 'json'
 
 
 module Mica
