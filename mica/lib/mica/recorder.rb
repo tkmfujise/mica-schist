@@ -7,6 +7,10 @@ module Mica
         `sox -V -t coreaudio null -n 2>&1 | grep "Found Audio" | cut -d'"' -f2`.split("\n")
       end
 
+      def default_device
+        Mica.config.recording_device || devices[-1]
+      end
+
 
       def perform(device: nil, output:, duration: 10, &block)
         recorder = new(device)
@@ -14,7 +18,6 @@ module Mica
         thread = Thread.new do
           sleep duration
           recorder.stop
-          # FileUtils.mv recorder.tmp, output
           pid = recorder.trim recorder.tmp.path, output.to_s
           Process.wait pid
 
@@ -29,7 +32,7 @@ module Mica
     attr_accessor :device, :tmp, :pid
 
     def initialize(device = nil)
-      self.device = device || Recorder.devices[-1]
+      self.device = device || Recorder.default_device
     end
 
     def start
