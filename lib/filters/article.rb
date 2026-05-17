@@ -82,10 +82,12 @@ module Nanoc::Filters
           HTML
         end.compact.join
         <<~TEXT
-        [.stat]
         ++++
+        <div class="stat">
         #{html}
+        </div>
         ++++
+
         ```json
         #{json}
         ```

@@ -230,4 +230,6 @@ body pre.highlight {
 body code {
   background: transparent;
 }
-
+body article .stat progress {
+  min-width: 5rem;
+}
