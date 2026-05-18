@@ -24,7 +24,7 @@ module Mica
 
     def play
       Recorder.perform(
-        output:   dir.join('output.wav'),
+        output:   dir.join('output.ogg'),
         duration: recording_time,
       ) do |file|
         self.output = file

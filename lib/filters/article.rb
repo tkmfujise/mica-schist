@@ -14,7 +14,7 @@ module Nanoc::Filters
       # minimum_delta:     1,
       # mean_delta:        1,
       rms_delta:         1,
-      rough_frequency:   22050.0,
+      rough_frequency:   20000.0,
     }
 
 
@@ -23,7 +23,7 @@ module Nanoc::Filters
         == #{title}
 
         [.output]
-        audio::output.wav[]
+        audio::output.ogg[]
 
         .#{filepath}
         ```ruby
