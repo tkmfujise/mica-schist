@@ -6,15 +6,16 @@ module Nanoc::Filters
     requires 'asciidoctor'
 
     STAT_MAX = {
-      maximum_amplitude: 1,
-      # mean_amplitude:    1,
-      rms_amplitude:     1,
-      crest_factor:      20,
-      maximum_delta:     1,
-      # minimum_delta:     1,
-      # mean_delta:        1,
-      rms_delta:         1,
-      rough_frequency:   20000.0,
+      maximum_amplitude:  1,
+      # mean_amplitude:     1,
+      rms_amplitude:      1,
+      crest_factor:       20,
+      maximum_delta:      1,
+      # minimum_delta:      1,
+      # mean_delta:         1,
+      rms_delta:          1,
+      delta_crest_factor: 40,
+      rough_frequency:    18000.0,
     }
 
 
@@ -70,6 +71,7 @@ module Nanoc::Filters
         json = dir.join('stat.json').read
         stat = JSON.parse(json, symbolize_names: true)
         stat.merge!(crest_factor: stat[:maximum_amplitude] / stat[:rms_amplitude])
+        stat.merge!(delta_crest_factor: stat[:maximum_delta] / stat[:rms_delta])
 
         html = STAT_MAX.map do |k, max|
           next unless stat[k]
