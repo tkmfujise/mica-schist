@@ -15,6 +15,8 @@ module Nanoc::Filters
       # mean_delta:         1,
       rms_delta:          1,
       delta_crest_factor: 40,
+      noise_ratio:        1,
+      periodicity:        0.8,
       rough_frequency:    18000.0,
     }
 
@@ -70,8 +72,11 @@ module Nanoc::Filters
         return '' unless dir.join('stat.json').exist?
         json = dir.join('stat.json').read
         stat = JSON.parse(json, symbolize_names: true)
+
         stat.merge!(crest_factor: stat[:maximum_amplitude] / stat[:rms_amplitude])
         stat.merge!(delta_crest_factor: stat[:maximum_delta] / stat[:rms_delta])
+        stat.merge!(noise_ratio: stat[:rms_delta] / stat[:rms_amplitude])
+        stat.merge!(periodicity: stat[:mean_delta] / stat[:rms_delta])
 
         html = STAT_MAX.map do |k, max|
           next unless stat[k]

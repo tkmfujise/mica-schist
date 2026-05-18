@@ -9,6 +9,7 @@ Sonic Pi Examples
 
 === Contents
 
+* link:/cc0/sonic_pi/samples/elec_triangle[]
 * link:/cc0/sonic_pi/samples/guit_e_slide[]
 * link:/cc0/sonic_pi/samples/loop_amen_full[]
 * link:/cc0/sonic_pi/samples/loop_mika[]
