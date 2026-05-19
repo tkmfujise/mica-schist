@@ -2,12 +2,61 @@
 title: Home
 ---
 
-== Mica-Sound マイカサウンド
+1,234 sounds.
+++++
+<form>
+  <p>
+    <button>Samples</button>
+    <button>Synths</button>
+  </p>
 
-Sonic Pi Examples
+  <p class="search">
+    <select id="license">
+      <option value="">ALL</option>
+      <option value="1">CC0</option>
+      <option value="2">CC BY</option>
+    </select>
+    <input type="search" />
+  </p>
+    
+  <details>
+    <summary>Advancend</summary>
+
+    <fieldset>
+      <legend>rough_frequency</legend>
+      <input type="range" min="0" max="18000" value="0">
+      <input type="range" min="0" max="18000" value="18000">
+    </fieldset>
+
+    <fieldset>
+      <legend>crest_factor</legend>
+      <input type="range">
+      <input type="range">
+    </fieldset>
+
+    <fieldset>
+      <legend>delta_crest_factor</legend>
+      <input type="range">
+      <input type="range">
+    </fieldset>
+
+    <fieldset>
+      <legend>noise_ratio</legend>
+      <input type="range">
+      <input type="range">
+    </fieldset>
+
+    <fieldset>
+      <legend>periodicity</legend>
+      <input type="range">
+      <input type="range">
+    </fieldset>
+  </details>
+</form>
+++++
 
 
-=== Contents
+== Contents
 
 * link:/cc0/sonic_pi/samples/elec_triangle[]
 * link:/cc0/sonic_pi/samples/guit_e_slide[]

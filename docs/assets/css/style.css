@@ -233,6 +233,32 @@ body code {
 body article {
   margin-bottom: 5rem;
 }
+body article div:first-child h2 {
+  margin-top: 0;
+}
+body article h2 {
+  font-style: italic;
+  font-weight: 200;
+  font-size: 1.8rem;
+}
 body article .stat progress {
   min-width: 5rem;
+}
+
+/* Form */
+body form p.search {
+  width: 100%;
+}
+body form p.search #license {
+  min-width: 0;
+  max-width: 25%;
+}
+body form p.search input[type="search"] {
+  min-width: 0;
+  min-width: 70%;
+  background-color: white;
+}
+body form input[type="range"] {
+  min-width: 0;
+  max-width: 45%;
 }

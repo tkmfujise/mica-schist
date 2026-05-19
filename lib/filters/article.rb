@@ -65,7 +65,7 @@ module Nanoc::Filters
       end
 
       def title
-        name.capitalize
+        name.split('_').map(&:capitalize).join(' ')
       end
 
       def stat

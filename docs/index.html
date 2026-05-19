@@ -17,22 +17,26 @@
   <button onclick="document.querySelector('.main-menu').classList.toggle('closed');">
     <span>Expand/Collapse menu</span>
   </button>
-  <h2>Table of contents</h2>
+  <h2>Gems among stones.</h2>
   <ul>
     <li>
-      <a href="./">Home</a>
+      <a href="./">💎 Home 🪨</a>
     </li>
 
     <li>
-      <div>Typography</div>
+      <div>Categories</div>
       <ul>
-        <li><a href="./pages/inline-elements.html">Inline elements</a></li>
-        <li><a href="./pages/address.html">Address</a></li>
-        <li><a href="./pages/blockquote.html">Blockquote</a></li>
-        <li><a href="./pages/fancy-links.html">Fancy links</a></li>
-        <li><a href="./pages/headings.html">Headings</a></li>
-        <li><a href="./pages/lists.html">Lists</a></li>
-        <li><a href="./pages/preformatted-text.html">Preformatted text</a></li>
+        <li><a href="#">Bell</a></li>
+        <li><a href="#">Loop</a></li>
+      </ul>
+    </li>
+
+    <li>
+      <div>About</div>
+      <ul>
+        <li><a href="#">License</a></li>
+        <li><a href="#">Sonic Pi</a></li>
+        <li><a href="#">GitHub</a></li>
       </ul>
     </li>
   </ul>
@@ -51,14 +55,61 @@
 
       <main>
         <article>
-      		<div class="sect1">
-<h2 id="_mica_sound_マイカサウンド">Mica-Sound マイカサウンド</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Sonic Pi Examples</p>
+      		<div class="paragraph">
+<p>1,234 sounds.</p>
 </div>
-<div class="sect2">
-<h3 id="_contents">Contents</h3>
+<form>
+  <p>
+    <button>Samples</button>
+    <button>Synths</button>
+  </p>
+
+  <p class="search">
+    <select id="license">
+      <option value="">ALL</option>
+      <option value="1">CC0</option>
+      <option value="2">CC BY</option>
+    </select>
+    <input type="search">
+  </p>
+
+  <details>
+    <summary>Advancend</summary>
+
+    <fieldset>
+      <legend>rough_frequency</legend>
+      <input type="range" min="0" max="18000" value="0">
+      <input type="range" min="0" max="18000" value="18000">
+    </fieldset>
+
+    <fieldset>
+      <legend>crest_factor</legend>
+      <input type="range">
+      <input type="range">
+    </fieldset>
+
+    <fieldset>
+      <legend>delta_crest_factor</legend>
+      <input type="range">
+      <input type="range">
+    </fieldset>
+
+    <fieldset>
+      <legend>noise_ratio</legend>
+      <input type="range">
+      <input type="range">
+    </fieldset>
+
+    <fieldset>
+      <legend>periodicity</legend>
+      <input type="range">
+      <input type="range">
+    </fieldset>
+  </details>
+</form>
+<div class="sect1">
+<h2 id="_contents">Contents</h2>
+<div class="sectionbody">
 <div class="ulist">
 <ul>
 <li>
@@ -101,7 +152,6 @@
 <p><a href="sfx/dash" class="bare">/sfx/dash</a></p>
 </li>
 </ul>
-</div>
 </div>
 </div>
 </div>
