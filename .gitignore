@@ -6,3 +6,6 @@ crash.log
 
 content/**/*.wav
 content/**/*.ogg
+
+content/**/spectrogram.png
+content/**/stat.json
