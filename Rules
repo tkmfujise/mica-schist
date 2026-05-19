@@ -42,6 +42,9 @@ compile '/**/*.rb' do
 end
 
 
+ignore '/**/stat.json'
+
+
 passthrough '/**/*'
 
 layout '/**/*', :erb
