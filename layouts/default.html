@@ -17,6 +17,7 @@
       <%= render '/header.html' %>
       <main>
         <article>
+          <%= render '/search_form.html' if home? %>
       		<%= yield %>
         </article>
       </main>

@@ -1,0 +1,14 @@
+/cc0/sonic_pi/samples/elec_triangle/elec_triangle.rb
+/cc0/sonic_pi/samples/guit_e_slide/guit_e_slide.rb
+/cc0/sonic_pi/samples/loop_amen_full/loop_amen_full.rb
+/cc0/sonic_pi/samples/loop_mika/loop_mika.rb
+/cc0/sonic_pi/samples/loop_garzul/loop_garzul.rb
+/cc0/sonic_pi/samples/perc_bell/perc_bell.rb
+/cc0/sonic_pi/samples/sn_dolf/sn_dolf.rb
+/cc0/sonic_pi/synths/noise/noise.rb
+/cc0/sonic_pi/synths/zawa/zawa.rb
+/incubations/crushed/crushed.rb
+/nature/ocean/ocean.rb
+/sfx/land_snow/land_snow.rb
+/sfx/dash/dash.rb
+

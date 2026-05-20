@@ -233,7 +233,7 @@ body code {
 body article {
   margin-bottom: 5rem;
 }
-body article div:first-child h2 {
+body article div:first-of-type h2 {
   margin-top: 0;
 }
 body article h2 {
@@ -260,5 +260,5 @@ body form p.search input[type="search"] {
 }
 body form input[type="range"] {
   min-width: 0;
-  max-width: 45%;
+  max-width: 30%;
 }

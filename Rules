@@ -2,6 +2,12 @@
 require 'rouge'
 
 
+asciidoctor_params = { attributes: {
+    'source-highlighter' => 'rouge',
+    'rouge-css' => 'class',
+  }}
+
+
 passthrough '/robots.txt'
 
 compile '/**/*.html' do
@@ -15,12 +21,16 @@ compile '/**/*.html' do
 end
 
 
+compile '/index.txt' do
+  filter :home
+  layout '/default.*'
+  filter :relativize_paths, type: :html
+  write item.identifier.without_ext + '.html'
+end
+
+
 compile '/**/*.adoc' do
-  filter :asciidoctor, \
-    attributes: {
-      'source-highlighter' => 'rouge',
-      'rouge-css' => 'class',
-    }
+  filter :asciidoctor, asciidoctor_params
 
   layout '/default.*'
   filter :relativize_paths, type: :html
@@ -34,7 +44,8 @@ end
 
 
 compile '/**/*.rb' do
-  filter :article
+  filter :article, asciidoctor_params
+
   layout '/default.*'
   filter :relativize_paths, type: :html
 

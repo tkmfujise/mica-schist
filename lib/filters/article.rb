@@ -15,7 +15,7 @@ module Nanoc::Filters
       # mean_delta:         1,
       rms_delta:          1,
       delta_crest_factor: 40,
-      noise_ratio:        1,
+      jiggly:             1,
       periodicity:        0.8,
       rough_frequency:    18000.0,
     }
@@ -35,23 +35,14 @@ module Nanoc::Filters
         [.spectrogram]
         image::spectrogram.png[]
 
-        #{stat}
+        #{stat_html}
       ADOC
 
-      ::Asciidoctor.convert(content, asciidoctor_params)
+      ::Asciidoctor.convert(content, params)
     end
 
 
     private
-      def asciidoctor_params
-        {
-          attributes: {
-            'source-highlighter' => 'rouge',
-            'rouge-css' => 'class',
-          }
-        }
-      end
-
       def filepath
         @item.identifier.to_s
       end
@@ -68,16 +59,29 @@ module Nanoc::Filters
         name.split('_').map(&:capitalize).join(' ')
       end
 
+
       def stat
-        return '' unless dir.join('stat.json').exist?
-        json = dir.join('stat.json').read
-        stat = JSON.parse(json, symbolize_names: true)
+        @stat ||= begin
+          stat = JSON.parse(stat_json, symbolize_names: true)
 
-        stat.merge!(crest_factor: stat[:maximum_amplitude] / stat[:rms_amplitude])
-        stat.merge!(delta_crest_factor: stat[:maximum_delta] / stat[:rms_delta])
-        stat.merge!(noise_ratio: stat[:rms_delta] / stat[:rms_amplitude])
-        stat.merge!(periodicity: stat[:mean_delta] / stat[:rms_delta])
+          stat.merge!(crest_factor: stat[:maximum_amplitude] / stat[:rms_amplitude])
+          stat.merge!(delta_crest_factor: stat[:maximum_delta] / stat[:rms_delta])
+          stat.merge!(jiggly: stat[:rms_delta] / stat[:rms_amplitude])
+          stat.merge!(periodicity: stat[:mean_delta] / stat[:rms_delta])
+        end
+      end
 
+
+      def stat_json
+        @stat_json ||= begin
+          return {} unless dir.join('stat.json').exist?
+          dir.join('stat.json').read
+        end
+      end
+
+
+      def stat_html
+        return '' if stat.empty?
         html = STAT_MAX.map do |k, max|
           next unless stat[k]
           <<~HTML
@@ -96,7 +100,7 @@ module Nanoc::Filters
         ++++
 
         ```json
-        #{json}
+        #{stat_json}
         ```
         TEXT
       end
