@@ -11,9 +11,8 @@ module Nanoc::Filters
             <td>
               <audio preload="none"
                 #{hash_to_html_attribute(stat)}
-                data-src="#{dir.join('output.ogg')}"
+                src="#{dir.join('output.ogg')}"
                 controls
-                class="lazy-sound"
               >
                 Your browser does not support the audio tag.
               </audio>
