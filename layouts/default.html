@@ -10,6 +10,8 @@
 		<link rel="stylesheet" href="/assets/css/almond.min.css">
 		<link rel="stylesheet" href="/assets/css/style.css">
 		<link rel="stylesheet" href="/assets/css/syntax.gessetti.css">
+		<link rel="stylesheet" href="/assets/css/syntax.gessetti.css">
+    <script src="/assets/js/filter.js"></script>
 	</head>
   <body>
     <%= render '/main-menu.html' %>
@@ -17,7 +19,7 @@
       <%= render '/header.html' %>
       <main>
         <article>
-          <%= render '/search_form.html' if home? %>
+          <%= render '/search_form.html' if index? %>
       		<%= yield %>
         </article>
       </main>

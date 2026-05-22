@@ -1,0 +1,148 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Sonic Pi Examples - tkmfujise</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+		<meta name="author" content="tkmfujise">
+		<meta name="keywords" content="Sonic Pi, Ruby, sound, music, effect, cc0">
+		<meta name="description" content="Sonic Pi Examples">
+		<link rel="stylesheet" href="../../../../assets/css/almond.min.css">
+		<link rel="stylesheet" href="../../../../assets/css/style.css">
+		<link rel="stylesheet" href="../../../../assets/css/syntax.gessetti.css">
+		<link rel="stylesheet" href="../../../../assets/css/syntax.gessetti.css">
+    <script src="../../../../assets/js/filter.js"></script>
+	</head>
+  <body>
+    <nav class="main-menu closed">
+  <button onclick="document.querySelector('.main-menu').classList.toggle('closed');">
+    <span>Expand/Collapse menu</span>
+  </button>
+  <h2>Gems among stones.</h2>
+  <ul>
+    <li>
+      <a href="../../../../">💎 Home 🪨</a>
+    </li>
+
+    <li>
+      <div>Categories</div>
+      <ul>
+        <li><a href="..">Samples</a></li>
+        <li><a href="../../synths">Synths</a></li>
+      </ul>
+    </li>
+
+    <li>
+      <div>Links</div>
+      <ul>
+        <li><a href="#">About</a></li>
+        <li><a rel="external" target="_blank" href="https://github.com/tkmfujise/mica-sound/blob/main/license.md">License</a></li>
+        <li><a rel="external" target="_blank" href="https://github.com/tkmfujise/mica-sound">GitHub</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+    <div>
+      <header>
+  <div>
+    <a href="../../../../">
+      <h1>Mica Sound</h1>
+    </a>
+    <p>Sonic Pi Examples</p>
+  </div>
+</header>
+
+
+      <main>
+        <article>
+          
+      		<div class="sect1">
+<h2 id="_tabla_te_ne">Tabla Te Ne</h2>
+<div class="sectionbody">
+<div class="audioblock output">
+<div class="content">
+<audio src="output.ogg" controls>
+Your browser does not support the audio tag.
+</audio>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">/cc0/sonic_pi/samples/tabla_te_ne/tabla_te_ne.rb</div>
+<div class="content">
+<pre class="rouge highlight"><code data-lang="ruby"><span class="n">sample</span> <span class="ss">:tabla_te_ne</span></code></pre>
+</div>
+</div>
+<div class="imageblock spectrogram">
+<div class="content">
+<img src="spectrogram.png" alt="spectrogram">
+</div>
+</div>
+<div class="stat">
+<label>
+  <progress style="accent-color: green" max="1" value="0.352234"></progress>
+  : maximum_amplitude
+</label><br>
+<label>
+  <progress style="accent-color: blue" max="1" value="0.043973"></progress>
+  : rms_amplitude
+</label><br>
+<label>
+  <progress style="accent-color: green" max="20" value="8.01023355240716"></progress>
+  : crest_factor
+</label><br>
+<label>
+  <progress style="accent-color: blue" max="1" value="0.037384"></progress>
+  : maximum_delta
+</label><br>
+<label>
+  <progress style="accent-color: blue" max="1" value="0.002128"></progress>
+  : rms_delta
+</label><br>
+<label>
+  <progress style="accent-color: green" max="40" value="17.56766917293233"></progress>
+  : delta_crest_factor
+</label><br>
+<label>
+  <progress style="accent-color: blue" max="1" value="0.04839333227207605"></progress>
+  : jiggly
+</label><br>
+<label>
+  <progress style="accent-color: green" max="0.8" value="0.23872180451127817"></progress>
+  : periodicity
+</label><br>
+<label>
+  <progress style="accent-color: blue" max="18000.0" value="369.0"></progress>
+  : rough_frequency
+</label><br>
+
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="json"><span class="p">{</span><span class="w">
+  </span><span class="nl">"samples_read"</span><span class="p">:</span><span class="w"> </span><span class="mf">15254.0</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"length"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.158896</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"scaled_by"</span><span class="p">:</span><span class="w"> </span><span class="mf">2147483647.0</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"maximum_amplitude"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.352234</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"minimum_amplitude"</span><span class="p">:</span><span class="w"> </span><span class="mf">-0.347748</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"midline_amplitude"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.002243</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"mean_norm"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0149</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"mean_amplitude"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.000032</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"rms_amplitude"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.043973</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"maximum_delta"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.037384</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"minimum_delta"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"mean_delta"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.000508</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"rms_delta"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.002128</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"rough_frequency"</span><span class="p">:</span><span class="w"> </span><span class="mf">369.0</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"volume_adjustment"</span><span class="p">:</span><span class="w"> </span><span class="mf">2.839</span><span class="w">
+</span><span class="p">}</span></code></pre>
+</div>
+</div>
+</div>
+</div>
+        </article>
+      </main>
+    </div>
+	</body>
+</html>

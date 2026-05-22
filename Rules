@@ -21,8 +21,8 @@ compile '/**/*.html' do
 end
 
 
-compile '/index.txt' do
-  filter :home
+compile '/**/index.txt' do
+  filter :index
   layout '/default.*'
   filter :relativize_paths, type: :html
   write item.identifier.without_ext + '.html'

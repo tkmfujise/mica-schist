@@ -1,0 +1,2182 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Sonic Pi Examples - tkmfujise</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+		<meta name="author" content="tkmfujise">
+		<meta name="keywords" content="Sonic Pi, Ruby, sound, music, effect, cc0">
+		<meta name="description" content="Sonic Pi Examples">
+		<link rel="stylesheet" href="../../../assets/css/almond.min.css">
+		<link rel="stylesheet" href="../../../assets/css/style.css">
+		<link rel="stylesheet" href="../../../assets/css/syntax.gessetti.css">
+		<link rel="stylesheet" href="../../../assets/css/syntax.gessetti.css">
+    <script src="../../../assets/js/filter.js"></script>
+	</head>
+  <body>
+    <nav class="main-menu closed">
+  <button onclick="document.querySelector('.main-menu').classList.toggle('closed');">
+    <span>Expand/Collapse menu</span>
+  </button>
+  <h2>Gems among stones.</h2>
+  <ul>
+    <li>
+      <a href="../../../">💎 Home 🪨</a>
+    </li>
+
+    <li>
+      <div>Categories</div>
+      <ul>
+        <li><a href=".">Samples</a></li>
+        <li><a href="../synths">Synths</a></li>
+      </ul>
+    </li>
+
+    <li>
+      <div>Links</div>
+      <ul>
+        <li><a href="#">About</a></li>
+        <li><a rel="external" target="_blank" href="https://github.com/tkmfujise/mica-sound/blob/main/license.md">License</a></li>
+        <li><a rel="external" target="_blank" href="https://github.com/tkmfujise/mica-sound">GitHub</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+    <div>
+      <header>
+  <div>
+    <a href="../../../">
+      <h1>Mica Sound</h1>
+    </a>
+    <p>Sonic Pi Examples</p>
+  </div>
+</header>
+
+
+      <main>
+        <article>
+          1,234 sounds.
+<form>
+  <p>
+    <button>Samples</button>
+    <button>Synths</button>
+  </p>
+
+  <p class="search">
+    <select id="license">
+      <option value="">ALL</option>
+      <option value="1">CC0</option>
+      <option value="2">CC BY</option>
+    </select>
+    <input type="search">
+  </p>
+    
+  <details>
+    <summary>Advancend</summary>
+
+    <fieldset>
+      <legend>rough_frequency</legend>
+      <input type="range" min="0" max="18000" value="0">
+      <input type="range" min="0" max="18000" value="18000">
+    </fieldset>
+
+    <fieldset>
+      <legend>crest_factor</legend>
+      <input type="range">
+      <input type="range">
+    </fieldset>
+
+    <fieldset>
+      <legend>delta_crest_factor</legend>
+      <input type="range">
+      <input type="range">
+    </fieldset>
+
+    <fieldset>
+      <legend>jiggly</legend>
+      <input type="range">
+      <input type="range">
+    </fieldset>
+
+    <fieldset>
+      <legend>periodicity</legend>
+      <input type="range">
+      <input type="range">
+    </fieldset>
+  </details>
+</form>
+
+
+      		<table>
+  <tbody>
+    <tr>
+  <td>
+    <audio preload="none" src="ambi_choir/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="ambi_choir">/cc0/sonic_pi/samples/ambi_choir</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="ambi_dark_woosh/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="ambi_dark_woosh">/cc0/sonic_pi/samples/ambi_dark_woosh</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="ambi_drone/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="ambi_drone">/cc0/sonic_pi/samples/ambi_drone</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="ambi_glass_hum/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="ambi_glass_hum">/cc0/sonic_pi/samples/ambi_glass_hum</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="ambi_glass_rub/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="ambi_glass_rub">/cc0/sonic_pi/samples/ambi_glass_rub</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="ambi_haunted_hum/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="ambi_haunted_hum">/cc0/sonic_pi/samples/ambi_haunted_hum</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="ambi_lunar_land/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="ambi_lunar_land">/cc0/sonic_pi/samples/ambi_lunar_land</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="ambi_piano/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="ambi_piano">/cc0/sonic_pi/samples/ambi_piano</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="ambi_sauna/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="ambi_sauna">/cc0/sonic_pi/samples/ambi_sauna</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="ambi_soft_buzz/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="ambi_soft_buzz">/cc0/sonic_pi/samples/ambi_soft_buzz</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="ambi_swoosh/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="ambi_swoosh">/cc0/sonic_pi/samples/ambi_swoosh</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="arovane_beat_a/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="arovane_beat_a">/cc0/sonic_pi/samples/arovane_beat_a</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="arovane_beat_b/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="arovane_beat_b">/cc0/sonic_pi/samples/arovane_beat_b</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="arovane_beat_c/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="arovane_beat_c">/cc0/sonic_pi/samples/arovane_beat_c</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="arovane_beat_d/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="arovane_beat_d">/cc0/sonic_pi/samples/arovane_beat_d</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="arovane_beat_e/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="arovane_beat_e">/cc0/sonic_pi/samples/arovane_beat_e</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="bass_dnb_f/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="bass_dnb_f">/cc0/sonic_pi/samples/bass_dnb_f</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="bass_drop_c/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="bass_drop_c">/cc0/sonic_pi/samples/bass_drop_c</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="bass_hard_c/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="bass_hard_c">/cc0/sonic_pi/samples/bass_hard_c</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="bass_hit_c/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="bass_hit_c">/cc0/sonic_pi/samples/bass_hit_c</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="bass_thick_c/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="bass_thick_c">/cc0/sonic_pi/samples/bass_thick_c</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="bass_trance_c/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="bass_trance_c">/cc0/sonic_pi/samples/bass_trance_c</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="bass_voxy_c/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="bass_voxy_c">/cc0/sonic_pi/samples/bass_voxy_c</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="bass_voxy_hit_c/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="bass_voxy_hit_c">/cc0/sonic_pi/samples/bass_voxy_hit_c</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="bass_woodsy_c/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="bass_woodsy_c">/cc0/sonic_pi/samples/bass_woodsy_c</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="bd_808/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="bd_808">/cc0/sonic_pi/samples/bd_808</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="bd_ada/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="bd_ada">/cc0/sonic_pi/samples/bd_ada</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="bd_boom/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="bd_boom">/cc0/sonic_pi/samples/bd_boom</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="bd_chip/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="bd_chip">/cc0/sonic_pi/samples/bd_chip</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="bd_fat/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="bd_fat">/cc0/sonic_pi/samples/bd_fat</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="bd_gas/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="bd_gas">/cc0/sonic_pi/samples/bd_gas</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="bd_haus/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="bd_haus">/cc0/sonic_pi/samples/bd_haus</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="bd_jazz/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="bd_jazz">/cc0/sonic_pi/samples/bd_jazz</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="bd_klub/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="bd_klub">/cc0/sonic_pi/samples/bd_klub</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="bd_mehackit/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="bd_mehackit">/cc0/sonic_pi/samples/bd_mehackit</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="bd_pure/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="bd_pure">/cc0/sonic_pi/samples/bd_pure</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="bd_sone/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="bd_sone">/cc0/sonic_pi/samples/bd_sone</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="bd_tek/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="bd_tek">/cc0/sonic_pi/samples/bd_tek</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="bd_zome/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="bd_zome">/cc0/sonic_pi/samples/bd_zome</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="bd_zum/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="bd_zum">/cc0/sonic_pi/samples/bd_zum</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="drum_bass_hard/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="drum_bass_hard">/cc0/sonic_pi/samples/drum_bass_hard</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="drum_bass_soft/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="drum_bass_soft">/cc0/sonic_pi/samples/drum_bass_soft</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="drum_cowbell/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="drum_cowbell">/cc0/sonic_pi/samples/drum_cowbell</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="drum_cymbal_closed/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="drum_cymbal_closed">/cc0/sonic_pi/samples/drum_cymbal_closed</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="drum_cymbal_hard/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="drum_cymbal_hard">/cc0/sonic_pi/samples/drum_cymbal_hard</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="drum_cymbal_open/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="drum_cymbal_open">/cc0/sonic_pi/samples/drum_cymbal_open</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="drum_cymbal_pedal/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="drum_cymbal_pedal">/cc0/sonic_pi/samples/drum_cymbal_pedal</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="drum_cymbal_soft/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="drum_cymbal_soft">/cc0/sonic_pi/samples/drum_cymbal_soft</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="drum_heavy_kick/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="drum_heavy_kick">/cc0/sonic_pi/samples/drum_heavy_kick</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="drum_roll/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="drum_roll">/cc0/sonic_pi/samples/drum_roll</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="drum_snare_hard/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="drum_snare_hard">/cc0/sonic_pi/samples/drum_snare_hard</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="drum_snare_soft/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="drum_snare_soft">/cc0/sonic_pi/samples/drum_snare_soft</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="drum_splash_hard/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="drum_splash_hard">/cc0/sonic_pi/samples/drum_splash_hard</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="drum_splash_soft/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="drum_splash_soft">/cc0/sonic_pi/samples/drum_splash_soft</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="drum_tom_hi_hard/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="drum_tom_hi_hard">/cc0/sonic_pi/samples/drum_tom_hi_hard</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="drum_tom_hi_soft/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="drum_tom_hi_soft">/cc0/sonic_pi/samples/drum_tom_hi_soft</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="drum_tom_lo_hard/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="drum_tom_lo_hard">/cc0/sonic_pi/samples/drum_tom_lo_hard</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="drum_tom_lo_soft/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="drum_tom_lo_soft">/cc0/sonic_pi/samples/drum_tom_lo_soft</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="drum_tom_mid_hard/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="drum_tom_mid_hard">/cc0/sonic_pi/samples/drum_tom_mid_hard</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="drum_tom_mid_soft/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="drum_tom_mid_soft">/cc0/sonic_pi/samples/drum_tom_mid_soft</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="elec_beep/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="elec_beep">/cc0/sonic_pi/samples/elec_beep</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="elec_bell/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="elec_bell">/cc0/sonic_pi/samples/elec_bell</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="elec_blip/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="elec_blip">/cc0/sonic_pi/samples/elec_blip</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="elec_blip2/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="elec_blip2">/cc0/sonic_pi/samples/elec_blip2</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="elec_blup/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="elec_blup">/cc0/sonic_pi/samples/elec_blup</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="elec_bong/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="elec_bong">/cc0/sonic_pi/samples/elec_bong</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="elec_chime/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="elec_chime">/cc0/sonic_pi/samples/elec_chime</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="elec_cymbal/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="elec_cymbal">/cc0/sonic_pi/samples/elec_cymbal</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="elec_filt_snare/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="elec_filt_snare">/cc0/sonic_pi/samples/elec_filt_snare</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="elec_flip/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="elec_flip">/cc0/sonic_pi/samples/elec_flip</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="elec_fuzz_tom/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="elec_fuzz_tom">/cc0/sonic_pi/samples/elec_fuzz_tom</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="elec_hi_snare/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="elec_hi_snare">/cc0/sonic_pi/samples/elec_hi_snare</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="elec_hollow_kick/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="elec_hollow_kick">/cc0/sonic_pi/samples/elec_hollow_kick</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="elec_lo_snare/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="elec_lo_snare">/cc0/sonic_pi/samples/elec_lo_snare</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="elec_mid_snare/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="elec_mid_snare">/cc0/sonic_pi/samples/elec_mid_snare</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="elec_ping/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="elec_ping">/cc0/sonic_pi/samples/elec_ping</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="elec_plip/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="elec_plip">/cc0/sonic_pi/samples/elec_plip</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="elec_pop/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="elec_pop">/cc0/sonic_pi/samples/elec_pop</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="elec_snare/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="elec_snare">/cc0/sonic_pi/samples/elec_snare</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="elec_soft_kick/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="elec_soft_kick">/cc0/sonic_pi/samples/elec_soft_kick</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="elec_tick/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="elec_tick">/cc0/sonic_pi/samples/elec_tick</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" data-samples_read="22880.0" data-length="0.238333" data-scaled_by="2147483647.0" data-maximum_amplitude="0.297119" data-minimum_amplitude="-0.323029" data-midline_amplitude="-0.012955" data-mean_norm="0.044675" data-mean_amplitude="4.0e-06" data-rms_amplitude="0.075489" data-maximum_delta="0.284088" data-minimum_delta="0.0" data-mean_delta="0.019253" data-rms_delta="0.045853" data-rough_frequency="4640.0" data-volume_adjustment="3.096" src="elec_triangle/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="elec_triangle">/cc0/sonic_pi/samples/elec_triangle</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="elec_twang/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="elec_twang">/cc0/sonic_pi/samples/elec_twang</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="elec_twip/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="elec_twip">/cc0/sonic_pi/samples/elec_twip</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="elec_wood/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="elec_wood">/cc0/sonic_pi/samples/elec_wood</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="glitch_bass_g/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="glitch_bass_g">/cc0/sonic_pi/samples/glitch_bass_g</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="glitch_perc1/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="glitch_perc1">/cc0/sonic_pi/samples/glitch_perc1</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="glitch_perc2/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="glitch_perc2">/cc0/sonic_pi/samples/glitch_perc2</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="glitch_perc3/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="glitch_perc3">/cc0/sonic_pi/samples/glitch_perc3</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="glitch_perc4/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="glitch_perc4">/cc0/sonic_pi/samples/glitch_perc4</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="glitch_perc5/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="glitch_perc5">/cc0/sonic_pi/samples/glitch_perc5</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="glitch_robot1/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="glitch_robot1">/cc0/sonic_pi/samples/glitch_robot1</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="glitch_robot2/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="glitch_robot2">/cc0/sonic_pi/samples/glitch_robot2</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="guit_e_fifths/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="guit_e_fifths">/cc0/sonic_pi/samples/guit_e_fifths</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" data-samples_read="235594.0" data-length="2.454104" data-scaled_by="2147483647.0" data-maximum_amplitude="0.296082" data-minimum_amplitude="-0.278931" data-midline_amplitude="0.008575" data-mean_norm="0.022692" data-mean_amplitude="2.0e-06" data-rms_amplitude="0.046185" data-maximum_delta="0.039368" data-minimum_delta="0.0" data-mean_delta="0.001177" data-rms_delta="0.003357" data-rough_frequency="555.0" data-volume_adjustment="3.377" src="guit_e_slide/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="guit_e_slide">/cc0/sonic_pi/samples/guit_e_slide</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="guit_em9/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="guit_em9">/cc0/sonic_pi/samples/guit_em9</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="guit_harmonics/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="guit_harmonics">/cc0/sonic_pi/samples/guit_harmonics</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="hat_bdu/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="hat_bdu">/cc0/sonic_pi/samples/hat_bdu</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="hat_cab/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="hat_cab">/cc0/sonic_pi/samples/hat_cab</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="hat_cats/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="hat_cats">/cc0/sonic_pi/samples/hat_cats</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="hat_gem/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="hat_gem">/cc0/sonic_pi/samples/hat_gem</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="hat_gnu/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="hat_gnu">/cc0/sonic_pi/samples/hat_gnu</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="hat_gump/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="hat_gump">/cc0/sonic_pi/samples/hat_gump</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="hat_hier/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="hat_hier">/cc0/sonic_pi/samples/hat_hier</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="hat_len/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="hat_len">/cc0/sonic_pi/samples/hat_len</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="hat_mess/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="hat_mess">/cc0/sonic_pi/samples/hat_mess</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="hat_metal/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="hat_metal">/cc0/sonic_pi/samples/hat_metal</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="hat_noiz/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="hat_noiz">/cc0/sonic_pi/samples/hat_noiz</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="hat_psych/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="hat_psych">/cc0/sonic_pi/samples/hat_psych</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="hat_raw/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="hat_raw">/cc0/sonic_pi/samples/hat_raw</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="hat_sci/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="hat_sci">/cc0/sonic_pi/samples/hat_sci</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="hat_snap/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="hat_snap">/cc0/sonic_pi/samples/hat_snap</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="hat_star/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="hat_star">/cc0/sonic_pi/samples/hat_star</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="hat_tap/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="hat_tap">/cc0/sonic_pi/samples/hat_tap</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="hat_yosh/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="hat_yosh">/cc0/sonic_pi/samples/hat_yosh</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="hat_zan/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="hat_zan">/cc0/sonic_pi/samples/hat_zan</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="hat_zap/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="hat_zap">/cc0/sonic_pi/samples/hat_zap</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="hat_zild/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="hat_zild">/cc0/sonic_pi/samples/hat_zild</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="loop_3d_printer/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="loop_3d_printer">/cc0/sonic_pi/samples/loop_3d_printer</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="loop_amen/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="loop_amen">/cc0/sonic_pi/samples/loop_amen</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" data-samples_read="662596.0" data-length="6.902042" data-scaled_by="2147483647.0" data-maximum_amplitude="0.552551" data-minimum_amplitude="-0.663605" data-midline_amplitude="-0.055527" data-mean_norm="0.070979" data-mean_amplitude="-1.4e-05" data-rms_amplitude="0.107497" data-maximum_delta="0.460327" data-minimum_delta="0.0" data-mean_delta="0.014908" data-rms_delta="0.030354" data-rough_frequency="2157.0" data-volume_adjustment="1.507" src="loop_amen_full/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="loop_amen_full">/cc0/sonic_pi/samples/loop_amen_full</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="loop_breakbeat/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="loop_breakbeat">/cc0/sonic_pi/samples/loop_breakbeat</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="loop_compus/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="loop_compus">/cc0/sonic_pi/samples/loop_compus</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="loop_drone_g_97/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="loop_drone_g_97">/cc0/sonic_pi/samples/loop_drone_g_97</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="loop_electric/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="loop_electric">/cc0/sonic_pi/samples/loop_electric</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" data-samples_read="770066.0" data-length="8.021521" data-scaled_by="2147483647.0" data-maximum_amplitude="0.349854" data-minimum_amplitude="-0.330872" data-midline_amplitude="0.009491" data-mean_norm="0.049305" data-mean_amplitude="-9.5e-05" data-rms_amplitude="0.07128" data-maximum_delta="0.191071" data-minimum_delta="0.0" data-mean_delta="0.011296" data-rms_delta="0.016762" data-rough_frequency="1796.0" data-volume_adjustment="2.858" src="loop_garzul/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="loop_garzul">/cc0/sonic_pi/samples/loop_garzul</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="loop_industrial/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="loop_industrial">/cc0/sonic_pi/samples/loop_industrial</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="loop_mehackit1/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="loop_mehackit1">/cc0/sonic_pi/samples/loop_mehackit1</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="loop_mehackit2/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="loop_mehackit2">/cc0/sonic_pi/samples/loop_mehackit2</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" data-samples_read="769832.0" data-length="8.019083" data-scaled_by="2147483647.0" data-maximum_amplitude="0.390686" data-minimum_amplitude="-0.383942" data-midline_amplitude="0.003372" data-mean_norm="0.043791" data-mean_amplitude="0.000124" data-rms_amplitude="0.062316" data-maximum_delta="0.211823" data-minimum_delta="0.0" data-mean_delta="0.002105" data-rms_delta="0.005704" data-rough_frequency="699.0" data-volume_adjustment="2.56" src="loop_mika/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="loop_mika">/cc0/sonic_pi/samples/loop_mika</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="loop_perc1/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="loop_perc1">/cc0/sonic_pi/samples/loop_perc1</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="loop_perc2/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="loop_perc2">/cc0/sonic_pi/samples/loop_perc2</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="loop_safari/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="loop_safari">/cc0/sonic_pi/samples/loop_safari</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="loop_tabla/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="loop_tabla">/cc0/sonic_pi/samples/loop_tabla</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="loop_weirdo/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="loop_weirdo">/cc0/sonic_pi/samples/loop_weirdo</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="mehackit_phone1/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="mehackit_phone1">/cc0/sonic_pi/samples/mehackit_phone1</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="mehackit_phone2/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="mehackit_phone2">/cc0/sonic_pi/samples/mehackit_phone2</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="mehackit_phone3/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="mehackit_phone3">/cc0/sonic_pi/samples/mehackit_phone3</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="mehackit_phone4/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="mehackit_phone4">/cc0/sonic_pi/samples/mehackit_phone4</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="mehackit_robot1/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="mehackit_robot1">/cc0/sonic_pi/samples/mehackit_robot1</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="mehackit_robot2/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="mehackit_robot2">/cc0/sonic_pi/samples/mehackit_robot2</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="mehackit_robot3/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="mehackit_robot3">/cc0/sonic_pi/samples/mehackit_robot3</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="mehackit_robot4/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="mehackit_robot4">/cc0/sonic_pi/samples/mehackit_robot4</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="mehackit_robot5/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="mehackit_robot5">/cc0/sonic_pi/samples/mehackit_robot5</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="mehackit_robot6/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="mehackit_robot6">/cc0/sonic_pi/samples/mehackit_robot6</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="mehackit_robot7/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="mehackit_robot7">/cc0/sonic_pi/samples/mehackit_robot7</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="misc_burp/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="misc_burp">/cc0/sonic_pi/samples/misc_burp</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="misc_cineboom/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="misc_cineboom">/cc0/sonic_pi/samples/misc_cineboom</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="misc_crow/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="misc_crow">/cc0/sonic_pi/samples/misc_crow</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" data-samples_read="409934.0" data-length="4.270146" data-scaled_by="2147483647.0" data-maximum_amplitude="0.375031" data-minimum_amplitude="-0.386169" data-midline_amplitude="-0.005569" data-mean_norm="0.007977" data-mean_amplitude="-0.0" data-rms_amplitude="0.027524" data-maximum_delta="0.660919" data-minimum_delta="0.0" data-mean_delta="0.012625" data-rms_delta="0.048572" data-rough_frequency="13481.0" data-volume_adjustment="2.59" src="perc_bell/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="perc_bell">/cc0/sonic_pi/samples/perc_bell</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="perc_bell2/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="perc_bell2">/cc0/sonic_pi/samples/perc_bell2</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="perc_door/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="perc_door">/cc0/sonic_pi/samples/perc_door</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="perc_impact1/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="perc_impact1">/cc0/sonic_pi/samples/perc_impact1</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="perc_impact2/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="perc_impact2">/cc0/sonic_pi/samples/perc_impact2</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="perc_snap/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="perc_snap">/cc0/sonic_pi/samples/perc_snap</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="perc_snap2/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="perc_snap2">/cc0/sonic_pi/samples/perc_snap2</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="perc_swash/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="perc_swash">/cc0/sonic_pi/samples/perc_swash</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="perc_swoosh/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="perc_swoosh">/cc0/sonic_pi/samples/perc_swoosh</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="perc_till/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="perc_till">/cc0/sonic_pi/samples/perc_till</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="ride_tri/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="ride_tri">/cc0/sonic_pi/samples/ride_tri</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="ride_via/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="ride_via">/cc0/sonic_pi/samples/ride_via</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" data-samples_read="37686.0" data-length="0.392562" data-scaled_by="2147483647.0" data-maximum_amplitude="0.503998" data-minimum_amplitude="-0.531403" data-midline_amplitude="-0.013702" data-mean_norm="0.047165" data-mean_amplitude="2.1e-05" data-rms_amplitude="0.098434" data-maximum_delta="0.311127" data-minimum_delta="0.0" data-mean_delta="0.023371" data-rms_delta="0.04501" data-rough_frequency="3493.0" data-volume_adjustment="1.882" src="sn_dolf/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="sn_dolf">/cc0/sonic_pi/samples/sn_dolf</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="sn_dub/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="sn_dub">/cc0/sonic_pi/samples/sn_dub</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="sn_generic/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="sn_generic">/cc0/sonic_pi/samples/sn_generic</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="sn_zome/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="sn_zome">/cc0/sonic_pi/samples/sn_zome</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="tabla_dhec/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="tabla_dhec">/cc0/sonic_pi/samples/tabla_dhec</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="tabla_ghe1/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="tabla_ghe1">/cc0/sonic_pi/samples/tabla_ghe1</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="tabla_ghe2/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="tabla_ghe2">/cc0/sonic_pi/samples/tabla_ghe2</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="tabla_ghe3/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="tabla_ghe3">/cc0/sonic_pi/samples/tabla_ghe3</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="tabla_ghe4/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="tabla_ghe4">/cc0/sonic_pi/samples/tabla_ghe4</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="tabla_ghe5/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="tabla_ghe5">/cc0/sonic_pi/samples/tabla_ghe5</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="tabla_ghe6/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="tabla_ghe6">/cc0/sonic_pi/samples/tabla_ghe6</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="tabla_ghe7/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="tabla_ghe7">/cc0/sonic_pi/samples/tabla_ghe7</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="tabla_ghe8/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="tabla_ghe8">/cc0/sonic_pi/samples/tabla_ghe8</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="tabla_ke1/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="tabla_ke1">/cc0/sonic_pi/samples/tabla_ke1</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="tabla_ke2/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="tabla_ke2">/cc0/sonic_pi/samples/tabla_ke2</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="tabla_ke3/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="tabla_ke3">/cc0/sonic_pi/samples/tabla_ke3</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="tabla_na/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="tabla_na">/cc0/sonic_pi/samples/tabla_na</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="tabla_na_o/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="tabla_na_o">/cc0/sonic_pi/samples/tabla_na_o</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="tabla_na_s/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="tabla_na_s">/cc0/sonic_pi/samples/tabla_na_s</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="tabla_re/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="tabla_re">/cc0/sonic_pi/samples/tabla_re</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="tabla_tas1/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="tabla_tas1">/cc0/sonic_pi/samples/tabla_tas1</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="tabla_tas2/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="tabla_tas2">/cc0/sonic_pi/samples/tabla_tas2</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="tabla_tas3/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="tabla_tas3">/cc0/sonic_pi/samples/tabla_tas3</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="tabla_te1/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="tabla_te1">/cc0/sonic_pi/samples/tabla_te1</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="tabla_te2/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="tabla_te2">/cc0/sonic_pi/samples/tabla_te2</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="tabla_te_m/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="tabla_te_m">/cc0/sonic_pi/samples/tabla_te_m</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="tabla_te_ne/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="tabla_te_ne">/cc0/sonic_pi/samples/tabla_te_ne</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="tabla_tun1/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="tabla_tun1">/cc0/sonic_pi/samples/tabla_tun1</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="tabla_tun2/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="tabla_tun2">/cc0/sonic_pi/samples/tabla_tun2</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="tabla_tun3/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="tabla_tun3">/cc0/sonic_pi/samples/tabla_tun3</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="tbd_fxbed_loop/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="tbd_fxbed_loop">/cc0/sonic_pi/samples/tbd_fxbed_loop</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="tbd_highkey_c4/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="tbd_highkey_c4">/cc0/sonic_pi/samples/tbd_highkey_c4</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="tbd_pad_1/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="tbd_pad_1">/cc0/sonic_pi/samples/tbd_pad_1</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="tbd_pad_2/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="tbd_pad_2">/cc0/sonic_pi/samples/tbd_pad_2</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="tbd_pad_3/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="tbd_pad_3">/cc0/sonic_pi/samples/tbd_pad_3</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="tbd_pad_4/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="tbd_pad_4">/cc0/sonic_pi/samples/tbd_pad_4</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="tbd_perc_blip/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="tbd_perc_blip">/cc0/sonic_pi/samples/tbd_perc_blip</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="tbd_perc_hat/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="tbd_perc_hat">/cc0/sonic_pi/samples/tbd_perc_hat</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="tbd_perc_tap_1/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="tbd_perc_tap_1">/cc0/sonic_pi/samples/tbd_perc_tap_1</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="tbd_perc_tap_2/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="tbd_perc_tap_2">/cc0/sonic_pi/samples/tbd_perc_tap_2</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="tbd_voctone/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="tbd_voctone">/cc0/sonic_pi/samples/tbd_voctone</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="vinyl_backspin/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="vinyl_backspin">/cc0/sonic_pi/samples/vinyl_backspin</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="vinyl_hiss/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="vinyl_hiss">/cc0/sonic_pi/samples/vinyl_hiss</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="vinyl_rewind/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="vinyl_rewind">/cc0/sonic_pi/samples/vinyl_rewind</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <audio preload="none" src="vinyl_scratch/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="vinyl_scratch">/cc0/sonic_pi/samples/vinyl_scratch</a>
+  </td>
+</tr>
+
+  </tbody>
+</table>
+
+        </article>
+      </main>
+    </div>
+	</body>
+</html>

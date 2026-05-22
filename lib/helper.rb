@@ -1,5 +1,5 @@
 module Helper
-  def home?
-    @item.identifier == '/index.txt'
+  def index?
+    @item.identifier.to_s.end_with? '/index.txt'
   end
 end

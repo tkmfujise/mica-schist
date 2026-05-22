@@ -1,0 +1,2 @@
+/cc0/sonic_pi/synths/noise/noise.rb
+/cc0/sonic_pi/synths/zawa/zawa.rb

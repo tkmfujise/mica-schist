@@ -1,0 +1,1 @@
+sample :tabla_ghe6

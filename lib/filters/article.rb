@@ -62,6 +62,7 @@ module Nanoc::Filters
 
       def stat
         @stat ||= begin
+          return {} if stat_json.empty?
           stat = JSON.parse(stat_json, symbolize_names: true)
 
           stat.merge!(crest_factor: stat[:maximum_amplitude] / stat[:rms_amplitude])
@@ -74,7 +75,7 @@ module Nanoc::Filters
 
       def stat_json
         @stat_json ||= begin
-          return {} unless dir.join('stat.json').exist?
+          return '' unless dir.join('stat.json').exist?
           dir.join('stat.json').read
         end
       end

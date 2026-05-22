@@ -31,8 +31,15 @@ module Mica
         analyzer = Analyzer.new(file)
         analyzer.spectrogram
         analyzer.stat
+        touch
       end
       Player.current.play(code)
+    end
+
+
+    def touch
+      path = dir.children.find{|p| p.to_s.end_with?('.rb') }
+      path && FileUtils.touch(path)
     end
 
 

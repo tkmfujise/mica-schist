@@ -11,6 +11,8 @@
 		<link rel="stylesheet" href="../../../../assets/css/almond.min.css">
 		<link rel="stylesheet" href="../../../../assets/css/style.css">
 		<link rel="stylesheet" href="../../../../assets/css/syntax.gessetti.css">
+		<link rel="stylesheet" href="../../../../assets/css/syntax.gessetti.css">
+    <script src="../../../../assets/js/filter.js"></script>
 	</head>
   <body>
     <nav class="main-menu closed">
@@ -26,17 +28,17 @@
     <li>
       <div>Categories</div>
       <ul>
-        <li><a href="#">Bell</a></li>
-        <li><a href="#">Loop</a></li>
+        <li><a href="..">Samples</a></li>
+        <li><a href="../../synths">Synths</a></li>
       </ul>
     </li>
 
     <li>
-      <div>About</div>
+      <div>Links</div>
       <ul>
-        <li><a href="#">License</a></li>
-        <li><a href="#">Sonic Pi</a></li>
-        <li><a href="#">GitHub</a></li>
+        <li><a href="#">About</a></li>
+        <li><a rel="external" target="_blank" href="https://github.com/tkmfujise/mica-sound/blob/main/license.md">License</a></li>
+        <li><a rel="external" target="_blank" href="https://github.com/tkmfujise/mica-sound">GitHub</a></li>
       </ul>
     </li>
   </ul>
@@ -79,39 +81,39 @@ Your browser does not support the audio tag.
 </div>
 <div class="stat">
 <label>
-  <progress style="accent-color: green" max="1" value="0.523285"></progress>
+  <progress style="accent-color: green" max="1" value="0.504028"></progress>
   : maximum_amplitude
 </label><br>
 <label>
-  <progress style="accent-color: blue" max="1" value="0.097725"></progress>
+  <progress style="accent-color: blue" max="1" value="0.098434"></progress>
   : rms_amplitude
 </label><br>
 <label>
-  <progress style="accent-color: green" max="20" value="5.354668713225888"></progress>
+  <progress style="accent-color: green" max="20" value="5.1204665054757506"></progress>
   : crest_factor
 </label><br>
 <label>
-  <progress style="accent-color: green" max="1" value="0.307526"></progress>
+  <progress style="accent-color: green" max="1" value="0.311127"></progress>
   : maximum_delta
 </label><br>
 <label>
-  <progress style="accent-color: blue" max="1" value="0.044533"></progress>
+  <progress style="accent-color: blue" max="1" value="0.045008"></progress>
   : rms_delta
 </label><br>
 <label>
-  <progress style="accent-color: blue" max="40" value="6.905575640536232"></progress>
+  <progress style="accent-color: blue" max="40" value="6.912704408105226"></progress>
   : delta_crest_factor
 </label><br>
 <label>
-  <progress style="accent-color: green" max="1" value="0.4556971092350985"></progress>
+  <progress style="accent-color: green" max="1" value="0.4572403844200175"></progress>
   : jiggly
 </label><br>
 <label>
-  <progress style="accent-color: green" max="0.8" value="0.5167179395055352"></progress>
+  <progress style="accent-color: green" max="0.8" value="0.5191521507287594"></progress>
   : periodicity
 </label><br>
 <label>
-  <progress style="accent-color: blue" max="18000.0" value="3481.0"></progress>
+  <progress style="accent-color: blue" max="18000.0" value="3493.0"></progress>
   : rough_frequency
 </label><br>
 
@@ -119,21 +121,21 @@ Your browser does not support the audio tag.
 <div class="listingblock">
 <div class="content">
 <pre class="rouge highlight"><code data-lang="json"><span class="p">{</span><span class="w">
-  </span><span class="nl">"samples_read"</span><span class="p">:</span><span class="w"> </span><span class="mf">37906.0</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"length"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.394854</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"samples_read"</span><span class="p">:</span><span class="w"> </span><span class="mf">37686.0</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"length"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.392562</span><span class="p">,</span><span class="w">
   </span><span class="nl">"scaled_by"</span><span class="p">:</span><span class="w"> </span><span class="mf">2147483647.0</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"maximum_amplitude"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.523285</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"minimum_amplitude"</span><span class="p">:</span><span class="w"> </span><span class="mf">-0.531952</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"midline_amplitude"</span><span class="p">:</span><span class="w"> </span><span class="mf">-0.004333</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"mean_norm"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.046652</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"mean_amplitude"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.00002</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"rms_amplitude"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.097725</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"maximum_delta"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.307526</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"maximum_amplitude"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.504028</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"minimum_amplitude"</span><span class="p">:</span><span class="w"> </span><span class="mf">-0.531403</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"midline_amplitude"</span><span class="p">:</span><span class="w"> </span><span class="mf">-0.013687</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"mean_norm"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.047165</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"mean_amplitude"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.000021</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"rms_amplitude"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.098434</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"maximum_delta"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.311127</span><span class="p">,</span><span class="w">
   </span><span class="nl">"minimum_delta"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"mean_delta"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.023011</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"rms_delta"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.044533</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"rough_frequency"</span><span class="p">:</span><span class="w"> </span><span class="mf">3481.0</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"volume_adjustment"</span><span class="p">:</span><span class="w"> </span><span class="mf">1.88</span><span class="w">
+  </span><span class="nl">"mean_delta"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.023366</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"rms_delta"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.045008</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"rough_frequency"</span><span class="p">:</span><span class="w"> </span><span class="mf">3493.0</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"volume_adjustment"</span><span class="p">:</span><span class="w"> </span><span class="mf">1.882</span><span class="w">
 </span><span class="p">}</span></code></pre>
 </div>
 </div>

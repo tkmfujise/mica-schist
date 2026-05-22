@@ -1,0 +1,1 @@
+sample :elec_hollow_kick
