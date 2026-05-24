@@ -1,0 +1,14 @@
+== About Mica Sound
+
+Mica Sound is a collection of sounds generated with https://sonic-pi.net/[Sonic Pi].
+
+All audio files are freely available under open licenses:
+
+* CC0 1.0 (public domain)
+* CC BY-SA 4.0
+* CC BY 4.0
+
+You can use these sounds for any purpose — music, games, apps, videos, or research.
+
+Attribution is required only for CC BY and CC BY-SA materials.
+

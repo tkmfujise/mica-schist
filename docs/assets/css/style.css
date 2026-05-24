@@ -288,6 +288,15 @@ body form input[type="range"] {
   max-width: 30%;
 }
 
+/* Footer */
+body footer {
+  padding: 1rem 0;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+
+/* Smartphone */
 @media (max-width: 768px) {
   body article .license.imageblock img {
     max-height: 2rem;
