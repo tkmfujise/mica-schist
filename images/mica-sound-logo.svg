@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="512"
+   height="512"
+   viewBox="0 0 135.46666 135.46667"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   sodipodi:docname="mica-sound-logo.svg"
+   inkscape:export-filename="mica-sound-logo.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="0.18529742"
+     inkscape:cx="-267.1381"
+     inkscape:cy="296.82011"
+     inkscape:window-width="1470"
+     inkscape:window-height="895"
+     inkscape:window-x="0"
+     inkscape:window-y="33"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       sodipodi:type="star"
+       style="fill:#484537;stroke-width:0.529167"
+       id="path1"
+       inkscape:flatsided="true"
+       sodipodi:sides="8"
+       sodipodi:cx="13.88292"
+       sodipodi:cy="18.174004"
+       sodipodi:r1="65.70015"
+       sodipodi:r2="32.850075"
+       sodipodi:arg1="0.47052035"
+       sodipodi:arg2="0.86321943"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 72.443599,47.959176 -38.213323,32.684779 -50.132528,-3.909272 -32.684779,-38.213324 3.909272,-50.132528 38.2133236,-32.684778 50.1325284,3.909272 32.684778,38.213323 z"
+       inkscape:transform-center-x="-1.7428116"
+       inkscape:transform-center-y="-14.892587"
+       transform="translate(54.522012,51.997845)" />
+    <path
+       sodipodi:type="star"
+       style="fill:#2a2823;stroke-width:0.529167;fill-opacity:0.5"
+       id="path1-1"
+       inkscape:flatsided="true"
+       sodipodi:sides="8"
+       sodipodi:cx="13.88292"
+       sodipodi:cy="18.174004"
+       sodipodi:r1="65.70015"
+       sodipodi:r2="32.850075"
+       sodipodi:arg1="0.47052035"
+       sodipodi:arg2="0.86321943"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 72.443599,47.959176 -38.213323,32.684779 -50.132528,-3.909272 -32.684779,-38.213324 3.909272,-50.132528 38.2133236,-32.684778 50.1325284,3.909272 32.684778,38.213323 z"
+       inkscape:transform-center-x="-1.6653492"
+       inkscape:transform-center-y="-14.471361"
+       transform="matrix(0.95555329,0,0,0.97171573,52.154401,48.198627)" />
+    <path
+       style="font-size:100.264px;font-family:'Arial Hebrew';-inkscape-font-specification:'Arial Hebrew, Normal';letter-spacing:-0.417768px;word-spacing:-0.330037px;fill:#00ff00;fill-opacity:0.5;stroke-width:0.835537"
+       d="m 71.280053,33.060168 c 6.582771,0.156882 13.828499,-0.721319 19.619816,3.097453 4.763632,3.082033 6.467137,9.008783 6.4513,14.409429 -0.433661,1.736929 1.337726,5.834145 -1.621101,5.103408 h -3.526649 c 0.720467,-4.616847 -1.950254,-10.012347 -6.824055,-10.921757 -2.638912,-0.624276 -5.496716,-1.920872 -8.190358,-0.91929 -2.144538,2.639571 -0.06137,6.760316 -0.771831,10.019987 -0.02687,10.790634 0.206018,21.592217 -0.199847,32.375313 -0.554294,5.017932 -16.013458,11.697378 -20.882245,12.807368 -5.700279,1.828061 -13.089458,1.588901 -17.085172,-3.47985 -3.985444,-5.329546 -0.851925,-13.711627 5.279374,-15.808547 5.196021,-2.263549 22.692958,-4.101043 27.750771,-1.78528 -2e-6,-14.966078 4e-6,-29.932156 -3e-6,-44.898234 z"
+       id="text2"
+       aria-label="♪"
+       sodipodi:nodetypes="cccccccccccccc" />
+    <path
+       style="font-size:100.264px;font-family:'Arial Hebrew';-inkscape-font-specification:'Arial Hebrew, Normal';letter-spacing:-0.417768px;word-spacing:-0.330037px;fill:#008000;fill-opacity:0.5;stroke-width:0.835537"
+       d="m 73.064908,36.27291 c 6.582771,0.156882 13.828499,-0.721319 19.619816,3.097453 4.763632,3.082033 6.467141,9.008783 6.451301,14.409429 -0.43366,1.736929 1.337735,5.834145 -1.621102,5.103408 h -3.526649 c 0.720467,-4.616847 -1.950254,-10.012347 -6.824055,-10.921757 -2.638912,-0.624276 -5.496716,-1.920872 -8.190358,-0.91929 -2.144538,2.639571 -0.06137,6.760316 -0.771831,10.019987 -0.02687,10.790634 0.206018,21.592217 -0.199847,32.375313 -0.554294,5.017931 -16.013458,11.697377 -20.882245,12.807367 -5.700279,1.82806 -13.089458,1.5889 -17.085172,-3.47985 -3.985444,-5.329546 -0.851925,-13.711626 5.279374,-15.808546 5.196021,-2.263549 22.692958,-4.101043 27.750771,-1.78528 -2e-6,-14.966078 4e-6,-29.932156 -3e-6,-44.898234 z"
+       id="path4"
+       aria-label="♪"
+       sodipodi:nodetypes="cccccccccccccc" />
+  </g>
+</svg>

@@ -7,10 +7,11 @@ module Nanoc::Filters
         dir  = Pathname(path).dirname
         stat = stat_of(dir)
         <<~HTML
-          <tr>
+          <tr class="audio-list">
             <td>
               <audio preload="none"
                 #{hash_to_html_attribute(stat)}
+                data-path="#{dir}"
                 src="#{dir.join('output.ogg')}"
                 controls
               >
