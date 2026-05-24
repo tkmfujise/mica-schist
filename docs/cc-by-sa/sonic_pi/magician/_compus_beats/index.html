@@ -1,0 +1,116 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Sonic Pi Examples - tkmfujise</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+		<meta name="author" content="tkmfujise">
+		<meta name="keywords" content="Sonic Pi, Ruby, sound, music, effect, cc0">
+		<meta name="description" content="Sonic Pi Examples">
+		<link rel="stylesheet" href="../../../../assets/css/almond.min.css">
+		<link rel="stylesheet" href="../../../../assets/css/style.css">
+		<link rel="stylesheet" href="../../../../assets/css/syntax.gessetti.css">
+    <script src="../../../../assets/js/vendor/fuse.js@7.1.0"></script>
+    <script src="../../../../assets/js/filter.js"></script>
+    <script src="../../../../assets/js/clipboard.js"></script>
+	</head>
+  <body>
+    <nav class="main-menu closed">
+  <button onclick="document.querySelector('.main-menu').classList.toggle('closed');">
+    <span>Expand/Collapse menu</span>
+  </button>
+  <h2>Gems among stones.</h2>
+  <ul>
+    <li>
+      <a href="../../../../">💎 Home 🪨</a>
+    </li>
+
+    <li>
+      <div>Categories</div>
+      <ul>
+        <li><a href="../../../../cc0/sonic_pi/samples">Samples</a></li>
+        <li><a href="../../../../cc0/sonic_pi/synths">Synths</a></li>
+        <li><a href="../..">Official Examples</a></li>
+        <li><a href="../../../../cc-by/tkmfujise">Mica Sound</a></li>
+      </ul>
+    </li>
+
+    <li>
+      <div>Links</div>
+      <ul>
+        <li><a href="../../../../about">About</a></li>
+        <li><a rel="external" target="_blank" href="https://github.com/tkmfujise/mica-sound/blob/main/LICENSE.md">License</a></li>
+        <li><a rel="external" target="_blank" href="https://github.com/tkmfujise/mica-sound">GitHub</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+    <div>
+      <header>
+  <div>
+    <a href="../../../../">
+      <h1>Mica Sound</h1>
+    </a>
+    <p>Sonic Pi Examples</p>
+  </div>
+</header>
+
+
+      <main>
+        <article>
+          
+      		<div class="sect1">
+<h2 id="_compus_beats">Compus Beats</h2>
+<div class="sectionbody">
+<div class="imageblock license">
+<div class="content">
+<a class="image" href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener"><img src="../../../../assets/images/cc-by-sa.svg" alt="cc by sa"></a>
+</div>
+</div>
+<div class="audioblock output">
+<div class="content">
+<audio src="output.ogg" controls>
+Your browser does not support the audio tag.
+</audio>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">/cc-by-sa/sonic_pi/magician/_compus_beats</div>
+<div class="content">
+<pre class="rouge highlight"><code data-lang="ruby"><span class="c1"># Coded by Sam Aaron</span>
+
+<span class="n">use_sample_bpm</span> <span class="ss">:loop_compus</span><span class="p">,</span> <span class="ss">num_beats: </span><span class="mi">4</span>
+
+<span class="n">live_loop</span> <span class="ss">:loopr</span> <span class="k">do</span>
+  <span class="n">sample</span> <span class="ss">:loop_compus</span><span class="p">,</span> <span class="ss">rate: </span><span class="p">[</span><span class="mf">0.5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">].</span><span class="nf">choose</span> <span class="k">unless</span> <span class="n">one_in</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+  <span class="nb">sleep</span> <span class="mi">4</span>
+<span class="k">end</span>
+
+<span class="n">live_loop</span> <span class="ss">:bass</span> <span class="k">do</span>
+  <span class="n">sample</span> <span class="ss">:bass_voxy_c</span><span class="p">,</span> <span class="ss">amp: </span><span class="n">rrand</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">),</span> <span class="ss">rate: </span><span class="p">[</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">].</span><span class="nf">choose</span> <span class="k">if</span> <span class="n">one_in</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+  <span class="n">use_synth</span> <span class="ss">:mod_pulse</span>
+  <span class="n">use_synth_defaults</span> <span class="ss">mod_invert_wave: </span><span class="mi">1</span>
+  <span class="n">play</span> <span class="ss">:C1</span><span class="p">,</span> <span class="ss">mod_range: </span><span class="mi">12</span><span class="p">,</span> <span class="ss">amp: </span><span class="n">rrand</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="ss">mod_phase: </span><span class="p">[</span><span class="mf">0.25</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mi">1</span><span class="p">].</span><span class="nf">choose</span><span class="p">,</span> <span class="ss">release: </span><span class="mi">1</span><span class="p">,</span> <span class="ss">cutoff: </span><span class="n">rrand</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="mi">90</span><span class="p">)</span>
+  <span class="n">play</span> <span class="ss">:C2</span><span class="p">,</span> <span class="ss">mod_range: </span><span class="p">[</span><span class="mi">24</span><span class="p">,</span> <span class="mi">36</span><span class="p">,</span> <span class="mi">34</span><span class="p">].</span><span class="nf">choose</span><span class="p">,</span> <span class="ss">amp: </span><span class="mf">0.35</span><span class="p">,</span> <span class="ss">mod_phase: </span><span class="mf">0.25</span><span class="p">,</span> <span class="ss">release: </span><span class="mi">2</span><span class="p">,</span> <span class="ss">cutoff: </span><span class="mi">60</span><span class="p">,</span> <span class="ss">pulse_width: </span><span class="nb">rand</span>
+  <span class="nb">sleep</span> <span class="mi">1</span>
+<span class="k">end</span></code></pre>
+</div>
+</div>
+<div class="imageblock spectrogram">
+<div class="content">
+<img src="spectrogram.png" alt="spectrogram">
+</div>
+</div>
+</div>
+</div>
+        </article>
+      </main>
+      <footer>
+  <p>Copyright © 2026 Mica Sound / FUJISE Takumi (tkmfujise)</p>
+</footer>
+
+    </div>
+	</body>
+</html>

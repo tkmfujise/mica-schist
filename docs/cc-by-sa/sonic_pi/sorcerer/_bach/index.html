@@ -1,0 +1,229 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Sonic Pi Examples - tkmfujise</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+		<meta name="author" content="tkmfujise">
+		<meta name="keywords" content="Sonic Pi, Ruby, sound, music, effect, cc0">
+		<meta name="description" content="Sonic Pi Examples">
+		<link rel="stylesheet" href="../../../../assets/css/almond.min.css">
+		<link rel="stylesheet" href="../../../../assets/css/style.css">
+		<link rel="stylesheet" href="../../../../assets/css/syntax.gessetti.css">
+    <script src="../../../../assets/js/vendor/fuse.js@7.1.0"></script>
+    <script src="../../../../assets/js/filter.js"></script>
+    <script src="../../../../assets/js/clipboard.js"></script>
+	</head>
+  <body>
+    <nav class="main-menu closed">
+  <button onclick="document.querySelector('.main-menu').classList.toggle('closed');">
+    <span>Expand/Collapse menu</span>
+  </button>
+  <h2>Gems among stones.</h2>
+  <ul>
+    <li>
+      <a href="../../../../">💎 Home 🪨</a>
+    </li>
+
+    <li>
+      <div>Categories</div>
+      <ul>
+        <li><a href="../../../../cc0/sonic_pi/samples">Samples</a></li>
+        <li><a href="../../../../cc0/sonic_pi/synths">Synths</a></li>
+        <li><a href="../..">Official Examples</a></li>
+        <li><a href="../../../../cc-by/tkmfujise">Mica Sound</a></li>
+      </ul>
+    </li>
+
+    <li>
+      <div>Links</div>
+      <ul>
+        <li><a href="../../../../about">About</a></li>
+        <li><a rel="external" target="_blank" href="https://github.com/tkmfujise/mica-sound/blob/main/LICENSE.md">License</a></li>
+        <li><a rel="external" target="_blank" href="https://github.com/tkmfujise/mica-sound">GitHub</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+    <div>
+      <header>
+  <div>
+    <a href="../../../../">
+      <h1>Mica Sound</h1>
+    </a>
+    <p>Sonic Pi Examples</p>
+  </div>
+</header>
+
+
+      <main>
+        <article>
+          
+      		<div class="sect1">
+<h2 id="_bach">Bach</h2>
+<div class="sectionbody">
+<div class="imageblock license">
+<div class="content">
+<a class="image" href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener"><img src="../../../../assets/images/cc-by-sa.svg" alt="cc by sa"></a>
+</div>
+</div>
+<div class="audioblock output">
+<div class="content">
+<audio src="output.ogg" controls>
+Your browser does not support the audio tag.
+</audio>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">/cc-by-sa/sonic_pi/sorcerer/_bach</div>
+<div class="content">
+<pre class="rouge highlight"><code data-lang="ruby"><span class="c1"># Bach Minuet in G</span>
+<span class="c1">#</span>
+<span class="c1"># Coded by Robin Newman</span>
+
+<span class="n">use_bpm</span> <span class="mi">60</span>
+<span class="n">use_synth_defaults</span> <span class="ss">release: </span><span class="mf">0.5</span><span class="p">,</span> <span class="ss">amp: </span><span class="mf">0.7</span><span class="p">,</span> <span class="ss">cutoff: </span><span class="mi">90</span>
+<span class="n">use_synth</span> <span class="ss">:beep</span>
+
+<span class="c1">## Each section of the minuet is repeated</span>
+<span class="mi">2</span><span class="p">.</span><span class="nf">times</span> <span class="k">do</span>
+
+  <span class="c1">## First start a thread for the first 8 bars of the bass left hand part</span>
+  <span class="n">in_thread</span> <span class="k">do</span>
+    <span class="n">play_chord</span> <span class="p">[</span><span class="mi">55</span><span class="p">,</span><span class="mi">59</span><span class="p">]</span><span class="c1">#b1</span>
+    <span class="nb">sleep</span> <span class="mi">1</span>
+    <span class="n">play_pattern_timed</span> <span class="p">[</span><span class="mi">57</span><span class="p">],[</span><span class="mf">0.5</span><span class="p">]</span>
+    <span class="n">play_pattern_timed</span> <span class="p">[</span><span class="mi">59</span><span class="p">],[</span><span class="mf">1.5</span><span class="p">]</span> <span class="c1">#b2</span>
+    <span class="n">play_pattern_timed</span> <span class="p">[</span><span class="mi">60</span><span class="p">],[</span><span class="mf">1.5</span><span class="p">]</span> <span class="c1">#b3</span>
+    <span class="n">play_pattern_timed</span> <span class="p">[</span><span class="mi">59</span><span class="p">],[</span><span class="mf">1.5</span><span class="p">]</span> <span class="c1">#b4</span>
+    <span class="n">play_pattern_timed</span> <span class="p">[</span><span class="mi">57</span><span class="p">],[</span><span class="mf">1.5</span><span class="p">]</span> <span class="c1">#b5</span>
+    <span class="n">play_pattern_timed</span> <span class="p">[</span><span class="mi">55</span><span class="p">],[</span><span class="mf">1.5</span><span class="p">]</span> <span class="c1">#b6</span>
+    <span class="n">play_pattern_timed</span> <span class="p">[</span><span class="mi">62</span><span class="p">,</span><span class="mi">59</span><span class="p">,</span><span class="mi">55</span><span class="p">],[</span><span class="mf">0.5</span><span class="p">]</span> <span class="c1">#b7</span>
+    <span class="n">play_pattern_timed</span> <span class="p">[</span><span class="mi">62</span><span class="p">],[</span><span class="mf">0.5</span><span class="p">]</span> <span class="c1">#b8</span>
+    <span class="n">play_pattern_timed</span> <span class="p">[</span><span class="mi">50</span><span class="p">,</span><span class="mi">60</span><span class="p">,</span><span class="mi">59</span><span class="p">,</span><span class="mi">57</span><span class="p">],[</span><span class="mf">0.25</span><span class="p">]</span>
+  <span class="k">end</span>
+
+  <span class="c1">## Play concurrently the first 8 bars of the right hand part</span>
+  <span class="n">play_pattern_timed</span> <span class="p">[</span><span class="mi">74</span><span class="p">],[</span><span class="mf">0.5</span><span class="p">]</span><span class="c1">#b1</span>
+  <span class="n">play_pattern_timed</span> <span class="p">[</span><span class="mi">67</span><span class="p">,</span><span class="mi">69</span><span class="p">,</span><span class="mi">71</span><span class="p">,</span><span class="mi">72</span><span class="p">],[</span><span class="mf">0.25</span><span class="p">]</span>
+  <span class="n">play_pattern_timed</span> <span class="p">[</span><span class="mi">74</span><span class="p">,</span><span class="mi">67</span><span class="p">,</span><span class="mi">67</span><span class="p">],[</span><span class="mf">0.5</span><span class="p">]</span><span class="c1">#b2</span>
+  <span class="n">play_pattern_timed</span> <span class="p">[</span><span class="mi">76</span><span class="p">],[</span><span class="mf">0.5</span><span class="p">]</span><span class="c1">#b3</span>
+  <span class="n">play_pattern_timed</span> <span class="p">[</span><span class="mi">72</span><span class="p">,</span><span class="mi">74</span><span class="p">,</span><span class="mi">76</span><span class="p">,</span><span class="mi">78</span><span class="p">],[</span><span class="mf">0.25</span><span class="p">]</span>
+  <span class="n">play_pattern_timed</span> <span class="p">[</span><span class="mi">79</span><span class="p">,</span><span class="mi">67</span><span class="p">,</span><span class="mi">67</span><span class="p">],[</span><span class="mf">0.5</span><span class="p">]</span><span class="c1">#b4</span>
+  <span class="n">play_pattern_timed</span> <span class="p">[</span><span class="mi">72</span><span class="p">],[</span><span class="mf">0.5</span><span class="p">]</span> <span class="c1">#b5</span>
+  <span class="n">play_pattern_timed</span> <span class="p">[</span><span class="mi">74</span><span class="p">,</span><span class="mi">72</span><span class="p">,</span><span class="mi">71</span><span class="p">,</span><span class="mi">69</span><span class="p">],[</span><span class="mf">0.25</span><span class="p">]</span>
+  <span class="n">play_pattern_timed</span> <span class="p">[</span><span class="mi">71</span><span class="p">],[</span><span class="mf">0.5</span><span class="p">]</span> <span class="c1">#b6</span>
+  <span class="n">play_pattern_timed</span> <span class="p">[</span><span class="mi">72</span><span class="p">,</span><span class="mi">71</span><span class="p">,</span><span class="mi">69</span><span class="p">,</span><span class="mi">67</span><span class="p">],[</span><span class="mf">0.25</span><span class="p">]</span>
+  <span class="n">play_pattern_timed</span> <span class="p">[</span><span class="mi">66</span><span class="p">],[</span><span class="mf">0.5</span><span class="p">]</span> <span class="c1">#b7</span>
+  <span class="n">play_pattern_timed</span> <span class="p">[</span><span class="mi">67</span><span class="p">,</span><span class="mi">69</span><span class="p">,</span><span class="mi">71</span><span class="p">,</span><span class="mi">67</span><span class="p">],[</span><span class="mf">0.25</span><span class="p">]</span>
+  <span class="n">play_pattern_timed</span> <span class="p">[</span><span class="mi">71</span><span class="p">,</span><span class="mi">69</span><span class="p">],[</span><span class="mf">0.5</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span> <span class="c1">#b8</span>
+
+  <span class="c1">## Start a new thread for bars 9-16 of the left hand part</span>
+  <span class="n">in_thread</span> <span class="k">do</span>
+    <span class="n">play_chord</span> <span class="p">[</span><span class="mi">55</span><span class="p">,</span><span class="mi">59</span><span class="p">]</span><span class="c1">#b9=b1</span>
+    <span class="nb">sleep</span> <span class="mi">1</span>
+    <span class="n">play</span> <span class="mi">57</span>
+    <span class="nb">sleep</span> <span class="mf">0.5</span>
+    <span class="n">play_pattern_timed</span> <span class="p">[</span><span class="mi">55</span><span class="p">,</span><span class="mi">59</span><span class="p">,</span><span class="mi">55</span><span class="p">],[</span><span class="mf">0.5</span><span class="p">]</span> <span class="c1">#b10</span>
+    <span class="n">play_pattern_timed</span> <span class="p">[</span><span class="mi">60</span><span class="p">],[</span><span class="mf">1.5</span><span class="p">]</span> <span class="c1">#b11=b3</span>
+    <span class="n">play_pattern_timed</span> <span class="p">[</span><span class="mi">59</span><span class="p">,</span><span class="mi">60</span><span class="p">,</span><span class="mi">59</span><span class="p">,</span><span class="mi">57</span><span class="p">,</span><span class="mi">5</span><span class="p">],[</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">0.25</span><span class="p">,</span><span class="mf">0.25</span><span class="p">,</span><span class="mf">0.25</span><span class="p">,</span><span class="mf">0.25</span><span class="p">]</span> <span class="c1">#b12=b4]</span>
+    <span class="n">play_pattern_timed</span> <span class="p">[</span><span class="mi">57</span><span class="p">,</span><span class="mi">54</span><span class="p">],[</span><span class="mi">1</span><span class="p">,</span><span class="mf">0.5</span><span class="p">]</span> <span class="c1">#b13</span>
+    <span class="n">play_pattern_timed</span> <span class="p">[</span><span class="mi">55</span><span class="p">,</span><span class="mi">59</span><span class="p">],[</span><span class="mi">1</span><span class="p">,</span><span class="mf">0.5</span><span class="p">]</span> <span class="c1">#b14</span>
+    <span class="n">play_pattern_timed</span> <span class="p">[</span><span class="mi">60</span><span class="p">,</span><span class="mi">62</span><span class="p">,</span><span class="mi">50</span><span class="p">],[</span><span class="mf">0.5</span><span class="p">]</span> <span class="c1">#b15</span>
+    <span class="n">play_pattern_timed</span> <span class="p">[</span><span class="mi">55</span><span class="p">,</span><span class="mi">43</span><span class="p">],[</span><span class="mi">1</span><span class="p">,</span><span class="mf">0.5</span><span class="p">]</span> <span class="c1">#b16</span>
+  <span class="k">end</span>
+
+  <span class="c1">## Play concurrently bars 9-16 of the right hand part the first six</span>
+  <span class="c1">## bars repeat bars 1-6</span>
+  <span class="n">play_pattern_timed</span> <span class="p">[</span><span class="mi">74</span><span class="p">],[</span><span class="mf">0.5</span><span class="p">]</span><span class="c1">#b9 = b1</span>
+  <span class="n">play_pattern_timed</span> <span class="p">[</span><span class="mi">67</span><span class="p">,</span><span class="mi">69</span><span class="p">,</span><span class="mi">71</span><span class="p">,</span><span class="mi">72</span><span class="p">],[</span><span class="mf">0.25</span><span class="p">]</span>
+  <span class="n">play_pattern_timed</span> <span class="p">[</span><span class="mi">74</span><span class="p">,</span><span class="mi">67</span><span class="p">,</span><span class="mi">67</span><span class="p">],[</span><span class="mf">0.5</span><span class="p">]</span><span class="c1">#b10=b2</span>
+  <span class="n">play_pattern_timed</span> <span class="p">[</span><span class="mi">76</span><span class="p">],[</span><span class="mf">0.5</span><span class="p">]</span><span class="c1">#b11=b3</span>
+  <span class="n">play_pattern_timed</span> <span class="p">[</span><span class="mi">72</span><span class="p">,</span><span class="mi">74</span><span class="p">,</span><span class="mi">76</span><span class="p">,</span><span class="mi">78</span><span class="p">],[</span><span class="mf">0.25</span><span class="p">]</span>
+  <span class="n">play_pattern_timed</span> <span class="p">[</span><span class="mi">79</span><span class="p">,</span><span class="mi">67</span><span class="p">,</span><span class="mi">67</span><span class="p">],[</span><span class="mf">0.5</span><span class="p">]</span><span class="c1">#b12=b4</span>
+  <span class="n">play_pattern_timed</span> <span class="p">[</span><span class="mi">72</span><span class="p">],[</span><span class="mf">0.5</span><span class="p">]</span> <span class="c1">#b13=b5</span>
+  <span class="n">play_pattern_timed</span> <span class="p">[</span><span class="mi">74</span><span class="p">,</span><span class="mi">72</span><span class="p">,</span><span class="mi">71</span><span class="p">,</span><span class="mi">69</span><span class="p">],[</span><span class="mf">0.25</span><span class="p">]</span>
+  <span class="n">play_pattern_timed</span> <span class="p">[</span><span class="mi">71</span><span class="p">],[</span><span class="mf">0.5</span><span class="p">]</span> <span class="c1">#b14=b6</span>
+  <span class="n">play_pattern_timed</span> <span class="p">[</span><span class="mi">72</span><span class="p">,</span><span class="mi">71</span><span class="p">,</span><span class="mi">69</span><span class="p">,</span><span class="mi">67</span><span class="p">],[</span><span class="mf">0.25</span><span class="p">]</span>
+  <span class="n">play_pattern_timed</span> <span class="p">[</span><span class="mi">69</span><span class="p">],[</span><span class="mf">0.5</span><span class="p">]</span> <span class="c1">#b15</span>
+  <span class="n">play_pattern_timed</span> <span class="p">[</span><span class="mi">71</span><span class="p">,</span><span class="mi">69</span><span class="p">,</span><span class="mi">67</span><span class="p">,</span><span class="mi">66</span><span class="p">],[</span><span class="mf">0.25</span><span class="p">]</span>
+  <span class="n">play_pattern_timed</span> <span class="p">[</span><span class="mi">67</span><span class="p">],[</span><span class="mf">1.5</span><span class="p">]</span> <span class="c1">#b16</span>
+<span class="k">end</span>
+
+
+<span class="c1">## ==========second section starts here======</span>
+<span class="c1">## The second section is also repeated</span>
+<span class="mi">2</span><span class="p">.</span><span class="nf">times</span> <span class="k">do</span>
+
+  <span class="c1">## Start a thread for bars 17-24 of the left hand part</span>
+  <span class="n">in_thread</span> <span class="k">do</span>
+    <span class="n">play_pattern_timed</span> <span class="p">[</span><span class="mi">55</span><span class="p">],[</span><span class="mf">1.5</span><span class="p">]</span> <span class="c1">#b17</span>
+    <span class="n">play_pattern_timed</span> <span class="p">[</span><span class="mi">54</span><span class="p">],[</span><span class="mf">1.5</span><span class="p">]</span> <span class="c1">#b18</span>
+    <span class="n">play_pattern_timed</span> <span class="p">[</span><span class="mi">52</span><span class="p">,</span><span class="mi">54</span><span class="p">,</span><span class="mi">52</span><span class="p">],[</span><span class="mf">0.5</span><span class="p">]</span> <span class="c1">#b19</span>
+    <span class="n">play_pattern_timed</span> <span class="p">[</span><span class="mi">57</span><span class="p">,</span><span class="mi">45</span><span class="p">],[</span><span class="mi">1</span><span class="p">,</span><span class="mf">0.5</span><span class="p">]</span> <span class="c1">#b20</span>
+    <span class="n">play_pattern_timed</span> <span class="p">[</span><span class="mi">57</span><span class="p">],[</span><span class="mf">1.5</span><span class="p">]</span> <span class="c1">#b21</span>
+    <span class="n">play_pattern_timed</span> <span class="p">[</span><span class="mi">59</span><span class="p">,</span><span class="mi">62</span><span class="p">,</span><span class="mi">61</span><span class="p">],[</span><span class="mf">0.5</span><span class="p">]</span> <span class="c1">#b22</span>
+    <span class="n">play_pattern_timed</span> <span class="p">[</span><span class="mi">62</span><span class="p">,</span><span class="mi">54</span><span class="p">,</span><span class="mi">57</span><span class="p">],[</span><span class="mf">0.5</span><span class="p">]</span> <span class="c1">#b23</span>
+    <span class="n">play_pattern_timed</span> <span class="p">[</span><span class="mi">62</span><span class="p">,</span><span class="mi">50</span><span class="p">,</span><span class="mi">60</span><span class="p">],[</span><span class="mf">0.5</span><span class="p">]</span> <span class="c1">#b24</span>
+  <span class="k">end</span>
+
+  <span class="c1">## Play bars 17 to 24 of the right hand concurrently with the left</span>
+  <span class="c1">## hand thread</span>
+  <span class="n">play_pattern_timed</span> <span class="p">[</span><span class="mi">83</span><span class="p">],[</span><span class="mf">0.5</span><span class="p">]</span> <span class="c1">#b17</span>
+  <span class="n">play_pattern_timed</span> <span class="p">[</span><span class="mi">79</span><span class="p">,</span><span class="mi">81</span><span class="p">,</span><span class="mi">83</span><span class="p">,</span><span class="mi">79</span><span class="p">],[</span><span class="mf">0.25</span><span class="p">]</span>
+  <span class="n">play_pattern_timed</span> <span class="p">[</span><span class="mi">81</span><span class="p">],[</span><span class="mf">0.5</span><span class="p">]</span> <span class="c1">#b18</span>
+  <span class="n">play_pattern_timed</span> <span class="p">[</span><span class="mi">74</span><span class="p">,</span><span class="mi">76</span><span class="p">,</span><span class="mi">78</span><span class="p">,</span><span class="mi">74</span><span class="p">],[</span><span class="mf">0.25</span><span class="p">]</span>
+  <span class="n">play_pattern_timed</span> <span class="p">[</span><span class="mi">79</span><span class="p">],[</span><span class="mf">0.5</span><span class="p">]</span> <span class="c1">#b19</span>
+  <span class="n">play_pattern_timed</span> <span class="p">[</span><span class="mi">76</span><span class="p">,</span><span class="mi">78</span><span class="p">,</span><span class="mi">79</span><span class="p">,</span><span class="mi">74</span><span class="p">],[</span><span class="mf">0.25</span><span class="p">]</span>
+  <span class="n">play_pattern_timed</span> <span class="p">[</span><span class="mi">73</span><span class="p">,</span><span class="mi">71</span><span class="p">,</span><span class="mi">73</span><span class="p">,</span><span class="mi">69</span><span class="p">],[</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">0.25</span><span class="p">,</span><span class="mf">0.25</span><span class="p">,</span><span class="mf">0.5</span><span class="p">]</span> <span class="c1">#b20</span>
+  <span class="n">play_pattern_timed</span> <span class="p">[</span><span class="mi">69</span><span class="p">,</span><span class="mi">71</span><span class="p">,</span><span class="mi">73</span><span class="p">,</span><span class="mi">74</span><span class="p">,</span><span class="mi">76</span><span class="p">,</span><span class="mi">78</span><span class="p">],[</span><span class="mf">0.25</span><span class="p">]</span> <span class="c1">#b21</span>
+  <span class="n">play_pattern_timed</span> <span class="p">[</span><span class="mi">79</span><span class="p">,</span><span class="mi">78</span><span class="p">,</span><span class="mi">76</span><span class="p">],[</span><span class="mf">0.5</span><span class="p">]</span> <span class="c1">#b22</span>
+  <span class="n">play_pattern_timed</span> <span class="p">[</span><span class="mi">78</span><span class="p">,</span><span class="mi">69</span><span class="p">,</span><span class="mi">73</span><span class="p">],[</span><span class="mf">0.5</span><span class="p">]</span> <span class="c1">#b23</span>
+  <span class="n">play</span> <span class="mi">74</span> <span class="c1">#b24</span>
+  <span class="nb">sleep</span> <span class="mf">1.5</span>
+
+  <span class="c1">## Start a new thread for bars 25-32 of the left hand part</span>
+  <span class="n">in_thread</span> <span class="k">do</span>
+    <span class="n">play_pattern_timed</span> <span class="p">[</span><span class="mi">59</span><span class="p">,</span><span class="mi">62</span><span class="p">,</span><span class="mi">59</span><span class="p">],[</span><span class="mf">0.5</span><span class="p">]</span> <span class="c1">#b25</span>
+    <span class="n">play_pattern_timed</span> <span class="p">[</span><span class="mi">60</span><span class="p">,</span><span class="mi">64</span><span class="p">,</span><span class="mi">60</span><span class="p">],[</span><span class="mf">0.5</span><span class="p">]</span> <span class="c1">#b26</span>
+    <span class="n">play_pattern_timed</span> <span class="p">[</span><span class="mi">59</span><span class="p">,</span><span class="mi">57</span><span class="p">,</span><span class="mi">55</span><span class="p">],[</span><span class="mf">0.5</span><span class="p">]</span> <span class="c1">#b27</span>
+    <span class="n">play</span> <span class="mi">62</span> <span class="c1">#b28</span>
+    <span class="nb">sleep</span> <span class="mf">1.5</span> <span class="c1">#includes a rest</span>
+    <span class="n">play_pattern_timed</span> <span class="p">[</span><span class="mi">50</span><span class="p">,</span><span class="mi">54</span><span class="p">],[</span><span class="mi">1</span><span class="p">,</span><span class="mf">0.5</span><span class="p">]</span> <span class="c1">#b29</span>
+    <span class="n">play_pattern_timed</span> <span class="p">[</span><span class="mi">52</span><span class="p">,</span><span class="mi">55</span><span class="p">,</span><span class="mi">54</span><span class="p">],[</span><span class="mf">0.5</span><span class="p">]</span> <span class="c1">#b30</span>
+    <span class="n">play_pattern_timed</span> <span class="p">[</span><span class="mi">55</span><span class="p">,</span><span class="mi">47</span><span class="p">,</span><span class="mi">50</span><span class="p">],[</span><span class="mf">0.5</span><span class="p">]</span> <span class="c1">#b31</span>
+    <span class="n">play_pattern_timed</span> <span class="p">[</span><span class="mi">55</span><span class="p">,</span><span class="mi">50</span><span class="p">,</span><span class="mi">43</span><span class="p">],[</span><span class="mf">0.5</span><span class="p">]</span> <span class="c1">#b32</span>
+  <span class="k">end</span>
+
+  <span class="c1">## Play bars 25-32 of the right hand part concurrently with the left</span>
+  <span class="c1">## hand thread</span>
+  <span class="n">play_pattern_timed</span> <span class="p">[</span><span class="mi">74</span><span class="p">,</span><span class="mi">67</span><span class="p">,</span><span class="mi">66</span><span class="p">,</span><span class="mi">67</span><span class="p">],[</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">0.25</span><span class="p">,</span><span class="mf">0.25</span><span class="p">,</span><span class="mf">0.5</span><span class="p">]</span> <span class="c1">#b25</span>
+  <span class="n">play_pattern_timed</span> <span class="p">[</span><span class="mi">76</span><span class="p">,</span><span class="mi">67</span><span class="p">,</span><span class="mi">66</span><span class="p">,</span><span class="mi">67</span><span class="p">],[</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">0.25</span><span class="p">,</span><span class="mf">0.25</span><span class="p">,</span><span class="mf">0.5</span><span class="p">]</span> <span class="c1">#b26</span>
+  <span class="n">play_pattern_timed</span> <span class="p">[</span><span class="mi">74</span><span class="p">,</span><span class="mi">72</span><span class="p">,</span><span class="mi">71</span><span class="p">],[</span><span class="mf">0.5</span><span class="p">]</span> <span class="c1">#b27</span>
+  <span class="n">play_pattern_timed</span> <span class="p">[</span><span class="mi">69</span><span class="p">,</span><span class="mi">67</span><span class="p">,</span><span class="mi">66</span><span class="p">,</span><span class="mi">67</span><span class="p">,</span><span class="mi">69</span><span class="p">],[</span><span class="mf">0.25</span><span class="p">,</span><span class="mf">0.25</span><span class="p">,</span><span class="mf">0.25</span><span class="p">,</span><span class="mf">0.25</span><span class="p">,</span><span class="mf">0.5</span><span class="p">]</span> <span class="c1">#b28</span>
+  <span class="n">play_pattern_timed</span> <span class="p">[</span><span class="mi">62</span><span class="p">,</span><span class="mi">64</span><span class="p">,</span><span class="mi">66</span><span class="p">,</span><span class="mi">67</span><span class="p">,</span><span class="mi">69</span><span class="p">,</span><span class="mi">71</span><span class="p">],[</span><span class="mf">0.25</span><span class="p">]</span> <span class="c1">#b29</span>
+  <span class="n">play_pattern_timed</span> <span class="p">[</span><span class="mi">72</span><span class="p">,</span><span class="mi">71</span><span class="p">,</span><span class="mi">69</span><span class="p">],[</span><span class="mf">0.5</span><span class="p">]</span> <span class="c1">#b30</span>
+  <span class="n">play_pattern_timed</span> <span class="p">[</span><span class="mi">71</span><span class="p">,</span><span class="mi">74</span><span class="p">,</span><span class="mi">67</span><span class="p">,</span><span class="mi">66</span><span class="p">],[</span><span class="mf">0.25</span><span class="p">,</span><span class="mf">0.25</span><span class="p">,</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">0.5</span><span class="p">]</span> <span class="c1">#b31</span>
+  <span class="n">play_chord</span> <span class="p">[</span><span class="mi">67</span><span class="p">,</span><span class="mi">59</span><span class="p">]</span> <span class="c1">#b32</span>
+  <span class="nb">sleep</span> <span class="mf">1.5</span>
+<span class="k">end</span></code></pre>
+</div>
+</div>
+<div class="imageblock spectrogram">
+<div class="content">
+<img src="spectrogram.png" alt="spectrogram">
+</div>
+</div>
+</div>
+</div>
+        </article>
+      </main>
+      <footer>
+  <p>Copyright © 2026 Mica Sound / FUJISE Takumi (tkmfujise)</p>
+</footer>
+
+    </div>
+	</body>
+</html>

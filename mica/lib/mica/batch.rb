@@ -5,8 +5,10 @@ module Mica
     # Mica::Batch['cc0/**']
     def self.[](keyword)
       Dir[Mica.config.contents_dir.join("#{keyword}/*.rb")].map{|path|
-        Pathname(path).relative_path_from(Mica.config.contents_dir).to_s
-      }.then{|files| new(files) }
+        path = Pathname(path)
+        next if path.parent.basename.to_s.start_with?('_')
+        path.relative_path_from(Mica.config.contents_dir).to_s
+      }.compact.then{|files| new(files) }
     end
 
     def self.all

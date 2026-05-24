@@ -1,0 +1,210 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Sonic Pi Examples - tkmfujise</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+		<meta name="author" content="tkmfujise">
+		<meta name="keywords" content="Sonic Pi, Ruby, sound, music, effect, cc0">
+		<meta name="description" content="Sonic Pi Examples">
+		<link rel="stylesheet" href="../../../../assets/css/almond.min.css">
+		<link rel="stylesheet" href="../../../../assets/css/style.css">
+		<link rel="stylesheet" href="../../../../assets/css/syntax.gessetti.css">
+    <script src="../../../../assets/js/vendor/fuse.js@7.1.0"></script>
+    <script src="../../../../assets/js/filter.js"></script>
+    <script src="../../../../assets/js/clipboard.js"></script>
+	</head>
+  <body>
+    <nav class="main-menu closed">
+  <button onclick="document.querySelector('.main-menu').classList.toggle('closed');">
+    <span>Expand/Collapse menu</span>
+  </button>
+  <h2>Gems among stones.</h2>
+  <ul>
+    <li>
+      <a href="../../../../">💎 Home 🪨</a>
+    </li>
+
+    <li>
+      <div>Categories</div>
+      <ul>
+        <li><a href="../../../../cc0/sonic_pi/samples">Samples</a></li>
+        <li><a href="../../../../cc0/sonic_pi/synths">Synths</a></li>
+        <li><a href="../..">Official Examples</a></li>
+        <li><a href="../../../../cc-by/tkmfujise">Mica Sound</a></li>
+      </ul>
+    </li>
+
+    <li>
+      <div>Links</div>
+      <ul>
+        <li><a href="../../../../about">About</a></li>
+        <li><a rel="external" target="_blank" href="https://github.com/tkmfujise/mica-sound/blob/main/LICENSE.md">License</a></li>
+        <li><a rel="external" target="_blank" href="https://github.com/tkmfujise/mica-sound">GitHub</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+    <div>
+      <header>
+  <div>
+    <a href="../../../../">
+      <h1>Mica Sound</h1>
+    </a>
+    <p>Sonic Pi Examples</p>
+  </div>
+</header>
+
+
+      <main>
+        <article>
+          
+      		<div class="sect1">
+<h2 id="_blockgame">Blockgame</h2>
+<div class="sectionbody">
+<div class="imageblock license">
+<div class="content">
+<a class="image" href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener"><img src="../../../../assets/images/cc-by-sa.svg" alt="cc by sa"></a>
+</div>
+</div>
+<div class="audioblock output">
+<div class="content">
+<audio src="output.ogg" controls>
+Your browser does not support the audio tag.
+</audio>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">/cc-by-sa/sonic_pi/algomancer/_blockgame</div>
+<div class="content">
+<pre class="rouge highlight"><code data-lang="ruby"><span class="c1"># Coded by DJ_Dave</span>
+
+<span class="n">use_bpm</span> <span class="mi">130</span>
+
+<span class="n">live_loop</span> <span class="ss">:met1</span> <span class="k">do</span>
+  <span class="nb">sleep</span> <span class="mi">1</span>
+<span class="k">end</span>
+
+<span class="n">cmaster1</span> <span class="o">=</span> <span class="mi">130</span>
+<span class="n">cmaster2</span> <span class="o">=</span> <span class="mi">130</span>
+
+<span class="n">define</span> <span class="ss">:pattern</span> <span class="k">do</span> <span class="o">|</span><span class="n">pattern</span><span class="o">|</span>
+  <span class="k">return</span> <span class="n">pattern</span><span class="p">.</span><span class="nf">ring</span><span class="p">.</span><span class="nf">tick</span> <span class="o">==</span> <span class="s2">"x"</span>
+<span class="k">end</span>
+
+<span class="n">live_loop</span> <span class="ss">:kick</span><span class="p">,</span> <span class="ss">sync: :met1</span> <span class="k">do</span>
+  <span class="c1">##| stop</span>
+  <span class="n">a</span> <span class="o">=</span> <span class="mf">1.5</span>
+  <span class="n">sample</span> <span class="ss">:bd_tek</span><span class="p">,</span> <span class="ss">amp: </span><span class="n">a</span><span class="p">,</span> <span class="ss">cutoff: </span><span class="n">cmaster1</span> <span class="k">if</span> <span class="n">pattern</span> <span class="s2">"x--x--x---x--x--"</span>
+  <span class="nb">sleep</span> <span class="mf">0.25</span>
+<span class="k">end</span>
+
+<span class="n">with_fx</span> <span class="ss">:echo</span><span class="p">,</span> <span class="ss">mix: </span><span class="mf">0.2</span> <span class="k">do</span>
+  <span class="n">with_fx</span> <span class="ss">:reverb</span><span class="p">,</span> <span class="ss">mix: </span><span class="mf">0.2</span><span class="p">,</span> <span class="ss">room: </span><span class="mf">0.5</span> <span class="k">do</span>
+    <span class="n">live_loop</span> <span class="ss">:clap</span><span class="p">,</span> <span class="ss">sync: :met1</span> <span class="k">do</span>
+      <span class="c1">##| stop</span>
+      <span class="n">a</span> <span class="o">=</span> <span class="mf">0.75</span>
+      <span class="nb">sleep</span> <span class="mi">1</span>
+      <span class="n">sample</span> <span class="ss">:drum_snare_hard</span><span class="p">,</span> <span class="ss">rate: </span><span class="mf">2.5</span><span class="p">,</span> <span class="ss">cutoff: </span><span class="n">cmaster1</span><span class="p">,</span> <span class="ss">amp: </span><span class="n">a</span>
+      <span class="n">sample</span> <span class="ss">:drum_snare_hard</span><span class="p">,</span> <span class="ss">rate: </span><span class="mf">2.2</span><span class="p">,</span> <span class="ss">start: </span><span class="mf">0.02</span><span class="p">,</span> <span class="ss">cutoff: </span><span class="n">cmaster1</span><span class="p">,</span> <span class="ss">pan: </span><span class="mf">0.2</span><span class="p">,</span> <span class="ss">amp: </span><span class="n">a</span>
+      <span class="n">sample</span> <span class="ss">:drum_snare_hard</span><span class="p">,</span> <span class="ss">rate: </span><span class="mi">2</span><span class="p">,</span> <span class="ss">start: </span><span class="mf">0.04</span><span class="p">,</span> <span class="ss">cutoff: </span><span class="n">cmaster1</span><span class="p">,</span> <span class="ss">pan: </span><span class="o">-</span><span class="mf">0.2</span><span class="p">,</span> <span class="ss">amp: </span><span class="n">a</span>
+      <span class="nb">sleep</span> <span class="mi">1</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="n">with_fx</span> <span class="ss">:reverb</span><span class="p">,</span> <span class="ss">mix: </span><span class="mf">0.2</span> <span class="k">do</span>
+  <span class="n">with_fx</span> <span class="ss">:panslicer</span><span class="p">,</span> <span class="ss">mix: </span><span class="mf">0.2</span> <span class="k">do</span>
+    <span class="n">live_loop</span> <span class="ss">:hhc1</span><span class="p">,</span> <span class="ss">sync: :met1</span> <span class="k">do</span>
+      <span class="c1">##| stop</span>
+      <span class="n">a</span> <span class="o">=</span> <span class="mf">0.75</span>
+      <span class="nb">p</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">].</span><span class="nf">choose</span>
+      <span class="n">sample</span> <span class="ss">:drum_cymbal_closed</span><span class="p">,</span> <span class="ss">amp: </span><span class="n">a</span><span class="p">,</span> <span class="ss">rate: </span><span class="mf">2.5</span><span class="p">,</span> <span class="ss">finish: </span><span class="mf">0.5</span><span class="p">,</span> <span class="ss">pan: </span><span class="nb">p</span><span class="p">,</span> <span class="ss">cutoff: </span><span class="n">cmaster2</span> <span class="k">if</span> <span class="n">pattern</span> <span class="s2">"x-x-x-x-x-x-x-x-xxx-x-x-x-x-x-x-"</span>
+      <span class="nb">sleep</span> <span class="mf">0.125</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="n">live_loop</span> <span class="ss">:hhc2</span><span class="p">,</span> <span class="ss">sync: :met1</span> <span class="k">do</span>
+  <span class="c1">##| stop</span>
+  <span class="n">a</span> <span class="o">=</span> <span class="mf">1.25</span>
+  <span class="nb">sleep</span> <span class="mf">0.5</span>
+  <span class="n">sample</span> <span class="ss">:drum_cymbal_closed</span><span class="p">,</span> <span class="ss">cutoff: </span><span class="n">cmaster2</span><span class="p">,</span> <span class="ss">rate: </span><span class="mf">1.2</span><span class="p">,</span> <span class="ss">start: </span><span class="mf">0.01</span><span class="p">,</span> <span class="ss">finish: </span><span class="mf">0.5</span><span class="p">,</span> <span class="ss">amp: </span><span class="n">a</span>
+  <span class="nb">sleep</span> <span class="mf">0.5</span>
+<span class="k">end</span>
+
+<span class="n">with_fx</span> <span class="ss">:reverb</span><span class="p">,</span> <span class="ss">mix: </span><span class="mf">0.7</span> <span class="k">do</span>
+  <span class="n">live_loop</span> <span class="ss">:crash</span><span class="p">,</span> <span class="ss">sync: :met1</span> <span class="k">do</span>
+    <span class="c1">##| stop</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="mf">0.1</span>
+    <span class="n">c</span> <span class="o">=</span> <span class="n">cmaster2</span><span class="o">-</span><span class="mi">10</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="mf">1.5</span>
+    <span class="n">f</span> <span class="o">=</span> <span class="mf">0.25</span>
+    <span class="n">crash</span> <span class="o">=</span> <span class="ss">:drum_splash_soft</span>
+    <span class="nb">sleep</span> <span class="mf">14.5</span>
+    <span class="n">sample</span> <span class="n">crash</span><span class="p">,</span> <span class="ss">amp: </span><span class="n">a</span><span class="p">,</span> <span class="ss">cutoff: </span><span class="n">c</span><span class="p">,</span> <span class="ss">rate: </span><span class="n">r</span><span class="p">,</span> <span class="ss">finish: </span><span class="n">f</span>
+    <span class="n">sample</span> <span class="n">crash</span><span class="p">,</span> <span class="ss">amp: </span><span class="n">a</span><span class="p">,</span> <span class="ss">cutoff: </span><span class="n">c</span><span class="p">,</span> <span class="ss">rate: </span><span class="n">r</span><span class="o">-</span><span class="mf">0.2</span><span class="p">,</span> <span class="ss">finish: </span><span class="n">f</span>
+    <span class="nb">sleep</span> <span class="mi">1</span>
+    <span class="n">sample</span> <span class="n">crash</span><span class="p">,</span> <span class="ss">amp: </span><span class="n">a</span><span class="p">,</span> <span class="ss">cutoff: </span><span class="n">c</span><span class="p">,</span> <span class="ss">rate: </span><span class="n">r</span><span class="p">,</span> <span class="ss">finish: </span><span class="n">f</span>
+    <span class="n">sample</span> <span class="n">crash</span><span class="p">,</span> <span class="ss">amp: </span><span class="n">a</span><span class="p">,</span> <span class="ss">cutoff: </span><span class="n">c</span><span class="p">,</span> <span class="ss">rate: </span><span class="n">r</span><span class="o">-</span><span class="mf">0.2</span><span class="p">,</span> <span class="ss">finish: </span><span class="n">f</span>
+    <span class="nb">sleep</span> <span class="mf">0.5</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="n">with_fx</span> <span class="ss">:reverb</span><span class="p">,</span> <span class="ss">mix: </span><span class="mf">0.7</span> <span class="k">do</span>
+  <span class="n">live_loop</span> <span class="ss">:arp</span><span class="p">,</span> <span class="ss">sync: :met1</span> <span class="k">do</span>
+    <span class="n">with_fx</span> <span class="ss">:echo</span><span class="p">,</span> <span class="ss">phase: </span><span class="mi">1</span><span class="p">,</span> <span class="ss">mix: </span><span class="p">(</span><span class="n">line</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="ss">steps: </span><span class="mi">128</span><span class="p">).</span><span class="nf">mirror</span><span class="p">.</span><span class="nf">tick</span> <span class="k">do</span>
+      <span class="c1">##| stop</span>
+      <span class="n">a</span> <span class="o">=</span> <span class="mf">0.6</span>
+      <span class="n">r</span> <span class="o">=</span> <span class="mf">0.25</span>
+      <span class="n">c</span> <span class="o">=</span> <span class="mi">130</span>
+      <span class="nb">p</span> <span class="o">=</span> <span class="p">(</span><span class="n">line</span> <span class="o">-</span><span class="mf">0.7</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">,</span> <span class="ss">steps: </span><span class="mi">64</span><span class="p">).</span><span class="nf">mirror</span><span class="p">.</span><span class="nf">tick</span>
+      <span class="n">at</span> <span class="o">=</span> <span class="mf">0.01</span>
+      <span class="n">use_synth</span> <span class="ss">:beep</span>
+      <span class="n">tick</span>
+      <span class="n">notes</span> <span class="o">=</span> <span class="p">(</span><span class="n">scale</span> <span class="ss">:g4</span><span class="p">,</span> <span class="ss">:major_pentatonic</span><span class="p">).</span><span class="nf">shuffle</span>
+      <span class="n">play</span> <span class="n">notes</span><span class="p">.</span><span class="nf">look</span><span class="p">,</span> <span class="ss">amp: </span><span class="n">a</span><span class="p">,</span> <span class="ss">release: </span><span class="n">r</span><span class="p">,</span> <span class="ss">cutoff: </span><span class="n">c</span><span class="p">,</span> <span class="ss">pan: </span><span class="nb">p</span><span class="p">,</span> <span class="ss">attack: </span><span class="n">at</span>
+      <span class="nb">sleep</span> <span class="mf">0.75</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="n">with_fx</span> <span class="ss">:panslicer</span><span class="p">,</span> <span class="ss">mix: </span><span class="mf">0.4</span> <span class="k">do</span>
+  <span class="n">with_fx</span> <span class="ss">:reverb</span><span class="p">,</span> <span class="ss">mix: </span><span class="mf">0.75</span> <span class="k">do</span>
+    <span class="n">live_loop</span> <span class="ss">:synthbass</span><span class="p">,</span> <span class="ss">sync: :met1</span> <span class="k">do</span>
+      <span class="c1">##| stop</span>
+      <span class="n">s</span> <span class="o">=</span> <span class="mi">4</span>
+      <span class="n">r</span> <span class="o">=</span> <span class="mi">2</span>
+      <span class="n">c</span> <span class="o">=</span> <span class="mi">60</span>
+      <span class="n">a</span> <span class="o">=</span> <span class="mf">0.75</span>
+      <span class="n">at</span> <span class="o">=</span> <span class="mi">0</span>
+      <span class="n">use_synth</span> <span class="ss">:tech_saws</span>
+      <span class="n">play</span> <span class="ss">:g3</span><span class="p">,</span> <span class="ss">sustain: </span><span class="mi">6</span><span class="p">,</span> <span class="ss">cutoff: </span><span class="n">c</span><span class="p">,</span> <span class="ss">amp: </span><span class="n">a</span><span class="p">,</span> <span class="ss">attack: </span><span class="n">at</span>
+      <span class="nb">sleep</span> <span class="mi">6</span>
+      <span class="n">play</span> <span class="ss">:d3</span><span class="p">,</span> <span class="ss">sustain: </span><span class="mi">2</span><span class="p">,</span> <span class="ss">cutoff: </span><span class="n">c</span><span class="p">,</span> <span class="ss">amp: </span><span class="n">a</span><span class="p">,</span> <span class="ss">attack: </span><span class="n">at</span>
+      <span class="nb">sleep</span> <span class="mi">2</span>
+      <span class="n">play</span> <span class="ss">:e3</span><span class="p">,</span> <span class="ss">sustain: </span><span class="mi">8</span><span class="p">,</span> <span class="ss">cutoff: </span><span class="n">c</span><span class="p">,</span> <span class="ss">amp: </span><span class="n">a</span><span class="p">,</span> <span class="ss">attack: </span><span class="n">at</span>
+      <span class="nb">sleep</span> <span class="mi">8</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">end</span></code></pre>
+</div>
+</div>
+<div class="imageblock spectrogram">
+<div class="content">
+<img src="spectrogram.png" alt="spectrogram">
+</div>
+</div>
+</div>
+</div>
+        </article>
+      </main>
+      <footer>
+  <p>Copyright © 2026 Mica Sound / FUJISE Takumi (tkmfujise)</p>
+</footer>
+
+    </div>
+	</body>
+</html>

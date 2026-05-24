@@ -1,0 +1,350 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Sonic Pi Examples - tkmfujise</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+		<meta name="author" content="tkmfujise">
+		<meta name="keywords" content="Sonic Pi, Ruby, sound, music, effect, cc0">
+		<meta name="description" content="Sonic Pi Examples">
+		<link rel="stylesheet" href="../../../../assets/css/almond.min.css">
+		<link rel="stylesheet" href="../../../../assets/css/style.css">
+		<link rel="stylesheet" href="../../../../assets/css/syntax.gessetti.css">
+    <script src="../../../../assets/js/vendor/fuse.js@7.1.0"></script>
+    <script src="../../../../assets/js/filter.js"></script>
+    <script src="../../../../assets/js/clipboard.js"></script>
+	</head>
+  <body>
+    <nav class="main-menu closed">
+  <button onclick="document.querySelector('.main-menu').classList.toggle('closed');">
+    <span>Expand/Collapse menu</span>
+  </button>
+  <h2>Gems among stones.</h2>
+  <ul>
+    <li>
+      <a href="../../../../">💎 Home 🪨</a>
+    </li>
+
+    <li>
+      <div>Categories</div>
+      <ul>
+        <li><a href="../../../../cc0/sonic_pi/samples">Samples</a></li>
+        <li><a href="../../../../cc0/sonic_pi/synths">Synths</a></li>
+        <li><a href="../..">Official Examples</a></li>
+        <li><a href="../../../../cc-by/tkmfujise">Mica Sound</a></li>
+      </ul>
+    </li>
+
+    <li>
+      <div>Links</div>
+      <ul>
+        <li><a href="../../../../about">About</a></li>
+        <li><a rel="external" target="_blank" href="https://github.com/tkmfujise/mica-sound/blob/main/LICENSE.md">License</a></li>
+        <li><a rel="external" target="_blank" href="https://github.com/tkmfujise/mica-sound">GitHub</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+    <div>
+      <header>
+  <div>
+    <a href="../../../../">
+      <h1>Mica Sound</h1>
+    </a>
+    <p>Sonic Pi Examples</p>
+  </div>
+</header>
+
+
+      <main>
+        <article>
+          
+      		<div class="sect1">
+<h2 id="_sonic_dreams">Sonic Dreams</h2>
+<div class="sectionbody">
+<div class="imageblock license">
+<div class="content">
+<a class="image" href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener"><img src="../../../../assets/images/cc-by-sa.svg" alt="cc by sa"></a>
+</div>
+</div>
+<div class="audioblock output">
+<div class="content">
+<audio src="output.ogg" controls>
+Your browser does not support the audio tag.
+</audio>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">/cc-by-sa/sonic_pi/algomancer/_sonic_dreams</div>
+<div class="content">
+<pre class="rouge highlight"><code data-lang="ruby"><span class="c1"># rand-seed-ver 33</span>
+<span class="c1">#</span>
+<span class="c1"># Coded by Sam Aaron</span>
+<span class="c1">#</span>
+<span class="c1"># Video: https://vimeo.com/110416910</span>
+
+<span class="n">use_debug</span> <span class="kp">false</span>
+<span class="n">load_samples</span> <span class="p">[</span><span class="ss">:bd_haus</span><span class="p">,</span> <span class="ss">:elec_blip</span><span class="p">,</span> <span class="ss">:ambi_lunar_land</span><span class="p">]</span>
+
+<span class="n">define</span> <span class="ss">:ocean</span> <span class="k">do</span> <span class="o">|</span><span class="n">num</span><span class="p">,</span> <span class="n">amp_mul</span><span class="o">=</span><span class="mi">1</span><span class="o">|</span>
+  <span class="n">num</span><span class="p">.</span><span class="nf">times</span> <span class="k">do</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="n">synth</span> <span class="p">[</span><span class="ss">:bnoise</span><span class="p">,</span> <span class="ss">:cnoise</span><span class="p">,</span> <span class="ss">:gnoise</span><span class="p">].</span><span class="nf">choose</span><span class="p">,</span> <span class="ss">amp: </span><span class="n">rrand</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">)</span> <span class="o">*</span> <span class="n">amp_mul</span><span class="p">,</span> <span class="ss">attack: </span><span class="n">rrand</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="ss">sustain: </span><span class="n">rrand</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="ss">release: </span><span class="n">rrand</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span> <span class="o">+</span> <span class="mf">0.5</span><span class="p">,</span> <span class="ss">cutoff_slide: </span><span class="n">rrand</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="ss">cutoff: </span><span class="n">rrand</span><span class="p">(</span><span class="mi">60</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span> <span class="ss">pan: </span><span class="n">rrand</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="ss">pan_slide: </span><span class="mi">1</span>
+    <span class="n">control</span> <span class="n">s</span><span class="p">,</span> <span class="ss">pan: </span><span class="n">rrand</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="ss">cutoff: </span><span class="n">rrand</span><span class="p">(</span><span class="mi">60</span><span class="p">,</span> <span class="mi">110</span><span class="p">)</span>
+    <span class="nb">sleep</span> <span class="n">rrand</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="n">define</span> <span class="ss">:echoes</span> <span class="k">do</span> <span class="o">|</span><span class="n">num</span><span class="p">,</span> <span class="n">tonics</span><span class="p">,</span> <span class="n">co</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">res</span><span class="o">=</span><span class="mf">0.9</span><span class="p">,</span> <span class="n">amp</span><span class="o">=</span><span class="mi">1</span><span class="o">|</span>
+  <span class="n">num</span><span class="p">.</span><span class="nf">times</span> <span class="k">do</span>
+    <span class="n">play</span> <span class="n">chord</span><span class="p">(</span><span class="n">tonics</span><span class="p">.</span><span class="nf">choose</span><span class="p">,</span> <span class="ss">:minor</span><span class="p">).</span><span class="nf">choose</span><span class="p">,</span> <span class="ss">res: </span><span class="n">res</span><span class="p">,</span> <span class="ss">cutoff: </span><span class="n">rrand</span><span class="p">(</span><span class="n">co</span> <span class="o">-</span> <span class="mi">20</span><span class="p">,</span> <span class="n">co</span> <span class="o">+</span> <span class="mi">20</span><span class="p">),</span> <span class="ss">amp: </span><span class="mf">0.5</span> <span class="o">*</span> <span class="n">amp</span><span class="p">,</span> <span class="ss">attack: </span><span class="mi">0</span><span class="p">,</span> <span class="ss">release: </span><span class="n">rrand</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">),</span> <span class="ss">pan: </span><span class="n">rrand</span><span class="p">(</span><span class="o">-</span><span class="mf">0.7</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">)</span>
+    <span class="nb">sleep</span> <span class="p">[</span><span class="mf">0.25</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">].</span><span class="nf">choose</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="n">define</span> <span class="ss">:bd</span> <span class="k">do</span>
+  <span class="n">cue</span> <span class="ss">:in_relentless_cycles</span>
+  <span class="mi">16</span><span class="p">.</span><span class="nf">times</span> <span class="k">do</span>
+    <span class="n">sample</span> <span class="ss">:bd_haus</span><span class="p">,</span> <span class="ss">amp: </span><span class="mi">4</span><span class="p">,</span> <span class="ss">cutoff: </span><span class="mi">100</span>
+    <span class="nb">sleep</span> <span class="mf">0.5</span>
+  <span class="k">end</span>
+  <span class="n">cue</span> <span class="ss">:winding_everywhichway</span>
+  <span class="mi">2</span><span class="p">.</span><span class="nf">times</span> <span class="k">do</span>
+    <span class="mi">2</span><span class="p">.</span><span class="nf">times</span> <span class="k">do</span>
+      <span class="n">sample</span> <span class="ss">:bd_haus</span><span class="p">,</span> <span class="ss">amp: </span><span class="mi">4</span><span class="p">,</span> <span class="ss">cutoff: </span><span class="mi">100</span>
+      <span class="nb">sleep</span> <span class="mf">0.25</span>
+    <span class="k">end</span>
+    <span class="n">sample</span> <span class="ss">:ambi_lunar_land</span>
+    <span class="nb">sleep</span> <span class="mf">0.25</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="n">define</span> <span class="ss">:drums</span> <span class="k">do</span> <span class="o">|</span><span class="n">level</span><span class="p">,</span> <span class="n">b_level</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">rand_cf</span><span class="o">=</span><span class="kp">false</span><span class="o">|</span>
+  <span class="n">synth</span> <span class="ss">:fm</span><span class="p">,</span> <span class="ss">note: :e2</span><span class="p">,</span> <span class="ss">release: </span><span class="mf">0.1</span><span class="p">,</span> <span class="ss">amp: </span><span class="n">b_level</span> <span class="o">*</span> <span class="mi">3</span><span class="p">,</span> <span class="ss">cutoff: </span><span class="mi">130</span>
+  <span class="n">co</span> <span class="o">=</span> <span class="n">rand_cf</span> <span class="p">?</span> <span class="n">rrand</span><span class="p">(</span><span class="mi">110</span><span class="p">,</span> <span class="mi">130</span><span class="p">)</span> <span class="p">:</span> <span class="mi">130</span>
+  <span class="n">a</span>  <span class="o">=</span> <span class="n">rand_cf</span> <span class="p">?</span> <span class="n">rrand</span><span class="p">(</span><span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span> <span class="p">:</span> <span class="mf">0.6</span>
+  <span class="n">n</span>  <span class="o">=</span> <span class="n">rand_cf</span> <span class="p">?</span> <span class="ss">:bnoise</span>         <span class="p">:</span> <span class="ss">:noise</span>
+  <span class="n">synth</span> <span class="ss">:noise</span><span class="p">,</span> <span class="ss">release: </span><span class="mf">0.05</span><span class="p">,</span> <span class="ss">cutoff: </span><span class="n">co</span><span class="p">,</span> <span class="ss">res: </span><span class="mf">0.95</span><span class="p">,</span> <span class="ss">amp: </span><span class="n">a</span> <span class="k">if</span> <span class="n">level</span> <span class="o">&gt;</span> <span class="mi">0</span>
+  <span class="n">sample</span> <span class="ss">:elec_blip</span><span class="p">,</span> <span class="ss">amp: </span><span class="mi">2</span><span class="p">,</span> <span class="ss">rate: </span><span class="mi">2</span><span class="p">,</span> <span class="ss">pan: </span><span class="n">rrand</span><span class="p">(</span><span class="o">-</span><span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">)</span> <span class="k">if</span> <span class="n">level</span> <span class="o">&gt;</span> <span class="mi">1</span>
+  <span class="nb">sleep</span> <span class="mi">1</span>
+<span class="k">end</span>
+
+<span class="n">define</span> <span class="ss">:synths</span> <span class="k">do</span> <span class="o">|</span><span class="n">s_name</span><span class="p">,</span> <span class="n">co</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="ss">:e2</span><span class="o">|</span>
+  <span class="n">use_synth</span> <span class="n">s_name</span>
+  <span class="n">use_transpose</span> <span class="mi">0</span>
+  <span class="n">use_synth_defaults</span> <span class="ss">detune: </span><span class="p">[</span><span class="mi">12</span><span class="p">,</span><span class="mi">24</span><span class="p">].</span><span class="nf">choose</span><span class="p">,</span> <span class="ss">amp: </span><span class="mi">1</span><span class="p">,</span> <span class="ss">cutoff: </span><span class="n">co</span><span class="p">,</span> <span class="ss">pulse_width: </span><span class="mf">0.12</span><span class="p">,</span> <span class="ss">attack: </span><span class="n">rrand</span><span class="p">(</span><span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">),</span> <span class="ss">release: </span><span class="mf">0.5</span> <span class="p">,</span>  <span class="ss">mod_phase: </span><span class="mf">0.25</span><span class="p">,</span> <span class="ss">mod_invert_wave: </span><span class="mi">1</span>
+
+  <span class="n">play</span> <span class="ss">:e1</span><span class="p">,</span> <span class="ss">mod_range: </span><span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">12</span><span class="p">].</span><span class="nf">choose</span><span class="p">,</span> <span class="ss">pan: </span><span class="n">rrand</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+  <span class="nb">sleep</span> <span class="mf">0.125</span>
+
+  <span class="n">play</span> <span class="ss">:e3</span><span class="p">,</span> <span class="ss">mod_range: </span><span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">12</span><span class="p">].</span><span class="nf">choose</span><span class="p">,</span> <span class="ss">pan: </span><span class="n">rrand</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+  <span class="nb">sleep</span> <span class="p">[</span><span class="mf">0.25</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">].</span><span class="nf">choose</span>
+
+  <span class="n">play</span> <span class="n">n</span><span class="p">,</span> <span class="ss">mod_range: </span><span class="mi">12</span><span class="p">,</span> <span class="ss">pan: </span><span class="n">rrand</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+  <span class="nb">sleep</span> <span class="mf">0.5</span>
+
+  <span class="n">play</span> <span class="n">chord</span><span class="p">(</span><span class="ss">:e2</span><span class="p">,</span> <span class="ss">:minor</span><span class="p">).</span><span class="nf">choose</span><span class="p">,</span> <span class="ss">mod_range: </span><span class="mi">12</span><span class="p">,</span> <span class="ss">pan: </span><span class="n">rrand</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+  <span class="nb">sleep</span> <span class="mf">0.25</span>
+<span class="k">end</span>
+
+<span class="n">define</span> <span class="ss">:play_synths</span> <span class="k">do</span>
+  <span class="n">with_fx</span> <span class="ss">:reverb</span> <span class="k">do</span> <span class="o">|</span><span class="n">r</span><span class="o">|</span>
+    <span class="n">with_fx</span> <span class="ss">:echo</span><span class="p">,</span> <span class="ss">phase: </span><span class="mf">0.25</span> <span class="k">do</span> <span class="o">|</span><span class="n">e</span><span class="o">|</span>
+      <span class="n">synths</span> <span class="o">=</span> <span class="p">[</span><span class="ss">:mod_pulse</span><span class="p">,</span> <span class="ss">:mod_saw</span><span class="p">,</span> <span class="ss">:mod_dsaw</span><span class="p">,</span> <span class="ss">:mod_dsaw</span><span class="p">,</span> <span class="ss">:mod_dsaw</span><span class="p">,</span> <span class="ss">:mod_dsaw</span><span class="p">]</span>
+      <span class="n">cutoffs</span> <span class="o">=</span> <span class="p">[</span><span class="mi">108</span><span class="p">,</span> <span class="mi">78</span><span class="p">,</span> <span class="mi">88</span><span class="p">,</span> <span class="mi">98</span><span class="p">]</span>
+      <span class="n">synth</span> <span class="o">=</span> <span class="n">synths</span><span class="p">.</span><span class="nf">rotate!</span><span class="p">.</span><span class="nf">first</span>
+      <span class="mi">4</span><span class="p">.</span><span class="nf">times</span> <span class="k">do</span> <span class="o">|</span><span class="n">t</span><span class="o">|</span>
+        <span class="nb">puts</span> <span class="n">shuffle</span><span class="p">(</span><span class="s2">"0"</span> <span class="o">*</span> <span class="p">(</span><span class="mi">30</span> <span class="o">-</span> <span class="n">t</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="s2">"1"</span> <span class="o">*</span> <span class="n">t</span><span class="p">))</span> <span class="k">unless</span> <span class="n">t</span> <span class="o">==</span> <span class="mi">0</span>
+        <span class="n">co</span> <span class="o">=</span> <span class="n">cutoffs</span><span class="p">.</span><span class="nf">rotate!</span><span class="p">.</span><span class="nf">first</span> <span class="o">+</span> <span class="p">(</span><span class="n">t</span> <span class="o">*</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="mi">7</span><span class="p">.</span><span class="nf">times</span> <span class="k">do</span>
+          <span class="n">n</span> <span class="o">=</span> <span class="n">chord</span><span class="p">([</span><span class="ss">:e2</span><span class="p">,</span> <span class="ss">:e3</span><span class="p">,</span> <span class="ss">:e4</span><span class="p">,</span> <span class="ss">:e5</span><span class="p">][</span><span class="n">t</span><span class="p">],</span> <span class="ss">:minor</span><span class="p">).</span><span class="nf">choose</span>
+          <span class="n">synths</span><span class="p">(</span><span class="n">synth</span><span class="p">,</span> <span class="n">co</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+        <span class="k">end</span>
+        <span class="nb">sleep</span> <span class="mi">2</span>
+      <span class="k">end</span>
+      <span class="nb">sleep</span> <span class="mi">1</span>
+      <span class="n">cue</span> <span class="ss">:within</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="n">define</span> <span class="ss">:binary_celebration</span> <span class="k">do</span> <span class="o">|</span><span class="n">n</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">st</span><span class="o">=</span><span class="mi">1</span><span class="o">|</span>
+  <span class="n">in_thread</span> <span class="k">do</span>
+    <span class="n">n</span><span class="p">.</span><span class="nf">times</span> <span class="k">do</span>
+      <span class="nb">puts</span> <span class="p">(</span><span class="mi">0</span><span class="o">..</span><span class="mi">30</span><span class="p">).</span><span class="nf">map</span><span class="p">{</span><span class="o">|</span><span class="n">_</span><span class="o">|</span> <span class="p">[</span><span class="s2">"0"</span><span class="p">,</span> <span class="s2">"1"</span><span class="p">].</span><span class="nf">choose</span><span class="p">}.</span><span class="nf">join</span>
+      <span class="nb">sleep</span> <span class="n">st</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="nb">puts</span> <span class="s1">'Introduction'</span>
+<span class="nb">puts</span> <span class="s1">'The Curved Ebb of Carpentry'</span>
+<span class="nb">sleep</span> <span class="mi">2</span>
+
+<span class="n">cue</span> <span class="ss">:oceans</span>
+<span class="n">at</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">12</span><span class="p">],</span> <span class="p">[</span><span class="ss">:crash</span><span class="p">,</span> <span class="ss">:within_oceans</span><span class="p">]</span> <span class="k">do</span> <span class="o">|</span><span class="n">m</span><span class="o">|</span>
+  <span class="n">cue</span> <span class="n">m</span>
+<span class="k">end</span>
+
+<span class="n">uncomment</span> <span class="k">do</span>
+  <span class="n">use_random_seed</span> <span class="mi">1000</span>
+  <span class="n">with_bpm</span> <span class="mi">45</span> <span class="k">do</span>
+    <span class="n">with_fx</span> <span class="ss">:reverb</span> <span class="k">do</span>
+      <span class="n">with_fx</span><span class="p">(</span><span class="ss">:echo</span><span class="p">,</span> <span class="ss">delay: </span><span class="mf">0.5</span><span class="p">,</span> <span class="ss">decay: </span><span class="mi">4</span><span class="p">)</span> <span class="k">do</span>
+        <span class="n">in_thread</span> <span class="k">do</span>
+          <span class="n">use_random_seed</span> <span class="mi">2</span>
+          <span class="n">ocean</span> <span class="mi">5</span>
+          <span class="n">ocean</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">0.5</span>
+          <span class="n">ocean</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">0.25</span>
+        <span class="k">end</span>
+        <span class="nb">sleep</span> <span class="mi">10</span>
+        <span class="n">use_random_seed</span> <span class="mi">1200</span>
+        <span class="n">echoes</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="p">[</span><span class="ss">:b1</span><span class="p">,</span> <span class="ss">:b2</span><span class="p">,</span> <span class="ss">:e1</span><span class="p">,</span> <span class="ss">:e2</span><span class="p">,</span> <span class="ss">:b3</span><span class="p">,</span> <span class="ss">:e3</span><span class="p">])</span>
+        <span class="n">cue</span> <span class="ss">:a_distant_object</span>
+        <span class="n">echoes</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="p">[</span><span class="ss">:b1</span><span class="p">,</span> <span class="ss">:e1</span><span class="p">,</span> <span class="ss">:e2</span><span class="p">,</span> <span class="ss">:e3</span><span class="p">])</span>
+        <span class="n">cue</span> <span class="ss">:breathes_time</span>
+        <span class="n">in_thread</span> <span class="k">do</span>
+          <span class="n">echoes</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="p">[</span><span class="ss">:e1</span><span class="p">,</span> <span class="ss">:e2</span><span class="p">,</span> <span class="ss">:e3</span><span class="p">])</span>
+        <span class="k">end</span>
+        <span class="n">use_synth</span> <span class="ss">:tb303</span>
+        <span class="n">echoes</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="p">[</span><span class="ss">:e1</span><span class="p">,</span> <span class="ss">:e2</span><span class="p">,</span> <span class="ss">:e3</span><span class="p">],</span> <span class="mi">60</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span>
+        <span class="n">echoes</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="p">[</span><span class="ss">:e1</span><span class="p">,</span> <span class="ss">:e2</span><span class="p">,</span> <span class="ss">:e3</span><span class="p">],</span> <span class="mi">62</span><span class="p">)</span>
+        <span class="n">echoes</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="p">[</span><span class="ss">:e1</span><span class="p">,</span> <span class="ss">:e2</span><span class="p">,</span> <span class="ss">:e3</span><span class="p">],</span> <span class="mi">64</span><span class="p">,</span> <span class="mf">0.97</span><span class="p">)</span>
+        <span class="n">echoes</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="p">[</span><span class="ss">:e1</span><span class="p">,</span> <span class="ss">:e2</span><span class="p">,</span> <span class="ss">:e3</span><span class="p">],</span> <span class="mi">66</span><span class="p">)</span>
+        <span class="n">echoes</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="p">[</span><span class="ss">:e1</span><span class="p">,</span> <span class="ss">:e2</span><span class="p">,</span> <span class="ss">:e3</span><span class="p">],</span> <span class="mi">68</span><span class="p">)</span>
+        <span class="n">cue</span> <span class="ss">:liminality_holds_fast</span>
+        <span class="n">echoes</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="p">[</span><span class="ss">:b1</span><span class="p">,</span> <span class="ss">:e1</span><span class="p">,</span> <span class="ss">:e2</span><span class="p">,</span> <span class="ss">:b3</span><span class="p">,</span> <span class="ss">:e3</span><span class="p">],</span> <span class="mi">80</span><span class="p">)</span>
+        <span class="n">echoes</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="p">[</span><span class="ss">:b1</span><span class="p">,</span> <span class="ss">:b2</span><span class="p">,</span> <span class="ss">:e1</span><span class="p">,</span> <span class="ss">:e2</span><span class="p">,</span> <span class="ss">:b3</span><span class="p">,</span> <span class="ss">:e3</span><span class="p">],</span> <span class="mi">85</span><span class="p">,</span>  <span class="mf">0.98</span><span class="p">)</span>
+        <span class="n">cue</span> <span class="ss">:within_reach</span>
+        <span class="n">echoes</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="p">[</span><span class="ss">:e1</span><span class="p">,</span> <span class="ss">:b2</span><span class="p">],</span> <span class="mi">90</span><span class="p">)</span>
+        <span class="n">cue</span> <span class="ss">:as_it_unfolds</span>
+        <span class="n">in_thread</span> <span class="k">do</span>
+          <span class="n">echoes</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="p">[</span><span class="ss">:e1</span><span class="p">],</span> <span class="mi">90</span><span class="p">)</span>
+        <span class="k">end</span>
+      <span class="k">end</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+
+<span class="n">in_thread</span><span class="p">(</span><span class="ss">name: :bassdrums</span><span class="p">)</span> <span class="k">do</span>
+  <span class="n">use_random_seed</span> <span class="mi">0</span>
+  <span class="nb">sleep</span> <span class="mi">22</span>
+  <span class="mi">3</span><span class="p">.</span><span class="nf">times</span> <span class="k">do</span>
+    <span class="n">bd</span>
+  <span class="k">end</span>
+  <span class="nb">sleep</span> <span class="mi">28</span>
+  <span class="n">live_loop</span> <span class="ss">:bd</span> <span class="k">do</span>
+    <span class="n">bd</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="n">in_thread</span><span class="p">(</span><span class="ss">name: :drums</span><span class="p">)</span> <span class="k">do</span>
+  <span class="n">use_random_seed</span> <span class="mi">0</span>
+  <span class="n">level</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+  <span class="n">with_fx</span> <span class="ss">:echo</span> <span class="k">do</span> <span class="o">|</span><span class="n">e</span><span class="o">|</span>
+    <span class="nb">sleep</span> <span class="mi">2</span>
+    <span class="n">drums</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mf">0.1</span>
+    <span class="n">drums</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mf">0.2</span>
+    <span class="n">drums</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mf">0.4</span>
+    <span class="n">drums</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mf">0.7</span>
+    <span class="nb">puts</span> <span class="s2">"Part 2"</span>
+    <span class="nb">puts</span> <span class="s2">"Inside the Machine"</span>
+    <span class="mi">3</span><span class="p">.</span><span class="nf">times</span> <span class="k">do</span>
+      <span class="mi">8</span><span class="p">.</span><span class="nf">times</span> <span class="k">do</span>
+        <span class="n">drums</span> <span class="n">level</span><span class="p">,</span> <span class="mf">0.8</span>
+      <span class="k">end</span>
+      <span class="mi">6</span><span class="p">.</span><span class="nf">times</span> <span class="k">do</span>
+        <span class="n">drums</span><span class="p">(</span><span class="n">level</span><span class="p">)</span>
+      <span class="k">end</span>
+
+      <span class="nb">sleep</span> <span class="mi">1</span>
+      <span class="n">level</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">end</span>
+    <span class="nb">sleep</span> <span class="mi">4</span>
+    <span class="n">cue</span> <span class="ss">:dreams</span>
+    <span class="mi">8</span><span class="p">.</span><span class="nf">times</span> <span class="k">do</span>
+      <span class="n">drums</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="kp">true</span>
+    <span class="k">end</span>
+
+    <span class="mi">10</span><span class="p">.</span><span class="nf">times</span> <span class="k">do</span>
+      <span class="n">m</span> <span class="o">=</span> <span class="n">choose</span> <span class="p">[</span><span class="n">shuffle</span><span class="p">(</span><span class="ss">:within_dreams</span><span class="p">),</span> <span class="ss">:within_dreams</span><span class="p">,</span> <span class="ss">:dreams_within</span><span class="p">]</span>
+      <span class="n">cue</span> <span class="n">m</span>
+      <span class="n">drums</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="kp">true</span>
+    <span class="k">end</span>
+
+    <span class="mi">6</span><span class="p">.</span><span class="nf">times</span> <span class="k">do</span>
+      <span class="n">m</span> <span class="o">=</span> <span class="n">choose</span> <span class="p">[</span><span class="n">shuffle</span><span class="p">(</span><span class="s2">"within"</span><span class="p">)</span> <span class="o">+</span> <span class="s2">"_dreams"</span><span class="p">,</span> <span class="ss">:within_dreams</span><span class="p">.</span><span class="nf">shuffle</span><span class="p">,</span> <span class="s2">"dreams_"</span> <span class="o">+</span> <span class="n">shuffle</span><span class="p">(</span><span class="s2">"within"</span><span class="p">)]</span>
+      <span class="n">cue</span> <span class="n">m</span>
+      <span class="n">drums</span> <span class="mi">2</span>
+    <span class="k">end</span>
+
+    <span class="n">live_loop</span> <span class="ss">:drums</span> <span class="k">do</span>
+      <span class="mi">8</span><span class="p">.</span><span class="nf">times</span> <span class="k">do</span> <span class="o">|</span><span class="n">i</span><span class="o">|</span>
+        <span class="n">drums</span> <span class="mi">1</span>
+      <span class="k">end</span>
+
+      <span class="mi">16</span><span class="p">.</span><span class="nf">times</span> <span class="k">do</span> <span class="o">|</span><span class="n">i</span><span class="o">|</span>
+        <span class="n">cue</span> <span class="s2">" "</span> <span class="o">*</span> <span class="n">rand_i</span><span class="p">(</span><span class="mi">32</span><span class="p">)</span>
+        <span class="n">at</span> <span class="mi">1</span> <span class="k">do</span>
+          <span class="n">cue</span> <span class="s2">"  "</span> <span class="o">*</span> <span class="n">i</span>
+        <span class="k">end</span>
+        <span class="n">drums</span> <span class="mi">2</span>
+      <span class="k">end</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="n">in_thread</span> <span class="ss">name: :synths</span> <span class="k">do</span>
+  <span class="n">use_random_seed</span> <span class="mi">0</span>
+  <span class="nb">sleep</span> <span class="mi">12</span>
+  <span class="n">cue</span> <span class="ss">:the_flow_of_logic</span>
+  <span class="n">play_synths</span>
+<span class="k">end</span>
+
+<span class="n">in_thread</span> <span class="k">do</span>
+  <span class="n">use_random_seed</span> <span class="mi">0</span>
+  <span class="n">sync</span> <span class="ss">:within</span>
+  <span class="nb">puts</span> <span class="s2">"Part 3"</span>
+  <span class="nb">puts</span> <span class="s2">"Reality A"</span>
+  <span class="nb">sleep</span> <span class="mi">12</span>
+  <span class="n">use_synth_defaults</span> <span class="ss">phase: </span><span class="mf">0.5</span><span class="p">,</span> <span class="ss">res: </span><span class="mf">0.5</span><span class="p">,</span> <span class="ss">cutoff: </span><span class="mi">80</span><span class="p">,</span> <span class="ss">release: </span><span class="mf">3.3</span><span class="p">,</span> <span class="ss">wave: </span><span class="mi">1</span>
+
+  <span class="mi">2</span><span class="p">.</span><span class="nf">times</span> <span class="k">do</span>
+    <span class="p">[</span><span class="mi">80</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">110</span><span class="p">].</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">cf</span><span class="o">|</span>
+      <span class="n">use_merged_synth_defaults</span> <span class="ss">cutoff: </span><span class="n">cf</span>
+      <span class="nb">puts</span> <span class="s2">"1"</span> <span class="o">*</span> <span class="mi">30</span>
+      <span class="n">synth</span> <span class="ss">:zawa</span><span class="p">,</span> <span class="ss">note: :e2</span><span class="p">,</span> <span class="ss">phase: </span><span class="mf">0.25</span>
+      <span class="n">synth</span> <span class="ss">:zawa</span><span class="p">,</span> <span class="ss">note: :a1</span>
+      <span class="nb">sleep</span> <span class="mi">3</span>
+    <span class="k">end</span>
+    <span class="mi">4</span><span class="p">.</span><span class="nf">times</span> <span class="k">do</span> <span class="o">|</span><span class="n">t</span><span class="o">|</span>
+      <span class="n">binary_celebration</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span>
+      <span class="n">synth</span> <span class="ss">:zawa</span><span class="p">,</span> <span class="ss">note: :e2</span><span class="p">,</span> <span class="ss">phase: </span><span class="mf">0.25</span><span class="p">,</span> <span class="ss">res: </span><span class="n">rrand</span><span class="p">(</span><span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">),</span> <span class="ss">cutoff: </span><span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">105</span><span class="p">,</span> <span class="mi">110</span><span class="p">,</span> <span class="mi">115</span><span class="p">][</span><span class="n">t</span><span class="p">]</span>
+      <span class="nb">sleep</span> <span class="mi">3</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+
+  <span class="nb">puts</span> <span class="s1">'Part n'</span>
+  <span class="nb">puts</span> <span class="s1">'The Observer becomes the Observed'</span>
+  <span class="c1"># Your turn...</span>
+<span class="k">end</span></code></pre>
+</div>
+</div>
+<div class="imageblock spectrogram">
+<div class="content">
+<img src="spectrogram.png" alt="spectrogram">
+</div>
+</div>
+</div>
+</div>
+        </article>
+      </main>
+      <footer>
+  <p>Copyright © 2026 Mica Sound / FUJISE Takumi (tkmfujise)</p>
+</footer>
+
+    </div>
+	</body>
+</html>

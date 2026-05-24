@@ -1,0 +1,119 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Sonic Pi Examples - tkmfujise</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+		<meta name="author" content="tkmfujise">
+		<meta name="keywords" content="Sonic Pi, Ruby, sound, music, effect, cc0">
+		<meta name="description" content="Sonic Pi Examples">
+		<link rel="stylesheet" href="../../../../assets/css/almond.min.css">
+		<link rel="stylesheet" href="../../../../assets/css/style.css">
+		<link rel="stylesheet" href="../../../../assets/css/syntax.gessetti.css">
+    <script src="../../../../assets/js/vendor/fuse.js@7.1.0"></script>
+    <script src="../../../../assets/js/filter.js"></script>
+    <script src="../../../../assets/js/clipboard.js"></script>
+	</head>
+  <body>
+    <nav class="main-menu closed">
+  <button onclick="document.querySelector('.main-menu').classList.toggle('closed');">
+    <span>Expand/Collapse menu</span>
+  </button>
+  <h2>Gems among stones.</h2>
+  <ul>
+    <li>
+      <a href="../../../../">💎 Home 🪨</a>
+    </li>
+
+    <li>
+      <div>Categories</div>
+      <ul>
+        <li><a href="../../../../cc0/sonic_pi/samples">Samples</a></li>
+        <li><a href="../../../../cc0/sonic_pi/synths">Synths</a></li>
+        <li><a href="../..">Official Examples</a></li>
+        <li><a href="../../../../cc-by/tkmfujise">Mica Sound</a></li>
+      </ul>
+    </li>
+
+    <li>
+      <div>Links</div>
+      <ul>
+        <li><a href="../../../../about">About</a></li>
+        <li><a rel="external" target="_blank" href="https://github.com/tkmfujise/mica-sound/blob/main/LICENSE.md">License</a></li>
+        <li><a rel="external" target="_blank" href="https://github.com/tkmfujise/mica-sound">GitHub</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+    <div>
+      <header>
+  <div>
+    <a href="../../../../">
+      <h1>Mica Sound</h1>
+    </a>
+    <p>Sonic Pi Examples</p>
+  </div>
+</header>
+
+
+      <main>
+        <article>
+          
+      		<div class="sect1">
+<h2 id="_ambient">Ambient</h2>
+<div class="sectionbody">
+<div class="imageblock license">
+<div class="content">
+<a class="image" href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener"><img src="../../../../assets/images/cc-by-sa.svg" alt="cc by sa"></a>
+</div>
+</div>
+<div class="audioblock output">
+<div class="content">
+<audio src="output.ogg" controls>
+Your browser does not support the audio tag.
+</audio>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">/cc-by-sa/sonic_pi/magician/_ambient</div>
+<div class="content">
+<pre class="rouge highlight"><code data-lang="ruby"><span class="c1"># Coded by Sam Aaron</span>
+
+<span class="n">load_samples</span><span class="p">(</span><span class="n">sample_names</span> <span class="ss">:ambi</span><span class="p">)</span>
+<span class="nb">sleep</span> <span class="mi">2</span>
+
+<span class="n">with_fx</span> <span class="ss">:reverb</span><span class="p">,</span> <span class="ss">mix: </span><span class="mf">0.8</span> <span class="k">do</span>
+  <span class="n">live_loop</span> <span class="ss">:foo</span> <span class="k">do</span>
+    <span class="c1"># try changing the sp_ vars..</span>
+    <span class="n">sp_name</span> <span class="o">=</span> <span class="n">choose</span> <span class="n">sample_names</span> <span class="ss">:ambi</span>
+    <span class="c1"># sp_name = choose sample_names :drum</span>
+    <span class="n">sp_time</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">].</span><span class="nf">choose</span>
+    <span class="c1">#sp_time = 0.5</span>
+    <span class="n">sp_rate</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="c1">#sp_rate = 4</span>
+
+    <span class="n">s</span> <span class="o">=</span> <span class="n">sample</span> <span class="n">sp_name</span><span class="p">,</span> <span class="ss">cutoff: </span><span class="n">rrand</span><span class="p">(</span><span class="mi">70</span><span class="p">,</span> <span class="mi">130</span><span class="p">),</span> <span class="ss">rate: </span><span class="n">sp_rate</span> <span class="o">*</span> <span class="n">choose</span><span class="p">([</span><span class="mf">0.5</span><span class="p">,</span> <span class="mi">1</span><span class="p">]),</span> <span class="ss">pan: </span><span class="n">rrand</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="ss">pan_slide: </span><span class="n">sp_time</span>
+    <span class="n">control</span> <span class="n">s</span><span class="p">,</span> <span class="ss">pan: </span><span class="n">rrand</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="nb">sleep</span> <span class="n">sp_time</span>
+  <span class="k">end</span>
+<span class="k">end</span></code></pre>
+</div>
+</div>
+<div class="imageblock spectrogram">
+<div class="content">
+<img src="spectrogram.png" alt="spectrogram">
+</div>
+</div>
+</div>
+</div>
+        </article>
+      </main>
+      <footer>
+  <p>Copyright © 2026 Mica Sound / FUJISE Takumi (tkmfujise)</p>
+</footer>
+
+    </div>
+	</body>
+</html>
