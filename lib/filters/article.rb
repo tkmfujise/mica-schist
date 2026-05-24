@@ -21,7 +21,8 @@ module Nanoc::Filters
     }
 
 
-    def run(content, params = {})
+    def run(code, params = {})
+      code = remove_comments(code)
       content = <<~ADOC
         == #{title}
 
@@ -30,7 +31,7 @@ module Nanoc::Filters
 
         .#{filepath}
         ```ruby
-        #{content}
+        #{code}
         ```
         [.spectrogram]
         image::spectrogram.png[]
@@ -59,6 +60,9 @@ module Nanoc::Filters
         name.split('_').map(&:capitalize).join(' ')
       end
 
+      def remove_comments(code)
+        code.gsub(/^#.+$/, '').chomp
+      end
 
       def stat
         @stat ||= begin

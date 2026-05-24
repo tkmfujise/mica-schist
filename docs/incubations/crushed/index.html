@@ -70,9 +70,7 @@ Your browser does not support the audio tag.
 <div class="listingblock">
 <div class="title">/incubations/crushed/crushed.rb</div>
 <div class="content">
-<pre class="rouge highlight"><code data-lang="ruby"><span class="c1"># max-recording-time: 10</span>
-
-<span class="n">with_fx</span> <span class="ss">:bitcrusher</span> <span class="k">do</span>
+<pre class="rouge highlight"><code data-lang="ruby"><span class="n">with_fx</span> <span class="ss">:bitcrusher</span> <span class="k">do</span>
   <span class="mi">4</span><span class="p">.</span><span class="nf">times</span> <span class="k">do</span>
     <span class="n">use_synth</span> <span class="ss">:mod_fm</span>
     <span class="n">play</span> <span class="mi">50</span> <span class="o">+</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">].</span><span class="nf">choose</span><span class="p">,</span> <span class="ss">mod_phase: </span><span class="mf">0.25</span><span class="p">,</span> <span class="ss">release: </span><span class="mi">1</span><span class="p">,</span> <span class="ss">mod_range: </span><span class="p">[</span><span class="mi">24</span><span class="p">,</span> <span class="mi">27</span><span class="p">,</span> <span class="mi">12</span><span class="p">].</span><span class="nf">choose</span>

@@ -1,5 +1,7 @@
 module Mica
   class Batch
+    include Enumerable
+
     # Mica::Batch['cc0/**']
     def self.[](keyword)
       Dir[Mica.config.contents_dir.join("#{keyword}/*.rb")].map{|path|
@@ -16,6 +18,10 @@ module Mica
 
     def initialize(files)
       self.sounds = files.map{|f| Sound.new(f) }
+    end
+
+    def each(&block)
+      sounds.each(&block)
     end
 
     def play

@@ -43,6 +43,16 @@ module Mica
     end
 
 
+    def stat
+      file = dir.join('stat.json')
+      if file.exist?
+        JSON.parse(file.read, symbolize_names: true)
+      else
+        {}
+      end
+    end
+
+
     private
       def read(path)
         target = Mica.config.contents_dir.join(path)
