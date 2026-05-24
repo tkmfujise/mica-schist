@@ -79,7 +79,7 @@ module Nanoc::Filters
       end
 
       def remove_comments(code)
-        code.gsub(/\n#\smax-recording-time:.+$/, '').chomp
+        code.gsub(/^#\smax-recording-time:.+$\n/, '').chomp
       end
 
       def stat
