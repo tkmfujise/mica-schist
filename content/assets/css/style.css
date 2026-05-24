@@ -234,7 +234,6 @@ body code {
 body .listingblock {
   position: relative;
 }
-
 body .listingblock > .title {
   position: absolute;
   top: 0;
@@ -248,6 +247,23 @@ body .listingblock > .title {
   box-shadow: 0 1px 3px rgba(0,0,0,0.2);
   z-index: 10;
 }
+body .listingblock .copy-button {
+  position: absolute;
+  top: 6px;
+  right: 8px;
+  padding: 4px 8px;
+  font-size: 0.75rem;
+  background: transparent;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+body .listingblock .copy-button:hover {
+  opacity: 1;
+}
+
 body article {
   margin-bottom: 5rem;
 }
