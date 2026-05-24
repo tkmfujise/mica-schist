@@ -30,8 +30,8 @@ SOFTWARE.
 
 These sounds were generated using Sonic Pi.
 
-Sonic Pi: https://sonic-pi.net/
-Original license:
+* Sonic Pi: https://sonic-pi.net/
+* Original license:
 https://github.com/sonic-pi-net/sonic-pi/blob/stable/LICENSE.md
 
 Licensed under:
@@ -39,12 +39,12 @@ Licensed under:
 
 
 ## Sonic Pi Official Examples
-(contents of `content/cc-by-sa/sonic_pi` and `content/cc-by-sa/sonic_pi`)
+(contents of `content/cc-by-sa/sonic_pi` and `docs/cc-by-sa/sonic_pi`)
 
 These example scripts are derived from the official Sonic Pi examples and therefore remain under the original CC BY-SA 4.0 license.
 
-Sonic Pi: https://sonic-pi.net/
-Original license:
+* Sonic Pi: https://sonic-pi.net/
+* Original license:
 https://github.com/sonic-pi-net/sonic-pi/blob/stable/LICENSE.md
 
 Licensed under:
@@ -64,7 +64,7 @@ Licensed under:
 ### Recommended Attribution
 When using works from this section, please credit as follows:
 
-Creator: Mica Sound (or tkmfujise)
-License: CC BY 4.0
-License URL: https://creativecommons.org/licenses/by/4.0/
-Project URL: https://tkmfujise.github.io/mica-sound/
+* Creator: Mica Sound (or tkmfujise)
+* License: CC BY 4.0
+* License URL: https://creativecommons.org/licenses/by/4.0/
+* Project URL: https://tkmfujise.github.io/mica-sound/
