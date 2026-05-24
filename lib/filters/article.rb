@@ -20,6 +20,12 @@ module Nanoc::Filters
       rough_frequency:    18000.0,
     }
 
+    LICENSE_LINK = {
+      'cc0'      => 'https://creativecommons.org/publicdomain/zero/1.0/',
+      'cc-by'    => 'https://creativecommons.org/licenses/by/4.0/',
+      'cc-by-sa' => 'https://creativecommons.org/licenses/by-sa/4.0/',
+    }
+
 
     def run(code, params = {})
       code = remove_comments(code)
@@ -27,12 +33,13 @@ module Nanoc::Filters
         == #{title}
 
         [.license]
-        image::/assets/images/#{license_logo}[]
+        [link=#{LICENSE_LINK[license]},window=_blank]
+        image::/assets/images/#{license}.svg[]
 
         [.output]
         audio::output.ogg[]
 
-        .#{filepath}
+        .#{dirname}
         ```ruby
         #{code}
         ```
@@ -51,6 +58,10 @@ module Nanoc::Filters
         @item.identifier.to_s
       end
 
+      def dirname
+        Pathname(filepath).dirname.to_s
+      end
+
       def dir
         @dir ||= Pathname(@item.raw_filename).dirname
       end
@@ -63,9 +74,8 @@ module Nanoc::Filters
         name.split('_').map(&:capitalize).join(' ')
       end
 
-      def license_logo
-        str = @item.identifier.to_s[/^\/([^\/]+)/, 1]
-        "#{str}.svg"
+      def license
+        @license ||= @item.identifier.to_s[/^\/([^\/]+)/, 1]
       end
 
       def remove_comments(code)

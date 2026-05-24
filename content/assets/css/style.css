@@ -228,7 +228,25 @@ body pre.highlight {
   border-radius: 10px;
 }
 body code {
+  padding-top: 2rem;
   background: transparent;
+}
+body .listingblock {
+  position: relative;
+}
+
+body .listingblock > .title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: lightslategray;
+  color: white;
+  padding: 2px 8px;
+  font-size: 0.8rem;
+  font-family: monospace;
+  border-radius: 8px 0 4px 0;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  z-index: 10;
 }
 body article {
   margin-bottom: 5rem;
