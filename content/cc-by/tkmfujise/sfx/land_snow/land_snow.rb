@@ -1,3 +1,7 @@
+#
+# Creator: tkmfujise
+# Licence: CC-BY 4.0
+#
 define :land_show do
   sample :drum_bass_hard, rate: 0.2, amp: 0.9, cutoff: 60, sustain_level: 0.02
   sample :perc_snap, rate: 0.8, amp: 0.8, cutoff: 80, sustain_level: 0.2

@@ -1,3 +1,7 @@
+#
+# Creator: tkmfujise
+# Licence: CC-BY 4.0
+#
 define :dash do
   with_fx :reverb do
     sample :loop_breakbeat, start: 0.6, finish: 0.75, rate: 1.3, cutoff: 90

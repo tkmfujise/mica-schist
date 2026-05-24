@@ -206,8 +206,7 @@
 /cc0/sonic_pi/samples/vinyl_scratch/vinyl_scratch.rb
 /cc0/sonic_pi/synths/noise/noise.rb
 /cc0/sonic_pi/synths/zawa/zawa.rb
-/incubations/crushed/crushed.rb
-/nature/ocean/ocean.rb
-/sfx/land_snow/land_snow.rb
-/sfx/dash/dash.rb
+/cc-by-sa/sonic_pi/nature/ocean/ocean.rb
+/cc-by/tkmfujise/sfx/land_snow/land_snow.rb
+/cc-by/tkmfujise/sfx/dash/dash.rb
 

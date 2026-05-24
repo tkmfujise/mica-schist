@@ -26,6 +26,9 @@ module Nanoc::Filters
       content = <<~ADOC
         == #{title}
 
+        [.license]
+        image::/assets/images/#{license_logo}[]
+
         [.output]
         audio::output.ogg[]
 
@@ -60,8 +63,13 @@ module Nanoc::Filters
         name.split('_').map(&:capitalize).join(' ')
       end
 
+      def license_logo
+        str = @item.identifier.to_s[/^\/([^\/]+)/, 1]
+        "#{str}.svg"
+      end
+
       def remove_comments(code)
-        code.gsub(/^#.+$/, '').chomp
+        code.gsub(/^#\smax-recording-time:.+$/, '').chomp
       end
 
       def stat
