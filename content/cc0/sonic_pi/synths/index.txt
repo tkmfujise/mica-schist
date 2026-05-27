@@ -54,8 +54,6 @@
 /cc0/sonic_pi/synths/sc808_tomlo/sc808_tomlo.rb
 /cc0/sonic_pi/synths/sc808_tommid/sc808_tommid.rb
 /cc0/sonic_pi/synths/sine/sine.rb
-/cc0/sonic_pi/synths/sound_in/sound_in.rb
-/cc0/sonic_pi/synths/sound_in_stereo/sound_in_stereo.rb
 /cc0/sonic_pi/synths/square/square.rb
 /cc0/sonic_pi/synths/subpulse/subpulse.rb
 /cc0/sonic_pi/synths/supersaw/supersaw.rb
