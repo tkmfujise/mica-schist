@@ -1,0 +1,2208 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Mica Sound: Sonic Pi Examples</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+		<meta name="author" content="tkmfujise">
+		<meta name="keywords" content="Sonic Pi, Ruby, sound, music, effect, cc0">
+		<meta name="description" content="Sonic Pi Examples">
+		<link rel="stylesheet" href="../../../../assets/css/almond.min.css">
+		<link rel="stylesheet" href="../../../../assets/css/style.css">
+		<link rel="stylesheet" href="../../../../assets/css/syntax.gessetti.css">
+    <script src="../../../../assets/js/vendor/fuse.js@7.1.0"></script>
+    <script src="../../../../assets/js/filter.js"></script>
+    <script src="../../../../assets/js/clipboard.js"></script>
+	</head>
+  <body>
+    <nav class="main-menu closed">
+  <button onclick="document.querySelector('.main-menu').classList.toggle('closed');">
+    <span>Expand/Collapse menu</span>
+  </button>
+  <h2>Gems among stones.</h2>
+  <ul>
+    <li>
+      <a href="../../../../">💎 Home 🪨</a>
+    </li>
+
+    <li>
+      <div>Samples</div>
+      <ul>
+        <li><a href="..">All</a></li>
+        <li><a href="../original">Originals</a></li>
+        <li><a href="../rate_0.2">rate 0.2</a></li>
+        <li><a href="../rate_0.4">rate 0.4</a></li>
+        <li><a href=".">rate 0.6</a></li>
+        <li><a href="../rate_0.8">rate 0.8</a></li>
+      </ul>
+    </li>
+
+    <li>
+      <div>Synths</div>
+      <ul>
+        <li><a href="../../synths">All</a></li>
+      </ul>
+    </li>
+
+    <li>
+      <div>Others</div>
+      <ul>
+        <li><a href="../../synths">Synths</a></li>
+        <li><a href="../../../../cc-by-sa/sonic_pi">Official Examples</a></li>
+        <li><a href="../../../../cc-by/tkmfujise">Mica Sound</a></li>
+      </ul>
+    </li>
+
+    <li>
+      <div>Links</div>
+      <ul>
+        <li><a href="../../../../about">About</a></li>
+        <li><a rel="external" target="_blank" href="https://github.com/tkmfujise/mica-sound/blob/main/LICENSE.md">License</a></li>
+        <li><a rel="external" target="_blank" href="https://github.com/tkmfujise/mica-sound">GitHub</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+    <div>
+      <header>
+  <div>
+    <a href="../../../../">
+      <h1>Mica Sound</h1>
+    </a>
+    <p>Sonic Pi Examples</p>
+  </div>
+</header>
+
+
+      <main>
+        <article>
+          <span class="search-result-count">-</span> sounds.
+
+<form>
+  <p>
+    <button>Samples</button>
+    <button>Synths</button>
+  </p>
+
+  <p class="search">
+    <select id="license">
+      <option value="">ALL</option>
+      <option value="1">CC0</option>
+      <option value="2">CC BY</option>
+    </select>
+    <input type="search">
+  </p>
+    
+  <details>
+    <summary>Advancend</summary>
+
+    <fieldset>
+      <legend>rough_frequency</legend>
+      <input type="range" min="0" max="18000" value="0">
+      <input type="range" min="0" max="18000" value="18000">
+    </fieldset>
+
+    <fieldset>
+      <legend>crest_factor</legend>
+      <input type="range">
+      <input type="range">
+    </fieldset>
+
+    <fieldset>
+      <legend>delta_crest_factor</legend>
+      <input type="range">
+      <input type="range">
+    </fieldset>
+
+    <fieldset>
+      <legend>jiggly</legend>
+      <input type="range">
+      <input type="range">
+    </fieldset>
+
+    <fieldset>
+      <legend>periodicity</legend>
+      <input type="range">
+      <input type="range">
+    </fieldset>
+  </details>
+</form>
+
+
+      		<table>
+  <tbody>
+    <tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="252268.0" data-length="2.627792" data-scaled_by="2147483647.0" data-maximum_amplitude="0.255585" data-minimum_amplitude="-0.249207" data-midline_amplitude="0.003189" data-mean_norm="0.024489" data-mean_amplitude="-0.0" data-rms_amplitude="0.04089" data-maximum_delta="0.315399" data-minimum_delta="0.0" data-mean_delta="0.033776" data-rms_delta="0.054183" data-rough_frequency="10122.0" data-volume_adjustment="3.913" data-path="/cc0/sonic_pi/samples/rate_0.6/ambi_choir" src="ambi_choir/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="ambi_choir">/cc0/sonic_pi/samples/rate_0.6/ambi_choir</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="583176.0" data-length="6.07475" data-scaled_by="2147483647.0" data-maximum_amplitude="0.258453" data-minimum_amplitude="-0.247864" data-midline_amplitude="0.005295" data-mean_norm="0.020206" data-mean_amplitude="-2.6e-05" data-rms_amplitude="0.03542" data-maximum_delta="0.264587" data-minimum_delta="0.0" data-mean_delta="0.020367" data-rms_delta="0.03602" data-rough_frequency="7768.0" data-volume_adjustment="3.869" data-path="/cc0/sonic_pi/samples/rate_0.6/ambi_dark_woosh" src="ambi_dark_woosh/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="ambi_dark_woosh">/cc0/sonic_pi/samples/rate_0.6/ambi_dark_woosh</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="706912.0" data-length="7.363667" data-scaled_by="2147483647.0" data-maximum_amplitude="0.191345" data-minimum_amplitude="-0.177032" data-midline_amplitude="0.007156" data-mean_norm="0.03872" data-mean_amplitude="-0.0" data-rms_amplitude="0.047987" data-maximum_delta="0.252258" data-minimum_delta="0.0" data-mean_delta="0.053624" data-rms_delta="0.06733" data-rough_frequency="10718.0" data-volume_adjustment="5.226" data-path="/cc0/sonic_pi/samples/rate_0.6/ambi_drone" src="ambi_drone/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="ambi_drone">/cc0/sonic_pi/samples/rate_0.6/ambi_drone</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="1564182.0" data-length="16.293563" data-scaled_by="2147483647.0" data-maximum_amplitude="0.133484" data-minimum_amplitude="-0.121277" data-midline_amplitude="0.006104" data-mean_norm="0.0181" data-mean_amplitude="-0.0" data-rms_amplitude="0.027533" data-maximum_delta="0.044556" data-minimum_delta="0.0" data-mean_delta="0.00649" data-rms_delta="0.009458" data-rough_frequency="2624.0" data-volume_adjustment="7.492" data-path="/cc0/sonic_pi/samples/rate_0.6/ambi_glass_hum" src="ambi_glass_hum/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="ambi_glass_hum">/cc0/sonic_pi/samples/rate_0.6/ambi_glass_hum</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="503306.0" data-length="5.242771" data-scaled_by="2147483647.0" data-maximum_amplitude="0.36087" data-minimum_amplitude="-0.364563" data-midline_amplitude="-0.001846" data-mean_norm="0.085118" data-mean_amplitude="-1.0e-06" data-rms_amplitude="0.109622" data-maximum_delta="0.331787" data-minimum_delta="0.0" data-mean_delta="0.104224" data-rms_delta="0.129746" data-rough_frequency="9041.0" data-volume_adjustment="2.743" data-path="/cc0/sonic_pi/samples/rate_0.6/ambi_glass_rub" src="ambi_glass_rub/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="ambi_glass_rub">/cc0/sonic_pi/samples/rate_0.6/ambi_glass_rub</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="1534516.0" data-length="15.984542" data-scaled_by="2147483647.0" data-maximum_amplitude="0.142395" data-minimum_amplitude="-0.131012" data-midline_amplitude="0.005692" data-mean_norm="0.012656" data-mean_amplitude="6.0e-06" data-rms_amplitude="0.020608" data-maximum_delta="0.153961" data-minimum_delta="0.0" data-mean_delta="0.016081" data-rms_delta="0.025557" data-rough_frequency="9474.0" data-volume_adjustment="7.023" data-path="/cc0/sonic_pi/samples/rate_0.6/ambi_haunted_hum" src="ambi_haunted_hum/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="ambi_haunted_hum">/cc0/sonic_pi/samples/rate_0.6/ambi_haunted_hum</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="1183808.0" data-length="12.331333" data-scaled_by="2147483647.0" data-maximum_amplitude="0.305145" data-minimum_amplitude="-0.310852" data-midline_amplitude="-0.002853" data-mean_norm="0.010931" data-mean_amplitude="0.0" data-rms_amplitude="0.017983" data-maximum_delta="0.460602" data-minimum_delta="0.0" data-mean_delta="0.014002" data-rms_delta="0.021673" data-rough_frequency="9207.0" data-volume_adjustment="3.217" data-path="/cc0/sonic_pi/samples/rate_0.6/ambi_lunar_land" src="ambi_lunar_land/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="ambi_lunar_land">/cc0/sonic_pi/samples/rate_0.6/ambi_lunar_land</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="450506.0" data-length="4.692771" data-scaled_by="2147483647.0" data-maximum_amplitude="0.220551" data-minimum_amplitude="-0.215393" data-midline_amplitude="0.002579" data-mean_norm="0.043954" data-mean_amplitude="-3.7e-05" data-rms_amplitude="0.061059" data-maximum_delta="0.201324" data-minimum_delta="0.0" data-mean_delta="0.013116" data-rms_delta="0.021575" data-rough_frequency="2699.0" data-volume_adjustment="4.534" data-path="/cc0/sonic_pi/samples/rate_0.6/ambi_piano" src="ambi_piano/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="ambi_piano">/cc0/sonic_pi/samples/rate_0.6/ambi_piano</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="1391852.0" data-length="14.498458" data-scaled_by="2147483647.0" data-maximum_amplitude="0.261902" data-minimum_amplitude="-0.304047" data-midline_amplitude="-0.021072" data-mean_norm="0.026418" data-mean_amplitude="-4.0e-06" data-rms_amplitude="0.038034" data-maximum_delta="0.224823" data-minimum_delta="0.0" data-mean_delta="0.020327" data-rms_delta="0.028984" data-rough_frequency="5821.0" data-volume_adjustment="3.289" data-path="/cc0/sonic_pi/samples/rate_0.6/ambi_sauna" src="ambi_sauna/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="ambi_sauna">/cc0/sonic_pi/samples/rate_0.6/ambi_sauna</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="125974.0" data-length="1.312229" data-scaled_by="2147483647.0" data-maximum_amplitude="0.192596" data-minimum_amplitude="-0.158997" data-midline_amplitude="0.0168" data-mean_norm="0.02595" data-mean_amplitude="-0.000175" data-rms_amplitude="0.039745" data-maximum_delta="0.26059" data-minimum_delta="0.0" data-mean_delta="0.037516" data-rms_delta="0.055954" data-rough_frequency="10754.0" data-volume_adjustment="5.192" data-path="/cc0/sonic_pi/samples/rate_0.6/ambi_soft_buzz" src="ambi_soft_buzz/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="ambi_soft_buzz">/cc0/sonic_pi/samples/rate_0.6/ambi_soft_buzz</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="294226.0" data-length="3.064854" data-scaled_by="2147483647.0" data-maximum_amplitude="0.177643" data-minimum_amplitude="-0.171783" data-midline_amplitude="0.00293" data-mean_norm="0.018056" data-mean_amplitude="-8.3e-05" data-rms_amplitude="0.028882" data-maximum_delta="0.006897" data-minimum_delta="0.0" data-mean_delta="0.000388" data-rms_delta="0.000692" data-rough_frequency="183.0" data-volume_adjustment="5.629" data-path="/cc0/sonic_pi/samples/rate_0.6/ambi_swoosh" src="ambi_swoosh/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="ambi_swoosh">/cc0/sonic_pi/samples/rate_0.6/ambi_swoosh</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="297976.0" data-length="3.103917" data-scaled_by="2147483647.0" data-maximum_amplitude="0.408997" data-minimum_amplitude="-0.350708" data-midline_amplitude="0.029144" data-mean_norm="0.051937" data-mean_amplitude="1.7e-05" data-rms_amplitude="0.079243" data-maximum_delta="0.186432" data-minimum_delta="0.0" data-mean_delta="0.008689" data-rms_delta="0.013244" data-rough_frequency="1276.0" data-volume_adjustment="2.445" data-path="/cc0/sonic_pi/samples/rate_0.6/arovane_beat_a" src="arovane_beat_a/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="arovane_beat_a">/cc0/sonic_pi/samples/rate_0.6/arovane_beat_a</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="2368856.0" data-length="24.675583" data-scaled_by="2147483647.0" data-maximum_amplitude="0.691528" data-minimum_amplitude="-0.591705" data-midline_amplitude="0.049911" data-mean_norm="0.067746" data-mean_amplitude="-1.8e-05" data-rms_amplitude="0.090738" data-maximum_delta="0.250702" data-minimum_delta="0.0" data-mean_delta="0.013367" data-rms_delta="0.021307" data-rough_frequency="1793.0" data-volume_adjustment="1.446" data-path="/cc0/sonic_pi/samples/rate_0.6/arovane_beat_b" src="arovane_beat_b/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="arovane_beat_b">/cc0/sonic_pi/samples/rate_0.6/arovane_beat_b</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="1183992.0" data-length="12.33325" data-scaled_by="2147483647.0" data-maximum_amplitude="0.484192" data-minimum_amplitude="-0.565887" data-midline_amplitude="-0.040848" data-mean_norm="0.046858" data-mean_amplitude="-8.0e-06" data-rms_amplitude="0.076634" data-maximum_delta="0.2901" data-minimum_delta="0.0" data-mean_delta="0.011681" data-rms_delta="0.01922" data-rough_frequency="1916.0" data-volume_adjustment="1.767" data-path="/cc0/sonic_pi/samples/rate_0.6/arovane_beat_c" src="arovane_beat_c/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="arovane_beat_c">/cc0/sonic_pi/samples/rate_0.6/arovane_beat_c</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="1777734.0" data-length="18.518062" data-scaled_by="2147483647.0" data-maximum_amplitude="0.615387" data-minimum_amplitude="-0.448608" data-midline_amplitude="0.083389" data-mean_norm="0.074353" data-mean_amplitude="9.4e-05" data-rms_amplitude="0.095172" data-maximum_delta="0.614441" data-minimum_delta="0.0" data-mean_delta="0.101835" data-rms_delta="0.128907" data-rough_frequency="10347.0" data-volume_adjustment="1.625" data-path="/cc0/sonic_pi/samples/rate_0.6/arovane_beat_d" src="arovane_beat_d/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="arovane_beat_d">/cc0/sonic_pi/samples/rate_0.6/arovane_beat_d</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="1776670.0" data-length="18.506979" data-scaled_by="2147483647.0" data-maximum_amplitude="0.486267" data-minimum_amplitude="-0.43222" data-midline_amplitude="0.027023" data-mean_norm="0.033659" data-mean_amplitude="-1.5e-05" data-rms_amplitude="0.049507" data-maximum_delta="0.39032" data-minimum_delta="0.0" data-mean_delta="0.010989" data-rms_delta="0.018314" data-rough_frequency="2826.0" data-volume_adjustment="2.056" data-path="/cc0/sonic_pi/samples/rate_0.6/arovane_beat_e" src="arovane_beat_e/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="arovane_beat_e">/cc0/sonic_pi/samples/rate_0.6/arovane_beat_e</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="142454.0" data-length="1.483896" data-scaled_by="2147483647.0" data-maximum_amplitude="0.184509" data-minimum_amplitude="-0.162415" data-midline_amplitude="0.011047" data-mean_norm="0.049374" data-mean_amplitude="1.5e-05" data-rms_amplitude="0.061854" data-maximum_delta="0.045197" data-minimum_delta="0.0" data-mean_delta="0.001841" data-rms_delta="0.004179" data-rough_frequency="516.0" data-volume_adjustment="5.42" data-path="/cc0/sonic_pi/samples/rate_0.6/bass_dnb_f" src="bass_dnb_f/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="bass_dnb_f">/cc0/sonic_pi/samples/rate_0.6/bass_dnb_f</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="380826.0" data-length="3.966937" data-scaled_by="2147483647.0" data-maximum_amplitude="0.295563" data-minimum_amplitude="-0.346375" data-midline_amplitude="-0.025406" data-mean_norm="0.042557" data-mean_amplitude="3.5e-05" data-rms_amplitude="0.059268" data-maximum_delta="0.435242" data-minimum_delta="0.0" data-mean_delta="0.048441" data-rms_delta="0.066982" data-rough_frequency="8633.0" data-volume_adjustment="2.887" data-path="/cc0/sonic_pi/samples/rate_0.6/bass_drop_c" src="bass_drop_c/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="bass_drop_c">/cc0/sonic_pi/samples/rate_0.6/bass_drop_c</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="245088.0" data-length="2.553" data-scaled_by="2147483647.0" data-maximum_amplitude="0.397003" data-minimum_amplitude="-0.357483" data-midline_amplitude="0.01976" data-mean_norm="0.073485" data-mean_amplitude="-0.000133" data-rms_amplitude="0.093836" data-maximum_delta="0.490356" data-minimum_delta="0.0" data-mean_delta="0.08612" data-rms_delta="0.111366" data-rough_frequency="9066.0" data-volume_adjustment="2.519" data-path="/cc0/sonic_pi/samples/rate_0.6/bass_hard_c" src="bass_hard_c/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="bass_hard_c">/cc0/sonic_pi/samples/rate_0.6/bass_hard_c</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="76236.0" data-length="0.794125" data-scaled_by="2147483647.0" data-maximum_amplitude="0.252045" data-minimum_amplitude="-0.248077" data-midline_amplitude="0.001984" data-mean_norm="0.021214" data-mean_amplitude="-0.00012" data-rms_amplitude="0.04304" data-maximum_delta="0.042755" data-minimum_delta="0.0" data-mean_delta="0.00016" data-rms_delta="0.000851" data-rough_frequency="151.0" data-volume_adjustment="3.968" data-path="/cc0/sonic_pi/samples/rate_0.6/bass_hit_c" src="bass_hit_c/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="bass_hit_c">/cc0/sonic_pi/samples/rate_0.6/bass_hit_c</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="635396.0" data-length="6.618708" data-scaled_by="2147483647.0" data-maximum_amplitude="0.462891" data-minimum_amplitude="-0.303833" data-midline_amplitude="0.079529" data-mean_norm="0.082798" data-mean_amplitude="1.4e-05" data-rms_amplitude="0.104005" data-maximum_delta="0.044281" data-minimum_delta="0.0" data-mean_delta="0.006688" data-rms_delta="0.008797" data-rough_frequency="646.0" data-volume_adjustment="2.16" data-path="/cc0/sonic_pi/samples/rate_0.6/bass_thick_c" src="bass_thick_c/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="bass_thick_c">/cc0/sonic_pi/samples/rate_0.6/bass_thick_c</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="582896.0" data-length="6.071833" data-scaled_by="2147483647.0" data-maximum_amplitude="0.514954" data-minimum_amplitude="-0.365021" data-midline_amplitude="0.074966" data-mean_norm="0.070013" data-mean_amplitude="7.4e-05" data-rms_amplitude="0.089141" data-maximum_delta="0.49765" data-minimum_delta="0.0" data-mean_delta="0.0975" data-rms_delta="0.123708" data-rough_frequency="10601.0" data-volume_adjustment="1.942" data-path="/cc0/sonic_pi/samples/rate_0.6/bass_trance_c" src="bass_trance_c/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="bass_trance_c">/cc0/sonic_pi/samples/rate_0.6/bass_trance_c</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="999260.0" data-length="10.408958" data-scaled_by="2147483647.0" data-maximum_amplitude="0.390991" data-minimum_amplitude="-0.415619" data-midline_amplitude="-0.012314" data-mean_norm="0.037161" data-mean_amplitude="1.2e-05" data-rms_amplitude="0.059889" data-maximum_delta="0.468933" data-minimum_delta="0.0" data-mean_delta="0.044818" data-rms_delta="0.072365" data-rough_frequency="9230.0" data-volume_adjustment="2.406" data-path="/cc0/sonic_pi/samples/rate_0.6/bass_voxy_c" src="bass_voxy_c/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="bass_voxy_c">/cc0/sonic_pi/samples/rate_0.6/bass_voxy_c</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="71416.0" data-length="0.743917" data-scaled_by="2147483647.0" data-maximum_amplitude="0.318146" data-minimum_amplitude="-0.290039" data-midline_amplitude="0.014053" data-mean_norm="0.019649" data-mean_amplitude="-6.3e-05" data-rms_amplitude="0.041065" data-maximum_delta="0.10611" data-minimum_delta="0.0" data-mean_delta="0.010714" data-rms_delta="0.017954" data-rough_frequency="3340.0" data-volume_adjustment="3.143" data-path="/cc0/sonic_pi/samples/rate_0.6/bass_voxy_hit_c" src="bass_voxy_hit_c/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="bass_voxy_hit_c">/cc0/sonic_pi/samples/rate_0.6/bass_voxy_hit_c</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="521912.0" data-length="5.436583" data-scaled_by="2147483647.0" data-maximum_amplitude="0.389801" data-minimum_amplitude="-0.283417" data-midline_amplitude="0.053192" data-mean_norm="0.089617" data-mean_amplitude="-8.8e-05" data-rms_amplitude="0.116784" data-maximum_delta="0.030731" data-minimum_delta="0.0" data-mean_delta="0.00283" data-rms_delta="0.004254" data-rough_frequency="278.0" data-volume_adjustment="2.565" data-path="/cc0/sonic_pi/samples/rate_0.6/bass_woodsy_c" src="bass_woodsy_c/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="bass_woodsy_c">/cc0/sonic_pi/samples/rate_0.6/bass_woodsy_c</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="91058.0" data-length="0.948521" data-scaled_by="2147483647.0" data-maximum_amplitude="0.082825" data-minimum_amplitude="-0.087708" data-midline_amplitude="-0.002441" data-mean_norm="0.005758" data-mean_amplitude="-2.7e-05" data-rms_amplitude="0.014928" data-maximum_delta="0.00296" data-minimum_delta="0.0" data-mean_delta="8.7e-05" data-rms_delta="0.000248" data-rough_frequency="126.0" data-volume_adjustment="11.402" data-path="/cc0/sonic_pi/samples/rate_0.6/bd_808" src="bd_808/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="bd_808">/cc0/sonic_pi/samples/rate_0.6/bd_808</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="20338.0" data-length="0.211854" data-scaled_by="2147483647.0" data-maximum_amplitude="0.379822" data-minimum_amplitude="-0.414063" data-midline_amplitude="-0.01712" data-mean_norm="0.056991" data-mean_amplitude="1.5e-05" data-rms_amplitude="0.090806" data-maximum_delta="0.085175" data-minimum_delta="0.0" data-mean_delta="0.000424" data-rms_delta="0.001717" data-rough_frequency="144.0" data-volume_adjustment="2.415" data-path="/cc0/sonic_pi/samples/rate_0.6/bd_ada" src="bd_ada/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="bd_ada">/cc0/sonic_pi/samples/rate_0.6/bd_ada</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="275156.0" data-length="2.866208" data-scaled_by="2147483647.0" data-maximum_amplitude="0.209869" data-minimum_amplitude="-0.215302" data-midline_amplitude="-0.002716" data-mean_norm="0.041102" data-mean_amplitude="-0.000128" data-rms_amplitude="0.0633" data-maximum_delta="0.006805" data-minimum_delta="0.0" data-mean_delta="0.001043" data-rms_delta="0.001481" data-rough_frequency="178.0" data-volume_adjustment="4.645" data-path="/cc0/sonic_pi/samples/rate_0.6/bd_boom" src="bd_boom/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="bd_boom">/cc0/sonic_pi/samples/rate_0.6/bd_boom</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="23304.0" data-length="0.24275" data-scaled_by="2147483647.0" data-maximum_amplitude="0.267487" data-minimum_amplitude="-0.240234" data-midline_amplitude="0.013626" data-mean_norm="0.047179" data-mean_amplitude="0.00014" data-rms_amplitude="0.077838" data-maximum_delta="0.028625" data-minimum_delta="0.0" data-mean_delta="0.000886" data-rms_delta="0.002527" data-rough_frequency="248.0" data-volume_adjustment="3.739" data-path="/cc0/sonic_pi/samples/rate_0.6/bd_chip" src="bd_chip/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="bd_chip">/cc0/sonic_pi/samples/rate_0.6/bd_chip</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="39826.0" data-length="0.414854" data-scaled_by="2147483647.0" data-maximum_amplitude="0.203918" data-minimum_amplitude="-0.216644" data-midline_amplitude="-0.006363" data-mean_norm="0.036733" data-mean_amplitude="-0.000152" data-rms_amplitude="0.054741" data-maximum_delta="0.015991" data-minimum_delta="0.0" data-mean_delta="0.000172" data-rms_delta="0.000462" data-rough_frequency="64.0" data-volume_adjustment="4.616" data-path="/cc0/sonic_pi/samples/rate_0.6/bd_fat" src="bd_fat/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="bd_fat">/cc0/sonic_pi/samples/rate_0.6/bd_fat</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="62002.0" data-length="0.645854" data-scaled_by="2147483647.0" data-maximum_amplitude="0.190125" data-minimum_amplitude="-0.183075" data-midline_amplitude="0.003525" data-mean_norm="0.02183" data-mean_amplitude="-1.9e-05" data-rms_amplitude="0.038911" data-maximum_delta="0.003662" data-minimum_delta="0.0" data-mean_delta="0.000153" data-rms_delta="0.000372" data-rough_frequency="73.0" data-volume_adjustment="5.26" data-path="/cc0/sonic_pi/samples/rate_0.6/bd_gas" src="bd_gas/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="bd_gas">/cc0/sonic_pi/samples/rate_0.6/bd_gas</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="40036.0" data-length="0.417042" data-scaled_by="2147483647.0" data-maximum_amplitude="0.328552" data-minimum_amplitude="-0.309357" data-midline_amplitude="0.009598" data-mean_norm="0.084544" data-mean_amplitude="-0.000227" data-rms_amplitude="0.106446" data-maximum_delta="0.216675" data-minimum_delta="0.0" data-mean_delta="0.001957" data-rms_delta="0.007338" data-rough_frequency="526.0" data-volume_adjustment="3.044" data-path="/cc0/sonic_pi/samples/rate_0.6/bd_haus" src="bd_haus/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="bd_haus">/cc0/sonic_pi/samples/rate_0.6/bd_haus</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="118262.0" data-length="1.231896" data-scaled_by="2147483647.0" data-maximum_amplitude="0.202454" data-minimum_amplitude="-0.236969" data-midline_amplitude="-0.017258" data-mean_norm="0.014113" data-mean_amplitude="-1.9e-05" data-rms_amplitude="0.026885" data-maximum_delta="0.019684" data-minimum_delta="0.0" data-mean_delta="0.000961" data-rms_delta="0.001896" data-rough_frequency="538.0" data-volume_adjustment="4.22" data-path="/cc0/sonic_pi/samples/rate_0.6/bd_jazz" src="bd_jazz/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="bd_jazz">/cc0/sonic_pi/samples/rate_0.6/bd_jazz</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="59938.0" data-length="0.624354" data-scaled_by="2147483647.0" data-maximum_amplitude="0.348969" data-minimum_amplitude="-0.337677" data-midline_amplitude="0.005646" data-mean_norm="0.094731" data-mean_amplitude="1.9e-05" data-rms_amplitude="0.114801" data-maximum_delta="0.024963" data-minimum_delta="0.0" data-mean_delta="0.003985" data-rms_delta="0.005112" data-rough_frequency="340.0" data-volume_adjustment="2.866" data-path="/cc0/sonic_pi/samples/rate_0.6/bd_klub" src="bd_klub/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="bd_klub">/cc0/sonic_pi/samples/rate_0.6/bd_klub</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="123990.0" data-length="1.291562" data-scaled_by="2147483647.0" data-maximum_amplitude="0.423615" data-minimum_amplitude="-0.503754" data-midline_amplitude="-0.04007" data-mean_norm="0.03762" data-mean_amplitude="3.3e-05" data-rms_amplitude="0.067913" data-maximum_delta="0.482819" data-minimum_delta="0.0" data-mean_delta="0.024641" data-rms_delta="0.055689" data-rough_frequency="6264.0" data-volume_adjustment="1.985" data-path="/cc0/sonic_pi/samples/rate_0.6/bd_mehackit" src="bd_mehackit/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="bd_mehackit">/cc0/sonic_pi/samples/rate_0.6/bd_mehackit</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="71928.0" data-length="0.74925" data-scaled_by="2147483647.0" data-maximum_amplitude="0.167175" data-minimum_amplitude="-0.167511" data-midline_amplitude="-0.000168" data-mean_norm="0.045778" data-mean_amplitude="-6.9e-05" data-rms_amplitude="0.061983" data-maximum_delta="0.002716" data-minimum_delta="0.0" data-mean_delta="0.00021" data-rms_delta="0.000399" data-rough_frequency="49.0" data-volume_adjustment="5.97" data-path="/cc0/sonic_pi/samples/rate_0.6/bd_pure" src="bd_pure/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="bd_pure">/cc0/sonic_pi/samples/rate_0.6/bd_pure</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="67622.0" data-length="0.704396" data-scaled_by="2147483647.0" data-maximum_amplitude="0.327301" data-minimum_amplitude="-0.308685" data-midline_amplitude="0.009308" data-mean_norm="0.089931" data-mean_amplitude="-7.1e-05" data-rms_amplitude="0.116544" data-maximum_delta="0.067078" data-minimum_delta="0.0" data-mean_delta="0.001605" data-rms_delta="0.002642" data-rough_frequency="173.0" data-volume_adjustment="3.055" data-path="/cc0/sonic_pi/samples/rate_0.6/bd_sone" src="bd_sone/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="bd_sone">/cc0/sonic_pi/samples/rate_0.6/bd_sone</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="40566.0" data-length="0.422563" data-scaled_by="2147483647.0" data-maximum_amplitude="0.403778" data-minimum_amplitude="-0.373535" data-midline_amplitude="0.015121" data-mean_norm="0.10291" data-mean_amplitude="-0.000359" data-rms_amplitude="0.135087" data-maximum_delta="0.054047" data-minimum_delta="0.0" data-mean_delta="0.000874" data-rms_delta="0.002541" data-rough_frequency="143.0" data-volume_adjustment="2.477" data-path="/cc0/sonic_pi/samples/rate_0.6/bd_tek" src="bd_tek/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="bd_tek">/cc0/sonic_pi/samples/rate_0.6/bd_tek</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="73888.0" data-length="0.769667" data-scaled_by="2147483647.0" data-maximum_amplitude="0.441498" data-minimum_amplitude="-0.360779" data-midline_amplitude="0.040359" data-mean_norm="0.042438" data-mean_amplitude="4.5e-05" data-rms_amplitude="0.076057" data-maximum_delta="0.136597" data-minimum_delta="0.0" data-mean_delta="0.01124" data-rms_delta="0.016802" data-rough_frequency="1687.0" data-volume_adjustment="2.265" data-path="/cc0/sonic_pi/samples/rate_0.6/bd_zome" src="bd_zome/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="bd_zome">/cc0/sonic_pi/samples/rate_0.6/bd_zome</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="24822.0" data-length="0.258562" data-scaled_by="2147483647.0" data-maximum_amplitude="0.299347" data-minimum_amplitude="-0.30426" data-midline_amplitude="-0.002457" data-mean_norm="0.074992" data-mean_amplitude="0.000425" data-rms_amplitude="0.104023" data-maximum_delta="0.126221" data-minimum_delta="0.0" data-mean_delta="0.001656" data-rms_delta="0.00642" data-rough_frequency="471.0" data-volume_adjustment="3.287" data-path="/cc0/sonic_pi/samples/rate_0.6/bd_zum" src="bd_zum/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="bd_zum">/cc0/sonic_pi/samples/rate_0.6/bd_zum</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="113116.0" data-length="1.178292" data-scaled_by="2147483647.0" data-maximum_amplitude="0.291107" data-minimum_amplitude="-0.565094" data-midline_amplitude="-0.136993" data-mean_norm="0.040147" data-mean_amplitude="7.9e-05" data-rms_amplitude="0.068152" data-maximum_delta="0.108429" data-minimum_delta="0.0" data-mean_delta="0.00026" data-rms_delta="0.001337" data-rough_frequency="149.0" data-volume_adjustment="1.77" data-path="/cc0/sonic_pi/samples/rate_0.6/drum_bass_hard" src="drum_bass_hard/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="drum_bass_hard">/cc0/sonic_pi/samples/rate_0.6/drum_bass_hard</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="88694.0" data-length="0.923896" data-scaled_by="2147483647.0" data-maximum_amplitude="0.158081" data-minimum_amplitude="-0.286682" data-midline_amplitude="-0.064301" data-mean_norm="0.015586" data-mean_amplitude="1.7e-05" data-rms_amplitude="0.030774" data-maximum_delta="0.036011" data-minimum_delta="0.0" data-mean_delta="0.000147" data-rms_delta="0.000826" data-rough_frequency="205.0" data-volume_adjustment="3.488" data-path="/cc0/sonic_pi/samples/rate_0.6/drum_bass_soft" src="drum_bass_soft/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="drum_bass_soft">/cc0/sonic_pi/samples/rate_0.6/drum_bass_soft</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="57600.0" data-length="0.6" data-scaled_by="2147483647.0" data-maximum_amplitude="0.389709" data-minimum_amplitude="-0.39975" data-midline_amplitude="-0.00502" data-mean_norm="0.071154" data-mean_amplitude="6.0e-06" data-rms_amplitude="0.108964" data-maximum_delta="0.17157" data-minimum_delta="0.0" data-mean_delta="0.005341" data-rms_delta="0.013179" data-rough_frequency="923.0" data-volume_adjustment="2.502" data-path="/cc0/sonic_pi/samples/rate_0.6/drum_cowbell" src="drum_cowbell/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="drum_cowbell">/cc0/sonic_pi/samples/rate_0.6/drum_cowbell</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="33164.0" data-length="0.345458" data-scaled_by="2147483647.0" data-maximum_amplitude="0.243958" data-minimum_amplitude="-0.212921" data-midline_amplitude="0.015518" data-mean_norm="0.011797" data-mean_amplitude="-2.9e-05" data-rms_amplitude="0.022647" data-maximum_delta="0.219635" data-minimum_delta="0.0" data-mean_delta="0.004952" data-rms_delta="0.013239" data-rough_frequency="4465.0" data-volume_adjustment="4.099" data-path="/cc0/sonic_pi/samples/rate_0.6/drum_cymbal_closed" src="drum_cymbal_closed/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="drum_cymbal_closed">/cc0/sonic_pi/samples/rate_0.6/drum_cymbal_closed</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="263042.0" data-length="2.740021" data-scaled_by="2147483647.0" data-maximum_amplitude="0.286865" data-minimum_amplitude="-0.374146" data-midline_amplitude="-0.04364" data-mean_norm="0.013606" data-mean_amplitude="-0.0" data-rms_amplitude="0.026514" data-maximum_delta="0.209229" data-minimum_delta="0.0" data-mean_delta="0.003436" data-rms_delta="0.010923" data-rough_frequency="3147.0" data-volume_adjustment="2.673" data-path="/cc0/sonic_pi/samples/rate_0.6/drum_cymbal_hard" src="drum_cymbal_hard/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="drum_cymbal_hard">/cc0/sonic_pi/samples/rate_0.6/drum_cymbal_hard</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="277872.0" data-length="2.8945" data-scaled_by="2147483647.0" data-maximum_amplitude="0.43985" data-minimum_amplitude="-0.425995" data-midline_amplitude="0.006927" data-mean_norm="0.020903" data-mean_amplitude="-3.0e-06" data-rms_amplitude="0.041927" data-maximum_delta="0.340302" data-minimum_delta="0.0" data-mean_delta="0.006381" data-rms_delta="0.019103" data-rough_frequency="3480.0" data-volume_adjustment="2.274" data-path="/cc0/sonic_pi/samples/rate_0.6/drum_cymbal_open" src="drum_cymbal_open/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="drum_cymbal_open">/cc0/sonic_pi/samples/rate_0.6/drum_cymbal_open</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="41718.0" data-length="0.434563" data-scaled_by="2147483647.0" data-maximum_amplitude="0.26004" data-minimum_amplitude="-0.225708" data-midline_amplitude="0.017166" data-mean_norm="0.011489" data-mean_amplitude="2.6e-05" data-rms_amplitude="0.027521" data-maximum_delta="0.233887" data-minimum_delta="0.0" data-mean_delta="0.003726" data-rms_delta="0.013477" data-rough_frequency="3740.0" data-volume_adjustment="3.846" data-path="/cc0/sonic_pi/samples/rate_0.6/drum_cymbal_pedal" src="drum_cymbal_pedal/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="drum_cymbal_pedal">/cc0/sonic_pi/samples/rate_0.6/drum_cymbal_pedal</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="148934.0" data-length="1.551396" data-scaled_by="2147483647.0" data-maximum_amplitude="0.263184" data-minimum_amplitude="-0.250244" data-midline_amplitude="0.00647" data-mean_norm="0.010346" data-mean_amplitude="2.0e-06" data-rms_amplitude="0.018705" data-maximum_delta="0.240692" data-minimum_delta="0.0" data-mean_delta="0.00322" data-rms_delta="0.009196" data-rough_frequency="3755.0" data-volume_adjustment="3.8" data-path="/cc0/sonic_pi/samples/rate_0.6/drum_cymbal_soft" src="drum_cymbal_soft/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="drum_cymbal_soft">/cc0/sonic_pi/samples/rate_0.6/drum_cymbal_soft</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="45452.0" data-length="0.473458" data-scaled_by="2147483647.0" data-maximum_amplitude="0.363251" data-minimum_amplitude="-0.308624" data-midline_amplitude="0.027313" data-mean_norm="0.036459" data-mean_amplitude="8.4e-05" data-rms_amplitude="0.070478" data-maximum_delta="0.05484" data-minimum_delta="0.0" data-mean_delta="0.000486" data-rms_delta="0.002316" data-rough_frequency="251.0" data-volume_adjustment="2.753" data-path="/cc0/sonic_pi/samples/rate_0.6/drum_heavy_kick" src="drum_heavy_kick/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="drum_heavy_kick">/cc0/sonic_pi/samples/rate_0.6/drum_heavy_kick</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="997646.0" data-length="10.392146" data-scaled_by="2147483647.0" data-maximum_amplitude="0.219482" data-minimum_amplitude="-0.232178" data-midline_amplitude="-0.006348" data-mean_norm="0.023436" data-mean_amplitude="-1.5e-05" data-rms_amplitude="0.034076" data-maximum_delta="0.034637" data-minimum_delta="0.0" data-mean_delta="0.001505" data-rms_delta="0.002568" data-rough_frequency="575.0" data-volume_adjustment="4.307" data-path="/cc0/sonic_pi/samples/rate_0.6/drum_roll" src="drum_roll/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="drum_roll">/cc0/sonic_pi/samples/rate_0.6/drum_roll</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="71082.0" data-length="0.740437" data-scaled_by="2147483647.0" data-maximum_amplitude="0.696381" data-minimum_amplitude="-0.747925" data-midline_amplitude="-0.025772" data-mean_norm="0.032271" data-mean_amplitude="-2.1e-05" data-rms_amplitude="0.079008" data-maximum_delta="0.167999" data-minimum_delta="0.0" data-mean_delta="0.003226" data-rms_delta="0.011298" data-rough_frequency="1092.0" data-volume_adjustment="1.337" data-path="/cc0/sonic_pi/samples/rate_0.6/drum_snare_hard" src="drum_snare_hard/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="drum_snare_hard">/cc0/sonic_pi/samples/rate_0.6/drum_snare_hard</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="48896.0" data-length="0.509333" data-scaled_by="2147483647.0" data-maximum_amplitude="0.21637" data-minimum_amplitude="-0.195984" data-midline_amplitude="0.010193" data-mean_norm="0.0116" data-mean_amplitude="-3.3e-05" data-rms_amplitude="0.024718" data-maximum_delta="0.044189" data-minimum_delta="0.0" data-mean_delta="0.001226" data-rms_delta="0.003365" data-rough_frequency="1039.0" data-volume_adjustment="4.622" data-path="/cc0/sonic_pi/samples/rate_0.6/drum_snare_soft" src="drum_snare_soft/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="drum_snare_soft">/cc0/sonic_pi/samples/rate_0.6/drum_snare_soft</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="372528.0" data-length="3.8805" data-scaled_by="2147483647.0" data-maximum_amplitude="0.409088" data-minimum_amplitude="-0.415039" data-midline_amplitude="-0.002975" data-mean_norm="0.024564" data-mean_amplitude="0.0" data-rms_amplitude="0.045874" data-maximum_delta="0.249237" data-minimum_delta="0.0" data-mean_delta="0.006239" data-rms_delta="0.016826" data-rough_frequency="2802.0" data-volume_adjustment="2.409" data-path="/cc0/sonic_pi/samples/rate_0.6/drum_splash_hard" src="drum_splash_hard/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="drum_splash_hard">/cc0/sonic_pi/samples/rate_0.6/drum_splash_hard</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="298112.0" data-length="3.105333" data-scaled_by="2147483647.0" data-maximum_amplitude="0.155426" data-minimum_amplitude="-0.153046" data-midline_amplitude="0.00119" data-mean_norm="0.010459" data-mean_amplitude="0.0" data-rms_amplitude="0.018009" data-maximum_delta="0.082642" data-minimum_delta="0.0" data-mean_delta="0.002792" data-rms_delta="0.006751" data-rough_frequency="2863.0" data-volume_adjustment="6.434" data-path="/cc0/sonic_pi/samples/rate_0.6/drum_splash_soft" src="drum_splash_soft/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="drum_splash_soft">/cc0/sonic_pi/samples/rate_0.6/drum_splash_soft</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="112594.0" data-length="1.172854" data-scaled_by="2147483647.0" data-maximum_amplitude="0.583466" data-minimum_amplitude="-0.638458" data-midline_amplitude="-0.027496" data-mean_norm="0.047816" data-mean_amplitude="0.000171" data-rms_amplitude="0.085118" data-maximum_delta="0.116852" data-minimum_delta="0.0" data-mean_delta="0.000708" data-rms_delta="0.002954" data-rough_frequency="265.0" data-volume_adjustment="1.566" data-path="/cc0/sonic_pi/samples/rate_0.6/drum_tom_hi_hard" src="drum_tom_hi_hard/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="drum_tom_hi_hard">/cc0/sonic_pi/samples/rate_0.6/drum_tom_hi_hard</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="88438.0" data-length="0.921229" data-scaled_by="2147483647.0" data-maximum_amplitude="0.214905" data-minimum_amplitude="-0.164093" data-midline_amplitude="0.025406" data-mean_norm="0.01674" data-mean_amplitude="-3.0e-05" data-rms_amplitude="0.028532" data-maximum_delta="0.012695" data-minimum_delta="0.0" data-mean_delta="0.000214" data-rms_delta="0.000618" data-rough_frequency="165.0" data-volume_adjustment="4.653" data-path="/cc0/sonic_pi/samples/rate_0.6/drum_tom_hi_soft" src="drum_tom_hi_soft/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="drum_tom_hi_soft">/cc0/sonic_pi/samples/rate_0.6/drum_tom_hi_soft</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="161678.0" data-length="1.684146" data-scaled_by="2147483647.0" data-maximum_amplitude="0.488098" data-minimum_amplitude="-0.678162" data-midline_amplitude="-0.095032" data-mean_norm="0.049204" data-mean_amplitude="1.0e-05" data-rms_amplitude="0.082982" data-maximum_delta="0.089325" data-minimum_delta="0.0" data-mean_delta="0.000565" data-rms_delta="0.002238" data-rough_frequency="206.0" data-volume_adjustment="1.475" data-path="/cc0/sonic_pi/samples/rate_0.6/drum_tom_lo_hard" src="drum_tom_lo_hard/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="drum_tom_lo_hard">/cc0/sonic_pi/samples/rate_0.6/drum_tom_lo_hard</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="139604.0" data-length="1.454208" data-scaled_by="2147483647.0" data-maximum_amplitude="0.186249" data-minimum_amplitude="-0.16568" data-midline_amplitude="0.010284" data-mean_norm="0.015947" data-mean_amplitude="-5.0e-06" data-rms_amplitude="0.026759" data-maximum_delta="0.008636" data-minimum_delta="0.0" data-mean_delta="0.000163" data-rms_delta="0.000439" data-rough_frequency="125.0" data-volume_adjustment="5.369" data-path="/cc0/sonic_pi/samples/rate_0.6/drum_tom_lo_soft" src="drum_tom_lo_soft/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="drum_tom_lo_soft">/cc0/sonic_pi/samples/rate_0.6/drum_tom_lo_soft</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="118410.0" data-length="1.233437" data-scaled_by="2147483647.0" data-maximum_amplitude="0.53717" data-minimum_amplitude="-0.633209" data-midline_amplitude="-0.048019" data-mean_norm="0.053495" data-mean_amplitude="0.000113" data-rms_amplitude="0.089835" data-maximum_delta="0.089722" data-minimum_delta="0.0" data-mean_delta="0.000728" data-rms_delta="0.002807" data-rough_frequency="238.0" data-volume_adjustment="1.579" data-path="/cc0/sonic_pi/samples/rate_0.6/drum_tom_mid_hard" src="drum_tom_mid_hard/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="drum_tom_mid_hard">/cc0/sonic_pi/samples/rate_0.6/drum_tom_mid_hard</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="108014.0" data-length="1.125146" data-scaled_by="2147483647.0" data-maximum_amplitude="0.268433" data-minimum_amplitude="-0.279266" data-midline_amplitude="-0.005417" data-mean_norm="0.026923" data-mean_amplitude="2.0e-06" data-rms_amplitude="0.044908" data-maximum_delta="0.01297" data-minimum_delta="0.0" data-mean_delta="0.000313" data-rms_delta="0.000773" data-rough_frequency="131.0" data-volume_adjustment="3.581" data-path="/cc0/sonic_pi/samples/rate_0.6/drum_tom_mid_soft" src="drum_tom_mid_soft/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="drum_tom_mid_soft">/cc0/sonic_pi/samples/rate_0.6/drum_tom_mid_soft</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="18668.0" data-length="0.194458" data-scaled_by="2147483647.0" data-maximum_amplitude="0.341339" data-minimum_amplitude="-0.396179" data-midline_amplitude="-0.02742" data-mean_norm="0.057577" data-mean_amplitude="-1.0e-05" data-rms_amplitude="0.081967" data-maximum_delta="0.066071" data-minimum_delta="0.0" data-mean_delta="0.00443" data-rms_delta="0.008723" data-rough_frequency="812.0" data-volume_adjustment="2.524" data-path="/cc0/sonic_pi/samples/rate_0.6/elec_beep" src="elec_beep/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="elec_beep">/cc0/sonic_pi/samples/rate_0.6/elec_beep</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="46352.0" data-length="0.482833" data-scaled_by="2147483647.0" data-maximum_amplitude="0.387207" data-minimum_amplitude="-0.404938" data-midline_amplitude="-0.008865" data-mean_norm="0.06915" data-mean_amplitude="3.0e-05" data-rms_amplitude="0.100676" data-maximum_delta="0.019989" data-minimum_delta="0.0" data-mean_delta="0.001014" data-rms_delta="0.002048" data-rough_frequency="155.0" data-volume_adjustment="2.47" data-path="/cc0/sonic_pi/samples/rate_0.6/elec_bell" src="elec_bell/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="elec_bell">/cc0/sonic_pi/samples/rate_0.6/elec_bell</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="26940.0" data-length="0.280625" data-scaled_by="2147483647.0" data-maximum_amplitude="0.150665" data-minimum_amplitude="-0.179382" data-midline_amplitude="-0.014359" data-mean_norm="0.009712" data-mean_amplitude="-3.0e-06" data-rms_amplitude="0.015382" data-maximum_delta="0.044952" data-minimum_delta="0.0" data-mean_delta="0.001205" data-rms_delta="0.002484" data-rough_frequency="1233.0" data-volume_adjustment="5.575" data-path="/cc0/sonic_pi/samples/rate_0.6/elec_blip" src="elec_blip/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="elec_blip">/cc0/sonic_pi/samples/rate_0.6/elec_blip</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="31196.0" data-length="0.324958" data-scaled_by="2147483647.0" data-maximum_amplitude="0.198334" data-minimum_amplitude="-0.202759" data-midline_amplitude="-0.002213" data-mean_norm="0.028303" data-mean_amplitude="-1.0e-05" data-rms_amplitude="0.037402" data-maximum_delta="0.043396" data-minimum_delta="0.0" data-mean_delta="0.00134" data-rms_delta="0.00272" data-rough_frequency="555.0" data-volume_adjustment="4.932" data-path="/cc0/sonic_pi/samples/rate_0.6/elec_blip2" src="elec_blip2/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="elec_blip2">/cc0/sonic_pi/samples/rate_0.6/elec_blip2</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="102918.0" data-length="1.072062" data-scaled_by="2147483647.0" data-maximum_amplitude="0.408081" data-minimum_amplitude="-0.3685" data-midline_amplitude="0.019791" data-mean_norm="0.043816" data-mean_amplitude="4.7e-05" data-rms_amplitude="0.074383" data-maximum_delta="0.031342" data-minimum_delta="0.0" data-mean_delta="0.000964" data-rms_delta="0.002459" data-rough_frequency="252.0" data-volume_adjustment="2.45" data-path="/cc0/sonic_pi/samples/rate_0.6/elec_blup" src="elec_blup/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="elec_blup">/cc0/sonic_pi/samples/rate_0.6/elec_blup</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="56882.0" data-length="0.592521" data-scaled_by="2147483647.0" data-maximum_amplitude="0.418091" data-minimum_amplitude="-0.362" data-midline_amplitude="0.028046" data-mean_norm="0.042349" data-mean_amplitude="-0.000163" data-rms_amplitude="0.071915" data-maximum_delta="0.014679" data-minimum_delta="0.0" data-mean_delta="0.000581" data-rms_delta="0.001326" data-rough_frequency="140.0" data-volume_adjustment="2.392" data-path="/cc0/sonic_pi/samples/rate_0.6/elec_bong" src="elec_bong/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="elec_bong">/cc0/sonic_pi/samples/rate_0.6/elec_bong</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="359772.0" data-length="3.747625" data-scaled_by="2147483647.0" data-maximum_amplitude="0.424744" data-minimum_amplitude="-0.441254" data-midline_amplitude="-0.008255" data-mean_norm="0.018324" data-mean_amplitude="0.0" data-rms_amplitude="0.041785" data-maximum_delta="0.232574" data-minimum_delta="0.0" data-mean_delta="0.003995" data-rms_delta="0.014103" data-rough_frequency="2578.0" data-volume_adjustment="2.266" data-path="/cc0/sonic_pi/samples/rate_0.6/elec_chime" src="elec_chime/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="elec_chime">/cc0/sonic_pi/samples/rate_0.6/elec_chime</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="91132.0" data-length="0.949292" data-scaled_by="2147483647.0" data-maximum_amplitude="0.471252" data-minimum_amplitude="-0.496704" data-midline_amplitude="-0.012726" data-mean_norm="0.060342" data-mean_amplitude="1.0e-05" data-rms_amplitude="0.094945" data-maximum_delta="0.25238" data-minimum_delta="0.0" data-mean_delta="0.014638" data-rms_delta="0.032091" data-rough_frequency="2582.0" data-volume_adjustment="2.013" data-path="/cc0/sonic_pi/samples/rate_0.6/elec_cymbal" src="elec_cymbal/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="elec_cymbal">/cc0/sonic_pi/samples/rate_0.6/elec_cymbal</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="242574.0" data-length="2.526813" data-scaled_by="2147483647.0" data-maximum_amplitude="0.291901" data-minimum_amplitude="-0.308868" data-midline_amplitude="-0.008484" data-mean_norm="0.019122" data-mean_amplitude="1.0e-06" data-rms_amplitude="0.032443" data-maximum_delta="0.099792" data-minimum_delta="0.0" data-mean_delta="0.00317" data-rms_delta="0.00796" data-rough_frequency="1874.0" data-volume_adjustment="3.238" data-path="/cc0/sonic_pi/samples/rate_0.6/elec_filt_snare" src="elec_filt_snare/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="elec_filt_snare">/cc0/sonic_pi/samples/rate_0.6/elec_filt_snare</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="10144.0" data-length="0.105667" data-scaled_by="2147483647.0" data-maximum_amplitude="0.383606" data-minimum_amplitude="-0.274017" data-midline_amplitude="0.054794" data-mean_norm="0.040139" data-mean_amplitude="0.000341" data-rms_amplitude="0.077224" data-maximum_delta="0.013245" data-minimum_delta="0.0" data-mean_delta="0.000547" data-rms_delta="0.0012" data-rough_frequency="118.0" data-volume_adjustment="2.607" data-path="/cc0/sonic_pi/samples/rate_0.6/elec_flip" src="elec_flip/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="elec_flip">/cc0/sonic_pi/samples/rate_0.6/elec_flip</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="61614.0" data-length="0.641813" data-scaled_by="2147483647.0" data-maximum_amplitude="0.321808" data-minimum_amplitude="-0.318268" data-midline_amplitude="0.00177" data-mean_norm="0.066756" data-mean_amplitude="5.1e-05" data-rms_amplitude="0.08541" data-maximum_delta="0.187592" data-minimum_delta="0.0" data-mean_delta="0.009198" data-rms_delta="0.014534" data-rough_frequency="1299.0" data-volume_adjustment="3.107" data-path="/cc0/sonic_pi/samples/rate_0.6/elec_fuzz_tom" src="elec_fuzz_tom/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="elec_fuzz_tom">/cc0/sonic_pi/samples/rate_0.6/elec_fuzz_tom</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="34096.0" data-length="0.355167" data-scaled_by="2147483647.0" data-maximum_amplitude="0.359344" data-minimum_amplitude="-0.411011" data-midline_amplitude="-0.025833" data-mean_norm="0.030746" data-mean_amplitude="-0.000136" data-rms_amplitude="0.050378" data-maximum_delta="0.109924" data-minimum_delta="0.0" data-mean_delta="0.004348" data-rms_delta="0.009769" data-rough_frequency="1481.0" data-volume_adjustment="2.433" data-path="/cc0/sonic_pi/samples/rate_0.6/elec_hi_snare" src="elec_hi_snare/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="elec_hi_snare">/cc0/sonic_pi/samples/rate_0.6/elec_hi_snare</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="25020.0" data-length="0.260625" data-scaled_by="2147483647.0" data-maximum_amplitude="0.186035" data-minimum_amplitude="-0.235168" data-midline_amplitude="-0.024567" data-mean_norm="0.032413" data-mean_amplitude="-6.6e-05" data-rms_amplitude="0.054566" data-maximum_delta="0.005188" data-minimum_delta="0.0" data-mean_delta="0.000266" data-rms_delta="0.00052" data-rough_frequency="72.0" data-volume_adjustment="4.252" data-path="/cc0/sonic_pi/samples/rate_0.6/elec_hollow_kick" src="elec_hollow_kick/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="elec_hollow_kick">/cc0/sonic_pi/samples/rate_0.6/elec_hollow_kick</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="108174.0" data-length="1.126812" data-scaled_by="2147483647.0" data-maximum_amplitude="0.577972" data-minimum_amplitude="-0.542236" data-midline_amplitude="0.017868" data-mean_norm="0.046739" data-mean_amplitude="0.000286" data-rms_amplitude="0.073472" data-maximum_delta="0.106781" data-minimum_delta="0.0" data-mean_delta="0.002158" data-rms_delta="0.005053" data-rough_frequency="525.0" data-volume_adjustment="1.73" data-path="/cc0/sonic_pi/samples/rate_0.6/elec_lo_snare" src="elec_lo_snare/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="elec_lo_snare">/cc0/sonic_pi/samples/rate_0.6/elec_lo_snare</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="90470.0" data-length="0.942396" data-scaled_by="2147483647.0" data-maximum_amplitude="0.372559" data-minimum_amplitude="-0.383667" data-midline_amplitude="-0.005554" data-mean_norm="0.014093" data-mean_amplitude="6.5e-05" data-rms_amplitude="0.033197" data-maximum_delta="0.059265" data-minimum_delta="0.0" data-mean_delta="0.000569" data-rms_delta="0.002132" data-rough_frequency="490.0" data-volume_adjustment="2.606" data-path="/cc0/sonic_pi/samples/rate_0.6/elec_mid_snare" src="elec_mid_snare/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="elec_mid_snare">/cc0/sonic_pi/samples/rate_0.6/elec_mid_snare</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="35482.0" data-length="0.369604" data-scaled_by="2147483647.0" data-maximum_amplitude="0.161346" data-minimum_amplitude="-0.189056" data-midline_amplitude="-0.013855" data-mean_norm="0.026083" data-mean_amplitude="1.4e-05" data-rms_amplitude="0.041461" data-maximum_delta="0.01767" data-minimum_delta="0.0" data-mean_delta="0.000967" data-rms_delta="0.002199" data-rough_frequency="405.0" data-volume_adjustment="5.289" data-path="/cc0/sonic_pi/samples/rate_0.6/elec_ping" src="elec_ping/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="elec_ping">/cc0/sonic_pi/samples/rate_0.6/elec_ping</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="0.0" data-length="0.0" data-scaled_by="2147483647.0" data-maximum_amplitude="0.0" data-minimum_amplitude="0.0" data-midline_amplitude="0.0" data-mean_norm="0.0" data-mean_amplitude="0.0" data-rms_amplitude="0.0" data-maximum_delta="0.0" data-minimum_delta="0.0" data-mean_delta="-0.0" data-rms_delta="-0.0" data-rough_frequency="0.0" data-path="/cc0/sonic_pi/samples/rate_0.6/elec_plip" src="elec_plip/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="elec_plip">/cc0/sonic_pi/samples/rate_0.6/elec_plip</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="17424.0" data-length="0.1815" data-scaled_by="2147483647.0" data-maximum_amplitude="0.375305" data-minimum_amplitude="-0.38504" data-midline_amplitude="-0.004868" data-mean_norm="0.072415" data-mean_amplitude="-6.3e-05" data-rms_amplitude="0.113687" data-maximum_delta="0.033051" data-minimum_delta="0.0" data-mean_delta="0.001824" data-rms_delta="0.004206" data-rough_frequency="282.0" data-volume_adjustment="2.597" data-path="/cc0/sonic_pi/samples/rate_0.6/elec_pop" src="elec_pop/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="elec_pop">/cc0/sonic_pi/samples/rate_0.6/elec_pop</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="64148.0" data-length="0.668208" data-scaled_by="2147483647.0" data-maximum_amplitude="0.525085" data-minimum_amplitude="-0.619324" data-midline_amplitude="-0.047119" data-mean_norm="0.03729" data-mean_amplitude="3.0e-05" data-rms_amplitude="0.061917" data-maximum_delta="0.201965" data-minimum_delta="0.0" data-mean_delta="0.002764" data-rms_delta="0.007372" data-rough_frequency="909.0" data-volume_adjustment="1.615" data-path="/cc0/sonic_pi/samples/rate_0.6/elec_snare" src="elec_snare/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="elec_snare">/cc0/sonic_pi/samples/rate_0.6/elec_snare</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="22612.0" data-length="0.235542" data-scaled_by="2147483647.0" data-maximum_amplitude="0.259857" data-minimum_amplitude="-0.27066" data-midline_amplitude="-0.005402" data-mean_norm="0.028734" data-mean_amplitude="-0.000338" data-rms_amplitude="0.053589" data-maximum_delta="0.006836" data-minimum_delta="0.0" data-mean_delta="0.00033" data-rms_delta="0.00065" data-rough_frequency="92.0" data-volume_adjustment="3.695" data-path="/cc0/sonic_pi/samples/rate_0.6/elec_soft_kick" src="elec_soft_kick/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="elec_soft_kick">/cc0/sonic_pi/samples/rate_0.6/elec_soft_kick</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="0.0" data-length="0.0" data-scaled_by="2147483647.0" data-maximum_amplitude="0.0" data-minimum_amplitude="0.0" data-midline_amplitude="0.0" data-mean_norm="0.0" data-mean_amplitude="0.0" data-rms_amplitude="0.0" data-maximum_delta="0.0" data-minimum_delta="0.0" data-mean_delta="-0.0" data-rms_delta="-0.0" data-rough_frequency="0.0" data-path="/cc0/sonic_pi/samples/rate_0.6/elec_tick" src="elec_tick/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="elec_tick">/cc0/sonic_pi/samples/rate_0.6/elec_tick</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="37070.0" data-length="0.386146" data-scaled_by="2147483647.0" data-maximum_amplitude="0.290924" data-minimum_amplitude="-0.31601" data-midline_amplitude="-0.012543" data-mean_norm="0.046177" data-mean_amplitude="-1.3e-05" data-rms_amplitude="0.076878" data-maximum_delta="0.217285" data-minimum_delta="0.0" data-mean_delta="0.012271" data-rms_delta="0.028693" data-rough_frequency="2851.0" data-volume_adjustment="3.164" data-path="/cc0/sonic_pi/samples/rate_0.6/elec_triangle" src="elec_triangle/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="elec_triangle">/cc0/sonic_pi/samples/rate_0.6/elec_triangle</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="100370.0" data-length="1.045521" data-scaled_by="2147483647.0" data-maximum_amplitude="0.237976" data-minimum_amplitude="-0.199158" data-midline_amplitude="0.019409" data-mean_norm="0.01671" data-mean_amplitude="1.1e-05" data-rms_amplitude="0.030516" data-maximum_delta="0.207977" data-minimum_delta="0.0" data-mean_delta="0.021743" data-rms_delta="0.037656" data-rough_frequency="9426.0" data-volume_adjustment="4.202" data-path="/cc0/sonic_pi/samples/rate_0.6/elec_twang" src="elec_twang/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="elec_twang">/cc0/sonic_pi/samples/rate_0.6/elec_twang</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="15214.0" data-length="0.158479" data-scaled_by="2147483647.0" data-maximum_amplitude="0.396088" data-minimum_amplitude="-0.400879" data-midline_amplitude="-0.002396" data-mean_norm="0.024466" data-mean_amplitude="-1.3e-05" data-rms_amplitude="0.050572" data-maximum_delta="0.110199" data-minimum_delta="0.0" data-mean_delta="0.002915" data-rms_delta="0.009106" data-rough_frequency="1375.0" data-volume_adjustment="2.495" data-path="/cc0/sonic_pi/samples/rate_0.6/elec_twip" src="elec_twip/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="elec_twip">/cc0/sonic_pi/samples/rate_0.6/elec_twip</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="77306.0" data-length="0.805271" data-scaled_by="2147483647.0" data-maximum_amplitude="0.183716" data-minimum_amplitude="-0.217865" data-midline_amplitude="-0.017075" data-mean_norm="0.014278" data-mean_amplitude="1.5e-05" data-rms_amplitude="0.025287" data-maximum_delta="0.023743" data-minimum_delta="0.0" data-mean_delta="0.000597" data-rms_delta="0.001544" data-rough_frequency="466.0" data-volume_adjustment="4.59" data-path="/cc0/sonic_pi/samples/rate_0.6/elec_wood" src="elec_wood/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="elec_wood">/cc0/sonic_pi/samples/rate_0.6/elec_wood</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="296148.0" data-length="3.084875" data-scaled_by="2147483647.0" data-maximum_amplitude="0.330688" data-minimum_amplitude="-0.422058" data-midline_amplitude="-0.045685" data-mean_norm="0.041094" data-mean_amplitude="5.0e-06" data-rms_amplitude="0.061735" data-maximum_delta="0.561066" data-minimum_delta="0.0" data-mean_delta="0.05762" data-rms_delta="0.084528" data-rough_frequency="10459.0" data-volume_adjustment="2.369" data-path="/cc0/sonic_pi/samples/rate_0.6/glitch_bass_g" src="glitch_bass_g/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="glitch_bass_g">/cc0/sonic_pi/samples/rate_0.6/glitch_bass_g</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="188824.0" data-length="1.966917" data-scaled_by="2147483647.0" data-maximum_amplitude="0.394867" data-minimum_amplitude="-0.385406" data-midline_amplitude="0.00473" data-mean_norm="0.022066" data-mean_amplitude="-1.0e-05" data-rms_amplitude="0.042155" data-maximum_delta="0.463959" data-minimum_delta="0.0" data-mean_delta="0.030861" data-rms_delta="0.056941" data-rough_frequency="10318.0" data-volume_adjustment="2.532" data-path="/cc0/sonic_pi/samples/rate_0.6/glitch_perc1" src="glitch_perc1/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="glitch_perc1">/cc0/sonic_pi/samples/rate_0.6/glitch_perc1</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="110560.0" data-length="1.151667" data-scaled_by="2147483647.0" data-maximum_amplitude="0.250763" data-minimum_amplitude="-0.281097" data-midline_amplitude="-0.015167" data-mean_norm="0.024056" data-mean_amplitude="-3.3e-05" data-rms_amplitude="0.04568" data-maximum_delta="0.407379" data-minimum_delta="0.0" data-mean_delta="0.04232" data-rms_delta="0.073438" data-rough_frequency="12281.0" data-volume_adjustment="3.557" data-path="/cc0/sonic_pi/samples/rate_0.6/glitch_perc2" src="glitch_perc2/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="glitch_perc2">/cc0/sonic_pi/samples/rate_0.6/glitch_perc2</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="139906.0" data-length="1.457354" data-scaled_by="2147483647.0" data-maximum_amplitude="0.334595" data-minimum_amplitude="-0.280945" data-midline_amplitude="0.026825" data-mean_norm="0.022896" data-mean_amplitude="2.1e-05" data-rms_amplitude="0.038244" data-maximum_delta="0.374542" data-minimum_delta="0.0" data-mean_delta="0.036912" data-rms_delta="0.059651" data-rough_frequency="11915.0" data-volume_adjustment="2.989" data-path="/cc0/sonic_pi/samples/rate_0.6/glitch_perc3" src="glitch_perc3/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="glitch_perc3">/cc0/sonic_pi/samples/rate_0.6/glitch_perc3</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="96408.0" data-length="1.00425" data-scaled_by="2147483647.0" data-maximum_amplitude="0.227325" data-minimum_amplitude="-0.216461" data-midline_amplitude="0.005432" data-mean_norm="0.012659" data-mean_amplitude="2.0e-06" data-rms_amplitude="0.023051" data-maximum_delta="0.304474" data-minimum_delta="0.0" data-mean_delta="0.020741" data-rms_delta="0.036595" data-rough_frequency="12128.0" data-volume_adjustment="4.399" data-path="/cc0/sonic_pi/samples/rate_0.6/glitch_perc4" src="glitch_perc4/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="glitch_perc4">/cc0/sonic_pi/samples/rate_0.6/glitch_perc4</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="97888.0" data-length="1.019667" data-scaled_by="2147483647.0" data-maximum_amplitude="0.265717" data-minimum_amplitude="-0.251373" data-midline_amplitude="0.007172" data-mean_norm="0.01972" data-mean_amplitude="-1.2e-05" data-rms_amplitude="0.034473" data-maximum_delta="0.374481" data-minimum_delta="0.0" data-mean_delta="0.032241" data-rms_delta="0.05584" data-rough_frequency="12374.0" data-volume_adjustment="3.763" data-path="/cc0/sonic_pi/samples/rate_0.6/glitch_perc5" src="glitch_perc5/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="glitch_perc5">/cc0/sonic_pi/samples/rate_0.6/glitch_perc5</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="160138.0" data-length="1.668104" data-scaled_by="2147483647.0" data-maximum_amplitude="0.397186" data-minimum_amplitude="-0.435333" data-midline_amplitude="-0.019073" data-mean_norm="0.032716" data-mean_amplitude="-2.5e-05" data-rms_amplitude="0.051842" data-maximum_delta="0.496307" data-minimum_delta="0.0" data-mean_delta="0.026184" data-rms_delta="0.04106" data-rough_frequency="6050.0" data-volume_adjustment="2.297" data-path="/cc0/sonic_pi/samples/rate_0.6/glitch_robot1" src="glitch_robot1/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="glitch_robot1">/cc0/sonic_pi/samples/rate_0.6/glitch_robot1</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="145980.0" data-length="1.520625" data-scaled_by="2147483647.0" data-maximum_amplitude="0.410156" data-minimum_amplitude="-0.430756" data-midline_amplitude="-0.0103" data-mean_norm="0.047929" data-mean_amplitude="2.0e-06" data-rms_amplitude="0.071095" data-maximum_delta="0.406189" data-minimum_delta="0.0" data-mean_delta="0.044622" data-rms_delta="0.064983" data-rough_frequency="6982.0" data-volume_adjustment="2.322" data-path="/cc0/sonic_pi/samples/rate_0.6/glitch_robot2" src="glitch_robot2/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="glitch_robot2">/cc0/sonic_pi/samples/rate_0.6/glitch_robot2</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="946066.0" data-length="9.854854" data-scaled_by="2147483647.0" data-maximum_amplitude="0.288086" data-minimum_amplitude="-0.268311" data-midline_amplitude="0.009888" data-mean_norm="0.021983" data-mean_amplitude="8.0e-06" data-rms_amplitude="0.038742" data-maximum_delta="0.140656" data-minimum_delta="0.0" data-mean_delta="0.014597" data-rms_delta="0.024118" data-rough_frequency="4755.0" data-volume_adjustment="3.471" data-path="/cc0/sonic_pi/samples/rate_0.6/guit_e_fifths" src="guit_e_fifths/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="guit_e_fifths">/cc0/sonic_pi/samples/rate_0.6/guit_e_fifths</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="392046.0" data-length="4.083812" data-scaled_by="2147483647.0" data-maximum_amplitude="0.295929" data-minimum_amplitude="-0.285736" data-midline_amplitude="0.005096" data-mean_norm="0.022621" data-mean_amplitude="-0.0" data-rms_amplitude="0.046126" data-maximum_delta="0.023285" data-minimum_delta="0.0" data-mean_delta="0.000728" data-rms_delta="0.002031" data-rough_frequency="336.0" data-volume_adjustment="3.379" data-path="/cc0/sonic_pi/samples/rate_0.6/guit_e_slide" src="guit_e_slide/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="guit_e_slide">/cc0/sonic_pi/samples/rate_0.6/guit_e_slide</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="1459800.0" data-length="15.20625" data-scaled_by="2147483647.0" data-maximum_amplitude="0.287048" data-minimum_amplitude="-0.251526" data-midline_amplitude="0.017761" data-mean_norm="0.025522" data-mean_amplitude="1.0e-06" data-rms_amplitude="0.038314" data-maximum_delta="0.160675" data-minimum_delta="0.0" data-mean_delta="0.017144" data-rms_delta="0.024701" data-rough_frequency="4924.0" data-volume_adjustment="3.484" data-path="/cc0/sonic_pi/samples/rate_0.6/guit_em9" src="guit_em9/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="guit_em9">/cc0/sonic_pi/samples/rate_0.6/guit_em9</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="485162.0" data-length="5.053771" data-scaled_by="2147483647.0" data-maximum_amplitude="0.177948" data-minimum_amplitude="-0.191315" data-midline_amplitude="-0.006683" data-mean_norm="0.011405" data-mean_amplitude="0.0" data-rms_amplitude="0.018213" data-maximum_delta="0.036072" data-minimum_delta="0.0" data-mean_delta="0.00032" data-rms_delta="0.000704" data-rough_frequency="295.0" data-volume_adjustment="5.227" data-path="/cc0/sonic_pi/samples/rate_0.6/guit_harmonics" src="guit_harmonics/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="guit_harmonics">/cc0/sonic_pi/samples/rate_0.6/guit_harmonics</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="16214.0" data-length="0.168896" data-scaled_by="2147483647.0" data-maximum_amplitude="0.26355" data-minimum_amplitude="-0.240082" data-midline_amplitude="0.011734" data-mean_norm="0.022344" data-mean_amplitude="1.0e-06" data-rms_amplitude="0.040975" data-maximum_delta="0.174164" data-minimum_delta="0.0" data-mean_delta="0.006911" data-rms_delta="0.017839" data-rough_frequency="3325.0" data-volume_adjustment="3.794" data-path="/cc0/sonic_pi/samples/rate_0.6/hat_bdu" src="hat_bdu/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="hat_bdu">/cc0/sonic_pi/samples/rate_0.6/hat_bdu</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="25490.0" data-length="0.265521" data-scaled_by="2147483647.0" data-maximum_amplitude="0.285828" data-minimum_amplitude="-0.307068" data-midline_amplitude="-0.01062" data-mean_norm="0.015741" data-mean_amplitude="1.4e-05" data-rms_amplitude="0.033136" data-maximum_delta="0.260223" data-minimum_delta="0.0" data-mean_delta="0.006636" data-rms_delta="0.01941" data-rough_frequency="4474.0" data-volume_adjustment="3.257" data-path="/cc0/sonic_pi/samples/rate_0.6/hat_cab" src="hat_cab/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="hat_cab">/cc0/sonic_pi/samples/rate_0.6/hat_cab</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="56872.0" data-length="0.592417" data-scaled_by="2147483647.0" data-maximum_amplitude="0.22641" data-minimum_amplitude="-0.220825" data-midline_amplitude="0.002792" data-mean_norm="0.021581" data-mean_amplitude="1.0e-06" data-rms_amplitude="0.033181" data-maximum_delta="0.2659" data-minimum_delta="0.0" data-mean_delta="0.009314" data-rms_delta="0.020452" data-rough_frequency="4708.0" data-volume_adjustment="4.417" data-path="/cc0/sonic_pi/samples/rate_0.6/hat_cats" src="hat_cats/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="hat_cats">/cc0/sonic_pi/samples/rate_0.6/hat_cats</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="22088.0" data-length="0.230083" data-scaled_by="2147483647.0" data-maximum_amplitude="0.458618" data-minimum_amplitude="-0.359894" data-midline_amplitude="0.049362" data-mean_norm="0.035188" data-mean_amplitude="4.0e-06" data-rms_amplitude="0.060889" data-maximum_delta="0.477386" data-minimum_delta="0.0" data-mean_delta="0.033404" data-rms_delta="0.05862" data-rough_frequency="7354.0" data-volume_adjustment="2.18" data-path="/cc0/sonic_pi/samples/rate_0.6/hat_gem" src="hat_gem/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="hat_gem">/cc0/sonic_pi/samples/rate_0.6/hat_gem</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="37184.0" data-length="0.387333" data-scaled_by="2147483647.0" data-maximum_amplitude="0.406921" data-minimum_amplitude="-0.364319" data-midline_amplitude="0.021301" data-mean_norm="0.01843" data-mean_amplitude="-0.0" data-rms_amplitude="0.036675" data-maximum_delta="0.500854" data-minimum_delta="0.0" data-mean_delta="0.026464" data-rms_delta="0.052156" data-rough_frequency="10864.0" data-volume_adjustment="2.457" data-path="/cc0/sonic_pi/samples/rate_0.6/hat_gnu" src="hat_gnu/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="hat_gnu">/cc0/sonic_pi/samples/rate_0.6/hat_gnu</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="73208.0" data-length="0.762583" data-scaled_by="2147483647.0" data-maximum_amplitude="0.354248" data-minimum_amplitude="-0.370331" data-midline_amplitude="-0.008041" data-mean_norm="0.034688" data-mean_amplitude="-0.0" data-rms_amplitude="0.056082" data-maximum_delta="0.393005" data-minimum_delta="0.0" data-mean_delta="0.03399" data-rms_delta="0.054993" data-rough_frequency="7491.0" data-volume_adjustment="2.7" data-path="/cc0/sonic_pi/samples/rate_0.6/hat_gump" src="hat_gump/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="hat_gump">/cc0/sonic_pi/samples/rate_0.6/hat_gump</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="18262.0" data-length="0.190229" data-scaled_by="2147483647.0" data-maximum_amplitude="0.314423" data-minimum_amplitude="-0.237274" data-midline_amplitude="0.038574" data-mean_norm="0.016252" data-mean_amplitude="-3.0e-06" data-rms_amplitude="0.032376" data-maximum_delta="0.309296" data-minimum_delta="0.0" data-mean_delta="0.007746" data-rms_delta="0.021207" data-rough_frequency="5003.0" data-volume_adjustment="3.18" data-path="/cc0/sonic_pi/samples/rate_0.6/hat_hier" src="hat_hier/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="hat_hier">/cc0/sonic_pi/samples/rate_0.6/hat_hier</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="119028.0" data-length="1.239875" data-scaled_by="2147483647.0" data-maximum_amplitude="0.364685" data-minimum_amplitude="-0.376068" data-midline_amplitude="-0.005692" data-mean_norm="0.006225" data-mean_amplitude="-1.0e-05" data-rms_amplitude="0.019924" data-maximum_delta="0.34613" data-minimum_delta="0.0" data-mean_delta="0.003181" data-rms_delta="0.012883" data-rough_frequency="4939.0" data-volume_adjustment="2.659" data-path="/cc0/sonic_pi/samples/rate_0.6/hat_len" src="hat_len/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="hat_len">/cc0/sonic_pi/samples/rate_0.6/hat_len</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="45924.0" data-length="0.478375" data-scaled_by="2147483647.0" data-maximum_amplitude="0.326599" data-minimum_amplitude="-0.259979" data-midline_amplitude="0.03331" data-mean_norm="0.011452" data-mean_amplitude="0.0" data-rms_amplitude="0.026411" data-maximum_delta="0.284637" data-minimum_delta="0.0" data-mean_delta="0.004891" data-rms_delta="0.016752" data-rough_frequency="4845.0" data-volume_adjustment="3.062" data-path="/cc0/sonic_pi/samples/rate_0.6/hat_mess" src="hat_mess/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="hat_mess">/cc0/sonic_pi/samples/rate_0.6/hat_mess</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="46012.0" data-length="0.479292" data-scaled_by="2147483647.0" data-maximum_amplitude="0.517761" data-minimum_amplitude="-0.514496" data-midline_amplitude="0.001633" data-mean_norm="0.023458" data-mean_amplitude="-1.9e-05" data-rms_amplitude="0.05352" data-maximum_delta="0.596069" data-minimum_delta="0.0" data-mean_delta="0.021944" data-rms_delta="0.053458" data-rough_frequency="7630.0" data-volume_adjustment="1.931" data-path="/cc0/sonic_pi/samples/rate_0.6/hat_metal" src="hat_metal/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="hat_metal">/cc0/sonic_pi/samples/rate_0.6/hat_metal</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="63972.0" data-length="0.666375" data-scaled_by="2147483647.0" data-maximum_amplitude="0.330475" data-minimum_amplitude="-0.29245" data-midline_amplitude="0.019012" data-mean_norm="0.017175" data-mean_amplitude="0.0" data-rms_amplitude="0.033894" data-maximum_delta="0.407349" data-minimum_delta="0.0" data-mean_delta="0.02291" data-rms_delta="0.045266" data-rough_frequency="10202.0" data-volume_adjustment="3.026" data-path="/cc0/sonic_pi/samples/rate_0.6/hat_noiz" src="hat_noiz/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="hat_noiz">/cc0/sonic_pi/samples/rate_0.6/hat_noiz</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="40272.0" data-length="0.4195" data-scaled_by="2147483647.0" data-maximum_amplitude="0.106201" data-minimum_amplitude="-0.11853" data-midline_amplitude="-0.006165" data-mean_norm="0.011405" data-mean_amplitude="1.0e-06" data-rms_amplitude="0.019459" data-maximum_delta="0.084442" data-minimum_delta="0.0" data-mean_delta="0.004005" data-rms_delta="0.009684" data-rough_frequency="3801.0" data-volume_adjustment="8.437" data-path="/cc0/sonic_pi/samples/rate_0.6/hat_psych" src="hat_psych/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="hat_psych">/cc0/sonic_pi/samples/rate_0.6/hat_psych</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="32636.0" data-length="0.339958" data-scaled_by="2147483647.0" data-maximum_amplitude="0.330963" data-minimum_amplitude="-0.319397" data-midline_amplitude="0.005783" data-mean_norm="0.027785" data-mean_amplitude="-2.0e-06" data-rms_amplitude="0.049426" data-maximum_delta="0.323883" data-minimum_delta="0.0" data-mean_delta="0.011334" data-rms_delta="0.028423" data-rough_frequency="4393.0" data-volume_adjustment="3.021" data-path="/cc0/sonic_pi/samples/rate_0.6/hat_raw" src="hat_raw/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="hat_raw">/cc0/sonic_pi/samples/rate_0.6/hat_raw</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="16636.0" data-length="0.173292" data-scaled_by="2147483647.0" data-maximum_amplitude="0.406372" data-minimum_amplitude="-0.366302" data-midline_amplitude="0.020035" data-mean_norm="0.040291" data-mean_amplitude="-1.0e-05" data-rms_amplitude="0.064736" data-maximum_delta="0.325531" data-minimum_delta="0.0" data-mean_delta="0.014775" data-rms_delta="0.035167" data-rough_frequency="4149.0" data-volume_adjustment="2.461" data-path="/cc0/sonic_pi/samples/rate_0.6/hat_sci" src="hat_sci/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="hat_sci">/cc0/sonic_pi/samples/rate_0.6/hat_sci</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="27610.0" data-length="0.287604" data-scaled_by="2147483647.0" data-maximum_amplitude="0.429077" data-minimum_amplitude="-0.365387" data-midline_amplitude="0.031845" data-mean_norm="0.033097" data-mean_amplitude="-0.0" data-rms_amplitude="0.055467" data-maximum_delta="0.500397" data-minimum_delta="0.0" data-mean_delta="0.033024" data-rms_delta="0.056512" data-rough_frequency="7783.0" data-volume_adjustment="2.331" data-path="/cc0/sonic_pi/samples/rate_0.6/hat_snap" src="hat_snap/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="hat_snap">/cc0/sonic_pi/samples/rate_0.6/hat_snap</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="18672.0" data-length="0.1945" data-scaled_by="2147483647.0" data-maximum_amplitude="0.348846" data-minimum_amplitude="-0.303619" data-midline_amplitude="0.022614" data-mean_norm="0.020748" data-mean_amplitude="9.0e-06" data-rms_amplitude="0.040438" data-maximum_delta="0.275848" data-minimum_delta="0.0" data-mean_delta="0.008004" data-rms_delta="0.023413" data-rough_frequency="4423.0" data-volume_adjustment="2.867" data-path="/cc0/sonic_pi/samples/rate_0.6/hat_star" src="hat_star/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="hat_star">/cc0/sonic_pi/samples/rate_0.6/hat_star</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="28266.0" data-length="0.294438" data-scaled_by="2147483647.0" data-maximum_amplitude="0.106628" data-minimum_amplitude="-0.082764" data-midline_amplitude="0.011932" data-mean_norm="0.005841" data-mean_amplitude="7.0e-06" data-rms_amplitude="0.010953" data-maximum_delta="0.111359" data-minimum_delta="0.0" data-mean_delta="0.003141" data-rms_delta="0.009001" data-rough_frequency="6277.0" data-volume_adjustment="9.378" data-path="/cc0/sonic_pi/samples/rate_0.6/hat_tap" src="hat_tap/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="hat_tap">/cc0/sonic_pi/samples/rate_0.6/hat_tap</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="20592.0" data-length="0.2145" data-scaled_by="2147483647.0" data-maximum_amplitude="0.274933" data-minimum_amplitude="-0.243622" data-midline_amplitude="0.015656" data-mean_norm="0.035564" data-mean_amplitude="4.0e-06" data-rms_amplitude="0.052657" data-maximum_delta="0.285614" data-minimum_delta="0.0" data-mean_delta="0.01793" data-rms_delta="0.037008" data-rough_frequency="5368.0" data-volume_adjustment="3.637" data-path="/cc0/sonic_pi/samples/rate_0.6/hat_yosh" src="hat_yosh/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="hat_yosh">/cc0/sonic_pi/samples/rate_0.6/hat_yosh</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="34716.0" data-length="0.361625" data-scaled_by="2147483647.0" data-maximum_amplitude="0.358276" data-minimum_amplitude="-0.323395" data-midline_amplitude="0.017441" data-mean_norm="0.063657" data-mean_amplitude="-9.0e-06" data-rms_amplitude="0.083687" data-maximum_delta="0.164337" data-minimum_delta="0.0" data-mean_delta="0.015191" data-rms_delta="0.028274" data-rough_frequency="2581.0" data-volume_adjustment="2.791" data-path="/cc0/sonic_pi/samples/rate_0.6/hat_zan" src="hat_zan/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="hat_zan">/cc0/sonic_pi/samples/rate_0.6/hat_zan</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="21798.0" data-length="0.227063" data-scaled_by="2147483647.0" data-maximum_amplitude="0.349365" data-minimum_amplitude="-0.268372" data-midline_amplitude="0.040497" data-mean_norm="0.030295" data-mean_amplitude="8.0e-06" data-rms_amplitude="0.051663" data-maximum_delta="0.354462" data-minimum_delta="0.0" data-mean_delta="0.025121" data-rms_delta="0.043179" data-rough_frequency="6384.0" data-volume_adjustment="2.862" data-path="/cc0/sonic_pi/samples/rate_0.6/hat_zap" src="hat_zap/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="hat_zap">/cc0/sonic_pi/samples/rate_0.6/hat_zap</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="37062.0" data-length="0.386062" data-scaled_by="2147483647.0" data-maximum_amplitude="0.305237" data-minimum_amplitude="-0.42337" data-midline_amplitude="-0.059067" data-mean_norm="0.021513" data-mean_amplitude="2.6e-05" data-rms_amplitude="0.041153" data-maximum_delta="0.243164" data-minimum_delta="0.0" data-mean_delta="0.006948" data-rms_delta="0.0194" data-rough_frequency="3601.0" data-volume_adjustment="2.362" data-path="/cc0/sonic_pi/samples/rate_0.6/hat_zild" src="hat_zild/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="hat_zild">/cc0/sonic_pi/samples/rate_0.6/hat_zild</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="1277526.0" data-length="13.307562" data-scaled_by="2147483647.0" data-maximum_amplitude="0.138977" data-minimum_amplitude="-0.140625" data-midline_amplitude="-0.000824" data-mean_norm="0.020548" data-mean_amplitude="-9.0e-06" data-rms_amplitude="0.026404" data-maximum_delta="0.141541" data-minimum_delta="0.0" data-mean_delta="0.018996" data-rms_delta="0.024386" data-rough_frequency="7055.0" data-volume_adjustment="7.111" data-path="/cc0/sonic_pi/samples/rate_0.6/loop_3d_printer" src="loop_3d_printer/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="loop_3d_printer">/cc0/sonic_pi/samples/rate_0.6/loop_3d_printer</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="282224.0" data-length="2.939833" data-scaled_by="2147483647.0" data-maximum_amplitude="0.339996" data-minimum_amplitude="-0.325165" data-midline_amplitude="0.007416" data-mean_norm="0.031971" data-mean_amplitude="-6.7e-05" data-rms_amplitude="0.049052" data-maximum_delta="0.280365" data-minimum_delta="0.0" data-mean_delta="0.018691" data-rms_delta="0.028066" data-rough_frequency="4371.0" data-volume_adjustment="2.941" data-path="/cc0/sonic_pi/samples/rate_0.6/loop_amen" src="loop_amen/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="loop_amen">/cc0/sonic_pi/samples/rate_0.6/loop_amen</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="1101768.0" data-length="11.47675" data-scaled_by="2147483647.0" data-maximum_amplitude="0.591064" data-minimum_amplitude="-0.761688" data-midline_amplitude="-0.085312" data-mean_norm="0.067991" data-mean_amplitude="2.9e-05" data-rms_amplitude="0.103307" data-maximum_delta="0.33374" data-minimum_delta="0.0" data-mean_delta="0.009204" data-rms_delta="0.018899" data-rough_frequency="1397.0" data-volume_adjustment="1.313" data-path="/cc0/sonic_pi/samples/rate_0.6/loop_amen_full" src="loop_amen_full/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="loop_amen_full">/cc0/sonic_pi/samples/rate_0.6/loop_amen_full</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="310422.0" data-length="3.233563" data-scaled_by="2147483647.0" data-maximum_amplitude="0.286896" data-minimum_amplitude="-0.308502" data-midline_amplitude="-0.010803" data-mean_norm="0.060346" data-mean_amplitude="-0.000106" data-rms_amplitude="0.069021" data-maximum_delta="0.083771" data-minimum_delta="0.0" data-mean_delta="0.001778" data-rms_delta="0.003261" data-rough_frequency="360.0" data-volume_adjustment="3.241" data-path="/cc0/sonic_pi/samples/rate_0.6/loop_breakbeat" src="loop_breakbeat/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="loop_breakbeat">/cc0/sonic_pi/samples/rate_0.6/loop_breakbeat</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="53792.0" data-length="0.560333" data-scaled_by="2147483647.0" data-maximum_amplitude="0.226746" data-minimum_amplitude="-0.234436" data-midline_amplitude="-0.003845" data-mean_norm="0.01027" data-mean_amplitude="-0.000106" data-rms_amplitude="0.024075" data-maximum_delta="0.186157" data-minimum_delta="0.0" data-mean_delta="0.002692" data-rms_delta="0.008846" data-rough_frequency="2806.0" data-volume_adjustment="4.266" data-path="/cc0/sonic_pi/samples/rate_0.6/loop_compus" src="loop_compus/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="loop_compus">/cc0/sonic_pi/samples/rate_0.6/loop_compus</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="796506.0" data-length="8.296938" data-scaled_by="2147483647.0" data-maximum_amplitude="0.254425" data-minimum_amplitude="-0.27124" data-midline_amplitude="-0.008408" data-mean_norm="0.062885" data-mean_amplitude="-9.7e-05" data-rms_amplitude="0.077569" data-maximum_delta="0.429901" data-minimum_delta="0.0" data-mean_delta="0.096141" data-rms_delta="0.118027" data-rough_frequency="11623.0" data-volume_adjustment="3.687" data-path="/cc0/sonic_pi/samples/rate_0.6/loop_drone_g_97" src="loop_drone_g_97/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="loop_drone_g_97">/cc0/sonic_pi/samples/rate_0.6/loop_drone_g_97</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="400206.0" data-length="4.168812" data-scaled_by="2147483647.0" data-maximum_amplitude="0.303131" data-minimum_amplitude="-0.211121" data-midline_amplitude="0.046005" data-mean_norm="0.011457" data-mean_amplitude="3.0e-06" data-rms_amplitude="0.017735" data-maximum_delta="0.33786" data-minimum_delta="0.0" data-mean_delta="0.018202" data-rms_delta="0.026726" data-rough_frequency="11512.0" data-volume_adjustment="3.299" data-path="/cc0/sonic_pi/samples/rate_0.6/loop_electric" src="loop_electric/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="loop_electric">/cc0/sonic_pi/samples/rate_0.6/loop_electric</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="1281548.0" data-length="13.349458" data-scaled_by="2147483647.0" data-maximum_amplitude="0.344635" data-minimum_amplitude="-0.284241" data-midline_amplitude="0.030197" data-mean_norm="0.045591" data-mean_amplitude="4.3e-05" data-rms_amplitude="0.064531" data-maximum_delta="0.128357" data-minimum_delta="0.0" data-mean_delta="0.00975" data-rms_delta="0.01428" data-rough_frequency="1690.0" data-volume_adjustment="2.902" data-path="/cc0/sonic_pi/samples/rate_0.6/loop_garzul" src="loop_garzul/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="loop_garzul">/cc0/sonic_pi/samples/rate_0.6/loop_garzul</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="144396.0" data-length="1.504125" data-scaled_by="2147483647.0" data-maximum_amplitude="0.531097" data-minimum_amplitude="-0.42868" data-midline_amplitude="0.051208" data-mean_norm="0.037726" data-mean_amplitude="-9.0e-06" data-rms_amplitude="0.057965" data-maximum_delta="0.552002" data-minimum_delta="0.0" data-mean_delta="0.035143" data-rms_delta="0.061446" data-rough_frequency="8098.0" data-volume_adjustment="1.883" data-path="/cc0/sonic_pi/samples/rate_0.6/loop_industrial" src="loop_industrial/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="loop_industrial">/cc0/sonic_pi/samples/rate_0.6/loop_industrial</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="382416.0" data-length="3.9835" data-scaled_by="2147483647.0" data-maximum_amplitude="0.405365" data-minimum_amplitude="-0.422302" data-midline_amplitude="-0.008469" data-mean_norm="0.017655" data-mean_amplitude="-6.0e-06" data-rms_amplitude="0.033293" data-maximum_delta="0.421112" data-minimum_delta="0.0" data-mean_delta="0.022912" data-rms_delta="0.041152" data-rough_frequency="9442.0" data-volume_adjustment="2.368" data-path="/cc0/sonic_pi/samples/rate_0.6/loop_mehackit1" src="loop_mehackit1/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="loop_mehackit1">/cc0/sonic_pi/samples/rate_0.6/loop_mehackit1</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="396992.0" data-length="4.135333" data-scaled_by="2147483647.0" data-maximum_amplitude="0.438843" data-minimum_amplitude="-0.405975" data-midline_amplitude="0.016434" data-mean_norm="0.026076" data-mean_amplitude="7.0e-06" data-rms_amplitude="0.044279" data-maximum_delta="0.531647" data-minimum_delta="0.0" data-mean_delta="0.034471" data-rms_delta="0.05589" data-rough_frequency="9642.0" data-volume_adjustment="2.279" data-path="/cc0/sonic_pi/samples/rate_0.6/loop_mehackit2" src="loop_mehackit2/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="loop_mehackit2">/cc0/sonic_pi/samples/rate_0.6/loop_mehackit2</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="1282374.0" data-length="13.358063" data-scaled_by="2147483647.0" data-maximum_amplitude="0.388885" data-minimum_amplitude="-0.385284" data-midline_amplitude="0.001801" data-mean_norm="0.040506" data-mean_amplitude="-0.000117" data-rms_amplitude="0.058503" data-maximum_delta="0.187805" data-minimum_delta="0.0" data-mean_delta="0.001333" data-rms_delta="0.003698" data-rough_frequency="482.0" data-volume_adjustment="2.571" data-path="/cc0/sonic_pi/samples/rate_0.6/loop_mika" src="loop_mika/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="loop_mika">/cc0/sonic_pi/samples/rate_0.6/loop_mika</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="360168.0" data-length="3.75175" data-scaled_by="2147483647.0" data-maximum_amplitude="0.447266" data-minimum_amplitude="-0.459534" data-midline_amplitude="-0.006134" data-mean_norm="0.034468" data-mean_amplitude="1.3e-05" data-rms_amplitude="0.05723" data-maximum_delta="0.391083" data-minimum_delta="0.0" data-mean_delta="0.028677" data-rms_delta="0.045728" data-rough_frequency="6104.0" data-volume_adjustment="2.176" data-path="/cc0/sonic_pi/samples/rate_0.6/loop_perc1" src="loop_perc1/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="loop_perc1">/cc0/sonic_pi/samples/rate_0.6/loop_perc1</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="398750.0" data-length="4.153646" data-scaled_by="2147483647.0" data-maximum_amplitude="0.422363" data-minimum_amplitude="-0.354706" data-midline_amplitude="0.033829" data-mean_norm="0.015606" data-mean_amplitude="-1.4e-05" data-rms_amplitude="0.028887" data-maximum_delta="0.286987" data-minimum_delta="0.0" data-mean_delta="0.015619" data-rms_delta="0.027528" data-rough_frequency="7280.0" data-volume_adjustment="2.368" data-path="/cc0/sonic_pi/samples/rate_0.6/loop_perc2" src="loop_perc2/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="loop_perc2">/cc0/sonic_pi/samples/rate_0.6/loop_perc2</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="1281460.0" data-length="13.348542" data-scaled_by="2147483647.0" data-maximum_amplitude="0.364838" data-minimum_amplitude="-0.431763" data-midline_amplitude="-0.033463" data-mean_norm="0.014803" data-mean_amplitude="8.0e-06" data-rms_amplitude="0.027536" data-maximum_delta="0.14212" data-minimum_delta="0.0" data-mean_delta="0.009444" data-rms_delta="0.014555" data-rough_frequency="4038.0" data-volume_adjustment="2.316" data-path="/cc0/sonic_pi/samples/rate_0.6/loop_safari" src="loop_safari/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="loop_safari">/cc0/sonic_pi/samples/rate_0.6/loop_safari</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="414386.0" data-length="4.316521" data-scaled_by="2147483647.0" data-maximum_amplitude="0.098053" data-minimum_amplitude="-0.106506" data-midline_amplitude="-0.004227" data-mean_norm="0.007195" data-mean_amplitude="-1.4e-05" data-rms_amplitude="0.013541" data-maximum_delta="0.041534" data-minimum_delta="0.0" data-mean_delta="0.000187" data-rms_delta="0.000613" data-rough_frequency="345.0" data-volume_adjustment="9.389" data-path="/cc0/sonic_pi/samples/rate_0.6/loop_tabla" src="loop_tabla/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="loop_tabla">/cc0/sonic_pi/samples/rate_0.6/loop_tabla</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="793862.0" data-length="8.269396" data-scaled_by="2147483647.0" data-maximum_amplitude="0.294586" data-minimum_amplitude="-0.279755" data-midline_amplitude="0.007416" data-mean_norm="0.011095" data-mean_amplitude="2.0e-06" data-rms_amplitude="0.01947" data-maximum_delta="0.379395" data-minimum_delta="0.0" data-mean_delta="0.018942" data-rms_delta="0.030023" data-rough_frequency="11780.0" data-volume_adjustment="3.395" data-path="/cc0/sonic_pi/samples/rate_0.6/loop_weirdo" src="loop_weirdo/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="loop_weirdo">/cc0/sonic_pi/samples/rate_0.6/loop_weirdo</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="157278.0" data-length="1.638313" data-scaled_by="2147483647.0" data-maximum_amplitude="0.351746" data-minimum_amplitude="-0.358612" data-midline_amplitude="-0.003433" data-mean_norm="0.011259" data-mean_amplitude="-1.4e-05" data-rms_amplitude="0.027435" data-maximum_delta="0.342499" data-minimum_delta="0.0" data-mean_delta="0.012058" data-rms_delta="0.02498" data-rough_frequency="6955.0" data-volume_adjustment="2.789" data-path="/cc0/sonic_pi/samples/rate_0.6/mehackit_phone1" src="mehackit_phone1/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="mehackit_phone1">/cc0/sonic_pi/samples/rate_0.6/mehackit_phone1</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="125058.0" data-length="1.302687" data-scaled_by="2147483647.0" data-maximum_amplitude="0.266602" data-minimum_amplitude="-0.254425" data-midline_amplitude="0.006088" data-mean_norm="0.011555" data-mean_amplitude="5.0e-06" data-rms_amplitude="0.02318" data-maximum_delta="0.246826" data-minimum_delta="0.0" data-mean_delta="0.011716" data-rms_delta="0.020783" data-rough_frequency="6849.0" data-volume_adjustment="3.751" data-path="/cc0/sonic_pi/samples/rate_0.6/mehackit_phone2" src="mehackit_phone2/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="mehackit_phone2">/cc0/sonic_pi/samples/rate_0.6/mehackit_phone2</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="172696.0" data-length="1.798917" data-scaled_by="2147483647.0" data-maximum_amplitude="0.185455" data-minimum_amplitude="-0.134766" data-midline_amplitude="0.025345" data-mean_norm="0.010673" data-mean_amplitude="5.0e-06" data-rms_amplitude="0.015551" data-maximum_delta="0.120087" data-minimum_delta="0.0" data-mean_delta="0.009114" data-rms_delta="0.01273" data-rough_frequency="6253.0" data-volume_adjustment="5.392" data-path="/cc0/sonic_pi/samples/rate_0.6/mehackit_phone3" src="mehackit_phone3/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="mehackit_phone3">/cc0/sonic_pi/samples/rate_0.6/mehackit_phone3</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="130916.0" data-length="1.363708" data-scaled_by="2147483647.0" data-maximum_amplitude="0.245911" data-minimum_amplitude="-0.235992" data-midline_amplitude="0.004959" data-mean_norm="0.013121" data-mean_amplitude="-5.0e-06" data-rms_amplitude="0.022148" data-maximum_delta="0.190125" data-minimum_delta="0.0" data-mean_delta="0.011623" data-rms_delta="0.01822" data-rough_frequency="6284.0" data-volume_adjustment="4.067" data-path="/cc0/sonic_pi/samples/rate_0.6/mehackit_phone4" src="mehackit_phone4/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="mehackit_phone4">/cc0/sonic_pi/samples/rate_0.6/mehackit_phone4</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="142058.0" data-length="1.479771" data-scaled_by="2147483647.0" data-maximum_amplitude="0.259796" data-minimum_amplitude="-0.207642" data-midline_amplitude="0.026077" data-mean_norm="0.016446" data-mean_amplitude="-1.1e-05" data-rms_amplitude="0.025252" data-maximum_delta="0.21109" data-minimum_delta="0.0" data-mean_delta="0.013628" data-rms_delta="0.020553" data-rough_frequency="6217.0" data-volume_adjustment="3.849" data-path="/cc0/sonic_pi/samples/rate_0.6/mehackit_robot1" src="mehackit_robot1/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="mehackit_robot1">/cc0/sonic_pi/samples/rate_0.6/mehackit_robot1</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="155890.0" data-length="1.623854" data-scaled_by="2147483647.0" data-maximum_amplitude="0.283447" data-minimum_amplitude="-0.243622" data-midline_amplitude="0.019913" data-mean_norm="0.01392" data-mean_amplitude="-1.0e-06" data-rms_amplitude="0.022011" data-maximum_delta="0.224884" data-minimum_delta="0.0" data-mean_delta="0.011831" data-rms_delta="0.018237" data-rough_frequency="6329.0" data-volume_adjustment="3.528" data-path="/cc0/sonic_pi/samples/rate_0.6/mehackit_robot2" src="mehackit_robot2/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="mehackit_robot2">/cc0/sonic_pi/samples/rate_0.6/mehackit_robot2</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="194632.0" data-length="2.027417" data-scaled_by="2147483647.0" data-maximum_amplitude="0.183502" data-minimum_amplitude="-0.140808" data-midline_amplitude="0.021347" data-mean_norm="0.010926" data-mean_amplitude="9.0e-06" data-rms_amplitude="0.019499" data-maximum_delta="0.125671" data-minimum_delta="0.0" data-mean_delta="0.009174" data-rms_delta="0.015279" data-rough_frequency="5986.0" data-volume_adjustment="5.45" data-path="/cc0/sonic_pi/samples/rate_0.6/mehackit_robot3" src="mehackit_robot3/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="mehackit_robot3">/cc0/sonic_pi/samples/rate_0.6/mehackit_robot3</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="308556.0" data-length="3.214125" data-scaled_by="2147483647.0" data-maximum_amplitude="0.340179" data-minimum_amplitude="-0.290985" data-midline_amplitude="0.024597" data-mean_norm="0.014967" data-mean_amplitude="1.4e-05" data-rms_amplitude="0.025054" data-maximum_delta="0.264038" data-minimum_delta="0.0" data-mean_delta="0.013599" data-rms_delta="0.022818" data-rough_frequency="6957.0" data-volume_adjustment="2.94" data-path="/cc0/sonic_pi/samples/rate_0.6/mehackit_robot4" src="mehackit_robot4/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="mehackit_robot4">/cc0/sonic_pi/samples/rate_0.6/mehackit_robot4</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="236514.0" data-length="2.463687" data-scaled_by="2147483647.0" data-maximum_amplitude="0.305847" data-minimum_amplitude="-0.339844" data-midline_amplitude="-0.016998" data-mean_norm="0.037427" data-mean_amplitude="2.3e-05" data-rms_amplitude="0.054171" data-maximum_delta="0.413574" data-minimum_delta="0.0" data-mean_delta="0.032855" data-rms_delta="0.050716" data-rough_frequency="7152.0" data-volume_adjustment="2.943" data-path="/cc0/sonic_pi/samples/rate_0.6/mehackit_robot5" src="mehackit_robot5/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="mehackit_robot5">/cc0/sonic_pi/samples/rate_0.6/mehackit_robot5</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="384464.0" data-length="4.004833" data-scaled_by="2147483647.0" data-maximum_amplitude="0.277802" data-minimum_amplitude="-0.291534" data-midline_amplitude="-0.006866" data-mean_norm="0.035706" data-mean_amplitude="1.2e-05" data-rms_amplitude="0.049702" data-maximum_delta="0.222382" data-minimum_delta="0.0" data-mean_delta="0.029585" data-rms_delta="0.040637" data-rough_frequency="6246.0" data-volume_adjustment="3.43" data-path="/cc0/sonic_pi/samples/rate_0.6/mehackit_robot6" src="mehackit_robot6/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="mehackit_robot6">/cc0/sonic_pi/samples/rate_0.6/mehackit_robot6</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="73350.0" data-length="0.764062" data-scaled_by="2147483647.0" data-maximum_amplitude="0.356781" data-minimum_amplitude="-0.366852" data-midline_amplitude="-0.005035" data-mean_norm="0.017545" data-mean_amplitude="2.2e-05" data-rms_amplitude="0.036926" data-maximum_delta="0.375519" data-minimum_delta="0.0" data-mean_delta="0.022029" data-rms_delta="0.0473" data-rough_frequency="9785.0" data-volume_adjustment="2.726" data-path="/cc0/sonic_pi/samples/rate_0.6/mehackit_robot7" src="mehackit_robot7/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="mehackit_robot7">/cc0/sonic_pi/samples/rate_0.6/mehackit_robot7</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="81050.0" data-length="0.844271" data-scaled_by="2147483647.0" data-maximum_amplitude="0.328491" data-minimum_amplitude="-0.419006" data-midline_amplitude="-0.045258" data-mean_norm="0.028173" data-mean_amplitude="-2.7e-05" data-rms_amplitude="0.052839" data-maximum_delta="0.09491" data-minimum_delta="0.0" data-mean_delta="0.001274" data-rms_delta="0.003772" data-rough_frequency="545.0" data-volume_adjustment="2.387" data-path="/cc0/sonic_pi/samples/rate_0.6/misc_burp" src="misc_burp/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="misc_burp">/cc0/sonic_pi/samples/rate_0.6/misc_burp</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="1167772.0" data-length="12.164292" data-scaled_by="2147483647.0" data-maximum_amplitude="0.239716" data-minimum_amplitude="-0.242218" data-midline_amplitude="-0.001251" data-mean_norm="0.022952" data-mean_amplitude="-1.8e-05" data-rms_amplitude="0.033414" data-maximum_delta="0.236969" data-minimum_delta="0.0" data-mean_delta="0.017592" data-rms_delta="0.026675" data-rough_frequency="6098.0" data-volume_adjustment="4.129" data-path="/cc0/sonic_pi/samples/rate_0.6/misc_cineboom" src="misc_cineboom/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="misc_cineboom">/cc0/sonic_pi/samples/rate_0.6/misc_cineboom</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="78348.0" data-length="0.816125" data-scaled_by="2147483647.0" data-maximum_amplitude="0.33783" data-minimum_amplitude="-0.348297" data-midline_amplitude="-0.005234" data-mean_norm="0.049822" data-mean_amplitude="-2.0e-06" data-rms_amplitude="0.077212" data-maximum_delta="0.067322" data-minimum_delta="0.0" data-mean_delta="0.003826" data-rms_delta="0.008339" data-rough_frequency="825.0" data-volume_adjustment="2.871" data-path="/cc0/sonic_pi/samples/rate_0.6/misc_crow" src="misc_crow/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="misc_crow">/cc0/sonic_pi/samples/rate_0.6/misc_crow</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="738704.0" data-length="7.694833" data-scaled_by="2147483647.0" data-maximum_amplitude="0.374756" data-minimum_amplitude="-0.375092" data-midline_amplitude="-0.000168" data-mean_norm="0.007386" data-mean_amplitude="-1.0e-06" data-rms_amplitude="0.026368" data-maximum_delta="0.684082" data-minimum_delta="0.0" data-mean_delta="0.011822" data-rms_delta="0.047749" data-rough_frequency="13834.0" data-volume_adjustment="2.666" data-path="/cc0/sonic_pi/samples/rate_0.6/perc_bell" src="perc_bell/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="perc_bell">/cc0/sonic_pi/samples/rate_0.6/perc_bell</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="497294.0" data-length="5.180146" data-scaled_by="2147483647.0" data-maximum_amplitude="0.189453" data-minimum_amplitude="-0.243835" data-midline_amplitude="-0.027191" data-mean_norm="0.009182" data-mean_amplitude="6.0e-06" data-rms_amplitude="0.017785" data-maximum_delta="0.283569" data-minimum_delta="0.0" data-mean_delta="0.014842" data-rms_delta="0.027534" data-rough_frequency="11827.0" data-volume_adjustment="4.101" data-path="/cc0/sonic_pi/samples/rate_0.6/perc_bell2" src="perc_bell2/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="perc_bell2">/cc0/sonic_pi/samples/rate_0.6/perc_bell2</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="373298.0" data-length="3.888521" data-scaled_by="2147483647.0" data-maximum_amplitude="0.414276" data-minimum_amplitude="-0.471252" data-midline_amplitude="-0.028488" data-mean_norm="0.012767" data-mean_amplitude="-4.0e-05" data-rms_amplitude="0.032142" data-maximum_delta="0.453064" data-minimum_delta="0.0" data-mean_delta="0.017213" data-rms_delta="0.041396" data-rough_frequency="9838.0" data-volume_adjustment="2.122" data-path="/cc0/sonic_pi/samples/rate_0.6/perc_door" src="perc_door/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="perc_door">/cc0/sonic_pi/samples/rate_0.6/perc_door</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="155452.0" data-length="1.619292" data-scaled_by="2147483647.0" data-maximum_amplitude="0.389221" data-minimum_amplitude="-0.31012" data-midline_amplitude="0.039551" data-mean_norm="0.017698" data-mean_amplitude="4.0e-06" data-rms_amplitude="0.037449" data-maximum_delta="0.399414" data-minimum_delta="0.0" data-mean_delta="0.020127" data-rms_delta="0.04013" data-rough_frequency="8186.0" data-volume_adjustment="2.569" data-path="/cc0/sonic_pi/samples/rate_0.6/perc_impact1" src="perc_impact1/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="perc_impact1">/cc0/sonic_pi/samples/rate_0.6/perc_impact1</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="108494.0" data-length="1.130146" data-scaled_by="2147483647.0" data-maximum_amplitude="0.264038" data-minimum_amplitude="-0.271851" data-midline_amplitude="-0.003906" data-mean_norm="0.021906" data-mean_amplitude="1.6e-05" data-rms_amplitude="0.03961" data-maximum_delta="0.344238" data-minimum_delta="0.0" data-mean_delta="0.030675" data-rms_delta="0.053073" data-rough_frequency="10236.0" data-volume_adjustment="3.678" data-path="/cc0/sonic_pi/samples/rate_0.6/perc_impact2" src="perc_impact2/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="perc_impact2">/cc0/sonic_pi/samples/rate_0.6/perc_impact2</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="46832.0" data-length="0.487833" data-scaled_by="2147483647.0" data-maximum_amplitude="0.459595" data-minimum_amplitude="-0.53006" data-midline_amplitude="-0.035233" data-mean_norm="0.013642" data-mean_amplitude="1.0e-06" data-rms_amplitude="0.036283" data-maximum_delta="0.332855" data-minimum_delta="0.0" data-mean_delta="0.002766" data-rms_delta="0.010333" data-rough_frequency="2175.0" data-volume_adjustment="1.887" data-path="/cc0/sonic_pi/samples/rate_0.6/perc_snap" src="perc_snap/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="perc_snap">/cc0/sonic_pi/samples/rate_0.6/perc_snap</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="30840.0" data-length="0.32125" data-scaled_by="2147483647.0" data-maximum_amplitude="0.694427" data-minimum_amplitude="-0.459198" data-midline_amplitude="0.117615" data-mean_norm="0.029973" data-mean_amplitude="-3.0e-06" data-rms_amplitude="0.065939" data-maximum_delta="0.328735" data-minimum_delta="0.0" data-mean_delta="0.004438" data-rms_delta="0.013169" data-rough_frequency="1525.0" data-volume_adjustment="1.44" data-path="/cc0/sonic_pi/samples/rate_0.6/perc_snap2" src="perc_snap2/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="perc_snap2">/cc0/sonic_pi/samples/rate_0.6/perc_snap2</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="50464.0" data-length="0.525667" data-scaled_by="2147483647.0" data-maximum_amplitude="0.393097" data-minimum_amplitude="-0.336914" data-midline_amplitude="0.028091" data-mean_norm="0.025419" data-mean_amplitude="4.5e-05" data-rms_amplitude="0.051234" data-maximum_delta="0.194366" data-minimum_delta="0.0" data-mean_delta="0.016553" data-rms_delta="0.030145" data-rough_frequency="4494.0" data-volume_adjustment="2.544" data-path="/cc0/sonic_pi/samples/rate_0.6/perc_swash" src="perc_swash/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="perc_swash">/cc0/sonic_pi/samples/rate_0.6/perc_swash</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="43652.0" data-length="0.454708" data-scaled_by="2147483647.0" data-maximum_amplitude="0.386261" data-minimum_amplitude="-0.276093" data-midline_amplitude="0.055084" data-mean_norm="0.025025" data-mean_amplitude="0.0" data-rms_amplitude="0.040251" data-maximum_delta="0.273743" data-minimum_delta="0.0" data-mean_delta="0.019455" data-rms_delta="0.03112" data-rough_frequency="5906.0" data-volume_adjustment="2.589" data-path="/cc0/sonic_pi/samples/rate_0.6/perc_swoosh" src="perc_swoosh/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="perc_swoosh">/cc0/sonic_pi/samples/rate_0.6/perc_swoosh</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="292998.0" data-length="3.052062" data-scaled_by="2147483647.0" data-maximum_amplitude="0.340179" data-minimum_amplitude="-0.371979" data-midline_amplitude="-0.0159" data-mean_norm="0.010763" data-mean_amplitude="-7.0e-06" data-rms_amplitude="0.023605" data-maximum_delta="0.25354" data-minimum_delta="0.0" data-mean_delta="0.002688" data-rms_delta="0.009594" data-rough_frequency="3105.0" data-volume_adjustment="2.688" data-path="/cc0/sonic_pi/samples/rate_0.6/perc_till" src="perc_till/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="perc_till">/cc0/sonic_pi/samples/rate_0.6/perc_till</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="754750.0" data-length="7.861979" data-scaled_by="2147483647.0" data-maximum_amplitude="0.132904" data-minimum_amplitude="-0.282928" data-midline_amplitude="-0.075012" data-mean_norm="0.004151" data-mean_amplitude="-1.0e-06" data-rms_amplitude="0.009107" data-maximum_delta="0.110687" data-minimum_delta="0.0" data-mean_delta="0.00062" data-rms_delta="0.002171" data-rough_frequency="1821.0" data-volume_adjustment="3.534" data-path="/cc0/sonic_pi/samples/rate_0.6/ride_tri" src="ride_tri/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="ride_tri">/cc0/sonic_pi/samples/rate_0.6/ride_tri</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="729130.0" data-length="7.595104" data-scaled_by="2147483647.0" data-maximum_amplitude="0.106476" data-minimum_amplitude="-0.226654" data-midline_amplitude="-0.060089" data-mean_norm="0.003042" data-mean_amplitude="-0.0" data-rms_amplitude="0.005926" data-maximum_delta="0.10022" data-minimum_delta="0.0" data-mean_delta="0.000389" data-rms_delta="0.001258" data-rough_frequency="1621.0" data-volume_adjustment="4.412" data-path="/cc0/sonic_pi/samples/rate_0.6/ride_via" src="ride_via/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="ride_via">/cc0/sonic_pi/samples/rate_0.6/ride_via</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="61780.0" data-length="0.643542" data-scaled_by="2147483647.0" data-maximum_amplitude="0.568573" data-minimum_amplitude="-0.568787" data-midline_amplitude="-0.000107" data-mean_norm="0.046665" data-mean_amplitude="-8.8e-05" data-rms_amplitude="0.096655" data-maximum_delta="0.270935" data-minimum_delta="0.0" data-mean_delta="0.022318" data-rms_delta="0.04261" data-rough_frequency="3367.0" data-volume_adjustment="1.758" data-path="/cc0/sonic_pi/samples/rate_0.6/sn_dolf" src="sn_dolf/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="sn_dolf">/cc0/sonic_pi/samples/rate_0.6/sn_dolf</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="46038.0" data-length="0.479563" data-scaled_by="2147483647.0" data-maximum_amplitude="0.454224" data-minimum_amplitude="-0.464355" data-midline_amplitude="-0.005066" data-mean_norm="0.051887" data-mean_amplitude="0.000155" data-rms_amplitude="0.080862" data-maximum_delta="0.273926" data-minimum_delta="0.0" data-mean_delta="0.021208" data-rms_delta="0.032644" data-rough_frequency="3083.0" data-volume_adjustment="2.154" data-path="/cc0/sonic_pi/samples/rate_0.6/sn_dub" src="sn_dub/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="sn_dub">/cc0/sonic_pi/samples/rate_0.6/sn_dub</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="72642.0" data-length="0.756687" data-scaled_by="2147483647.0" data-maximum_amplitude="0.410309" data-minimum_amplitude="-0.400146" data-midline_amplitude="0.005081" data-mean_norm="0.033691" data-mean_amplitude="-7.0e-06" data-rms_amplitude="0.057816" data-maximum_delta="0.513611" data-minimum_delta="0.0" data-mean_delta="0.045339" data-rms_delta="0.076593" data-rough_frequency="10120.0" data-volume_adjustment="2.437" data-path="/cc0/sonic_pi/samples/rate_0.6/sn_generic" src="sn_generic/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="sn_generic">/cc0/sonic_pi/samples/rate_0.6/sn_generic</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="71954.0" data-length="0.749521" data-scaled_by="2147483647.0" data-maximum_amplitude="0.432434" data-minimum_amplitude="-0.382568" data-midline_amplitude="0.024933" data-mean_norm="0.042308" data-mean_amplitude="5.3e-05" data-rms_amplitude="0.082977" data-maximum_delta="0.186859" data-minimum_delta="0.0" data-mean_delta="0.012833" data-rms_delta="0.019045" data-rough_frequency="1753.0" data-volume_adjustment="2.312" data-path="/cc0/sonic_pi/samples/rate_0.6/sn_zome" src="sn_zome/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="sn_zome">/cc0/sonic_pi/samples/rate_0.6/sn_zome</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="15408.0" data-length="0.1605" data-scaled_by="2147483647.0" data-maximum_amplitude="0.416992" data-minimum_amplitude="-0.36969" data-midline_amplitude="0.023651" data-mean_norm="0.014373" data-mean_amplitude="2.5e-05" data-rms_amplitude="0.036187" data-maximum_delta="0.167358" data-minimum_delta="0.0" data-mean_delta="0.001408" data-rms_delta="0.006011" data-rough_frequency="1269.0" data-volume_adjustment="2.398" data-path="/cc0/sonic_pi/samples/rate_0.6/tabla_dhec" src="tabla_dhec/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="tabla_dhec">/cc0/sonic_pi/samples/rate_0.6/tabla_dhec</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="72618.0" data-length="0.756437" data-scaled_by="2147483647.0" data-maximum_amplitude="0.320374" data-minimum_amplitude="-0.278473" data-midline_amplitude="0.02095" data-mean_norm="0.027119" data-mean_amplitude="-2.2e-05" data-rms_amplitude="0.054459" data-maximum_delta="0.040375" data-minimum_delta="0.0" data-mean_delta="0.000208" data-rms_delta="0.000634" data-rough_frequency="88.0" data-volume_adjustment="3.121" data-path="/cc0/sonic_pi/samples/rate_0.6/tabla_ghe1" src="tabla_ghe1/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="tabla_ghe1">/cc0/sonic_pi/samples/rate_0.6/tabla_ghe1</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="399582.0" data-length="4.162312" data-scaled_by="2147483647.0" data-maximum_amplitude="0.482544" data-minimum_amplitude="-0.484344" data-midline_amplitude="-0.0009" data-mean_norm="0.02892" data-mean_amplitude="-7.9e-05" data-rms_amplitude="0.064446" data-maximum_delta="0.103241" data-minimum_delta="0.0" data-mean_delta="0.000215" data-rms_delta="0.00065" data-rough_frequency="77.0" data-volume_adjustment="2.065" data-path="/cc0/sonic_pi/samples/rate_0.6/tabla_ghe2" src="tabla_ghe2/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="tabla_ghe2">/cc0/sonic_pi/samples/rate_0.6/tabla_ghe2</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="360194.0" data-length="3.752021" data-scaled_by="2147483647.0" data-maximum_amplitude="0.46048" data-minimum_amplitude="-0.447327" data-midline_amplitude="0.006577" data-mean_norm="0.021425" data-mean_amplitude="6.1e-05" data-rms_amplitude="0.048849" data-maximum_delta="0.083252" data-minimum_delta="0.0" data-mean_delta="0.000175" data-rms_delta="0.000581" data-rough_frequency="90.0" data-volume_adjustment="2.172" data-path="/cc0/sonic_pi/samples/rate_0.6/tabla_ghe3" src="tabla_ghe3/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="tabla_ghe3">/cc0/sonic_pi/samples/rate_0.6/tabla_ghe3</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="104922.0" data-length="1.092937" data-scaled_by="2147483647.0" data-maximum_amplitude="0.399994" data-minimum_amplitude="-0.410767" data-midline_amplitude="-0.005386" data-mean_norm="0.060337" data-mean_amplitude="0.000202" data-rms_amplitude="0.102878" data-maximum_delta="0.0383" data-minimum_delta="0.0" data-mean_delta="0.000419" data-rms_delta="0.001015" data-rough_frequency="75.0" data-volume_adjustment="2.434" data-path="/cc0/sonic_pi/samples/rate_0.6/tabla_ghe4" src="tabla_ghe4/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="tabla_ghe4">/cc0/sonic_pi/samples/rate_0.6/tabla_ghe4</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="515920.0" data-length="5.374167" data-scaled_by="2147483647.0" data-maximum_amplitude="0.310425" data-minimum_amplitude="-0.308868" data-midline_amplitude="0.000778" data-mean_norm="0.021948" data-mean_amplitude="9.5e-05" data-rms_amplitude="0.040991" data-maximum_delta="0.02774" data-minimum_delta="0.0" data-mean_delta="0.000167" data-rms_delta="0.00043" data-rough_frequency="80.0" data-volume_adjustment="3.221" data-path="/cc0/sonic_pi/samples/rate_0.6/tabla_ghe5" src="tabla_ghe5/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="tabla_ghe5">/cc0/sonic_pi/samples/rate_0.6/tabla_ghe5</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="525560.0" data-length="5.474583" data-scaled_by="2147483647.0" data-maximum_amplitude="0.341888" data-minimum_amplitude="-0.329895" data-midline_amplitude="0.005997" data-mean_norm="0.035285" data-mean_amplitude="-5.3e-05" data-rms_amplitude="0.063436" data-maximum_delta="0.044678" data-minimum_delta="0.0" data-mean_delta="0.000247" data-rms_delta="0.00059" data-rough_frequency="71.0" data-volume_adjustment="2.925" data-path="/cc0/sonic_pi/samples/rate_0.6/tabla_ghe6" src="tabla_ghe6/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="tabla_ghe6">/cc0/sonic_pi/samples/rate_0.6/tabla_ghe6</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="309234.0" data-length="3.221188" data-scaled_by="2147483647.0" data-maximum_amplitude="0.463562" data-minimum_amplitude="-0.475464" data-midline_amplitude="-0.005951" data-mean_norm="0.02872" data-mean_amplitude="7.1e-05" data-rms_amplitude="0.060781" data-maximum_delta="0.062714" data-minimum_delta="0.0" data-mean_delta="0.000195" data-rms_delta="0.000562" data-rough_frequency="70.0" data-volume_adjustment="2.103" data-path="/cc0/sonic_pi/samples/rate_0.6/tabla_ghe7" src="tabla_ghe7/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="tabla_ghe7">/cc0/sonic_pi/samples/rate_0.6/tabla_ghe7</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="66198.0" data-length="0.689562" data-scaled_by="2147483647.0" data-maximum_amplitude="0.46225" data-minimum_amplitude="-0.492798" data-midline_amplitude="-0.015274" data-mean_norm="0.064723" data-mean_amplitude="-0.000216" data-rms_amplitude="0.124304" data-maximum_delta="0.043091" data-minimum_delta="0.0" data-mean_delta="0.000445" data-rms_delta="0.001052" data-rough_frequency="64.0" data-volume_adjustment="2.029" data-path="/cc0/sonic_pi/samples/rate_0.6/tabla_ghe8" src="tabla_ghe8/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="tabla_ghe8">/cc0/sonic_pi/samples/rate_0.6/tabla_ghe8</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="0.0" data-length="0.0" data-scaled_by="2147483647.0" data-maximum_amplitude="0.0" data-minimum_amplitude="0.0" data-midline_amplitude="0.0" data-mean_norm="0.0" data-mean_amplitude="0.0" data-rms_amplitude="0.0" data-maximum_delta="0.0" data-minimum_delta="0.0" data-mean_delta="-0.0" data-rms_delta="-0.0" data-rough_frequency="0.0" data-path="/cc0/sonic_pi/samples/rate_0.6/tabla_ke1" src="tabla_ke1/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="tabla_ke1">/cc0/sonic_pi/samples/rate_0.6/tabla_ke1</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="11950.0" data-length="0.124479" data-scaled_by="2147483647.0" data-maximum_amplitude="0.366455" data-minimum_amplitude="-0.427612" data-midline_amplitude="-0.030579" data-mean_norm="0.03579" data-mean_amplitude="-0.000159" data-rms_amplitude="0.077977" data-maximum_delta="0.067413" data-minimum_delta="0.0" data-mean_delta="0.001076" data-rms_delta="0.003974" data-rough_frequency="389.0" data-volume_adjustment="2.339" data-path="/cc0/sonic_pi/samples/rate_0.6/tabla_ke2" src="tabla_ke2/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="tabla_ke2">/cc0/sonic_pi/samples/rate_0.6/tabla_ke2</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="16086.0" data-length="0.167563" data-scaled_by="2147483647.0" data-maximum_amplitude="0.270691" data-minimum_amplitude="-0.348633" data-midline_amplitude="-0.038971" data-mean_norm="0.040729" data-mean_amplitude="0.000615" data-rms_amplitude="0.073366" data-maximum_delta="0.008484" data-minimum_delta="0.0" data-mean_delta="0.000341" data-rms_delta="0.000891" data-rough_frequency="92.0" data-volume_adjustment="2.868" data-path="/cc0/sonic_pi/samples/rate_0.6/tabla_ke3" src="tabla_ke3/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="tabla_ke3">/cc0/sonic_pi/samples/rate_0.6/tabla_ke3</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="82098.0" data-length="0.855187" data-scaled_by="2147483647.0" data-maximum_amplitude="0.380676" data-minimum_amplitude="-0.380951" data-midline_amplitude="-0.000137" data-mean_norm="0.017351" data-mean_amplitude="8.0e-06" data-rms_amplitude="0.040964" data-maximum_delta="0.075409" data-minimum_delta="0.0" data-mean_delta="0.000662" data-rms_delta="0.002577" data-rough_frequency="480.0" data-volume_adjustment="2.625" data-path="/cc0/sonic_pi/samples/rate_0.6/tabla_na" src="tabla_na/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="tabla_na">/cc0/sonic_pi/samples/rate_0.6/tabla_na</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="190408.0" data-length="1.983417" data-scaled_by="2147483647.0" data-maximum_amplitude="0.424438" data-minimum_amplitude="-0.452057" data-midline_amplitude="-0.013809" data-mean_norm="0.019089" data-mean_amplitude="5.0e-06" data-rms_amplitude="0.044322" data-maximum_delta="0.402863" data-minimum_delta="0.0" data-mean_delta="0.000463" data-rms_delta="0.00276" data-rough_frequency="475.0" data-volume_adjustment="2.212" data-path="/cc0/sonic_pi/samples/rate_0.6/tabla_na_o" src="tabla_na_o/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="tabla_na_o">/cc0/sonic_pi/samples/rate_0.6/tabla_na_o</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="23308.0" data-length="0.242792" data-scaled_by="2147483647.0" data-maximum_amplitude="0.371338" data-minimum_amplitude="-0.323883" data-midline_amplitude="0.023727" data-mean_norm="0.024058" data-mean_amplitude="6.6e-05" data-rms_amplitude="0.050196" data-maximum_delta="0.087311" data-minimum_delta="0.0" data-mean_delta="0.001132" data-rms_delta="0.0042" data-rough_frequency="639.0" data-volume_adjustment="2.693" data-path="/cc0/sonic_pi/samples/rate_0.6/tabla_na_s" src="tabla_na_s/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="tabla_na_s">/cc0/sonic_pi/samples/rate_0.6/tabla_na_s</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="14680.0" data-length="0.152917" data-scaled_by="2147483647.0" data-maximum_amplitude="0.400269" data-minimum_amplitude="-0.271729" data-midline_amplitude="0.06427" data-mean_norm="0.009097" data-mean_amplitude="2.8e-05" data-rms_amplitude="0.025106" data-maximum_delta="0.140045" data-minimum_delta="0.0" data-mean_delta="0.000836" data-rms_delta="0.004425" data-rough_frequency="1346.0" data-volume_adjustment="2.498" data-path="/cc0/sonic_pi/samples/rate_0.6/tabla_re" src="tabla_re/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="tabla_re">/cc0/sonic_pi/samples/rate_0.6/tabla_re</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="158076.0" data-length="1.646625" data-scaled_by="2147483647.0" data-maximum_amplitude="0.313202" data-minimum_amplitude="-0.377747" data-midline_amplitude="-0.032272" data-mean_norm="0.004118" data-mean_amplitude="-3.0e-06" data-rms_amplitude="0.014091" data-maximum_delta="0.117645" data-minimum_delta="0.0" data-mean_delta="0.000162" data-rms_delta="0.001496" data-rough_frequency="811.0" data-volume_adjustment="2.647" data-path="/cc0/sonic_pi/samples/rate_0.6/tabla_tas1" src="tabla_tas1/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="tabla_tas1">/cc0/sonic_pi/samples/rate_0.6/tabla_tas1</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="186982.0" data-length="1.947729" data-scaled_by="2147483647.0" data-maximum_amplitude="0.444458" data-minimum_amplitude="-0.397522" data-midline_amplitude="0.023468" data-mean_norm="0.007059" data-mean_amplitude="-9.0e-06" data-rms_amplitude="0.018918" data-maximum_delta="0.22702" data-minimum_delta="0.0" data-mean_delta="0.00021" data-rms_delta="0.001548" data-rough_frequency="625.0" data-volume_adjustment="2.25" data-path="/cc0/sonic_pi/samples/rate_0.6/tabla_tas2" src="tabla_tas2/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="tabla_tas2">/cc0/sonic_pi/samples/rate_0.6/tabla_tas2</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="126636.0" data-length="1.319125" data-scaled_by="2147483647.0" data-maximum_amplitude="0.445465" data-minimum_amplitude="-0.461578" data-midline_amplitude="-0.008057" data-mean_norm="0.010471" data-mean_amplitude="-8.0e-06" data-rms_amplitude="0.028092" data-maximum_delta="0.106506" data-minimum_delta="0.0" data-mean_delta="0.000327" data-rms_delta="0.001478" data-rough_frequency="401.0" data-volume_adjustment="2.166" data-path="/cc0/sonic_pi/samples/rate_0.6/tabla_tas3" src="tabla_tas3/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="tabla_tas3">/cc0/sonic_pi/samples/rate_0.6/tabla_tas3</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="14042.0" data-length="0.146271" data-scaled_by="2147483647.0" data-maximum_amplitude="0.498566" data-minimum_amplitude="-0.319031" data-midline_amplitude="0.089767" data-mean_norm="0.021932" data-mean_amplitude="-6.2e-05" data-rms_amplitude="0.061466" data-maximum_delta="0.099121" data-minimum_delta="0.0" data-mean_delta="0.000883" data-rms_delta="0.004194" data-rough_frequency="521.0" data-volume_adjustment="2.006" data-path="/cc0/sonic_pi/samples/rate_0.6/tabla_te1" src="tabla_te1/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="tabla_te1">/cc0/sonic_pi/samples/rate_0.6/tabla_te1</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="13184.0" data-length="0.137333" data-scaled_by="2147483647.0" data-maximum_amplitude="0.389435" data-minimum_amplitude="-0.337799" data-midline_amplitude="0.025818" data-mean_norm="0.017047" data-mean_amplitude="1.3e-05" data-rms_amplitude="0.046011" data-maximum_delta="0.053619" data-minimum_delta="0.0" data-mean_delta="0.000748" data-rms_delta="0.002896" data-rough_frequency="480.0" data-volume_adjustment="2.568" data-path="/cc0/sonic_pi/samples/rate_0.6/tabla_te2" src="tabla_te2/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="tabla_te2">/cc0/sonic_pi/samples/rate_0.6/tabla_te2</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="11514.0" data-length="0.119938" data-scaled_by="2147483647.0" data-maximum_amplitude="0.350525" data-minimum_amplitude="-0.240845" data-midline_amplitude="0.05484" data-mean_norm="0.011948" data-mean_amplitude="5.0e-06" data-rms_amplitude="0.034969" data-maximum_delta="0.043427" data-minimum_delta="0.0" data-mean_delta="0.000456" data-rms_delta="0.002184" data-rough_frequency="477.0" data-volume_adjustment="2.853" data-path="/cc0/sonic_pi/samples/rate_0.6/tabla_te_m" src="tabla_te_m/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="tabla_te_m">/cc0/sonic_pi/samples/rate_0.6/tabla_te_m</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="24272.0" data-length="0.252833" data-scaled_by="2147483647.0" data-maximum_amplitude="0.300446" data-minimum_amplitude="-0.37677" data-midline_amplitude="-0.038162" data-mean_norm="0.015488" data-mean_amplitude="-0.000102" data-rms_amplitude="0.044544" data-maximum_delta="0.040344" data-minimum_delta="0.0" data-mean_delta="0.000586" data-rms_delta="0.001731" data-rough_frequency="296.0" data-volume_adjustment="2.654" data-path="/cc0/sonic_pi/samples/rate_0.6/tabla_te_ne" src="tabla_te_ne/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="tabla_te_ne">/cc0/sonic_pi/samples/rate_0.6/tabla_te_ne</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="302604.0" data-length="3.152125" data-scaled_by="2147483647.0" data-maximum_amplitude="0.409454" data-minimum_amplitude="-0.342224" data-midline_amplitude="0.033615" data-mean_norm="0.03079" data-mean_amplitude="6.0e-06" data-rms_amplitude="0.060279" data-maximum_delta="0.076935" data-minimum_delta="0.0" data-mean_delta="0.000445" data-rms_delta="0.001343" data-rough_frequency="170.0" data-volume_adjustment="2.442" data-path="/cc0/sonic_pi/samples/rate_0.6/tabla_tun1" src="tabla_tun1/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="tabla_tun1">/cc0/sonic_pi/samples/rate_0.6/tabla_tun1</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="341364.0" data-length="3.555875" data-scaled_by="2147483647.0" data-maximum_amplitude="0.375427" data-minimum_amplitude="-0.395569" data-midline_amplitude="-0.010071" data-mean_norm="0.033538" data-mean_amplitude="-3.0e-06" data-rms_amplitude="0.06653" data-maximum_delta="0.027893" data-minimum_delta="0.0" data-mean_delta="0.000463" data-rms_delta="0.001229" data-rough_frequency="141.0" data-volume_adjustment="2.528" data-path="/cc0/sonic_pi/samples/rate_0.6/tabla_tun2" src="tabla_tun2/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="tabla_tun2">/cc0/sonic_pi/samples/rate_0.6/tabla_tun2</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="331848.0" data-length="3.45675" data-scaled_by="2147483647.0" data-maximum_amplitude="0.387665" data-minimum_amplitude="-0.316986" data-midline_amplitude="0.035339" data-mean_norm="0.031128" data-mean_amplitude="-0.0" data-rms_amplitude="0.061159" data-maximum_delta="0.033264" data-minimum_delta="0.0" data-mean_delta="0.000422" data-rms_delta="0.001158" data-rough_frequency="144.0" data-volume_adjustment="2.58" data-path="/cc0/sonic_pi/samples/rate_0.6/tabla_tun3" src="tabla_tun3/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="tabla_tun3">/cc0/sonic_pi/samples/rate_0.6/tabla_tun3</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="1185250.0" data-length="12.346354" data-scaled_by="2147483647.0" data-maximum_amplitude="0.192535" data-minimum_amplitude="-0.2052" data-midline_amplitude="-0.006332" data-mean_norm="0.019962" data-mean_amplitude="3.0e-06" data-rms_amplitude="0.028299" data-maximum_delta="0.305328" data-minimum_delta="0.0" data-mean_delta="0.020631" data-rms_delta="0.030647" data-rough_frequency="8273.0" data-volume_adjustment="4.873" data-path="/cc0/sonic_pi/samples/rate_0.6/tbd_fxbed_loop" src="tbd_fxbed_loop/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="tbd_fxbed_loop">/cc0/sonic_pi/samples/rate_0.6/tbd_fxbed_loop</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="177318.0" data-length="1.847063" data-scaled_by="2147483647.0" data-maximum_amplitude="0.349091" data-minimum_amplitude="-0.326141" data-midline_amplitude="0.011475" data-mean_norm="0.029437" data-mean_amplitude="6.0e-06" data-rms_amplitude="0.044577" data-maximum_delta="0.383667" data-minimum_delta="0.0" data-mean_delta="0.034041" data-rms_delta="0.05086" data-rough_frequency="8716.0" data-volume_adjustment="2.865" data-path="/cc0/sonic_pi/samples/rate_0.6/tbd_highkey_c4" src="tbd_highkey_c4/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="tbd_highkey_c4">/cc0/sonic_pi/samples/rate_0.6/tbd_highkey_c4</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="324544.0" data-length="3.380667" data-scaled_by="2147483647.0" data-maximum_amplitude="0.173309" data-minimum_amplitude="-0.168701" data-midline_amplitude="0.002304" data-mean_norm="0.034566" data-mean_amplitude="7.0e-05" data-rms_amplitude="0.043745" data-maximum_delta="0.205933" data-minimum_delta="0.0" data-mean_delta="0.044582" data-rms_delta="0.055793" data-rough_frequency="9743.0" data-volume_adjustment="5.77" data-path="/cc0/sonic_pi/samples/rate_0.6/tbd_pad_1" src="tbd_pad_1/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="tbd_pad_1">/cc0/sonic_pi/samples/rate_0.6/tbd_pad_1</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="515960.0" data-length="5.374583" data-scaled_by="2147483647.0" data-maximum_amplitude="0.187744" data-minimum_amplitude="-0.162292" data-midline_amplitude="0.012726" data-mean_norm="0.033691" data-mean_amplitude="-4.0e-06" data-rms_amplitude="0.042546" data-maximum_delta="0.22229" data-minimum_delta="0.0" data-mean_delta="0.043143" data-rms_delta="0.054168" data-rough_frequency="9726.0" data-volume_adjustment="5.326" data-path="/cc0/sonic_pi/samples/rate_0.6/tbd_pad_2" src="tbd_pad_2/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="tbd_pad_2">/cc0/sonic_pi/samples/rate_0.6/tbd_pad_2</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="482046.0" data-length="5.021312" data-scaled_by="2147483647.0" data-maximum_amplitude="0.251923" data-minimum_amplitude="-0.266693" data-midline_amplitude="-0.007385" data-mean_norm="0.057751" data-mean_amplitude="-1.3e-05" data-rms_amplitude="0.072084" data-maximum_delta="0.360657" data-minimum_delta="0.0" data-mean_delta="0.071852" data-rms_delta="0.090101" data-rough_frequency="9548.0" data-volume_adjustment="3.75" data-path="/cc0/sonic_pi/samples/rate_0.6/tbd_pad_3" src="tbd_pad_3/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="tbd_pad_3">/cc0/sonic_pi/samples/rate_0.6/tbd_pad_3</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="400728.0" data-length="4.17425" data-scaled_by="2147483647.0" data-maximum_amplitude="0.281189" data-minimum_amplitude="-0.298798" data-midline_amplitude="-0.008804" data-mean_norm="0.056659" data-mean_amplitude="-0.0" data-rms_amplitude="0.071138" data-maximum_delta="0.313995" data-minimum_delta="0.0" data-mean_delta="0.069822" data-rms_delta="0.086794" data-rough_frequency="9320.0" data-volume_adjustment="3.347" data-path="/cc0/sonic_pi/samples/rate_0.6/tbd_pad_4" src="tbd_pad_4/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="tbd_pad_4">/cc0/sonic_pi/samples/rate_0.6/tbd_pad_4</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="15316.0" data-length="0.159542" data-scaled_by="2147483647.0" data-maximum_amplitude="0.261841" data-minimum_amplitude="-0.366516" data-midline_amplitude="-0.052338" data-mean_norm="0.01158" data-mean_amplitude="1.1e-05" data-rms_amplitude="0.026649" data-maximum_delta="0.219116" data-minimum_delta="0.0" data-mean_delta="0.005241" data-rms_delta="0.015022" data-rough_frequency="4306.0" data-volume_adjustment="2.728" data-path="/cc0/sonic_pi/samples/rate_0.6/tbd_perc_blip" src="tbd_perc_blip/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="tbd_perc_blip">/cc0/sonic_pi/samples/rate_0.6/tbd_perc_blip</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="16604.0" data-length="0.172958" data-scaled_by="2147483647.0" data-maximum_amplitude="0.048035" data-minimum_amplitude="-0.041962" data-midline_amplitude="0.003036" data-mean_norm="0.004722" data-mean_amplitude="6.0e-06" data-rms_amplitude="0.0072" data-maximum_delta="0.052277" data-minimum_delta="0.0" data-mean_delta="0.003612" data-rms_delta="0.00694" data-rough_frequency="7363.0" data-volume_adjustment="20.818" data-path="/cc0/sonic_pi/samples/rate_0.6/tbd_perc_hat" src="tbd_perc_hat/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="tbd_perc_hat">/cc0/sonic_pi/samples/rate_0.6/tbd_perc_hat</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="13076.0" data-length="0.136208" data-scaled_by="2147483647.0" data-maximum_amplitude="0.051422" data-minimum_amplitude="-0.04248" data-midline_amplitude="0.004471" data-mean_norm="0.004709" data-mean_amplitude="1.0e-06" data-rms_amplitude="0.008139" data-maximum_delta="0.061615" data-minimum_delta="0.0" data-mean_delta="0.004007" data-rms_delta="0.008418" data-rough_frequency="7900.0" data-volume_adjustment="19.447" data-path="/cc0/sonic_pi/samples/rate_0.6/tbd_perc_tap_1" src="tbd_perc_tap_1/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="tbd_perc_tap_1">/cc0/sonic_pi/samples/rate_0.6/tbd_perc_tap_1</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="14918.0" data-length="0.155396" data-scaled_by="2147483647.0" data-maximum_amplitude="0.211365" data-minimum_amplitude="-0.187286" data-midline_amplitude="0.012039" data-mean_norm="0.013709" data-mean_amplitude="-1.0e-06" data-rms_amplitude="0.027945" data-maximum_delta="0.141174" data-minimum_delta="0.0" data-mean_delta="0.009396" data-rms_delta="0.019693" data-rough_frequency="5383.0" data-volume_adjustment="4.731" data-path="/cc0/sonic_pi/samples/rate_0.6/tbd_perc_tap_2" src="tbd_perc_tap_2/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="tbd_perc_tap_2">/cc0/sonic_pi/samples/rate_0.6/tbd_perc_tap_2</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="565828.0" data-length="5.894042" data-scaled_by="2147483647.0" data-maximum_amplitude="0.184296" data-minimum_amplitude="-0.207672" data-midline_amplitude="-0.011688" data-mean_norm="0.012063" data-mean_amplitude="-0.0" data-rms_amplitude="0.020775" data-maximum_delta="0.183777" data-minimum_delta="0.0" data-mean_delta="0.013485" data-rms_delta="0.022275" data-rough_frequency="8190.0" data-volume_adjustment="4.815" data-path="/cc0/sonic_pi/samples/rate_0.6/tbd_voctone" src="tbd_voctone/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="tbd_voctone">/cc0/sonic_pi/samples/rate_0.6/tbd_voctone</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="170978.0" data-length="1.781021" data-scaled_by="2147483647.0" data-maximum_amplitude="0.401581" data-minimum_amplitude="-0.360107" data-midline_amplitude="0.020737" data-mean_norm="0.03371" data-mean_amplitude="-9.4e-05" data-rms_amplitude="0.054253" data-maximum_delta="0.337372" data-minimum_delta="0.0" data-mean_delta="0.018651" data-rms_delta="0.028487" data-rough_frequency="4011.0" data-volume_adjustment="2.49" data-path="/cc0/sonic_pi/samples/rate_0.6/vinyl_backspin" src="vinyl_backspin/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="vinyl_backspin">/cc0/sonic_pi/samples/rate_0.6/vinyl_backspin</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="1282190.0" data-length="13.356146" data-scaled_by="2147483647.0" data-maximum_amplitude="0.068542" data-minimum_amplitude="-0.124603" data-midline_amplitude="-0.02803" data-mean_norm="0.002333" data-mean_amplitude="-1.0e-06" data-rms_amplitude="0.003267" data-maximum_delta="0.078064" data-minimum_delta="0.0" data-mean_delta="0.002001" data-rms_delta="0.002681" data-rough_frequency="6270.0" data-volume_adjustment="8.025" data-path="/cc0/sonic_pi/samples/rate_0.6/vinyl_hiss" src="vinyl_hiss/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="vinyl_hiss">/cc0/sonic_pi/samples/rate_0.6/vinyl_hiss</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="407092.0" data-length="4.240542" data-scaled_by="2147483647.0" data-maximum_amplitude="0.227722" data-minimum_amplitude="-0.201904" data-midline_amplitude="0.012909" data-mean_norm="0.035683" data-mean_amplitude="-4.0e-06" data-rms_amplitude="0.049464" data-maximum_delta="0.190033" data-minimum_delta="0.0" data-mean_delta="0.009952" data-rms_delta="0.016863" data-rough_frequency="2604.0" data-volume_adjustment="4.391" data-path="/cc0/sonic_pi/samples/rate_0.6/vinyl_rewind" src="vinyl_rewind/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="vinyl_rewind">/cc0/sonic_pi/samples/rate_0.6/vinyl_rewind</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="43588.0" data-length="0.454042" data-scaled_by="2147483647.0" data-maximum_amplitude="0.331085" data-minimum_amplitude="-0.443787" data-midline_amplitude="-0.056351" data-mean_norm="0.046798" data-mean_amplitude="0.000296" data-rms_amplitude="0.069133" data-maximum_delta="0.104034" data-minimum_delta="0.0" data-mean_delta="0.002954" data-rms_delta="0.006753" data-rough_frequency="746.0" data-volume_adjustment="2.253" data-path="/cc0/sonic_pi/samples/rate_0.6/vinyl_scratch" src="vinyl_scratch/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="vinyl_scratch">/cc0/sonic_pi/samples/rate_0.6/vinyl_scratch</a>
+  </td>
+</tr>
+
+  </tbody>
+</table>
+
+        </article>
+      </main>
+      <footer>
+  <p>Copyright © 2026 Mica Sound / FUJISE Takumi (tkmfujise)</p>
+</footer>
+
+    </div>
+	</body>
+</html>
