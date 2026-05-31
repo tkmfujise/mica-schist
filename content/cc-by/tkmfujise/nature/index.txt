@@ -1,4 +1,3 @@
-/cc-by/tkmfujise/nature/plop/plop.rb
 /cc-by/tkmfujise/nature/rain/rain.rb
 /cc-by/tkmfujise/nature/waterfall/waterfall.rb
 /cc-by/tkmfujise/nature/wind/wind.rb
