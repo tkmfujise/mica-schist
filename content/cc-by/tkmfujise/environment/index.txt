@@ -1,0 +1,5 @@
+/cc-by/tkmfujise/environment/motor/motor.rb
+/cc-by/tkmfujise/environment/propeller/propeller.rb
+/cc-by/tkmfujise/environment/rewind/rewind.rb
+/cc-by/tkmfujise/environment/rewind_slow/rewind_slow.rb
+/cc-by/tkmfujise/environment/temple_bell/temple_bell.rb

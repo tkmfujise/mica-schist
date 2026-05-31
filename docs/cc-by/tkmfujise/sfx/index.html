@@ -1,0 +1,249 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Mica Sound: Sonic Pi Examples</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+		<meta name="author" content="tkmfujise">
+		<meta name="keywords" content="Sonic Pi, Ruby, sound, music, effect, cc0">
+		<meta name="description" content="Sonic Pi Examples">
+		<link rel="stylesheet" href="../../../assets/css/almond.min.css">
+		<link rel="stylesheet" href="../../../assets/css/style.css">
+		<link rel="stylesheet" href="../../../assets/css/syntax.gessetti.css">
+    <script src="../../../assets/js/vendor/fuse.js@7.1.0"></script>
+    <script src="../../../assets/js/filter.js"></script>
+    <script src="../../../assets/js/clipboard.js"></script>
+	</head>
+  <body>
+    <nav class="main-menu closed">
+  <button onclick="document.querySelector('.main-menu').classList.toggle('closed');">
+    <span>Expand/Collapse menu</span>
+  </button>
+  <h2>Gems among stones.</h2>
+  <ul>
+    <li>
+      <a href="../../../">💎 Home 🪨</a>
+    </li>
+
+    <li>
+      <div>Samples</div>
+      <ul>
+        <li><a href="../../../cc0/sonic_pi/samples">All</a></li>
+        <li><a href="../../../cc0/sonic_pi/samples/original">Originals</a></li>
+        <li><a href="../../../cc0/sonic_pi/samples/rate_0.8">rate 0.8</a></li>
+        <li><a href="../../../cc0/sonic_pi/samples/rate_0.6">rate 0.6</a></li>
+        <li><a href="../../../cc0/sonic_pi/samples/rate_0.4">rate 0.4</a></li>
+        <li><a href="../../../cc0/sonic_pi/samples/rate_0.2">rate 0.2</a></li>
+      </ul>
+    </li>
+
+    <li>
+      <div>Synths</div>
+      <ul>
+        <li><a href="../../../cc0/sonic_pi/synths">All</a></li>
+      </ul>
+    </li>
+
+    <li>
+      <div>Official Examples</div>
+      <ul>
+        <li><a href="../../../cc-by-sa/sonic_pi">All</a></li>
+      </ul>
+    </li>
+
+    <li>
+      <div>Mica Sound</div>
+      <ul>
+        <li><a href="..">All</a></li>
+        <li><a href="../bgm">Bgm</a></li>
+        <li><a href="../environment">Environment</a></li>
+        <li><a href="../nature">Nature</a></li>
+        <li><a href=".">Sfx</a></li>
+        <li><a href="../voice">Voice</a></li>
+      </ul>
+    </li>
+
+    <li>
+      <div>Links</div>
+      <ul>
+        <li><a href="../../../about">About</a></li>
+        <li><a rel="external" target="_blank" href="https://github.com/tkmfujise/mica-sound/blob/main/LICENSE.md">License</a></li>
+        <li><a rel="external" target="_blank" href="https://github.com/tkmfujise/mica-sound">GitHub</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+    <div>
+      <header>
+  <div>
+    <a href="../../../">
+      <h1>Mica Sound</h1>
+    </a>
+    <p>Sonic Pi Examples</p>
+  </div>
+</header>
+
+
+      <main>
+        <article>
+          <span class="search-result-count">-</span> sounds.
+
+<form>
+  <p>
+    <button>Samples</button>
+    <button>Synths</button>
+  </p>
+
+  <p class="search">
+    <select id="license">
+      <option value="">ALL</option>
+      <option value="1">CC0</option>
+      <option value="2">CC BY</option>
+      <option value="2">CC BY-SA</option>
+    </select>
+    <input type="search">
+  </p>
+    
+  <details>
+    <summary>Advancend</summary>
+
+    <fieldset>
+      <legend>rough_frequency</legend>
+      <input type="range" min="0" max="18000" value="0">
+      <input type="range" min="0" max="18000" value="18000">
+    </fieldset>
+
+    <fieldset>
+      <legend>crest_factor</legend>
+      <input type="range">
+      <input type="range">
+    </fieldset>
+
+    <fieldset>
+      <legend>delta_crest_factor</legend>
+      <input type="range">
+      <input type="range">
+    </fieldset>
+
+    <fieldset>
+      <legend>jiggly</legend>
+      <input type="range">
+      <input type="range">
+    </fieldset>
+
+    <fieldset>
+      <legend>periodicity</legend>
+      <input type="range">
+      <input type="range">
+    </fieldset>
+  </details>
+</form>
+
+
+      		<table>
+  <tbody>
+    <tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="106770.0" data-length="1.112188" data-scaled_by="2147483647.0" data-maximum_amplitude="0.698242" data-minimum_amplitude="-0.804565" data-midline_amplitude="-0.053162" data-mean_norm="0.03061" data-mean_amplitude="-0.000221" data-rms_amplitude="0.075536" data-maximum_delta="0.129456" data-minimum_delta="0.0" data-mean_delta="0.002227" data-rms_delta="0.007702" data-rough_frequency="778.0" data-volume_adjustment="1.243" data-path="/cc-by/tkmfujise/sfx/bash" src="bash/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="bash">/cc-by/tkmfujise/sfx/bash</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="117062.0" data-length="1.219396" data-scaled_by="2147483647.0" data-maximum_amplitude="0.48111" data-minimum_amplitude="-0.532043" data-midline_amplitude="-0.025467" data-mean_norm="0.029833" data-mean_amplitude="0.00028" data-rms_amplitude="0.070612" data-maximum_delta="0.238373" data-minimum_delta="0.0" data-mean_delta="0.012767" data-rms_delta="0.022466" data-rough_frequency="2430.0" data-volume_adjustment="1.88" data-path="/cc-by/tkmfujise/sfx/dash" src="dash/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="dash">/cc-by/tkmfujise/sfx/dash</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="15214.0" data-length="0.158479" data-scaled_by="2147483647.0" data-maximum_amplitude="0.396088" data-minimum_amplitude="-0.400848" data-midline_amplitude="-0.00238" data-mean_norm="0.024476" data-mean_amplitude="-2.0e-05" data-rms_amplitude="0.050583" data-maximum_delta="0.110229" data-minimum_delta="0.0" data-mean_delta="0.003071" data-rms_delta="0.009128" data-rough_frequency="1378.0" data-volume_adjustment="2.495" data-path="/cc-by/tkmfujise/sfx/fwip" src="fwip/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="fwip">/cc-by/tkmfujise/sfx/fwip</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="29954.0" data-length="0.312021" data-scaled_by="2147483647.0" data-maximum_amplitude="0.133942" data-minimum_amplitude="-0.088074" data-midline_amplitude="0.022934" data-mean_norm="0.008667" data-mean_amplitude="-9.0e-06" data-rms_amplitude="0.01446" data-maximum_delta="0.133362" data-minimum_delta="0.0" data-mean_delta="0.009259" data-rms_delta="0.013157" data-rough_frequency="6950.0" data-volume_adjustment="7.466" data-path="/cc-by/tkmfujise/sfx/land_snow" src="land_snow/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="land_snow">/cc-by/tkmfujise/sfx/land_snow</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="43192.0" data-length="0.449917" data-scaled_by="2147483647.0" data-maximum_amplitude="0.408783" data-minimum_amplitude="-0.436462" data-midline_amplitude="-0.01384" data-mean_norm="0.026331" data-mean_amplitude="-0.000117" data-rms_amplitude="0.052466" data-maximum_delta="0.045258" data-minimum_delta="0.0" data-mean_delta="0.001243" data-rms_delta="0.003374" data-rough_frequency="491.0" data-volume_adjustment="2.291" data-path="/cc-by/tkmfujise/sfx/poink" src="poink/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="poink">/cc-by/tkmfujise/sfx/poink</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="212670.0" data-length="2.215313" data-scaled_by="2147483647.0" data-maximum_amplitude="0.538422" data-minimum_amplitude="-0.612396" data-midline_amplitude="-0.036987" data-mean_norm="0.025726" data-mean_amplitude="-0.000143" data-rms_amplitude="0.061146" data-maximum_delta="0.066742" data-minimum_delta="0.0" data-mean_delta="0.001227" data-rms_delta="0.003994" data-rough_frequency="499.0" data-volume_adjustment="1.633" data-path="/cc-by/tkmfujise/sfx/thoom" src="thoom/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="thoom">/cc-by/tkmfujise/sfx/thoom</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="339892.0" data-length="3.540542" data-scaled_by="2147483647.0" data-maximum_amplitude="0.718109" data-minimum_amplitude="-0.950623" data-midline_amplitude="-0.116257" data-mean_norm="0.027979" data-mean_amplitude="-0.000237" data-rms_amplitude="0.081028" data-maximum_delta="0.710419" data-minimum_delta="0.0" data-mean_delta="0.028919" data-rms_delta="0.071932" data-rough_frequency="6781.0" data-volume_adjustment="1.052" data-path="/cc-by/tkmfujise/sfx/thump" src="thump/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="thump">/cc-by/tkmfujise/sfx/thump</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="188824.0" data-length="1.966917" data-scaled_by="2147483647.0" data-maximum_amplitude="0.39328" data-minimum_amplitude="-0.386658" data-midline_amplitude="0.003311" data-mean_norm="0.022065" data-mean_amplitude="-1.0e-05" data-rms_amplitude="0.042153" data-maximum_delta="0.464569" data-minimum_delta="0.0" data-mean_delta="0.030859" data-rms_delta="0.05694" data-rough_frequency="10319.0" data-volume_adjustment="2.543" data-path="/cc-by/tkmfujise/sfx/thwack" src="thwack/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="thwack">/cc-by/tkmfujise/sfx/thwack</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="136804.0" data-length="1.425042" data-scaled_by="2147483647.0" data-maximum_amplitude="0.474976" data-minimum_amplitude="-0.451874" data-midline_amplitude="0.011551" data-mean_norm="0.013196" data-mean_amplitude="1.0e-06" data-rms_amplitude="0.03556" data-maximum_delta="0.137665" data-minimum_delta="0.0" data-mean_delta="0.00099" data-rms_delta="0.00359" data-rough_frequency="771.0" data-volume_adjustment="2.105" data-path="/cc-by/tkmfujise/sfx/thwock" src="thwock/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="thwock">/cc-by/tkmfujise/sfx/thwock</a>
+  </td>
+</tr>
+
+  </tbody>
+</table>
+
+        </article>
+      </main>
+      <footer>
+  <p>Copyright © 2026 Mica Sound / FUJISE Takumi (tkmfujise)</p>
+</footer>
+
+    </div>
+	</body>
+</html>

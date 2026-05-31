@@ -1,0 +1,199 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Mica Sound: Sonic Pi Examples</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+		<meta name="author" content="tkmfujise">
+		<meta name="keywords" content="Sonic Pi, Ruby, sound, music, effect, cc0">
+		<meta name="description" content="Sonic Pi Examples">
+		<link rel="stylesheet" href="../../../assets/css/almond.min.css">
+		<link rel="stylesheet" href="../../../assets/css/style.css">
+		<link rel="stylesheet" href="../../../assets/css/syntax.gessetti.css">
+    <script src="../../../assets/js/vendor/fuse.js@7.1.0"></script>
+    <script src="../../../assets/js/filter.js"></script>
+    <script src="../../../assets/js/clipboard.js"></script>
+	</head>
+  <body>
+    <nav class="main-menu closed">
+  <button onclick="document.querySelector('.main-menu').classList.toggle('closed');">
+    <span>Expand/Collapse menu</span>
+  </button>
+  <h2>Gems among stones.</h2>
+  <ul>
+    <li>
+      <a href="../../../">💎 Home 🪨</a>
+    </li>
+
+    <li>
+      <div>Samples</div>
+      <ul>
+        <li><a href="../../../cc0/sonic_pi/samples">All</a></li>
+        <li><a href="../../../cc0/sonic_pi/samples/original">Originals</a></li>
+        <li><a href="../../../cc0/sonic_pi/samples/rate_0.8">rate 0.8</a></li>
+        <li><a href="../../../cc0/sonic_pi/samples/rate_0.6">rate 0.6</a></li>
+        <li><a href="../../../cc0/sonic_pi/samples/rate_0.4">rate 0.4</a></li>
+        <li><a href="../../../cc0/sonic_pi/samples/rate_0.2">rate 0.2</a></li>
+      </ul>
+    </li>
+
+    <li>
+      <div>Synths</div>
+      <ul>
+        <li><a href="../../../cc0/sonic_pi/synths">All</a></li>
+      </ul>
+    </li>
+
+    <li>
+      <div>Official Examples</div>
+      <ul>
+        <li><a href="../../../cc-by-sa/sonic_pi">All</a></li>
+      </ul>
+    </li>
+
+    <li>
+      <div>Mica Sound</div>
+      <ul>
+        <li><a href="..">All</a></li>
+        <li><a href="../bgm">Bgm</a></li>
+        <li><a href="../environment">Environment</a></li>
+        <li><a href=".">Nature</a></li>
+        <li><a href="../sfx">Sfx</a></li>
+        <li><a href="../voice">Voice</a></li>
+      </ul>
+    </li>
+
+    <li>
+      <div>Links</div>
+      <ul>
+        <li><a href="../../../about">About</a></li>
+        <li><a rel="external" target="_blank" href="https://github.com/tkmfujise/mica-sound/blob/main/LICENSE.md">License</a></li>
+        <li><a rel="external" target="_blank" href="https://github.com/tkmfujise/mica-sound">GitHub</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+    <div>
+      <header>
+  <div>
+    <a href="../../../">
+      <h1>Mica Sound</h1>
+    </a>
+    <p>Sonic Pi Examples</p>
+  </div>
+</header>
+
+
+      <main>
+        <article>
+          <span class="search-result-count">-</span> sounds.
+
+<form>
+  <p>
+    <button>Samples</button>
+    <button>Synths</button>
+  </p>
+
+  <p class="search">
+    <select id="license">
+      <option value="">ALL</option>
+      <option value="1">CC0</option>
+      <option value="2">CC BY</option>
+      <option value="2">CC BY-SA</option>
+    </select>
+    <input type="search">
+  </p>
+    
+  <details>
+    <summary>Advancend</summary>
+
+    <fieldset>
+      <legend>rough_frequency</legend>
+      <input type="range" min="0" max="18000" value="0">
+      <input type="range" min="0" max="18000" value="18000">
+    </fieldset>
+
+    <fieldset>
+      <legend>crest_factor</legend>
+      <input type="range">
+      <input type="range">
+    </fieldset>
+
+    <fieldset>
+      <legend>delta_crest_factor</legend>
+      <input type="range">
+      <input type="range">
+    </fieldset>
+
+    <fieldset>
+      <legend>jiggly</legend>
+      <input type="range">
+      <input type="range">
+    </fieldset>
+
+    <fieldset>
+      <legend>periodicity</legend>
+      <input type="range">
+      <input type="range">
+    </fieldset>
+  </details>
+</form>
+
+
+      		<table>
+  <tbody>
+    <tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="33852.0" data-length="0.352625" data-scaled_by="2147483647.0" data-maximum_amplitude="0.998016" data-minimum_amplitude="-0.985504" data-midline_amplitude="0.006256" data-mean_norm="0.017663" data-mean_amplitude="0.000186" data-rms_amplitude="0.082594" data-maximum_delta="0.068665" data-minimum_delta="0.0" data-mean_delta="0.000729" data-rms_delta="0.003665" data-rough_frequency="338.0" data-volume_adjustment="1.002" data-path="/cc-by/tkmfujise/nature/plop" src="plop/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="plop">/cc-by/tkmfujise/nature/plop</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="433074.0" data-length="4.511188" data-scaled_by="2147483647.0" data-maximum_amplitude="0.274841" data-minimum_amplitude="-0.31012" data-midline_amplitude="-0.017639" data-mean_norm="0.04379" data-mean_amplitude="-2.6e-05" data-rms_amplitude="0.056052" data-maximum_delta="0.230316" data-minimum_delta="0.0" data-mean_delta="0.033416" data-rms_delta="0.042842" data-rough_frequency="5839.0" data-volume_adjustment="3.225" data-path="/cc-by/tkmfujise/nature/rain" src="rain/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="rain">/cc-by/tkmfujise/nature/rain</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="432156.0" data-length="4.501625" data-scaled_by="2147483647.0" data-maximum_amplitude="0.262695" data-minimum_amplitude="-0.276703" data-midline_amplitude="-0.007004" data-mean_norm="0.043317" data-mean_amplitude="-1.3e-05" data-rms_amplitude="0.056405" data-maximum_delta="0.227844" data-minimum_delta="0.0" data-mean_delta="0.033541" data-rms_delta="0.043671" data-rough_frequency="5914.0" data-volume_adjustment="3.614" data-path="/cc-by/tkmfujise/nature/waterfall" src="waterfall/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="waterfall">/cc-by/tkmfujise/nature/waterfall</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <audio preload="none" data-samples_read="424990.0" data-length="4.426979" data-scaled_by="2147483647.0" data-maximum_amplitude="0.166534" data-minimum_amplitude="-0.174408" data-midline_amplitude="-0.003937" data-mean_norm="0.022017" data-mean_amplitude="-3.0e-06" data-rms_amplitude="0.030815" data-maximum_delta="0.024872" data-minimum_delta="0.0" data-mean_delta="0.001159" data-rms_delta="0.002306" data-rough_frequency="571.0" data-volume_adjustment="5.734" data-path="/cc-by/tkmfujise/nature/wind" src="wind/output.ogg" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </td>
+  <td>
+    <a href="wind">/cc-by/tkmfujise/nature/wind</a>
+  </td>
+</tr>
+
+  </tbody>
+</table>
+
+        </article>
+      </main>
+      <footer>
+  <p>Copyright © 2026 Mica Sound / FUJISE Takumi (tkmfujise)</p>
+</footer>
+
+    </div>
+	</body>
+</html>

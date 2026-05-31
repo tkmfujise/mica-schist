@@ -1,0 +1,9 @@
+/cc-by/tkmfujise/sfx/bash/bash.rb
+/cc-by/tkmfujise/sfx/dash/dash.rb
+/cc-by/tkmfujise/sfx/fwip/fwip.rb
+/cc-by/tkmfujise/sfx/land_snow/land_snow.rb
+/cc-by/tkmfujise/sfx/poink/poink.rb
+/cc-by/tkmfujise/sfx/thoom/thoom.rb
+/cc-by/tkmfujise/sfx/thump/thump.rb
+/cc-by/tkmfujise/sfx/thwack/thwack.rb
+/cc-by/tkmfujise/sfx/thwock/thwock.rb
