@@ -18,8 +18,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const generateFuseItems = (elements) => {
       return elements.map(e => {
         return {
-          path:     e.querySelector('audio').dataset.path,
-          target:   e,
+          path:   e.querySelector('button').dataset.path,
+          target: e,
         }   
       })
     }
