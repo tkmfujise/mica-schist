@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const wrapper = btn.closest(audioWrapperSelector).cloneNode(true)
     const newBtn  = wrapper.querySelector('button')
     setCallbacks(newBtn)
-    history.appendChild(wrapper)
+    history.prepend(wrapper)
     buttons.push(newBtn)
   }
 
