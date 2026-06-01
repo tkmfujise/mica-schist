@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   const showLabel = (btn) => {
-    label.innerText = btn.dataset.src
+    label.innerText = btn.dataset.path
   }
 
   const play = (btn) => {
