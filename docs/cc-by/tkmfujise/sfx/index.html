@@ -13,6 +13,7 @@
 		<link rel="stylesheet" href="../../../assets/css/syntax.gessetti.css">
     <script src="../../../assets/js/vendor/fuse.js@7.1.0"></script>
     <script src="../../../assets/js/filter.js"></script>
+    <script src="../../../assets/js/player.js"></script>
     <script src="../../../assets/js/clipboard.js"></script>
 	</head>
   <body>
@@ -91,64 +92,34 @@
           <span class="search-result-count">-</span> sounds.
 
 <form>
-  <p>
-    <button>Samples</button>
-    <button>Synths</button>
-  </p>
-
   <p class="search">
-    <select id="license">
-      <option value="">ALL</option>
-      <option value="1">CC0</option>
-      <option value="2">CC BY</option>
-      <option value="2">CC BY-SA</option>
-    </select>
+    <button type="button">Shuffle</button>
     <input type="search">
   </p>
-    
-  <details>
-    <summary>Advancend</summary>
-
-    <fieldset>
-      <legend>rough_frequency</legend>
-      <input type="range" min="0" max="18000" value="0">
-      <input type="range" min="0" max="18000" value="18000">
-    </fieldset>
-
-    <fieldset>
-      <legend>crest_factor</legend>
-      <input type="range">
-      <input type="range">
-    </fieldset>
-
-    <fieldset>
-      <legend>delta_crest_factor</legend>
-      <input type="range">
-      <input type="range">
-    </fieldset>
-
-    <fieldset>
-      <legend>jiggly</legend>
-      <input type="range">
-      <input type="range">
-    </fieldset>
-
-    <fieldset>
-      <legend>periodicity</legend>
-      <input type="range">
-      <input type="range">
-    </fieldset>
-  </details>
 </form>
+
+<div class="sticky">
+  <p>
+    <audio id="main-audio" preload="" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </p>
+
+  <details id="play-history">
+    <summary>Now: <span class="current">--</span></summary>
+    <table>
+      <tbody class="container">
+      </tbody>
+    </table>
+  </details>
+</div>
 
 
       		<table>
   <tbody>
     <tr class="audio-list">
   <td>
-    <audio preload="none" data-samples_read="106770.0" data-length="1.112188" data-scaled_by="2147483647.0" data-maximum_amplitude="0.698242" data-minimum_amplitude="-0.804565" data-midline_amplitude="-0.053162" data-mean_norm="0.03061" data-mean_amplitude="-0.000221" data-rms_amplitude="0.075536" data-maximum_delta="0.129456" data-minimum_delta="0.0" data-mean_delta="0.002227" data-rms_delta="0.007702" data-rough_frequency="778.0" data-volume_adjustment="1.243" data-path="/cc-by/tkmfujise/sfx/bash" src="bash/output.ogg" controls>
-      Your browser does not support the audio tag.
-    </audio>
+    <button data-samples_read="106770.0" data-length="1.112188" data-scaled_by="2147483647.0" data-maximum_amplitude="0.698242" data-minimum_amplitude="-0.804565" data-midline_amplitude="-0.053162" data-mean_norm="0.03061" data-mean_amplitude="-0.000221" data-rms_amplitude="0.075536" data-maximum_delta="0.129456" data-minimum_delta="0.0" data-mean_delta="0.002227" data-rms_delta="0.007702" data-rough_frequency="778.0" data-volume_adjustment="1.243" data-path="/cc-by/tkmfujise/sfx/bash" data-src="/cc-by/tkmfujise/sfx/bash/output.ogg" class="audio-item"></button>
   </td>
   <td>
     <a href="bash">/cc-by/tkmfujise/sfx/bash</a>
@@ -156,9 +127,7 @@
 </tr>
 <tr class="audio-list">
   <td>
-    <audio preload="none" data-samples_read="117062.0" data-length="1.219396" data-scaled_by="2147483647.0" data-maximum_amplitude="0.48111" data-minimum_amplitude="-0.532043" data-midline_amplitude="-0.025467" data-mean_norm="0.029833" data-mean_amplitude="0.00028" data-rms_amplitude="0.070612" data-maximum_delta="0.238373" data-minimum_delta="0.0" data-mean_delta="0.012767" data-rms_delta="0.022466" data-rough_frequency="2430.0" data-volume_adjustment="1.88" data-path="/cc-by/tkmfujise/sfx/dash" src="dash/output.ogg" controls>
-      Your browser does not support the audio tag.
-    </audio>
+    <button data-samples_read="117062.0" data-length="1.219396" data-scaled_by="2147483647.0" data-maximum_amplitude="0.48111" data-minimum_amplitude="-0.532043" data-midline_amplitude="-0.025467" data-mean_norm="0.029833" data-mean_amplitude="0.00028" data-rms_amplitude="0.070612" data-maximum_delta="0.238373" data-minimum_delta="0.0" data-mean_delta="0.012767" data-rms_delta="0.022466" data-rough_frequency="2430.0" data-volume_adjustment="1.88" data-path="/cc-by/tkmfujise/sfx/dash" data-src="/cc-by/tkmfujise/sfx/dash/output.ogg" class="audio-item"></button>
   </td>
   <td>
     <a href="dash">/cc-by/tkmfujise/sfx/dash</a>
@@ -166,9 +135,7 @@
 </tr>
 <tr class="audio-list">
   <td>
-    <audio preload="none" data-samples_read="15214.0" data-length="0.158479" data-scaled_by="2147483647.0" data-maximum_amplitude="0.396088" data-minimum_amplitude="-0.400848" data-midline_amplitude="-0.00238" data-mean_norm="0.024476" data-mean_amplitude="-2.0e-05" data-rms_amplitude="0.050583" data-maximum_delta="0.110229" data-minimum_delta="0.0" data-mean_delta="0.003071" data-rms_delta="0.009128" data-rough_frequency="1378.0" data-volume_adjustment="2.495" data-path="/cc-by/tkmfujise/sfx/fwip" src="fwip/output.ogg" controls>
-      Your browser does not support the audio tag.
-    </audio>
+    <button data-samples_read="15214.0" data-length="0.158479" data-scaled_by="2147483647.0" data-maximum_amplitude="0.396088" data-minimum_amplitude="-0.400848" data-midline_amplitude="-0.00238" data-mean_norm="0.024476" data-mean_amplitude="-2.0e-05" data-rms_amplitude="0.050583" data-maximum_delta="0.110229" data-minimum_delta="0.0" data-mean_delta="0.003071" data-rms_delta="0.009128" data-rough_frequency="1378.0" data-volume_adjustment="2.495" data-path="/cc-by/tkmfujise/sfx/fwip" data-src="/cc-by/tkmfujise/sfx/fwip/output.ogg" class="audio-item"></button>
   </td>
   <td>
     <a href="fwip">/cc-by/tkmfujise/sfx/fwip</a>
@@ -176,9 +143,7 @@
 </tr>
 <tr class="audio-list">
   <td>
-    <audio preload="none" data-samples_read="29954.0" data-length="0.312021" data-scaled_by="2147483647.0" data-maximum_amplitude="0.133942" data-minimum_amplitude="-0.088074" data-midline_amplitude="0.022934" data-mean_norm="0.008667" data-mean_amplitude="-9.0e-06" data-rms_amplitude="0.01446" data-maximum_delta="0.133362" data-minimum_delta="0.0" data-mean_delta="0.009259" data-rms_delta="0.013157" data-rough_frequency="6950.0" data-volume_adjustment="7.466" data-path="/cc-by/tkmfujise/sfx/land_snow" src="land_snow/output.ogg" controls>
-      Your browser does not support the audio tag.
-    </audio>
+    <button data-samples_read="29954.0" data-length="0.312021" data-scaled_by="2147483647.0" data-maximum_amplitude="0.133942" data-minimum_amplitude="-0.088074" data-midline_amplitude="0.022934" data-mean_norm="0.008667" data-mean_amplitude="-9.0e-06" data-rms_amplitude="0.01446" data-maximum_delta="0.133362" data-minimum_delta="0.0" data-mean_delta="0.009259" data-rms_delta="0.013157" data-rough_frequency="6950.0" data-volume_adjustment="7.466" data-path="/cc-by/tkmfujise/sfx/land_snow" data-src="/cc-by/tkmfujise/sfx/land_snow/output.ogg" class="audio-item"></button>
   </td>
   <td>
     <a href="land_snow">/cc-by/tkmfujise/sfx/land_snow</a>
@@ -186,9 +151,7 @@
 </tr>
 <tr class="audio-list">
   <td>
-    <audio preload="none" data-samples_read="33852.0" data-length="0.352625" data-scaled_by="2147483647.0" data-maximum_amplitude="0.998016" data-minimum_amplitude="-0.985504" data-midline_amplitude="0.006256" data-mean_norm="0.017663" data-mean_amplitude="0.000186" data-rms_amplitude="0.082594" data-maximum_delta="0.068665" data-minimum_delta="0.0" data-mean_delta="0.000729" data-rms_delta="0.003665" data-rough_frequency="338.0" data-volume_adjustment="1.002" data-path="/cc-by/tkmfujise/sfx/plop" src="plop/output.ogg" controls>
-      Your browser does not support the audio tag.
-    </audio>
+    <button data-samples_read="33852.0" data-length="0.352625" data-scaled_by="2147483647.0" data-maximum_amplitude="0.998016" data-minimum_amplitude="-0.985504" data-midline_amplitude="0.006256" data-mean_norm="0.017663" data-mean_amplitude="0.000186" data-rms_amplitude="0.082594" data-maximum_delta="0.068665" data-minimum_delta="0.0" data-mean_delta="0.000729" data-rms_delta="0.003665" data-rough_frequency="338.0" data-volume_adjustment="1.002" data-path="/cc-by/tkmfujise/sfx/plop" data-src="/cc-by/tkmfujise/sfx/plop/output.ogg" class="audio-item"></button>
   </td>
   <td>
     <a href="plop">/cc-by/tkmfujise/sfx/plop</a>
@@ -196,9 +159,7 @@
 </tr>
 <tr class="audio-list">
   <td>
-    <audio preload="none" data-samples_read="43192.0" data-length="0.449917" data-scaled_by="2147483647.0" data-maximum_amplitude="0.408783" data-minimum_amplitude="-0.436462" data-midline_amplitude="-0.01384" data-mean_norm="0.026331" data-mean_amplitude="-0.000117" data-rms_amplitude="0.052466" data-maximum_delta="0.045258" data-minimum_delta="0.0" data-mean_delta="0.001243" data-rms_delta="0.003374" data-rough_frequency="491.0" data-volume_adjustment="2.291" data-path="/cc-by/tkmfujise/sfx/poink" src="poink/output.ogg" controls>
-      Your browser does not support the audio tag.
-    </audio>
+    <button data-samples_read="43192.0" data-length="0.449917" data-scaled_by="2147483647.0" data-maximum_amplitude="0.408783" data-minimum_amplitude="-0.436462" data-midline_amplitude="-0.01384" data-mean_norm="0.026331" data-mean_amplitude="-0.000117" data-rms_amplitude="0.052466" data-maximum_delta="0.045258" data-minimum_delta="0.0" data-mean_delta="0.001243" data-rms_delta="0.003374" data-rough_frequency="491.0" data-volume_adjustment="2.291" data-path="/cc-by/tkmfujise/sfx/poink" data-src="/cc-by/tkmfujise/sfx/poink/output.ogg" class="audio-item"></button>
   </td>
   <td>
     <a href="poink">/cc-by/tkmfujise/sfx/poink</a>
@@ -206,9 +167,7 @@
 </tr>
 <tr class="audio-list">
   <td>
-    <audio preload="none" data-samples_read="212670.0" data-length="2.215313" data-scaled_by="2147483647.0" data-maximum_amplitude="0.538422" data-minimum_amplitude="-0.612396" data-midline_amplitude="-0.036987" data-mean_norm="0.025726" data-mean_amplitude="-0.000143" data-rms_amplitude="0.061146" data-maximum_delta="0.066742" data-minimum_delta="0.0" data-mean_delta="0.001227" data-rms_delta="0.003994" data-rough_frequency="499.0" data-volume_adjustment="1.633" data-path="/cc-by/tkmfujise/sfx/thoom" src="thoom/output.ogg" controls>
-      Your browser does not support the audio tag.
-    </audio>
+    <button data-samples_read="212670.0" data-length="2.215313" data-scaled_by="2147483647.0" data-maximum_amplitude="0.538422" data-minimum_amplitude="-0.612396" data-midline_amplitude="-0.036987" data-mean_norm="0.025726" data-mean_amplitude="-0.000143" data-rms_amplitude="0.061146" data-maximum_delta="0.066742" data-minimum_delta="0.0" data-mean_delta="0.001227" data-rms_delta="0.003994" data-rough_frequency="499.0" data-volume_adjustment="1.633" data-path="/cc-by/tkmfujise/sfx/thoom" data-src="/cc-by/tkmfujise/sfx/thoom/output.ogg" class="audio-item"></button>
   </td>
   <td>
     <a href="thoom">/cc-by/tkmfujise/sfx/thoom</a>
@@ -216,9 +175,7 @@
 </tr>
 <tr class="audio-list">
   <td>
-    <audio preload="none" data-samples_read="339892.0" data-length="3.540542" data-scaled_by="2147483647.0" data-maximum_amplitude="0.718109" data-minimum_amplitude="-0.950623" data-midline_amplitude="-0.116257" data-mean_norm="0.027979" data-mean_amplitude="-0.000237" data-rms_amplitude="0.081028" data-maximum_delta="0.710419" data-minimum_delta="0.0" data-mean_delta="0.028919" data-rms_delta="0.071932" data-rough_frequency="6781.0" data-volume_adjustment="1.052" data-path="/cc-by/tkmfujise/sfx/thump" src="thump/output.ogg" controls>
-      Your browser does not support the audio tag.
-    </audio>
+    <button data-samples_read="339892.0" data-length="3.540542" data-scaled_by="2147483647.0" data-maximum_amplitude="0.718109" data-minimum_amplitude="-0.950623" data-midline_amplitude="-0.116257" data-mean_norm="0.027979" data-mean_amplitude="-0.000237" data-rms_amplitude="0.081028" data-maximum_delta="0.710419" data-minimum_delta="0.0" data-mean_delta="0.028919" data-rms_delta="0.071932" data-rough_frequency="6781.0" data-volume_adjustment="1.052" data-path="/cc-by/tkmfujise/sfx/thump" data-src="/cc-by/tkmfujise/sfx/thump/output.ogg" class="audio-item"></button>
   </td>
   <td>
     <a href="thump">/cc-by/tkmfujise/sfx/thump</a>
@@ -226,9 +183,7 @@
 </tr>
 <tr class="audio-list">
   <td>
-    <audio preload="none" data-samples_read="188824.0" data-length="1.966917" data-scaled_by="2147483647.0" data-maximum_amplitude="0.39328" data-minimum_amplitude="-0.386658" data-midline_amplitude="0.003311" data-mean_norm="0.022065" data-mean_amplitude="-1.0e-05" data-rms_amplitude="0.042153" data-maximum_delta="0.464569" data-minimum_delta="0.0" data-mean_delta="0.030859" data-rms_delta="0.05694" data-rough_frequency="10319.0" data-volume_adjustment="2.543" data-path="/cc-by/tkmfujise/sfx/thwack" src="thwack/output.ogg" controls>
-      Your browser does not support the audio tag.
-    </audio>
+    <button data-samples_read="188824.0" data-length="1.966917" data-scaled_by="2147483647.0" data-maximum_amplitude="0.39328" data-minimum_amplitude="-0.386658" data-midline_amplitude="0.003311" data-mean_norm="0.022065" data-mean_amplitude="-1.0e-05" data-rms_amplitude="0.042153" data-maximum_delta="0.464569" data-minimum_delta="0.0" data-mean_delta="0.030859" data-rms_delta="0.05694" data-rough_frequency="10319.0" data-volume_adjustment="2.543" data-path="/cc-by/tkmfujise/sfx/thwack" data-src="/cc-by/tkmfujise/sfx/thwack/output.ogg" class="audio-item"></button>
   </td>
   <td>
     <a href="thwack">/cc-by/tkmfujise/sfx/thwack</a>
@@ -236,9 +191,7 @@
 </tr>
 <tr class="audio-list">
   <td>
-    <audio preload="none" data-samples_read="136804.0" data-length="1.425042" data-scaled_by="2147483647.0" data-maximum_amplitude="0.474976" data-minimum_amplitude="-0.451874" data-midline_amplitude="0.011551" data-mean_norm="0.013196" data-mean_amplitude="1.0e-06" data-rms_amplitude="0.03556" data-maximum_delta="0.137665" data-minimum_delta="0.0" data-mean_delta="0.00099" data-rms_delta="0.00359" data-rough_frequency="771.0" data-volume_adjustment="2.105" data-path="/cc-by/tkmfujise/sfx/thwock" src="thwock/output.ogg" controls>
-      Your browser does not support the audio tag.
-    </audio>
+    <button data-samples_read="136804.0" data-length="1.425042" data-scaled_by="2147483647.0" data-maximum_amplitude="0.474976" data-minimum_amplitude="-0.451874" data-midline_amplitude="0.011551" data-mean_norm="0.013196" data-mean_amplitude="1.0e-06" data-rms_amplitude="0.03556" data-maximum_delta="0.137665" data-minimum_delta="0.0" data-mean_delta="0.00099" data-rms_delta="0.00359" data-rough_frequency="771.0" data-volume_adjustment="2.105" data-path="/cc-by/tkmfujise/sfx/thwock" data-src="/cc-by/tkmfujise/sfx/thwock/output.ogg" class="audio-item"></button>
   </td>
   <td>
     <a href="thwock">/cc-by/tkmfujise/sfx/thwock</a>

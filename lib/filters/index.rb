@@ -9,14 +9,12 @@ module Nanoc::Filters
         <<~HTML
           <tr class="audio-list">
             <td>
-              <audio preload="none"
+              <button
                 #{hash_to_html_attribute(stat)}
                 data-path="#{dir}"
-                src="#{dir.join('output.ogg')}"
-                controls
-              >
-                Your browser does not support the audio tag.
-              </audio>
+                data-src="#{dir.join('output.ogg')}"
+                class="audio-item"
+              ></button>
             </td>
             <td>
               <a href="#{dir}">#{dir}</a>

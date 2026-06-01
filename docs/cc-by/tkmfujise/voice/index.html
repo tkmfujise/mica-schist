@@ -13,6 +13,7 @@
 		<link rel="stylesheet" href="../../../assets/css/syntax.gessetti.css">
     <script src="../../../assets/js/vendor/fuse.js@7.1.0"></script>
     <script src="../../../assets/js/filter.js"></script>
+    <script src="../../../assets/js/player.js"></script>
     <script src="../../../assets/js/clipboard.js"></script>
 	</head>
   <body>
@@ -91,64 +92,34 @@
           <span class="search-result-count">-</span> sounds.
 
 <form>
-  <p>
-    <button>Samples</button>
-    <button>Synths</button>
-  </p>
-
   <p class="search">
-    <select id="license">
-      <option value="">ALL</option>
-      <option value="1">CC0</option>
-      <option value="2">CC BY</option>
-      <option value="2">CC BY-SA</option>
-    </select>
+    <button type="button">Shuffle</button>
     <input type="search">
   </p>
-    
-  <details>
-    <summary>Advancend</summary>
-
-    <fieldset>
-      <legend>rough_frequency</legend>
-      <input type="range" min="0" max="18000" value="0">
-      <input type="range" min="0" max="18000" value="18000">
-    </fieldset>
-
-    <fieldset>
-      <legend>crest_factor</legend>
-      <input type="range">
-      <input type="range">
-    </fieldset>
-
-    <fieldset>
-      <legend>delta_crest_factor</legend>
-      <input type="range">
-      <input type="range">
-    </fieldset>
-
-    <fieldset>
-      <legend>jiggly</legend>
-      <input type="range">
-      <input type="range">
-    </fieldset>
-
-    <fieldset>
-      <legend>periodicity</legend>
-      <input type="range">
-      <input type="range">
-    </fieldset>
-  </details>
 </form>
+
+<div class="sticky">
+  <p>
+    <audio id="main-audio" preload="" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </p>
+
+  <details id="play-history">
+    <summary>Now: <span class="current">--</span></summary>
+    <table>
+      <tbody class="container">
+      </tbody>
+    </table>
+  </details>
+</div>
 
 
       		<table>
   <tbody>
     <tr class="audio-list">
   <td>
-    <audio preload="none" data-samples_read="50998.0" data-length="0.531229" data-scaled_by="2147483647.0" data-maximum_amplitude="0.475311" data-minimum_amplitude="-0.543793" data-midline_amplitude="-0.034241" data-mean_norm="0.066087" data-mean_amplitude="-0.000447" data-rms_amplitude="0.09977" data-maximum_delta="0.10791" data-minimum_delta="0.0" data-mean_delta="0.002933" data-rms_delta="0.007411" data-rough_frequency="567.0" data-volume_adjustment="1.839" data-path="/cc-by/tkmfujise/voice/growl" src="growl/output.ogg" controls>
-      Your browser does not support the audio tag.
-    </audio>
+    <button data-samples_read="50998.0" data-length="0.531229" data-scaled_by="2147483647.0" data-maximum_amplitude="0.475311" data-minimum_amplitude="-0.543793" data-midline_amplitude="-0.034241" data-mean_norm="0.066087" data-mean_amplitude="-0.000447" data-rms_amplitude="0.09977" data-maximum_delta="0.10791" data-minimum_delta="0.0" data-mean_delta="0.002933" data-rms_delta="0.007411" data-rough_frequency="567.0" data-volume_adjustment="1.839" data-path="/cc-by/tkmfujise/voice/growl" data-src="/cc-by/tkmfujise/voice/growl/output.ogg" class="audio-item"></button>
   </td>
   <td>
     <a href="growl">/cc-by/tkmfujise/voice/growl</a>
@@ -156,9 +127,7 @@
 </tr>
 <tr class="audio-list">
   <td>
-    <audio preload="none" data-samples_read="119390.0" data-length="1.243646" data-scaled_by="2147483647.0" data-maximum_amplitude="0.500488" data-minimum_amplitude="-0.454285" data-midline_amplitude="0.023102" data-mean_norm="0.071923" data-mean_amplitude="-5.7e-05" data-rms_amplitude="0.098445" data-maximum_delta="0.066467" data-minimum_delta="0.0" data-mean_delta="0.003151" data-rms_delta="0.006323" data-rough_frequency="490.0" data-volume_adjustment="1.998" data-path="/cc-by/tkmfujise/voice/robot" src="robot/output.ogg" controls>
-      Your browser does not support the audio tag.
-    </audio>
+    <button data-samples_read="119390.0" data-length="1.243646" data-scaled_by="2147483647.0" data-maximum_amplitude="0.500488" data-minimum_amplitude="-0.454285" data-midline_amplitude="0.023102" data-mean_norm="0.071923" data-mean_amplitude="-5.7e-05" data-rms_amplitude="0.098445" data-maximum_delta="0.066467" data-minimum_delta="0.0" data-mean_delta="0.003151" data-rms_delta="0.006323" data-rough_frequency="490.0" data-volume_adjustment="1.998" data-path="/cc-by/tkmfujise/voice/robot" data-src="/cc-by/tkmfujise/voice/robot/output.ogg" class="audio-item"></button>
   </td>
   <td>
     <a href="robot">/cc-by/tkmfujise/voice/robot</a>

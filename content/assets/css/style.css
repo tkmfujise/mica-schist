@@ -290,10 +290,6 @@ body article .stat progress {
 body form p.search {
   width: 100%;
 }
-body form p.search #license {
-  min-width: 0;
-  max-width: 25%;
-}
 body form p.search input[type="search"] {
   min-width: 0;
   min-width: 70%;
@@ -302,6 +298,41 @@ body form p.search input[type="search"] {
 body form input[type="range"] {
   min-width: 0;
   max-width: 30%;
+}
+
+body .sticky {
+  position: sticky;
+  top: 0;
+  background: white;
+}
+
+body button.audio-item::after {
+  content: 'Play'
+}
+body button.audio-item[data-playing="true"]::after {
+  content: 'Stop'
+}
+
+body #play-history {
+  max-height: 30rem;
+  overflow: auto;
+  background-color: cadetblue;
+}
+body #play-history summary {
+  background-color: mintcream;
+}
+
+body table {
+  max-width: 100%;
+  table-layout: fixed;
+}
+body table td,
+body table th {
+  word-break: break-all;
+}
+
+body tr.audio-list td:first-child {
+  width: 12%;
 }
 
 /* Footer */
@@ -316,5 +347,9 @@ body footer {
 @media (max-width: 768px) {
   body article .license.imageblock img {
     max-height: 2rem;
+  }
+
+  body tr.audio-list td:first-child {
+    width: 30%;
   }
 }

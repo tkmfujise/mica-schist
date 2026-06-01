@@ -1,53 +1,25 @@
 <span class="search-result-count">-</span> sounds.
 
 <form>
-  <p>
-    <button>Samples</button>
-    <button>Synths</button>
-  </p>
-
   <p class="search">
-    <select id="license">
-      <option value="">ALL</option>
-      <option value="1">CC0</option>
-      <option value="2">CC BY</option>
-      <option value="2">CC BY-SA</option>
-    </select>
+    <button type="button">Shuffle</button>
     <input type="search" />
   </p>
-    
-  <details>
-    <summary>Advancend</summary>
-
-    <fieldset>
-      <legend>rough_frequency</legend>
-      <input type="range" min="0" max="18000" value="0">
-      <input type="range" min="0" max="18000" value="18000">
-    </fieldset>
-
-    <fieldset>
-      <legend>crest_factor</legend>
-      <input type="range">
-      <input type="range">
-    </fieldset>
-
-    <fieldset>
-      <legend>delta_crest_factor</legend>
-      <input type="range">
-      <input type="range">
-    </fieldset>
-
-    <fieldset>
-      <legend>jiggly</legend>
-      <input type="range">
-      <input type="range">
-    </fieldset>
-
-    <fieldset>
-      <legend>periodicity</legend>
-      <input type="range">
-      <input type="range">
-    </fieldset>
-  </details>
 </form>
+
+<div class="sticky">
+  <p>
+    <audio id="main-audio" preload="" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </p>
+
+  <details id="play-history">
+    <summary>Now: <span class="current">--</span></summary>
+    <table>
+      <tbody class='container'>
+      </tbody>
+    </table>
+  </details>
+</div>
 

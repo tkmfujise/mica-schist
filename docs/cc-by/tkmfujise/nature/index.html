@@ -13,6 +13,7 @@
 		<link rel="stylesheet" href="../../../assets/css/syntax.gessetti.css">
     <script src="../../../assets/js/vendor/fuse.js@7.1.0"></script>
     <script src="../../../assets/js/filter.js"></script>
+    <script src="../../../assets/js/player.js"></script>
     <script src="../../../assets/js/clipboard.js"></script>
 	</head>
   <body>
@@ -91,64 +92,34 @@
           <span class="search-result-count">-</span> sounds.
 
 <form>
-  <p>
-    <button>Samples</button>
-    <button>Synths</button>
-  </p>
-
   <p class="search">
-    <select id="license">
-      <option value="">ALL</option>
-      <option value="1">CC0</option>
-      <option value="2">CC BY</option>
-      <option value="2">CC BY-SA</option>
-    </select>
+    <button type="button">Shuffle</button>
     <input type="search">
   </p>
-    
-  <details>
-    <summary>Advancend</summary>
-
-    <fieldset>
-      <legend>rough_frequency</legend>
-      <input type="range" min="0" max="18000" value="0">
-      <input type="range" min="0" max="18000" value="18000">
-    </fieldset>
-
-    <fieldset>
-      <legend>crest_factor</legend>
-      <input type="range">
-      <input type="range">
-    </fieldset>
-
-    <fieldset>
-      <legend>delta_crest_factor</legend>
-      <input type="range">
-      <input type="range">
-    </fieldset>
-
-    <fieldset>
-      <legend>jiggly</legend>
-      <input type="range">
-      <input type="range">
-    </fieldset>
-
-    <fieldset>
-      <legend>periodicity</legend>
-      <input type="range">
-      <input type="range">
-    </fieldset>
-  </details>
 </form>
+
+<div class="sticky">
+  <p>
+    <audio id="main-audio" preload="" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </p>
+
+  <details id="play-history">
+    <summary>Now: <span class="current">--</span></summary>
+    <table>
+      <tbody class="container">
+      </tbody>
+    </table>
+  </details>
+</div>
 
 
       		<table>
   <tbody>
     <tr class="audio-list">
   <td>
-    <audio preload="none" data-samples_read="433074.0" data-length="4.511188" data-scaled_by="2147483647.0" data-maximum_amplitude="0.274841" data-minimum_amplitude="-0.31012" data-midline_amplitude="-0.017639" data-mean_norm="0.04379" data-mean_amplitude="-2.6e-05" data-rms_amplitude="0.056052" data-maximum_delta="0.230316" data-minimum_delta="0.0" data-mean_delta="0.033416" data-rms_delta="0.042842" data-rough_frequency="5839.0" data-volume_adjustment="3.225" data-path="/cc-by/tkmfujise/nature/rain" src="rain/output.ogg" controls>
-      Your browser does not support the audio tag.
-    </audio>
+    <button data-samples_read="433074.0" data-length="4.511188" data-scaled_by="2147483647.0" data-maximum_amplitude="0.274841" data-minimum_amplitude="-0.31012" data-midline_amplitude="-0.017639" data-mean_norm="0.04379" data-mean_amplitude="-2.6e-05" data-rms_amplitude="0.056052" data-maximum_delta="0.230316" data-minimum_delta="0.0" data-mean_delta="0.033416" data-rms_delta="0.042842" data-rough_frequency="5839.0" data-volume_adjustment="3.225" data-path="/cc-by/tkmfujise/nature/rain" data-src="/cc-by/tkmfujise/nature/rain/output.ogg" class="audio-item"></button>
   </td>
   <td>
     <a href="rain">/cc-by/tkmfujise/nature/rain</a>
@@ -156,9 +127,7 @@
 </tr>
 <tr class="audio-list">
   <td>
-    <audio preload="none" data-samples_read="432156.0" data-length="4.501625" data-scaled_by="2147483647.0" data-maximum_amplitude="0.262695" data-minimum_amplitude="-0.276703" data-midline_amplitude="-0.007004" data-mean_norm="0.043317" data-mean_amplitude="-1.3e-05" data-rms_amplitude="0.056405" data-maximum_delta="0.227844" data-minimum_delta="0.0" data-mean_delta="0.033541" data-rms_delta="0.043671" data-rough_frequency="5914.0" data-volume_adjustment="3.614" data-path="/cc-by/tkmfujise/nature/waterfall" src="waterfall/output.ogg" controls>
-      Your browser does not support the audio tag.
-    </audio>
+    <button data-samples_read="432156.0" data-length="4.501625" data-scaled_by="2147483647.0" data-maximum_amplitude="0.262695" data-minimum_amplitude="-0.276703" data-midline_amplitude="-0.007004" data-mean_norm="0.043317" data-mean_amplitude="-1.3e-05" data-rms_amplitude="0.056405" data-maximum_delta="0.227844" data-minimum_delta="0.0" data-mean_delta="0.033541" data-rms_delta="0.043671" data-rough_frequency="5914.0" data-volume_adjustment="3.614" data-path="/cc-by/tkmfujise/nature/waterfall" data-src="/cc-by/tkmfujise/nature/waterfall/output.ogg" class="audio-item"></button>
   </td>
   <td>
     <a href="waterfall">/cc-by/tkmfujise/nature/waterfall</a>
@@ -166,9 +135,7 @@
 </tr>
 <tr class="audio-list">
   <td>
-    <audio preload="none" data-samples_read="424990.0" data-length="4.426979" data-scaled_by="2147483647.0" data-maximum_amplitude="0.166534" data-minimum_amplitude="-0.174408" data-midline_amplitude="-0.003937" data-mean_norm="0.022017" data-mean_amplitude="-3.0e-06" data-rms_amplitude="0.030815" data-maximum_delta="0.024872" data-minimum_delta="0.0" data-mean_delta="0.001159" data-rms_delta="0.002306" data-rough_frequency="571.0" data-volume_adjustment="5.734" data-path="/cc-by/tkmfujise/nature/wind" src="wind/output.ogg" controls>
-      Your browser does not support the audio tag.
-    </audio>
+    <button data-samples_read="424990.0" data-length="4.426979" data-scaled_by="2147483647.0" data-maximum_amplitude="0.166534" data-minimum_amplitude="-0.174408" data-midline_amplitude="-0.003937" data-mean_norm="0.022017" data-mean_amplitude="-3.0e-06" data-rms_amplitude="0.030815" data-maximum_delta="0.024872" data-minimum_delta="0.0" data-mean_delta="0.001159" data-rms_delta="0.002306" data-rough_frequency="571.0" data-volume_adjustment="5.734" data-path="/cc-by/tkmfujise/nature/wind" data-src="/cc-by/tkmfujise/nature/wind/output.ogg" class="audio-item"></button>
   </td>
   <td>
     <a href="wind">/cc-by/tkmfujise/nature/wind</a>
