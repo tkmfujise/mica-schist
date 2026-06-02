@@ -10,6 +10,7 @@
 /cc-by/tkmfujise/environment/rewind/rewind.rb
 /cc-by/tkmfujise/environment/rewind_slow/rewind_slow.rb
 /cc-by/tkmfujise/environment/temple_bell/temple_bell.rb
+/cc-by/tkmfujise/environment/ticktock/ticktock.rb
 /cc-by/tkmfujise/nature/rain/rain.rb
 /cc-by/tkmfujise/nature/waterfall/waterfall.rb
 /cc-by/tkmfujise/nature/wind/wind.rb

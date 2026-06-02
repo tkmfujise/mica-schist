@@ -3,3 +3,4 @@
 /cc-by/tkmfujise/environment/rewind/rewind.rb
 /cc-by/tkmfujise/environment/rewind_slow/rewind_slow.rb
 /cc-by/tkmfujise/environment/temple_bell/temple_bell.rb
+/cc-by/tkmfujise/environment/ticktock/ticktock.rb
