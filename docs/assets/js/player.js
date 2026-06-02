@@ -70,8 +70,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const container = audioList[0].parentElement
     shuffleArray(audioList)
     audioList.forEach(e => container.appendChild(e))
-    const btn = audioList[0].querySelector(selectorName.audioButton)
-    if (btn) play(btn)
+    const first = audioList.filter(e => e.style.display == '')[0]
+    if (first) {
+      const btn = first.querySelector(selectorName.audioButton)
+      play(btn) 
+    }
   }
 
 
