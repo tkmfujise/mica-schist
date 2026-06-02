@@ -1,2 +1,0 @@
-use_synth :growl
-play 60

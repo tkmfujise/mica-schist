@@ -1,3 +1,0 @@
-
-use_synth :zawa
-play 60

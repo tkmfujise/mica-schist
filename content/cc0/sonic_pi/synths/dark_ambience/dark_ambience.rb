@@ -1,2 +1,0 @@
-use_synth :dark_ambience
-play 60
