@@ -1,0 +1,21 @@
+# Straight 8th (40 bpm)
+# max-recording-time: 7
+hat   = (ring 1,1,1,1,1,1,1,1)
+snare = (ring 0,0,1,0,0,0,1,0)
+kick  = (ring 1,0,0,0,0,0,1,0)
+
+use_bpm 40
+
+define :straight_8th do
+  tick
+  sample :drum_cymbal_closed if hat.look == 1
+  sample :drum_snare_soft    if snare.look == 1
+  sample :drum_heavy_kick    if kick.look == 1
+  sleep 0.25
+end
+
+
+sample :drum_cymbal_hard
+(hat.length * 2).times do
+  straight_8th
+end

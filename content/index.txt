@@ -16,6 +16,15 @@
 /cc0/sonic_pi/arpeggio/maj9_C3/maj9_C3.rb
 /cc0/sonic_pi/arpeggio/sus2_C3/sus2_C3.rb
 /cc0/sonic_pi/arpeggio/sus4_C3/sus4_C3.rb
+/cc0/sonic_pi/rhythms/straight_8th/100bpm/100bpm.rb
+/cc0/sonic_pi/rhythms/straight_8th/110bpm/110bpm.rb
+/cc0/sonic_pi/rhythms/straight_8th/120bpm/120bpm.rb
+/cc0/sonic_pi/rhythms/straight_8th/40bpm/40bpm.rb
+/cc0/sonic_pi/rhythms/straight_8th/50bpm/50bpm.rb
+/cc0/sonic_pi/rhythms/straight_8th/60bpm/60bpm.rb
+/cc0/sonic_pi/rhythms/straight_8th/70bpm/70bpm.rb
+/cc0/sonic_pi/rhythms/straight_8th/80bpm/80bpm.rb
+/cc0/sonic_pi/rhythms/straight_8th/90bpm/90bpm.rb
 /cc0/sonic_pi/samples/original/ambi_choir/ambi_choir.rb
 /cc0/sonic_pi/samples/original/ambi_dark_woosh/ambi_dark_woosh.rb
 /cc0/sonic_pi/samples/original/ambi_drone/ambi_drone.rb

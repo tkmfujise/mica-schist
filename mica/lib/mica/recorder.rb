@@ -50,9 +50,9 @@ module Mica
 
 
     def trim(input, output)
-      cmd = ['sox', input, output, 'silence',
-          '1', '0.1', '0.05%', # Head
-          '1', '0.1', '0.05%', # Tail
+      cmd = ['sox', input, output,
+          'silence', '1', '0.1', '0.05%', 'reverse', # Head
+          'silence', '1', '0.1', '0.05%', 'reverse', # Tail
         ]
       Process.spawn(*cmd)
     end

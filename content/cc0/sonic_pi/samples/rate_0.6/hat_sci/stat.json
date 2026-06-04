@@ -1,17 +1,17 @@
 {
-  "samples_read": 16636.0,
-  "length": 0.173292,
+  "samples_read": 14716.0,
+  "length": 0.153292,
   "scaled_by": 2147483647.0,
-  "maximum_amplitude": 0.406372,
-  "minimum_amplitude": -0.366302,
+  "maximum_amplitude": 0.406433,
+  "minimum_amplitude": -0.366364,
   "midline_amplitude": 0.020035,
-  "mean_norm": 0.040291,
+  "mean_norm": 0.045518,
   "mean_amplitude": -0.00001,
-  "rms_amplitude": 0.064736,
-  "maximum_delta": 0.325531,
+  "rms_amplitude": 0.068856,
+  "maximum_delta": 0.325317,
   "minimum_delta": 0.0,
-  "mean_delta": 0.014775,
-  "rms_delta": 0.035167,
-  "rough_frequency": 4149.0,
-  "volume_adjustment": 2.461
+  "mean_delta": 0.017392,
+  "rms_delta": 0.037488,
+  "rough_frequency": 4159.0,
+  "volume_adjustment": 2.46
 }
