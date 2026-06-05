@@ -1,0 +1,9 @@
+/cc0/sonic_pi/rhythms/jazz/100bpm/100bpm.rb
+/cc0/sonic_pi/rhythms/jazz/110bpm/110bpm.rb
+/cc0/sonic_pi/rhythms/jazz/120bpm/120bpm.rb
+/cc0/sonic_pi/rhythms/jazz/40bpm/40bpm.rb
+/cc0/sonic_pi/rhythms/jazz/50bpm/50bpm.rb
+/cc0/sonic_pi/rhythms/jazz/60bpm/60bpm.rb
+/cc0/sonic_pi/rhythms/jazz/70bpm/70bpm.rb
+/cc0/sonic_pi/rhythms/jazz/80bpm/80bpm.rb
+/cc0/sonic_pi/rhythms/jazz/90bpm/90bpm.rb

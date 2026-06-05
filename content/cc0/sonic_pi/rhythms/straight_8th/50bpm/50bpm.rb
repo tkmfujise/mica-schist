@@ -8,9 +8,9 @@ use_bpm 50
 
 define :straight_8th do
   tick
-  sample :drum_cymbal_closed if hat.look == 1
-  sample :drum_snare_soft    if snare.look == 1
-  sample :drum_heavy_kick    if kick.look == 1
+  sample :drum_cymbal_closed, amp: 0.4 if hat.look == 1
+  sample :drum_snare_soft,    amp: 0.6 if snare.look == 1
+  sample :drum_heavy_kick,    amp: 1.0 if kick.look == 1
   sleep 0.25
 end
 
