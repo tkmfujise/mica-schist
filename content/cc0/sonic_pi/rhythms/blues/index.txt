@@ -1,0 +1,10 @@
+/cc0/sonic_pi/rhythms/blues/100bpm/100bpm.rb
+/cc0/sonic_pi/rhythms/blues/110bpm/110bpm.rb
+/cc0/sonic_pi/rhythms/blues/120bpm/120bpm.rb
+/cc0/sonic_pi/rhythms/blues/130bpm/130bpm.rb
+/cc0/sonic_pi/rhythms/blues/140bpm/140bpm.rb
+/cc0/sonic_pi/rhythms/blues/150bpm/150bpm.rb
+/cc0/sonic_pi/rhythms/blues/60bpm/60bpm.rb
+/cc0/sonic_pi/rhythms/blues/70bpm/70bpm.rb
+/cc0/sonic_pi/rhythms/blues/80bpm/80bpm.rb
+/cc0/sonic_pi/rhythms/blues/90bpm/90bpm.rb
