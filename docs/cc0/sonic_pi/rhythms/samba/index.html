@@ -1,0 +1,223 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Mica Sound: Sonic Pi Examples</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+		<meta name="author" content="tkmfujise">
+		<meta name="keywords" content="Sonic Pi, Ruby, sound, music, effect, cc0">
+		<meta name="description" content="Sonic Pi Examples">
+    <meta name="google-site-verification" content="1oOV_cc_qhnW_wanEljxYvquGQU5fLwqoNULPyf95YU">
+		<link rel="stylesheet" href="../../../../assets/css/almond.min.css">
+		<link rel="stylesheet" href="../../../../assets/css/style.css">
+		<link rel="stylesheet" href="../../../../assets/css/syntax.gessetti.css">
+    <script src="../../../../assets/js/vendor/fuse.js@7.1.0"></script>
+    <script src="../../../../assets/js/filter.js"></script>
+    <script src="../../../../assets/js/player.js"></script>
+    <script src="../../../../assets/js/clipboard.js"></script>
+	</head>
+  <body>
+    <nav class="main-menu closed">
+  <button onclick="document.querySelector('.main-menu').classList.toggle('closed');">
+    <span>Expand/Collapse menu</span>
+  </button>
+  <h2>Gems among stones.</h2>
+  <ul>
+    <li>
+      <a href="../../../../">💎 Home 🪨</a>
+    </li>
+
+    <li>
+      <div>Samples</div>
+      <ul>
+        <li><a href="../../samples">All</a></li>
+        <li><a href="../../samples/original">Originals</a></li>
+        <li><a href="../../samples/rate_0.8">rate 0.8</a></li>
+        <li><a href="../../samples/rate_0.6">rate 0.6</a></li>
+        <li><a href="../../samples/rate_0.4">rate 0.4</a></li>
+        <li><a href="../../samples/rate_0.2">rate 0.2</a></li>
+      </ul>
+    </li>
+
+    <li>
+      <div>Synths</div>
+      <ul>
+        <li><a href="../../synths">All</a></li>
+        <li><a href="../../synths/play_30">play 30</a></li>
+        <li><a href="../../synths/play_40">play 40</a></li>
+        <li><a href="../../synths/play_50">play 50</a></li>
+        <li><a href="../../synths/play_60">play 60</a></li>
+        <li><a href="../../synths/play_70">play 70</a></li>
+        <li><a href="../../synths/play_80">play 80</a></li>
+        <li><a href="../../synths/play_90">play 90</a></li>
+      </ul>
+    </li>
+
+    <li>
+      <div>Chord</div>
+      <ul>
+        <li><a href="../../arpeggio">Arpeggio</a></li>
+      </ul>
+    </li>
+
+    <li>
+      <div>Rhythm</div>
+      <ul>
+        <li><a href="..">All</a></li>
+        <li><a href="../straight_8th">Straigth 8th</a></li>
+        <li><a href="../jazz">Jazz</a></li>
+        <li><a href="../blues">Blues</a></li>
+        <li><a href="../funk">Funk</a></li>
+        <li><a href=".">Samba</a></li>
+      </ul>
+    </li>
+
+    <li>
+      <div>Mica Sound</div>
+      <ul>
+        <li><a href="../../../../cc-by/tkmfujise">All</a></li>
+        <li><a href="../../../../cc-by/tkmfujise/bgm">Bgm</a></li>
+        <li><a href="../../../../cc-by/tkmfujise/environment">Environment</a></li>
+        <li><a href="../../../../cc-by/tkmfujise/nature">Nature</a></li>
+        <li><a href="../../../../cc-by/tkmfujise/sfx">Sfx</a></li>
+        <li><a href="../../../../cc-by/tkmfujise/voice">Voice</a></li>
+      </ul>
+    </li>
+
+    <li>
+      <div>Others</div>
+      <ul>
+        <li><a href="../../../../cc-by-sa/sonic_pi">Official Examples</a></li>
+      </ul>
+    </li>
+
+    <li>
+      <div>Links</div>
+      <ul>
+        <li><a href="../../../../about">About</a></li>
+        <li><a rel="external" target="_blank" href="https://github.com/tkmfujise/mica-sound/blob/main/LICENSE.md">License</a></li>
+        <li><a rel="external" target="_blank" href="https://github.com/tkmfujise/mica-sound">GitHub</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+    <div>
+      <header>
+  <div>
+    <a href="../../../../">
+      <h1>Mica Sound</h1>
+    </a>
+    <p>Sonic Pi Examples</p>
+  </div>
+</header>
+
+
+      <main>
+        <article>
+          <span class="search-result-count">-</span> sounds.
+
+<form>
+  <p class="search">
+    <button id="shuffle-btn" type="button">Shuffle</button>
+    <input type="search">
+  </p>
+</form>
+
+<div class="sticky">
+  <p>
+    <audio id="main-audio" preload="" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </p>
+
+  <details id="play-history">
+    <summary>Now: <span class="current">--</span></summary>
+    <table>
+      <tbody class="container">
+      </tbody>
+    </table>
+  </details>
+</div>
+
+
+      		<table>
+  <tbody>
+    <tr class="audio-list">
+  <td>
+    <button data-path="/cc0/sonic_pi/rhythms/samba/100bpm" data-src="100bpm/output.ogg" class="audio-item"></button>
+  </td>
+  <td>
+    <a href="100bpm">/cc0/sonic_pi/rhythms/samba/100bpm</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <button data-path="/cc0/sonic_pi/rhythms/samba/110bpm" data-src="110bpm/output.ogg" class="audio-item"></button>
+  </td>
+  <td>
+    <a href="110bpm">/cc0/sonic_pi/rhythms/samba/110bpm</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <button data-path="/cc0/sonic_pi/rhythms/samba/120bpm" data-src="120bpm/output.ogg" class="audio-item"></button>
+  </td>
+  <td>
+    <a href="120bpm">/cc0/sonic_pi/rhythms/samba/120bpm</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <button data-path="/cc0/sonic_pi/rhythms/samba/130bpm" data-src="130bpm/output.ogg" class="audio-item"></button>
+  </td>
+  <td>
+    <a href="130bpm">/cc0/sonic_pi/rhythms/samba/130bpm</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <button data-path="/cc0/sonic_pi/rhythms/samba/60bpm" data-src="60bpm/output.ogg" class="audio-item"></button>
+  </td>
+  <td>
+    <a href="60bpm">/cc0/sonic_pi/rhythms/samba/60bpm</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <button data-path="/cc0/sonic_pi/rhythms/samba/70bpm" data-src="70bpm/output.ogg" class="audio-item"></button>
+  </td>
+  <td>
+    <a href="70bpm">/cc0/sonic_pi/rhythms/samba/70bpm</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <button data-path="/cc0/sonic_pi/rhythms/samba/80bpm" data-src="80bpm/output.ogg" class="audio-item"></button>
+  </td>
+  <td>
+    <a href="80bpm">/cc0/sonic_pi/rhythms/samba/80bpm</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <button data-path="/cc0/sonic_pi/rhythms/samba/90bpm" data-src="90bpm/output.ogg" class="audio-item"></button>
+  </td>
+  <td>
+    <a href="90bpm">/cc0/sonic_pi/rhythms/samba/90bpm</a>
+  </td>
+</tr>
+
+  </tbody>
+</table>
+
+        </article>
+      </main>
+      <footer>
+  <p>Copyright © 2026 Mica Sound / FUJISE Takumi (tkmfujise)</p>
+</footer>
+
+    </div>
+	</body>
+</html>
