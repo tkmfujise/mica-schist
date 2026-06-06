@@ -1,6 +1,5 @@
-# Samba (125 bpm)
+# Bossa Nova (125 bpm)
 # max-recording-time: 9
-# Bossa Nova
 hat   = (ring 1,1,1,1, 1,1,1,1, 1,1,1,1, 1,1,1,1)
 snare = (ring 0,0,1,0, 0,1,0,0, 1,0,0,1, 0,0,1,0)
 kick  = (ring 1,0,0,1, 1,0,0,1, 1,0,0,1, 1,0,0,1)

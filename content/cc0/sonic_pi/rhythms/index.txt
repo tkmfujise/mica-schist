@@ -36,6 +36,17 @@
 /cc0/sonic_pi/rhythms/jazz/220bpm/220bpm.rb
 /cc0/sonic_pi/rhythms/jazz/230bpm/230bpm.rb
 /cc0/sonic_pi/rhythms/jazz/240bpm/240bpm.rb
+/cc0/sonic_pi/rhythms/reggae/100bpm/100bpm.rb
+/cc0/sonic_pi/rhythms/reggae/105bpm/105bpm.rb
+/cc0/sonic_pi/rhythms/reggae/110bpm/110bpm.rb
+/cc0/sonic_pi/rhythms/reggae/115bpm/115bpm.rb
+/cc0/sonic_pi/rhythms/reggae/120bpm/120bpm.rb
+/cc0/sonic_pi/rhythms/reggae/125bpm/125bpm.rb
+/cc0/sonic_pi/rhythms/reggae/130bpm/130bpm.rb
+/cc0/sonic_pi/rhythms/reggae/135bpm/135bpm.rb
+/cc0/sonic_pi/rhythms/reggae/140bpm/140bpm.rb
+/cc0/sonic_pi/rhythms/reggae/145bpm/145bpm.rb
+/cc0/sonic_pi/rhythms/reggae/150bpm/150bpm.rb
 /cc0/sonic_pi/rhythms/samba/100bpm/100bpm.rb
 /cc0/sonic_pi/rhythms/samba/110bpm/110bpm.rb
 /cc0/sonic_pi/rhythms/samba/120bpm/120bpm.rb

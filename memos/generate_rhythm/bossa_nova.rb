@@ -5,9 +5,8 @@ mica_dir = '/path/to/mica-sound/content/cc0/sonic_pi/rhythms'
 def generate(bpm)
   ring_length = 16
   <<~RUBY
-    # Samba (#{bpm} bpm)
+    # Bossa Nova (#{bpm} bpm)
     # max-recording-time: #{(60.0/bpm * ring_length * 0.5 * 2).ceil + 1}
-    # Bossa Nova
     hat   = (ring 1,1,1,1, 1,1,1,1, 1,1,1,1, 1,1,1,1)
     snare = (ring 0,0,1,0, 0,1,0,0, 1,0,0,1, 0,0,1,0)
     kick  = (ring 1,0,0,1, 1,0,0,1, 1,0,0,1, 1,0,0,1)
