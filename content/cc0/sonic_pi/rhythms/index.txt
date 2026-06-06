@@ -15,6 +15,14 @@
 /cc0/sonic_pi/rhythms/bossa_nova/120bpm/120bpm.rb
 /cc0/sonic_pi/rhythms/bossa_nova/125bpm/125bpm.rb
 /cc0/sonic_pi/rhythms/bossa_nova/130bpm/130bpm.rb
+/cc0/sonic_pi/rhythms/flamenco/100bpm/100bpm.rb
+/cc0/sonic_pi/rhythms/flamenco/110bpm/110bpm.rb
+/cc0/sonic_pi/rhythms/flamenco/120bpm/120bpm.rb
+/cc0/sonic_pi/rhythms/flamenco/130bpm/130bpm.rb
+/cc0/sonic_pi/rhythms/flamenco/60bpm/60bpm.rb
+/cc0/sonic_pi/rhythms/flamenco/70bpm/70bpm.rb
+/cc0/sonic_pi/rhythms/flamenco/80bpm/80bpm.rb
+/cc0/sonic_pi/rhythms/flamenco/90bpm/90bpm.rb
 /cc0/sonic_pi/rhythms/funk/100bpm/100bpm.rb
 /cc0/sonic_pi/rhythms/funk/110bpm/110bpm.rb
 /cc0/sonic_pi/rhythms/funk/120bpm/120bpm.rb
