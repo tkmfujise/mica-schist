@@ -10,7 +10,7 @@ use_bpm 110
 define :reggae do
   tick
   sample :drum_cymbal_closed, amp: 0.6 if hat.look == 1
-  sample :drum_snare_soft,    amp: 1.5 if snare.look == 1
+  sample :drum_snare_soft,    amp: 1.2 if snare.look == 1
   sample :drum_bass_soft,     amp: 1.8 if kick.look == 1
 
   sleep 1.0/3
