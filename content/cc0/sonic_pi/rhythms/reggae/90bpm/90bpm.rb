@@ -1,11 +1,11 @@
-# Reggae (150 bpm)
-# max-recording-time: 8
+# Reggae (90 bpm)
+# max-recording-time: 12
 
 hat   = (ring 1,0,1, 1,0,1, 1,0,1, 1,0,1)
 snare = (ring 0,0,0, 0,0,0, 1,0,0, 0,0,0)
 kick  = (ring 0,0,0, 0,0,0, 1,0,0, 0,0,0)
 
-use_bpm 150
+use_bpm 90
 
 define :reggae do
   tick
