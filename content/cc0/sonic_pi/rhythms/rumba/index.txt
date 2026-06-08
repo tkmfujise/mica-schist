@@ -1,0 +1,8 @@
+/cc0/sonic_pi/rhythms/rumba/100bpm/100bpm.rb
+/cc0/sonic_pi/rhythms/rumba/110bpm/110bpm.rb
+/cc0/sonic_pi/rhythms/rumba/120bpm/120bpm.rb
+/cc0/sonic_pi/rhythms/rumba/130bpm/130bpm.rb
+/cc0/sonic_pi/rhythms/rumba/60bpm/60bpm.rb
+/cc0/sonic_pi/rhythms/rumba/70bpm/70bpm.rb
+/cc0/sonic_pi/rhythms/rumba/80bpm/80bpm.rb
+/cc0/sonic_pi/rhythms/rumba/90bpm/90bpm.rb
