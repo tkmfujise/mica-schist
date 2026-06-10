@@ -1,0 +1,221 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Mica Sound: Sonic Pi Examples</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+		<meta name="author" content="tkmfujise">
+		<meta name="keywords" content="Sonic Pi, Ruby, sound, music, effect, cc0">
+		<meta name="description" content="Sonic Pi Examples">
+    <meta name="google-site-verification" content="1oOV_cc_qhnW_wanEljxYvquGQU5fLwqoNULPyf95YU">
+		<link rel="stylesheet" href="../../../../assets/css/almond.min.css">
+		<link rel="stylesheet" href="../../../../assets/css/style.css">
+		<link rel="stylesheet" href="../../../../assets/css/syntax.gessetti.css">
+    <script src="../../../../assets/js/vendor/fuse.js@7.1.0"></script>
+    <script src="../../../../assets/js/filter.js"></script>
+    <script src="../../../../assets/js/player.js"></script>
+    <script src="../../../../assets/js/clipboard.js"></script>
+	</head>
+  <body>
+    <nav class="main-menu closed">
+  <button onclick="document.querySelector('.main-menu').classList.toggle('closed');">
+    <span>Expand/Collapse menu</span>
+  </button>
+  <h2>Gems among stones.</h2>
+  <ul>
+    <li>
+      <a href="../../../../">💎 Home 🪨</a>
+    </li>
+
+    <li>
+      <div>Samples</div>
+      <ul>
+        <li><a href="../../../samples">All</a></li>
+        <li><a href="../../../samples/original">Originals</a></li>
+        <li><a href="../../../samples/rate_0.8">rate 0.8</a></li>
+        <li><a href="../../../samples/rate_0.6">rate 0.6</a></li>
+        <li><a href="../../../samples/rate_0.4">rate 0.4</a></li>
+        <li><a href="../../../samples/rate_0.2">rate 0.2</a></li>
+      </ul>
+    </li>
+
+    <li>
+      <div>Synths</div>
+      <ul>
+        <li><a href="../..">All</a></li>
+        <li><a href="../../play_30">play 30</a></li>
+        <li><a href="../../play_40">play 40</a></li>
+        <li><a href="../../play_50">play 50</a></li>
+        <li><a href="..">play 60</a></li>
+        <li><a href="../../play_70">play 70</a></li>
+        <li><a href="../../play_80">play 80</a></li>
+        <li><a href="../../play_90">play 90</a></li>
+      </ul>
+    </li>
+
+    <li>
+      <div>Melody &amp; Harmony</div>
+      <ul>
+        <li><a href="../../../arpeggio">Arpeggio</a></li>
+        <li><a href="../../../scales">Scales</a></li>
+      </ul>
+    </li>
+
+    <li>
+      <div>Rhythm</div>
+      <ul>
+        <li><a href="../../../rhythms">All</a></li>
+        <li><a href="../../../rhythms/straight_8th">Straigth 8th</a></li>
+        <li><a href="../../../rhythms/jazz">Jazz</a></li>
+        <li><a href="../../../rhythms/blues">Blues</a></li>
+        <li><a href="../../../rhythms/funk">Funk</a></li>
+        <li><a href="../../../rhythms/samba">Samba</a></li>
+        <li><a href="../../../rhythms/bossa_nova">Bossa Nova</a></li>
+        <li><a href="../../../rhythms/reggae">Reggae</a></li>
+        <li><a href="../../../rhythms/rumba">Rumba</a></li>
+      </ul>
+    </li>
+
+    <li>
+      <div>Mica Sound</div>
+      <ul>
+        <li><a href="../../../../cc-by/tkmfujise">All</a></li>
+        <li><a href="../../../../cc-by/tkmfujise/bgm">Bgm</a></li>
+        <li><a href="../../../../cc-by/tkmfujise/environment">Environment</a></li>
+        <li><a href="../../../../cc-by/tkmfujise/nature">Nature</a></li>
+        <li><a href="../../../../cc-by/tkmfujise/sfx">Sfx</a></li>
+        <li><a href="../../../../cc-by/tkmfujise/voice">Voice</a></li>
+      </ul>
+    </li>
+
+    <li>
+      <div>Others</div>
+      <ul>
+        <li><a href="../../../../cc-by-sa/sonic_pi">Official Examples</a></li>
+      </ul>
+    </li>
+
+    <li>
+      <div>Links</div>
+      <ul>
+        <li><a href="../../../../about">About</a></li>
+        <li><a rel="external" target="_blank" href="https://github.com/tkmfujise/mica-sound/blob/main/LICENSE.md">License</a></li>
+        <li><a rel="external" target="_blank" href="https://github.com/tkmfujise/mica-sound">GitHub</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+    <div>
+      <header>
+  <div>
+    <a href="../../../../">
+      <h1>Mica Sound</h1>
+    </a>
+    <p>Sonic Pi Examples</p>
+  </div>
+</header>
+
+
+      <main>
+        <article>
+          
+      		<div class="sect1">
+<h2 id="_chipnoise">Chipnoise</h2>
+<div class="sectionbody">
+<div class="imageblock license">
+<div class="content">
+<a class="image" href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener"><img src="../../../../assets/images/cc0.svg" alt="cc0"></a>
+</div>
+</div>
+<div class="audioblock output">
+<div class="content">
+<audio src="output.ogg" controls>
+Your browser does not support the audio tag.
+</audio>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">/cc0/synths/play_60/chipnoise</div>
+<div class="content">
+<pre class="rouge highlight"><code data-lang="ruby"><span class="n">use_synth</span> <span class="ss">:chipnoise</span>
+<span class="n">play</span> <span class="mi">60</span></code></pre>
+</div>
+</div>
+<div class="imageblock spectrogram">
+<div class="content">
+<img src="spectrogram.png" alt="spectrogram">
+</div>
+</div>
+<div class="stat">
+<label>
+  <progress style="accent-color: green" max="1" value="0.614471"></progress>
+  : maximum_amplitude
+</label><br>
+<label>
+  <progress style="accent-color: blue" max="1" value="0.108301"></progress>
+  : rms_amplitude
+</label><br>
+<label>
+  <progress style="accent-color: green" max="20" value="5.673733391196757"></progress>
+  : crest_factor
+</label><br>
+<label>
+  <progress style="accent-color: green" max="1" value="0.253571"></progress>
+  : maximum_delta
+</label><br>
+<label>
+  <progress style="accent-color: blue" max="1" value="0.00753"></progress>
+  : rms_delta
+</label><br>
+<label>
+  <progress style="accent-color: red" max="40" value="33.67476759628154"></progress>
+  : delta_crest_factor
+</label><br>
+<label>
+  <progress style="accent-color: blue" max="1" value="0.06952844387401778"></progress>
+  : jiggly
+</label><br>
+<label>
+  <progress style="accent-color: green" max="0.8" value="0.17888446215139442"></progress>
+  : periodicity
+</label><br>
+<label>
+  <progress style="accent-color: blue" max="18000.0" value="531.0"></progress>
+  : rough_frequency
+</label><br>
+
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="json"><span class="p">{</span><span class="w">
+  </span><span class="nl">"samples_read"</span><span class="p">:</span><span class="w"> </span><span class="mf">96096.0</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"length"</span><span class="p">:</span><span class="w"> </span><span class="mf">1.001</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"scaled_by"</span><span class="p">:</span><span class="w"> </span><span class="mf">2147483647.0</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"maximum_amplitude"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.614471</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"minimum_amplitude"</span><span class="p">:</span><span class="w"> </span><span class="mf">-0.624329</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"midline_amplitude"</span><span class="p">:</span><span class="w"> </span><span class="mf">-0.004929</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"mean_norm"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.066755</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"mean_amplitude"</span><span class="p">:</span><span class="w"> </span><span class="mf">-0.000024</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"rms_amplitude"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.108301</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"maximum_delta"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.253571</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"minimum_delta"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"mean_delta"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.001347</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"rms_delta"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.00753</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"rough_frequency"</span><span class="p">:</span><span class="w"> </span><span class="mf">531.0</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"volume_adjustment"</span><span class="p">:</span><span class="w"> </span><span class="mf">1.602</span><span class="w">
+</span><span class="p">}</span></code></pre>
+</div>
+</div>
+</div>
+</div>
+        </article>
+      </main>
+      <footer>
+  <p>Copyright © 2026 Mica Sound / FUJISE Takumi (tkmfujise)</p>
+</footer>
+
+    </div>
+	</body>
+</html>

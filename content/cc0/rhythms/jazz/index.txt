@@ -1,0 +1,13 @@
+/cc0/rhythms/jazz/120bpm/120bpm.rb
+/cc0/rhythms/jazz/130bpm/130bpm.rb
+/cc0/rhythms/jazz/140bpm/140bpm.rb
+/cc0/rhythms/jazz/150bpm/150bpm.rb
+/cc0/rhythms/jazz/160bpm/160bpm.rb
+/cc0/rhythms/jazz/170bpm/170bpm.rb
+/cc0/rhythms/jazz/180bpm/180bpm.rb
+/cc0/rhythms/jazz/190bpm/190bpm.rb
+/cc0/rhythms/jazz/200bpm/200bpm.rb
+/cc0/rhythms/jazz/210bpm/210bpm.rb
+/cc0/rhythms/jazz/220bpm/220bpm.rb
+/cc0/rhythms/jazz/230bpm/230bpm.rb
+/cc0/rhythms/jazz/240bpm/240bpm.rb

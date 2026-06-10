@@ -1,0 +1,7 @@
+/cc0/rhythms/bossa_nova/100bpm/100bpm.rb
+/cc0/rhythms/bossa_nova/105bpm/105bpm.rb
+/cc0/rhythms/bossa_nova/110bpm/110bpm.rb
+/cc0/rhythms/bossa_nova/115bpm/115bpm.rb
+/cc0/rhythms/bossa_nova/120bpm/120bpm.rb
+/cc0/rhythms/bossa_nova/125bpm/125bpm.rb
+/cc0/rhythms/bossa_nova/130bpm/130bpm.rb

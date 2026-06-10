@@ -1,0 +1,267 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Mica Sound: Sonic Pi Examples</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+		<meta name="author" content="tkmfujise">
+		<meta name="keywords" content="Sonic Pi, Ruby, sound, music, effect, cc0">
+		<meta name="description" content="Sonic Pi Examples">
+    <meta name="google-site-verification" content="1oOV_cc_qhnW_wanEljxYvquGQU5fLwqoNULPyf95YU">
+		<link rel="stylesheet" href="../../../assets/css/almond.min.css">
+		<link rel="stylesheet" href="../../../assets/css/style.css">
+		<link rel="stylesheet" href="../../../assets/css/syntax.gessetti.css">
+    <script src="../../../assets/js/vendor/fuse.js@7.1.0"></script>
+    <script src="../../../assets/js/filter.js"></script>
+    <script src="../../../assets/js/player.js"></script>
+    <script src="../../../assets/js/clipboard.js"></script>
+	</head>
+  <body>
+    <nav class="main-menu closed">
+  <button onclick="document.querySelector('.main-menu').classList.toggle('closed');">
+    <span>Expand/Collapse menu</span>
+  </button>
+  <h2>Gems among stones.</h2>
+  <ul>
+    <li>
+      <a href="../../../">💎 Home 🪨</a>
+    </li>
+
+    <li>
+      <div>Samples</div>
+      <ul>
+        <li><a href="../../samples">All</a></li>
+        <li><a href="../../samples/original">Originals</a></li>
+        <li><a href="../../samples/rate_0.8">rate 0.8</a></li>
+        <li><a href="../../samples/rate_0.6">rate 0.6</a></li>
+        <li><a href="../../samples/rate_0.4">rate 0.4</a></li>
+        <li><a href="../../samples/rate_0.2">rate 0.2</a></li>
+      </ul>
+    </li>
+
+    <li>
+      <div>Synths</div>
+      <ul>
+        <li><a href="../../synths">All</a></li>
+        <li><a href="../../synths/play_30">play 30</a></li>
+        <li><a href="../../synths/play_40">play 40</a></li>
+        <li><a href="../../synths/play_50">play 50</a></li>
+        <li><a href="../../synths/play_60">play 60</a></li>
+        <li><a href="../../synths/play_70">play 70</a></li>
+        <li><a href="../../synths/play_80">play 80</a></li>
+        <li><a href="../../synths/play_90">play 90</a></li>
+      </ul>
+    </li>
+
+    <li>
+      <div>Melody &amp; Harmony</div>
+      <ul>
+        <li><a href="../../arpeggio">Arpeggio</a></li>
+        <li><a href="../../scales">Scales</a></li>
+      </ul>
+    </li>
+
+    <li>
+      <div>Rhythm</div>
+      <ul>
+        <li><a href="..">All</a></li>
+        <li><a href="../straight_8th">Straigth 8th</a></li>
+        <li><a href=".">Jazz</a></li>
+        <li><a href="../blues">Blues</a></li>
+        <li><a href="../funk">Funk</a></li>
+        <li><a href="../samba">Samba</a></li>
+        <li><a href="../bossa_nova">Bossa Nova</a></li>
+        <li><a href="../reggae">Reggae</a></li>
+        <li><a href="../rumba">Rumba</a></li>
+      </ul>
+    </li>
+
+    <li>
+      <div>Mica Sound</div>
+      <ul>
+        <li><a href="../../../cc-by/tkmfujise">All</a></li>
+        <li><a href="../../../cc-by/tkmfujise/bgm">Bgm</a></li>
+        <li><a href="../../../cc-by/tkmfujise/environment">Environment</a></li>
+        <li><a href="../../../cc-by/tkmfujise/nature">Nature</a></li>
+        <li><a href="../../../cc-by/tkmfujise/sfx">Sfx</a></li>
+        <li><a href="../../../cc-by/tkmfujise/voice">Voice</a></li>
+      </ul>
+    </li>
+
+    <li>
+      <div>Others</div>
+      <ul>
+        <li><a href="../../../cc-by-sa/sonic_pi">Official Examples</a></li>
+      </ul>
+    </li>
+
+    <li>
+      <div>Links</div>
+      <ul>
+        <li><a href="../../../about">About</a></li>
+        <li><a rel="external" target="_blank" href="https://github.com/tkmfujise/mica-sound/blob/main/LICENSE.md">License</a></li>
+        <li><a rel="external" target="_blank" href="https://github.com/tkmfujise/mica-sound">GitHub</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+    <div>
+      <header>
+  <div>
+    <a href="../../../">
+      <h1>Mica Sound</h1>
+    </a>
+    <p>Sonic Pi Examples</p>
+  </div>
+</header>
+
+
+      <main>
+        <article>
+          <span class="search-result-count">-</span> sounds.
+
+<form>
+  <p class="search">
+    <button id="shuffle-btn" type="button">Shuffle</button>
+    <input type="search">
+  </p>
+</form>
+
+<div class="sticky">
+  <p>
+    <audio id="main-audio" preload="" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </p>
+
+  <details id="play-history">
+    <summary>Now: <span class="current">--</span></summary>
+    <table>
+      <tbody class="container">
+      </tbody>
+    </table>
+  </details>
+</div>
+
+
+      		<table>
+  <tbody>
+    <tr class="audio-list">
+  <td>
+    <button data-samples_read="456100.0" data-length="4.751042" data-scaled_by="2147483647.0" data-maximum_amplitude="0.25293" data-minimum_amplitude="-0.252258" data-midline_amplitude="0.000336" data-mean_norm="0.016912" data-mean_amplitude="1.1e-05" data-rms_amplitude="0.026032" data-maximum_delta="0.327606" data-minimum_delta="0.0" data-mean_delta="0.007742" data-rms_delta="0.017877" data-rough_frequency="5246.0" data-volume_adjustment="3.954" data-path="/cc0/rhythms/jazz/120bpm" data-src="120bpm/output.ogg" class="audio-item"></button>
+  </td>
+  <td>
+    <a href="120bpm">/cc0/rhythms/jazz/120bpm</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <button data-samples_read="427684.0" data-length="4.455042" data-scaled_by="2147483647.0" data-maximum_amplitude="0.263275" data-minimum_amplitude="-0.249878" data-midline_amplitude="0.006699" data-mean_norm="0.017994" data-mean_amplitude="-2.2e-05" data-rms_amplitude="0.027532" data-maximum_delta="0.340668" data-minimum_delta="0.0" data-mean_delta="0.008143" data-rms_delta="0.018822" data-rough_frequency="5222.0" data-volume_adjustment="3.798" data-path="/cc0/rhythms/jazz/130bpm" data-src="130bpm/output.ogg" class="audio-item"></button>
+  </td>
+  <td>
+    <a href="130bpm">/cc0/rhythms/jazz/130bpm</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <button data-samples_read="403492.0" data-length="4.203042" data-scaled_by="2147483647.0" data-maximum_amplitude="0.311249" data-minimum_amplitude="-0.269928" data-midline_amplitude="0.02066" data-mean_norm="0.018584" data-mean_amplitude="-1.2e-05" data-rms_amplitude="0.028365" data-maximum_delta="0.33429" data-minimum_delta="0.0" data-mean_delta="0.008576" data-rms_delta="0.019628" data-rough_frequency="5286.0" data-volume_adjustment="3.213" data-path="/cc0/rhythms/jazz/140bpm" data-src="140bpm/output.ogg" class="audio-item"></button>
+  </td>
+  <td>
+    <a href="140bpm">/cc0/rhythms/jazz/140bpm</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <button data-samples_read="382500.0" data-length="3.984375" data-scaled_by="2147483647.0" data-maximum_amplitude="0.255157" data-minimum_amplitude="-0.244659" data-midline_amplitude="0.005249" data-mean_norm="0.019005" data-mean_amplitude="-1.5e-05" data-rms_amplitude="0.028736" data-maximum_delta="0.327393" data-minimum_delta="0.0" data-mean_delta="0.008714" data-rms_delta="0.019691" data-rough_frequency="5234.0" data-volume_adjustment="3.919" data-path="/cc0/rhythms/jazz/150bpm" data-src="150bpm/output.ogg" class="audio-item"></button>
+  </td>
+  <td>
+    <a href="150bpm">/cc0/rhythms/jazz/150bpm</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <button data-samples_read="364068.0" data-length="3.792375" data-scaled_by="2147483647.0" data-maximum_amplitude="0.305939" data-minimum_amplitude="-0.283661" data-midline_amplitude="0.011139" data-mean_norm="0.019577" data-mean_amplitude="-1.4e-05" data-rms_amplitude="0.029441" data-maximum_delta="0.347046" data-minimum_delta="0.0" data-mean_delta="0.009008" data-rms_delta="0.020309" data-rough_frequency="5269.0" data-volume_adjustment="3.269" data-path="/cc0/rhythms/jazz/160bpm" data-src="160bpm/output.ogg" class="audio-item"></button>
+  </td>
+  <td>
+    <a href="160bpm">/cc0/rhythms/jazz/160bpm</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <button data-samples_read="347940.0" data-length="3.624375" data-scaled_by="2147483647.0" data-maximum_amplitude="0.317017" data-minimum_amplitude="-0.296509" data-midline_amplitude="0.010254" data-mean_norm="0.020112" data-mean_amplitude="-2.7e-05" data-rms_amplitude="0.030195" data-maximum_delta="0.34256" data-minimum_delta="0.0" data-mean_delta="0.009213" data-rms_delta="0.0207" data-rough_frequency="5237.0" data-volume_adjustment="3.154" data-path="/cc0/rhythms/jazz/170bpm" data-src="170bpm/output.ogg" class="audio-item"></button>
+  </td>
+  <td>
+    <a href="170bpm">/cc0/rhythms/jazz/170bpm</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <button data-samples_read="333348.0" data-length="3.472375" data-scaled_by="2147483647.0" data-maximum_amplitude="0.286346" data-minimum_amplitude="-0.240051" data-midline_amplitude="0.023148" data-mean_norm="0.020207" data-mean_amplitude="-2.0e-05" data-rms_amplitude="0.030434" data-maximum_delta="0.375549" data-minimum_delta="0.0" data-mean_delta="0.009325" data-rms_delta="0.02099" data-rough_frequency="5268.0" data-volume_adjustment="3.492" data-path="/cc0/rhythms/jazz/180bpm" data-src="180bpm/output.ogg" class="audio-item"></button>
+  </td>
+  <td>
+    <a href="180bpm">/cc0/rhythms/jazz/180bpm</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <button data-samples_read="320548.0" data-length="3.339042" data-scaled_by="2147483647.0" data-maximum_amplitude="0.291595" data-minimum_amplitude="-0.277008" data-midline_amplitude="0.007294" data-mean_norm="0.020812" data-mean_amplitude="-5.6e-05" data-rms_amplitude="0.031305" data-maximum_delta="0.327698" data-minimum_delta="0.0" data-mean_delta="0.009593" data-rms_delta="0.021449" data-rough_frequency="5234.0" data-volume_adjustment="3.429" data-path="/cc0/rhythms/jazz/190bpm" data-src="190bpm/output.ogg" class="audio-item"></button>
+  </td>
+  <td>
+    <a href="190bpm">/cc0/rhythms/jazz/190bpm</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <button data-samples_read="308900.0" data-length="3.217708" data-scaled_by="2147483647.0" data-maximum_amplitude="0.325684" data-minimum_amplitude="-0.286682" data-midline_amplitude="0.019501" data-mean_norm="0.021298" data-mean_amplitude="-1.5e-05" data-rms_amplitude="0.03212" data-maximum_delta="0.369751" data-minimum_delta="0.0" data-mean_delta="0.009976" data-rms_delta="0.022402" data-rough_frequency="5328.0" data-volume_adjustment="3.07" data-path="/cc0/rhythms/jazz/200bpm" data-src="200bpm/output.ogg" class="audio-item"></button>
+  </td>
+  <td>
+    <a href="200bpm">/cc0/rhythms/jazz/200bpm</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <button data-samples_read="298404.0" data-length="3.108375" data-scaled_by="2147483647.0" data-maximum_amplitude="0.27948" data-minimum_amplitude="-0.260406" data-midline_amplitude="0.009537" data-mean_norm="0.02181" data-mean_amplitude="-3.8e-05" data-rms_amplitude="0.032562" data-maximum_delta="0.329132" data-minimum_delta="0.0" data-mean_delta="0.010187" data-rms_delta="0.022485" data-rough_frequency="5275.0" data-volume_adjustment="3.578" data-path="/cc0/rhythms/jazz/210bpm" data-src="210bpm/output.ogg" class="audio-item"></button>
+  </td>
+  <td>
+    <a href="210bpm">/cc0/rhythms/jazz/210bpm</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <button data-samples_read="288804.0" data-length="3.008375" data-scaled_by="2147483647.0" data-maximum_amplitude="0.308289" data-minimum_amplitude="-0.259491" data-midline_amplitude="0.024399" data-mean_norm="0.021657" data-mean_amplitude="-3.7e-05" data-rms_amplitude="0.032723" data-maximum_delta="0.334625" data-minimum_delta="0.0" data-mean_delta="0.010255" data-rms_delta="0.022844" data-rough_frequency="5333.0" data-volume_adjustment="3.244" data-path="/cc0/rhythms/jazz/220bpm" data-src="220bpm/output.ogg" class="audio-item"></button>
+  </td>
+  <td>
+    <a href="220bpm">/cc0/rhythms/jazz/220bpm</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <button data-samples_read="280100.0" data-length="2.917708" data-scaled_by="2147483647.0" data-maximum_amplitude="0.33197" data-minimum_amplitude="-0.277435" data-midline_amplitude="0.027267" data-mean_norm="0.022459" data-mean_amplitude="-2.5e-05" data-rms_amplitude="0.033661" data-maximum_delta="0.348938" data-minimum_delta="0.0" data-mean_delta="0.010538" data-rms_delta="0.02342" data-rough_frequency="5315.0" data-volume_adjustment="3.012" data-path="/cc0/rhythms/jazz/230bpm" data-src="230bpm/output.ogg" class="audio-item"></button>
+  </td>
+  <td>
+    <a href="230bpm">/cc0/rhythms/jazz/230bpm</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <button data-samples_read="272036.0" data-length="2.833708" data-scaled_by="2147483647.0" data-maximum_amplitude="0.293793" data-minimum_amplitude="-0.276886" data-midline_amplitude="0.008453" data-mean_norm="0.022983" data-mean_amplitude="-3.4e-05" data-rms_amplitude="0.034071" data-maximum_delta="0.334991" data-minimum_delta="0.0" data-mean_delta="0.010717" data-rms_delta="0.023572" data-rough_frequency="5285.0" data-volume_adjustment="3.404" data-path="/cc0/rhythms/jazz/240bpm" data-src="240bpm/output.ogg" class="audio-item"></button>
+  </td>
+  <td>
+    <a href="240bpm">/cc0/rhythms/jazz/240bpm</a>
+  </td>
+</tr>
+
+  </tbody>
+</table>
+
+        </article>
+      </main>
+      <footer>
+  <p>Copyright © 2026 Mica Sound / FUJISE Takumi (tkmfujise)</p>
+</footer>
+
+    </div>
+	</body>
+</html>

@@ -25,8 +25,8 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 
-## Sonic Pi Samples, Synths
-(contents of `content/cc0/sonic_pi` and `docs/cc0/sonic_pi`)
+## Sonic Pi Samples, Synths, Patterns, and Other Assets
+(contents of `content/cc0` and `docs/cc0`)
 
 These sounds were generated using Sonic Pi.
 

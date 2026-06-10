@@ -1,0 +1,675 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Mica Sound: Sonic Pi Examples</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+		<meta name="author" content="tkmfujise">
+		<meta name="keywords" content="Sonic Pi, Ruby, sound, music, effect, cc0">
+		<meta name="description" content="Sonic Pi Examples">
+    <meta name="google-site-verification" content="1oOV_cc_qhnW_wanEljxYvquGQU5fLwqoNULPyf95YU">
+		<link rel="stylesheet" href="../../../assets/css/almond.min.css">
+		<link rel="stylesheet" href="../../../assets/css/style.css">
+		<link rel="stylesheet" href="../../../assets/css/syntax.gessetti.css">
+    <script src="../../../assets/js/vendor/fuse.js@7.1.0"></script>
+    <script src="../../../assets/js/filter.js"></script>
+    <script src="../../../assets/js/player.js"></script>
+    <script src="../../../assets/js/clipboard.js"></script>
+	</head>
+  <body>
+    <nav class="main-menu closed">
+  <button onclick="document.querySelector('.main-menu').classList.toggle('closed');">
+    <span>Expand/Collapse menu</span>
+  </button>
+  <h2>Gems among stones.</h2>
+  <ul>
+    <li>
+      <a href="../../../">💎 Home 🪨</a>
+    </li>
+
+    <li>
+      <div>Samples</div>
+      <ul>
+        <li><a href="../../samples">All</a></li>
+        <li><a href="../../samples/original">Originals</a></li>
+        <li><a href="../../samples/rate_0.8">rate 0.8</a></li>
+        <li><a href="../../samples/rate_0.6">rate 0.6</a></li>
+        <li><a href="../../samples/rate_0.4">rate 0.4</a></li>
+        <li><a href="../../samples/rate_0.2">rate 0.2</a></li>
+      </ul>
+    </li>
+
+    <li>
+      <div>Synths</div>
+      <ul>
+        <li><a href="..">All</a></li>
+        <li><a href="../play_30">play 30</a></li>
+        <li><a href=".">play 40</a></li>
+        <li><a href="../play_50">play 50</a></li>
+        <li><a href="../play_60">play 60</a></li>
+        <li><a href="../play_70">play 70</a></li>
+        <li><a href="../play_80">play 80</a></li>
+        <li><a href="../play_90">play 90</a></li>
+      </ul>
+    </li>
+
+    <li>
+      <div>Melody &amp; Harmony</div>
+      <ul>
+        <li><a href="../../arpeggio">Arpeggio</a></li>
+        <li><a href="../../scales">Scales</a></li>
+      </ul>
+    </li>
+
+    <li>
+      <div>Rhythm</div>
+      <ul>
+        <li><a href="../../rhythms">All</a></li>
+        <li><a href="../../rhythms/straight_8th">Straigth 8th</a></li>
+        <li><a href="../../rhythms/jazz">Jazz</a></li>
+        <li><a href="../../rhythms/blues">Blues</a></li>
+        <li><a href="../../rhythms/funk">Funk</a></li>
+        <li><a href="../../rhythms/samba">Samba</a></li>
+        <li><a href="../../rhythms/bossa_nova">Bossa Nova</a></li>
+        <li><a href="../../rhythms/reggae">Reggae</a></li>
+        <li><a href="../../rhythms/rumba">Rumba</a></li>
+      </ul>
+    </li>
+
+    <li>
+      <div>Mica Sound</div>
+      <ul>
+        <li><a href="../../../cc-by/tkmfujise">All</a></li>
+        <li><a href="../../../cc-by/tkmfujise/bgm">Bgm</a></li>
+        <li><a href="../../../cc-by/tkmfujise/environment">Environment</a></li>
+        <li><a href="../../../cc-by/tkmfujise/nature">Nature</a></li>
+        <li><a href="../../../cc-by/tkmfujise/sfx">Sfx</a></li>
+        <li><a href="../../../cc-by/tkmfujise/voice">Voice</a></li>
+      </ul>
+    </li>
+
+    <li>
+      <div>Others</div>
+      <ul>
+        <li><a href="../../../cc-by-sa/sonic_pi">Official Examples</a></li>
+      </ul>
+    </li>
+
+    <li>
+      <div>Links</div>
+      <ul>
+        <li><a href="../../../about">About</a></li>
+        <li><a rel="external" target="_blank" href="https://github.com/tkmfujise/mica-sound/blob/main/LICENSE.md">License</a></li>
+        <li><a rel="external" target="_blank" href="https://github.com/tkmfujise/mica-sound">GitHub</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+    <div>
+      <header>
+  <div>
+    <a href="../../../">
+      <h1>Mica Sound</h1>
+    </a>
+    <p>Sonic Pi Examples</p>
+  </div>
+</header>
+
+
+      <main>
+        <article>
+          <span class="search-result-count">-</span> sounds.
+
+<form>
+  <p class="search">
+    <button id="shuffle-btn" type="button">Shuffle</button>
+    <input type="search">
+  </p>
+</form>
+
+<div class="sticky">
+  <p>
+    <audio id="main-audio" preload="" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </p>
+
+  <details id="play-history">
+    <summary>Now: <span class="current">--</span></summary>
+    <table>
+      <tbody class="container">
+      </tbody>
+    </table>
+  </details>
+</div>
+
+
+      		<table>
+  <tbody>
+    <tr class="audio-list">
+  <td>
+    <button data-samples_read="95638.0" data-length="0.996229" data-scaled_by="2147483647.0" data-maximum_amplitude="0.5047" data-minimum_amplitude="-0.089844" data-midline_amplitude="0.207428" data-mean_norm="0.042791" data-mean_amplitude="-2.7e-05" data-rms_amplitude="0.071161" data-maximum_delta="0.033295" data-minimum_delta="0.0" data-mean_delta="0.000786" data-rms_delta="0.00214" data-rough_frequency="229.0" data-volume_adjustment="1.981" data-path="/cc0/synths/play_40/bass_foundation" data-src="bass_foundation/output.ogg" class="audio-item"></button>
+  </td>
+  <td>
+    <a href="bass_foundation">/cc0/synths/play_40/bass_foundation</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <button data-samples_read="95700.0" data-length="0.996875" data-scaled_by="2147483647.0" data-maximum_amplitude="0.822632" data-minimum_amplitude="-0.336426" data-midline_amplitude="0.243103" data-mean_norm="0.051021" data-mean_amplitude="-0.0" data-rms_amplitude="0.081678" data-maximum_delta="0.217743" data-minimum_delta="0.0" data-mean_delta="0.002872" data-rms_delta="0.00731" data-rough_frequency="683.0" data-volume_adjustment="1.216" data-path="/cc0/synths/play_40/bass_highend" data-src="bass_highend/output.ogg" class="audio-item"></button>
+  </td>
+  <td>
+    <a href="bass_highend">/cc0/synths/play_40/bass_highend</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <button data-samples_read="96068.0" data-length="1.000708" data-scaled_by="2147483647.0" data-maximum_amplitude="0.397736" data-minimum_amplitude="-0.363953" data-midline_amplitude="0.016891" data-mean_norm="0.118198" data-mean_amplitude="0.000118" data-rms_amplitude="0.151163" data-maximum_delta="0.009949" data-minimum_delta="0.0" data-mean_delta="0.000935" data-rms_delta="0.001578" data-rough_frequency="79.0" data-volume_adjustment="2.514" data-path="/cc0/synths/play_40/beep" data-src="beep/output.ogg" class="audio-item"></button>
+  </td>
+  <td>
+    <a href="beep">/cc0/synths/play_40/beep</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <button data-samples_read="94588.0" data-length="0.985292" data-scaled_by="2147483647.0" data-maximum_amplitude="0.163727" data-minimum_amplitude="-0.138458" data-midline_amplitude="0.012634" data-mean_norm="0.015796" data-mean_amplitude="-3.4e-05" data-rms_amplitude="0.027369" data-maximum_delta="0.031189" data-minimum_delta="0.0" data-mean_delta="0.000527" data-rms_delta="0.001608" data-rough_frequency="448.0" data-volume_adjustment="6.108" data-path="/cc0/synths/play_40/blade" data-src="blade/output.ogg" class="audio-item"></button>
+  </td>
+  <td>
+    <a href="blade">/cc0/synths/play_40/blade</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <button data-samples_read="96036.0" data-length="1.000375" data-scaled_by="2147483647.0" data-maximum_amplitude="0.57077" data-minimum_amplitude="-0.578186" data-midline_amplitude="-0.003708" data-mean_norm="0.079075" data-mean_amplitude="-0.000355" data-rms_amplitude="0.113714" data-maximum_delta="0.068665" data-minimum_delta="0.0" data-mean_delta="0.003703" data-rms_delta="0.007293" data-rough_frequency="489.0" data-volume_adjustment="1.73" data-path="/cc0/synths/play_40/bnoise" data-src="bnoise/output.ogg" class="audio-item"></button>
+  </td>
+  <td>
+    <a href="bnoise">/cc0/synths/play_40/bnoise</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <button data-samples_read="95938.0" data-length="0.999354" data-scaled_by="2147483647.0" data-maximum_amplitude="0.339203" data-minimum_amplitude="-0.319672" data-midline_amplitude="0.009766" data-mean_norm="0.106617" data-mean_amplitude="9.0e-06" data-rms_amplitude="0.131495" data-maximum_delta="0.037262" data-minimum_delta="0.0" data-mean_delta="0.001707" data-rms_delta="0.004191" data-rough_frequency="243.0" data-volume_adjustment="2.948" data-path="/cc0/synths/play_40/chipbass" data-src="chipbass/output.ogg" class="audio-item"></button>
+  </td>
+  <td>
+    <a href="chipbass">/cc0/synths/play_40/chipbass</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <button data-samples_read="95422.0" data-length="0.993979" data-scaled_by="2147483647.0" data-maximum_amplitude="0.213684" data-minimum_amplitude="-0.291107" data-midline_amplitude="-0.038712" data-mean_norm="0.028668" data-mean_amplitude="-6.0e-06" data-rms_amplitude="0.049681" data-maximum_delta="0.163116" data-minimum_delta="0.0" data-mean_delta="0.00093" data-rms_delta="0.005135" data-rough_frequency="789.0" data-volume_adjustment="3.435" data-path="/cc0/synths/play_40/chiplead" data-src="chiplead/output.ogg" class="audio-item"></button>
+  </td>
+  <td>
+    <a href="chiplead">/cc0/synths/play_40/chiplead</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <button data-samples_read="96296.0" data-length="1.003083" data-scaled_by="2147483647.0" data-maximum_amplitude="0.581299" data-minimum_amplitude="-0.611542" data-midline_amplitude="-0.015121" data-mean_norm="0.069749" data-mean_amplitude="5.3e-05" data-rms_amplitude="0.109908" data-maximum_delta="0.243774" data-minimum_delta="0.0" data-mean_delta="0.001364" data-rms_delta="0.007566" data-rough_frequency="525.0" data-volume_adjustment="1.635" data-path="/cc0/synths/play_40/chipnoise" data-src="chipnoise/output.ogg" class="audio-item"></button>
+  </td>
+  <td>
+    <a href="chipnoise">/cc0/synths/play_40/chipnoise</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <button data-samples_read="95538.0" data-length="0.995188" data-scaled_by="2147483647.0" data-maximum_amplitude="0.332581" data-minimum_amplitude="-0.367371" data-midline_amplitude="-0.017395" data-mean_norm="0.049398" data-mean_amplitude="3.0e-06" data-rms_amplitude="0.070127" data-maximum_delta="0.183868" data-minimum_delta="0.0" data-mean_delta="0.012314" data-rms_delta="0.024711" data-rough_frequency="2691.0" data-volume_adjustment="2.722" data-path="/cc0/synths/play_40/cnoise" data-src="cnoise/output.ogg" class="audio-item"></button>
+  </td>
+  <td>
+    <a href="cnoise">/cc0/synths/play_40/cnoise</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <button data-samples_read="93042.0" data-length="0.969187" data-scaled_by="2147483647.0" data-maximum_amplitude="0.038208" data-minimum_amplitude="-0.04007" data-midline_amplitude="-0.000931" data-mean_norm="0.006976" data-mean_amplitude="8.0e-06" data-rms_amplitude="0.009696" data-maximum_delta="0.04129" data-minimum_delta="0.0" data-mean_delta="0.007643" data-rms_delta="0.010806" data-rough_frequency="8514.0" data-volume_adjustment="24.957" data-path="/cc0/synths/play_40/dark_ambience" data-src="dark_ambience/output.ogg" class="audio-item"></button>
+  </td>
+  <td>
+    <a href="dark_ambience">/cc0/synths/play_40/dark_ambience</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <button data-samples_read="93270.0" data-length="0.971562" data-scaled_by="2147483647.0" data-maximum_amplitude="0.694885" data-minimum_amplitude="-0.68692" data-midline_amplitude="0.003983" data-mean_norm="0.113116" data-mean_amplitude="6.0e-05" data-rms_amplitude="0.167522" data-maximum_delta="0.058807" data-minimum_delta="0.0" data-mean_delta="0.001645" data-rms_delta="0.004387" data-rough_frequency="200.0" data-volume_adjustment="1.439" data-path="/cc0/synths/play_40/dpulse" data-src="dpulse/output.ogg" class="audio-item"></button>
+  </td>
+  <td>
+    <a href="dpulse">/cc0/synths/play_40/dpulse</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <button data-samples_read="93862.0" data-length="0.977729" data-scaled_by="2147483647.0" data-maximum_amplitude="0.763672" data-minimum_amplitude="-0.166962" data-midline_amplitude="0.298355" data-mean_norm="0.08137" data-mean_amplitude="-0.000151" data-rms_amplitude="0.117012" data-maximum_delta="0.096405" data-minimum_delta="0.0" data-mean_delta="0.001021" data-rms_delta="0.003783" data-rough_frequency="247.0" data-volume_adjustment="1.309" data-path="/cc0/synths/play_40/dsaw" data-src="dsaw/output.ogg" class="audio-item"></button>
+  </td>
+  <td>
+    <a href="dsaw">/cc0/synths/play_40/dsaw</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <button data-samples_read="94170.0" data-length="0.980938" data-scaled_by="2147483647.0" data-maximum_amplitude="0.32373" data-minimum_amplitude="-0.295654" data-midline_amplitude="0.014038" data-mean_norm="0.127333" data-mean_amplitude="9.1e-05" data-rms_amplitude="0.159534" data-maximum_delta="0.009827" data-minimum_delta="0.0" data-mean_delta="0.000992" data-rms_delta="0.001683" data-rough_frequency="80.0" data-volume_adjustment="3.089" data-path="/cc0/synths/play_40/dtri" data-src="dtri/output.ogg" class="audio-item"></button>
+  </td>
+  <td>
+    <a href="dtri">/cc0/synths/play_40/dtri</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <button data-samples_read="95764.0" data-length="0.997542" data-scaled_by="2147483647.0" data-maximum_amplitude="0.263885" data-minimum_amplitude="-0.214661" data-midline_amplitude="0.024612" data-mean_norm="0.049412" data-mean_amplitude="-0.000199" data-rms_amplitude="0.066585" data-maximum_delta="0.003479" data-minimum_delta="0.0" data-mean_delta="0.00034" data-rms_delta="0.000586" data-rough_frequency="67.0" data-volume_adjustment="3.79" data-path="/cc0/synths/play_40/dull_bell" data-src="dull_bell/output.ogg" class="audio-item"></button>
+  </td>
+  <td>
+    <a href="dull_bell">/cc0/synths/play_40/dull_bell</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <button data-samples_read="95858.0" data-length="0.998521" data-scaled_by="2147483647.0" data-maximum_amplitude="0.326904" data-minimum_amplitude="-0.451202" data-midline_amplitude="-0.062149" data-mean_norm="0.086861" data-mean_amplitude="0.000291" data-rms_amplitude="0.113255" data-maximum_delta="0.018616" data-minimum_delta="0.0" data-mean_delta="0.001431" data-rms_delta="0.00273" data-rough_frequency="184.0" data-volume_adjustment="2.216" data-path="/cc0/synths/play_40/fm" data-src="fm/output.ogg" class="audio-item"></button>
+  </td>
+  <td>
+    <a href="fm">/cc0/synths/play_40/fm</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <button data-samples_read="32040.0" data-length="0.33375" data-scaled_by="2147483647.0" data-maximum_amplitude="0.174042" data-minimum_amplitude="-0.17099" data-midline_amplitude="0.001526" data-mean_norm="0.045808" data-mean_amplitude="3.7e-05" data-rms_amplitude="0.06064" data-maximum_delta="0.083344" data-minimum_delta="0.0" data-mean_delta="0.001445" data-rms_delta="0.004767" data-rough_frequency="600.0" data-volume_adjustment="5.746" data-path="/cc0/synths/play_40/gabberkick" data-src="gabberkick/output.ogg" class="audio-item"></button>
+  </td>
+  <td>
+    <a href="gabberkick">/cc0/synths/play_40/gabberkick</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <button data-samples_read="95746.0" data-length="0.997354" data-scaled_by="2147483647.0" data-maximum_amplitude="0.597351" data-minimum_amplitude="-0.571808" data-midline_amplitude="0.012772" data-mean_norm="0.091348" data-mean_amplitude="0.000317" data-rms_amplitude="0.126025" data-maximum_delta="0.186646" data-minimum_delta="0.0" data-mean_delta="0.007074" data-rms_delta="0.016602" data-rough_frequency="1006.0" data-volume_adjustment="1.674" data-path="/cc0/synths/play_40/gnoise" data-src="gnoise/output.ogg" class="audio-item"></button>
+  </td>
+  <td>
+    <a href="gnoise">/cc0/synths/play_40/gnoise</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <button data-samples_read="93434.0" data-length="0.973271" data-scaled_by="2147483647.0" data-maximum_amplitude="0.363312" data-minimum_amplitude="-0.355988" data-midline_amplitude="0.003662" data-mean_norm="0.110771" data-mean_amplitude="1.2e-05" data-rms_amplitude="0.14232" data-maximum_delta="0.010223" data-minimum_delta="0.0" data-mean_delta="0.00093" data-rms_delta="0.00159" data-rough_frequency="85.0" data-volume_adjustment="2.752" data-path="/cc0/synths/play_40/growl" data-src="growl/output.ogg" class="audio-item"></button>
+  </td>
+  <td>
+    <a href="growl">/cc0/synths/play_40/growl</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <button data-samples_read="92374.0" data-length="0.962229" data-scaled_by="2147483647.0" data-maximum_amplitude="0.118896" data-minimum_amplitude="-0.147949" data-midline_amplitude="-0.014526" data-mean_norm="0.029342" data-mean_amplitude="8.8e-05" data-rms_amplitude="0.040077" data-maximum_delta="0.003326" data-minimum_delta="0.0" data-mean_delta="0.000258" data-rms_delta="0.00045" data-rough_frequency="85.0" data-volume_adjustment="6.759" data-path="/cc0/synths/play_40/hollow" data-src="hollow/output.ogg" class="audio-item"></button>
+  </td>
+  <td>
+    <a href="hollow">/cc0/synths/play_40/hollow</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <button data-samples_read="103204.0" data-length="1.075042" data-scaled_by="2147483647.0" data-maximum_amplitude="0.503754" data-minimum_amplitude="-0.582428" data-midline_amplitude="-0.039337" data-mean_norm="0.102162" data-mean_amplitude="-0.000178" data-rms_amplitude="0.137886" data-maximum_delta="0.113922" data-minimum_delta="0.0" data-mean_delta="0.001201" data-rms_delta="0.003577" data-rough_frequency="198.0" data-volume_adjustment="1.717" data-path="/cc0/synths/play_40/hoover" data-src="hoover/output.ogg" class="audio-item"></button>
+  </td>
+  <td>
+    <a href="hoover">/cc0/synths/play_40/hoover</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <button data-samples_read="154074.0" data-length="1.604937" data-scaled_by="2147483647.0" data-maximum_amplitude="0.015839" data-minimum_amplitude="-0.0159" data-midline_amplitude="-3.1e-05" data-mean_norm="0.003241" data-mean_amplitude="-2.0e-06" data-rms_amplitude="0.00466" data-maximum_delta="0.001801" data-minimum_delta="0.0" data-mean_delta="6.9e-05" data-rms_delta="0.000102" data-rough_frequency="167.0" data-volume_adjustment="62.894" data-path="/cc0/synths/play_40/kalimba" data-src="kalimba/output.ogg" class="audio-item"></button>
+  </td>
+  <td>
+    <a href="kalimba">/cc0/synths/play_40/kalimba</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <button data-samples_read="94118.0" data-length="0.980396" data-scaled_by="2147483647.0" data-maximum_amplitude="0.406342" data-minimum_amplitude="-0.384247" data-midline_amplitude="0.011047" data-mean_norm="0.119154" data-mean_amplitude="-4.9e-05" data-rms_amplitude="0.152817" data-maximum_delta="0.005951" data-minimum_delta="0.0" data-mean_delta="0.001019" data-rms_delta="0.001679" data-rough_frequency="83.0" data-volume_adjustment="2.461" data-path="/cc0/synths/play_40/mod_beep" data-src="mod_beep/output.ogg" class="audio-item"></button>
+  </td>
+  <td>
+    <a href="mod_beep">/cc0/synths/play_40/mod_beep</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <button data-samples_read="93888.0" data-length="0.978" data-scaled_by="2147483647.0" data-maximum_amplitude="0.844513" data-minimum_amplitude="-0.209961" data-midline_amplitude="0.317276" data-mean_norm="0.10155" data-mean_amplitude="-0.000144" data-rms_amplitude="0.141422" data-maximum_delta="0.122681" data-minimum_delta="0.0" data-mean_delta="0.001395" data-rms_delta="0.005035" data-rough_frequency="271.0" data-volume_adjustment="1.184" data-path="/cc0/synths/play_40/mod_dsaw" data-src="mod_dsaw/output.ogg" class="audio-item"></button>
+  </td>
+  <td>
+    <a href="mod_dsaw">/cc0/synths/play_40/mod_dsaw</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <button data-samples_read="96060.0" data-length="1.000625" data-scaled_by="2147483647.0" data-maximum_amplitude="0.397308" data-minimum_amplitude="-0.547577" data-midline_amplitude="-0.075134" data-mean_norm="0.112441" data-mean_amplitude="-0.000286" data-rms_amplitude="0.147128" data-maximum_delta="0.032166" data-minimum_delta="0.0" data-mean_delta="0.001609" data-rms_delta="0.003461" data-rough_frequency="179.0" data-volume_adjustment="1.826" data-path="/cc0/synths/play_40/mod_fm" data-src="mod_fm/output.ogg" class="audio-item"></button>
+  </td>
+  <td>
+    <a href="mod_fm">/cc0/synths/play_40/mod_fm</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <button data-samples_read="93976.0" data-length="0.978917" data-scaled_by="2147483647.0" data-maximum_amplitude="0.522369" data-minimum_amplitude="-0.531036" data-midline_amplitude="-0.004333" data-mean_norm="0.087977" data-mean_amplitude="-2.0e-05" data-rms_amplitude="0.135559" data-maximum_delta="0.073242" data-minimum_delta="0.0" data-mean_delta="0.001216" data-rms_delta="0.004383" data-rough_frequency="247.0" data-volume_adjustment="1.883" data-path="/cc0/synths/play_40/mod_pulse" data-src="mod_pulse/output.ogg" class="audio-item"></button>
+  </td>
+  <td>
+    <a href="mod_pulse">/cc0/synths/play_40/mod_pulse</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <button data-samples_read="93490.0" data-length="0.973854" data-scaled_by="2147483647.0" data-maximum_amplitude="0.515015" data-minimum_amplitude="-0.127869" data-midline_amplitude="0.193573" data-mean_norm="0.057603" data-mean_amplitude="-0.000157" data-rms_amplitude="0.088422" data-maximum_delta="0.083466" data-minimum_delta="0.0" data-mean_delta="0.000743" data-rms_delta="0.003449" data-rough_frequency="298.0" data-volume_adjustment="1.942" data-path="/cc0/synths/play_40/mod_saw" data-src="mod_saw/output.ogg" class="audio-item"></button>
+  </td>
+  <td>
+    <a href="mod_saw">/cc0/synths/play_40/mod_saw</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <button data-samples_read="94118.0" data-length="0.980396" data-scaled_by="2147483647.0" data-maximum_amplitude="0.406342" data-minimum_amplitude="-0.384247" data-midline_amplitude="0.011047" data-mean_norm="0.119113" data-mean_amplitude="-4.7e-05" data-rms_amplitude="0.152706" data-maximum_delta="0.011108" data-minimum_delta="0.0" data-mean_delta="0.001134" data-rms_delta="0.001996" data-rough_frequency="99.0" data-volume_adjustment="2.461" data-path="/cc0/synths/play_40/mod_sine" data-src="mod_sine/output.ogg" class="audio-item"></button>
+  </td>
+  <td>
+    <a href="mod_sine">/cc0/synths/play_40/mod_sine</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <button data-samples_read="94160.0" data-length="0.980833" data-scaled_by="2147483647.0" data-maximum_amplitude="0.480011" data-minimum_amplitude="-0.433167" data-midline_amplitude="0.023422" data-mean_norm="0.150971" data-mean_amplitude="4.5e-05" data-rms_amplitude="0.189057" data-maximum_delta="0.012695" data-minimum_delta="0.0" data-mean_delta="0.001166" data-rms_delta="0.002171" data-rough_frequency="87.0" data-volume_adjustment="2.083" data-path="/cc0/synths/play_40/mod_tri" data-src="mod_tri/output.ogg" class="audio-item"></button>
+  </td>
+  <td>
+    <a href="mod_tri">/cc0/synths/play_40/mod_tri</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <button data-samples_read="95284.0" data-length="0.992542" data-scaled_by="2147483647.0" data-maximum_amplitude="0.312592" data-minimum_amplitude="-0.323608" data-midline_amplitude="-0.005508" data-mean_norm="0.042998" data-mean_amplitude="1.2e-05" data-rms_amplitude="0.061243" data-maximum_delta="0.17218" data-minimum_delta="0.0" data-mean_delta="0.011173" data-rms_delta="0.021623" data-rough_frequency="2697.0" data-volume_adjustment="3.09" data-path="/cc0/synths/play_40/noise" data-src="noise/output.ogg" class="audio-item"></button>
+  </td>
+  <td>
+    <a href="noise">/cc0/synths/play_40/noise</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <button data-samples_read="100654.0" data-length="1.048479" data-scaled_by="2147483647.0" data-maximum_amplitude="0.294617" data-minimum_amplitude="-0.206696" data-midline_amplitude="0.043961" data-mean_norm="0.063864" data-mean_amplitude="-0.000262" data-rms_amplitude="0.087015" data-maximum_delta="0.034973" data-minimum_delta="0.0" data-mean_delta="0.005208" data-rms_delta="0.007048" data-rough_frequency="618.0" data-volume_adjustment="3.394" data-path="/cc0/synths/play_40/organ_tonewheel" data-src="organ_tonewheel/output.ogg" class="audio-item"></button>
+  </td>
+  <td>
+    <a href="organ_tonewheel">/cc0/synths/play_40/organ_tonewheel</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <button data-samples_read="93330.0" data-length="0.972187" data-scaled_by="2147483647.0" data-maximum_amplitude="0.257477" data-minimum_amplitude="-0.247223" data-midline_amplitude="0.005127" data-mean_norm="0.032037" data-mean_amplitude="-3.9e-05" data-rms_amplitude="0.050446" data-maximum_delta="0.012604" data-minimum_delta="0.0" data-mean_delta="0.000584" data-rms_delta="0.001296" data-rough_frequency="196.0" data-volume_adjustment="3.884" data-path="/cc0/synths/play_40/piano" data-src="piano/output.ogg" class="audio-item"></button>
+  </td>
+  <td>
+    <a href="piano">/cc0/synths/play_40/piano</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <button data-samples_read="93248.0" data-length="0.971333" data-scaled_by="2147483647.0" data-maximum_amplitude="0.179596" data-minimum_amplitude="-0.183197" data-midline_amplitude="-0.001801" data-mean_norm="0.022481" data-mean_amplitude="2.7e-05" data-rms_amplitude="0.032493" data-maximum_delta="0.077209" data-minimum_delta="0.0" data-mean_delta="0.001582" data-rms_delta="0.004093" data-rough_frequency="962.0" data-volume_adjustment="5.459" data-path="/cc0/synths/play_40/pluck" data-src="pluck/output.ogg" class="audio-item"></button>
+  </td>
+  <td>
+    <a href="pluck">/cc0/synths/play_40/pluck</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <button data-samples_read="95482.0" data-length="0.994604" data-scaled_by="2147483647.0" data-maximum_amplitude="0.311493" data-minimum_amplitude="-0.38504" data-midline_amplitude="-0.036774" data-mean_norm="0.043752" data-mean_amplitude="-1.5e-05" data-rms_amplitude="0.063145" data-maximum_delta="0.09552" data-minimum_delta="0.0" data-mean_delta="0.005221" data-rms_delta="0.01062" data-rough_frequency="1284.0" data-volume_adjustment="2.597" data-path="/cc0/synths/play_40/pnoise" data-src="pnoise/output.ogg" class="audio-item"></button>
+  </td>
+  <td>
+    <a href="pnoise">/cc0/synths/play_40/pnoise</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <button data-samples_read="95626.0" data-length="0.996104" data-scaled_by="2147483647.0" data-maximum_amplitude="0.346588" data-minimum_amplitude="-0.278351" data-midline_amplitude="0.034119" data-mean_norm="0.061631" data-mean_amplitude="-6.0e-06" data-rms_amplitude="0.082027" data-maximum_delta="0.009613" data-minimum_delta="0.0" data-mean_delta="0.000674" data-rms_delta="0.001335" data-rough_frequency="124.0" data-volume_adjustment="2.885" data-path="/cc0/synths/play_40/pretty_bell" data-src="pretty_bell/output.ogg" class="audio-item"></button>
+  </td>
+  <td>
+    <a href="pretty_bell">/cc0/synths/play_40/pretty_bell</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <button data-samples_read="88798.0" data-length="0.924979" data-scaled_by="2147483647.0" data-maximum_amplitude="0.396698" data-minimum_amplitude="-0.513214" data-midline_amplitude="-0.058258" data-mean_norm="0.025633" data-mean_amplitude="-8.7e-05" data-rms_amplitude="0.046104" data-maximum_delta="0.177582" data-minimum_delta="0.0" data-mean_delta="0.001222" data-rms_delta="0.004836" data-rough_frequency="801.0" data-volume_adjustment="1.949" data-path="/cc0/synths/play_40/prophet" data-src="prophet/output.ogg" class="audio-item"></button>
+  </td>
+  <td>
+    <a href="prophet">/cc0/synths/play_40/prophet</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <button data-samples_read="93904.0" data-length="0.978167" data-scaled_by="2147483647.0" data-maximum_amplitude="0.543854" data-minimum_amplitude="-0.551239" data-midline_amplitude="-0.003693" data-mean_norm="0.084666" data-mean_amplitude="0.000109" data-rms_amplitude="0.132158" data-maximum_delta="0.070557" data-minimum_delta="0.0" data-mean_delta="0.001122" data-rms_delta="0.00401" data-rough_frequency="231.0" data-volume_adjustment="1.814" data-path="/cc0/synths/play_40/pulse" data-src="pulse/output.ogg" class="audio-item"></button>
+  </td>
+  <td>
+    <a href="pulse">/cc0/synths/play_40/pulse</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <button data-samples_read="94396.0" data-length="0.983292" data-scaled_by="2147483647.0" data-maximum_amplitude="0.391907" data-minimum_amplitude="-0.441132" data-midline_amplitude="-0.024612" data-mean_norm="0.077061" data-mean_amplitude="4.8e-05" data-rms_amplitude="0.110393" data-maximum_delta="0.024231" data-minimum_delta="0.0" data-mean_delta="0.001241" data-rms_delta="0.002608" data-rough_frequency="180.0" data-volume_adjustment="2.267" data-path="/cc0/synths/play_40/rhodey" data-src="rhodey/output.ogg" class="audio-item"></button>
+  </td>
+  <td>
+    <a href="rhodey">/cc0/synths/play_40/rhodey</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <button data-samples_read="95412.0" data-length="0.993875" data-scaled_by="2147483647.0" data-maximum_amplitude="0.396271" data-minimum_amplitude="-0.486145" data-midline_amplitude="-0.044937" data-mean_norm="0.043772" data-mean_amplitude="-2.7e-05" data-rms_amplitude="0.071474" data-maximum_delta="0.053192" data-minimum_delta="0.0" data-mean_delta="0.002316" data-rms_delta="0.005121" data-rough_frequency="547.0" data-volume_adjustment="2.057" data-path="/cc0/synths/play_40/rodeo" data-src="rodeo/output.ogg" class="audio-item"></button>
+  </td>
+  <td>
+    <a href="rodeo">/cc0/synths/play_40/rodeo</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <button data-samples_read="93634.0" data-length="0.975354" data-scaled_by="2147483647.0" data-maximum_amplitude="0.561462" data-minimum_amplitude="-0.118378" data-midline_amplitude="0.221542" data-mean_norm="0.05338" data-mean_amplitude="-0.000129" data-rms_amplitude="0.085917" data-maximum_delta="0.08075" data-minimum_delta="0.0" data-mean_delta="0.000641" data-rms_delta="0.003125" data-rough_frequency="277.0" data-volume_adjustment="1.781" data-path="/cc0/synths/play_40/saw" data-src="saw/output.ogg" class="audio-item"></button>
+  </td>
+  <td>
+    <a href="saw">/cc0/synths/play_40/saw</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <button data-samples_read="182228.0" data-length="1.898208" data-scaled_by="2147483647.0" data-maximum_amplitude="0.407562" data-minimum_amplitude="-0.380157" data-midline_amplitude="0.013702" data-mean_norm="0.093079" data-mean_amplitude="-8.7e-05" data-rms_amplitude="0.147216" data-maximum_delta="0.02887" data-minimum_delta="0.0" data-mean_delta="0.000989" data-rms_delta="0.002001" data-rough_frequency="103.0" data-volume_adjustment="2.454" data-path="/cc0/synths/play_40/sc808_bassdrum" data-src="sc808_bassdrum/output.ogg" class="audio-item"></button>
+  </td>
+  <td>
+    <a href="sc808_bassdrum">/cc0/synths/play_40/sc808_bassdrum</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <button data-samples_read="21526.0" data-length="0.224229" data-scaled_by="2147483647.0" data-maximum_amplitude="0.132965" data-minimum_amplitude="-0.120605" data-midline_amplitude="0.00618" data-mean_norm="0.008488" data-mean_amplitude="-2.0e-06" data-rms_amplitude="0.01696" data-maximum_delta="0.048431" data-minimum_delta="0.0" data-mean_delta="0.001466" data-rms_delta="0.003918" data-rough_frequency="1764.0" data-volume_adjustment="7.521" data-path="/cc0/synths/play_40/sc808_clap" data-src="sc808_clap/output.ogg" class="audio-item"></button>
+  </td>
+  <td>
+    <a href="sc808_clap">/cc0/synths/play_40/sc808_clap</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <button data-samples_read="0.0" data-length="0.0" data-scaled_by="2147483647.0" data-maximum_amplitude="0.0" data-minimum_amplitude="0.0" data-midline_amplitude="0.0" data-mean_norm="0.0" data-mean_amplitude="0.0" data-rms_amplitude="0.0" data-maximum_delta="0.0" data-minimum_delta="0.0" data-mean_delta="-0.0" data-rms_delta="-0.0" data-rough_frequency="0.0" data-path="/cc0/synths/play_40/sc808_claves" data-src="sc808_claves/output.ogg" class="audio-item"></button>
+  </td>
+  <td>
+    <a href="sc808_claves">/cc0/synths/play_40/sc808_claves</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <button data-samples_read="11032.0" data-length="0.114917" data-scaled_by="2147483647.0" data-maximum_amplitude="0.999969" data-minimum_amplitude="-1.0" data-midline_amplitude="-1.5e-05" data-mean_norm="0.158982" data-mean_amplitude="-0.001029" data-rms_amplitude="0.302532" data-maximum_delta="1.70929" data-minimum_delta="0.0" data-mean_delta="0.089641" data-rms_delta="0.246693" data-rough_frequency="6229.0" data-volume_adjustment="1.0" data-path="/cc0/synths/play_40/sc808_closed_hihat" data-src="sc808_closed_hihat/output.ogg" class="audio-item"></button>
+  </td>
+  <td>
+    <a href="sc808_closed_hihat">/cc0/synths/play_40/sc808_closed_hihat</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <button data-samples_read="14030.0" data-length="0.146146" data-scaled_by="2147483647.0" data-maximum_amplitude="0.29248" data-minimum_amplitude="-0.265503" data-midline_amplitude="0.013489" data-mean_norm="0.041412" data-mean_amplitude="-0.000349" data-rms_amplitude="0.076577" data-maximum_delta="0.032227" data-minimum_delta="0.0" data-mean_delta="0.000285" data-rms_delta="0.000823" data-rough_frequency="82.0" data-volume_adjustment="3.419" data-path="/cc0/synths/play_40/sc808_congahi" data-src="sc808_congahi/output.ogg" class="audio-item"></button>
+  </td>
+  <td>
+    <a href="sc808_congahi">/cc0/synths/play_40/sc808_congahi</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <button data-samples_read="42422.0" data-length="0.441896" data-scaled_by="2147483647.0" data-maximum_amplitude="0.355682" data-minimum_amplitude="-0.340179" data-midline_amplitude="0.007751" data-mean_norm="0.039899" data-mean_amplitude="-0.000337" data-rms_amplitude="0.076929" data-maximum_delta="0.027161" data-minimum_delta="0.0" data-mean_delta="0.000327" data-rms_delta="0.000795" data-rough_frequency="78.0" data-volume_adjustment="2.811" data-path="/cc0/synths/play_40/sc808_congalo" data-src="sc808_congalo/output.ogg" class="audio-item"></button>
+  </td>
+  <td>
+    <a href="sc808_congalo">/cc0/synths/play_40/sc808_congalo</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <button data-samples_read="21152.0" data-length="0.220333" data-scaled_by="2147483647.0" data-maximum_amplitude="0.336243" data-minimum_amplitude="-0.300598" data-midline_amplitude="0.017822" data-mean_norm="0.040833" data-mean_amplitude="-0.000344" data-rms_amplitude="0.077314" data-maximum_delta="0.03183" data-minimum_delta="0.0" data-mean_delta="0.000313" data-rms_delta="0.00082" data-rough_frequency="81.0" data-volume_adjustment="2.974" data-path="/cc0/synths/play_40/sc808_congamid" data-src="sc808_congamid/output.ogg" class="audio-item"></button>
+  </td>
+  <td>
+    <a href="sc808_congamid">/cc0/synths/play_40/sc808_congamid</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <button data-samples_read="33950.0" data-length="0.353646" data-scaled_by="2147483647.0" data-maximum_amplitude="0.164124" data-minimum_amplitude="-0.249573" data-midline_amplitude="-0.042725" data-mean_norm="0.005267" data-mean_amplitude="-2.2e-05" data-rms_amplitude="0.017711" data-maximum_delta="0.046936" data-minimum_delta="0.0" data-mean_delta="0.000249" data-rms_delta="0.000945" data-rough_frequency="407.0" data-volume_adjustment="4.007" data-path="/cc0/synths/play_40/sc808_cowbell" data-src="sc808_cowbell/output.ogg" class="audio-item"></button>
+  </td>
+  <td>
+    <a href="sc808_cowbell">/cc0/synths/play_40/sc808_cowbell</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <button data-samples_read="194892.0" data-length="2.030125" data-scaled_by="2147483647.0" data-maximum_amplitude="0.999969" data-minimum_amplitude="-1.0" data-midline_amplitude="-1.5e-05" data-mean_norm="0.042265" data-mean_amplitude="-2.0e-06" data-rms_amplitude="0.094506" data-maximum_delta="1.104431" data-minimum_delta="0.0" data-mean_delta="0.018949" data-rms_delta="0.060162" data-rough_frequency="4863.0" data-volume_adjustment="1.0" data-path="/cc0/synths/play_40/sc808_cymbal" data-src="sc808_cymbal/output.ogg" class="audio-item"></button>
+  </td>
+  <td>
+    <a href="sc808_cymbal">/cc0/synths/play_40/sc808_cymbal</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <button data-samples_read="0.0" data-length="0.0" data-scaled_by="2147483647.0" data-maximum_amplitude="0.0" data-minimum_amplitude="0.0" data-midline_amplitude="0.0" data-mean_norm="0.0" data-mean_amplitude="0.0" data-rms_amplitude="0.0" data-maximum_delta="0.0" data-minimum_delta="0.0" data-mean_delta="-0.0" data-rms_delta="-0.0" data-rough_frequency="0.0" data-path="/cc0/synths/play_40/sc808_maracas" data-src="sc808_maracas/output.ogg" class="audio-item"></button>
+  </td>
+  <td>
+    <a href="sc808_maracas">/cc0/synths/play_40/sc808_maracas</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <button data-samples_read="54794.0" data-length="0.570771" data-scaled_by="2147483647.0" data-maximum_amplitude="0.308075" data-minimum_amplitude="-0.346771" data-midline_amplitude="-0.019348" data-mean_norm="0.02207" data-mean_amplitude="-0.0" data-rms_amplitude="0.037844" data-maximum_delta="0.340668" data-minimum_delta="0.0" data-mean_delta="0.011199" data-rms_delta="0.026778" data-rough_frequency="5405.0" data-volume_adjustment="2.884" data-path="/cc0/synths/play_40/sc808_open_hihat" data-src="sc808_open_hihat/output.ogg" class="audio-item"></button>
+  </td>
+  <td>
+    <a href="sc808_open_hihat">/cc0/synths/play_40/sc808_open_hihat</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <button data-samples_read="0.0" data-length="0.0" data-scaled_by="2147483647.0" data-maximum_amplitude="0.0" data-minimum_amplitude="0.0" data-midline_amplitude="0.0" data-mean_norm="0.0" data-mean_amplitude="0.0" data-rms_amplitude="0.0" data-maximum_delta="0.0" data-minimum_delta="0.0" data-mean_delta="-0.0" data-rms_delta="-0.0" data-rough_frequency="0.0" data-path="/cc0/synths/play_40/sc808_rimshot" data-src="sc808_rimshot/output.ogg" class="audio-item"></button>
+  </td>
+  <td>
+    <a href="sc808_rimshot">/cc0/synths/play_40/sc808_rimshot</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <button data-samples_read="19868.0" data-length="0.206958" data-scaled_by="2147483647.0" data-maximum_amplitude="0.533783" data-minimum_amplitude="-0.717804" data-midline_amplitude="-0.09201" data-mean_norm="0.032295" data-mean_amplitude="-1.2e-05" data-rms_amplitude="0.07631" data-maximum_delta="0.364227" data-minimum_delta="0.0" data-mean_delta="0.010965" data-rms_delta="0.031808" data-rough_frequency="3184.0" data-volume_adjustment="1.393" data-path="/cc0/synths/play_40/sc808_snare" data-src="sc808_snare/output.ogg" class="audio-item"></button>
+  </td>
+  <td>
+    <a href="sc808_snare">/cc0/synths/play_40/sc808_snare</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <button data-samples_read="25748.0" data-length="0.268208" data-scaled_by="2147483647.0" data-maximum_amplitude="0.340637" data-minimum_amplitude="-0.316986" data-midline_amplitude="0.011826" data-mean_norm="0.040781" data-mean_amplitude="-0.000464" data-rms_amplitude="0.077521" data-maximum_delta="0.07016" data-minimum_delta="0.0" data-mean_delta="0.00048" data-rms_delta="0.001201" data-rough_frequency="118.0" data-volume_adjustment="2.936" data-path="/cc0/synths/play_40/sc808_tomhi" data-src="sc808_tomhi/output.ogg" class="audio-item"></button>
+  </td>
+  <td>
+    <a href="sc808_tomhi">/cc0/synths/play_40/sc808_tomhi</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <button data-samples_read="47180.0" data-length="0.491458" data-scaled_by="2147483647.0" data-maximum_amplitude="0.352936" data-minimum_amplitude="-0.341431" data-midline_amplitude="0.005753" data-mean_norm="0.039763" data-mean_amplitude="-0.000232" data-rms_amplitude="0.076736" data-maximum_delta="0.070862" data-minimum_delta="0.0" data-mean_delta="0.000282" data-rms_delta="0.000793" data-rough_frequency="78.0" data-volume_adjustment="2.833" data-path="/cc0/synths/play_40/sc808_tomlo" data-src="sc808_tomlo/output.ogg" class="audio-item"></button>
+  </td>
+  <td>
+    <a href="sc808_tomlo">/cc0/synths/play_40/sc808_tomlo</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <button data-samples_read="37702.0" data-length="0.392729" data-scaled_by="2147483647.0" data-maximum_amplitude="0.357971" data-minimum_amplitude="-0.333588" data-midline_amplitude="0.012192" data-mean_norm="0.040171" data-mean_amplitude="-0.000398" data-rms_amplitude="0.077205" data-maximum_delta="0.076385" data-minimum_delta="0.0" data-mean_delta="0.000279" data-rms_delta="0.000854" data-rough_frequency="84.0" data-volume_adjustment="2.794" data-path="/cc0/synths/play_40/sc808_tommid" data-src="sc808_tommid/output.ogg" class="audio-item"></button>
+  </td>
+  <td>
+    <a href="sc808_tommid">/cc0/synths/play_40/sc808_tommid</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <button data-samples_read="96068.0" data-length="1.000708" data-scaled_by="2147483647.0" data-maximum_amplitude="0.397736" data-minimum_amplitude="-0.363953" data-midline_amplitude="0.016891" data-mean_norm="0.118218" data-mean_amplitude="0.000121" data-rms_amplitude="0.151197" data-maximum_delta="0.011139" data-minimum_delta="0.0" data-mean_delta="0.001006" data-rms_delta="0.001829" data-rough_frequency="92.0" data-volume_adjustment="2.514" data-path="/cc0/synths/play_40/sine" data-src="sine/output.ogg" class="audio-item"></button>
+  </td>
+  <td>
+    <a href="sine">/cc0/synths/play_40/sine</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <button data-samples_read="93904.0" data-length="0.978167" data-scaled_by="2147483647.0" data-maximum_amplitude="0.543671" data-minimum_amplitude="-0.54953" data-midline_amplitude="-0.00293" data-mean_norm="0.084661" data-mean_amplitude="0.000112" data-rms_amplitude="0.132155" data-maximum_delta="0.070862" data-minimum_delta="0.0" data-mean_delta="0.00111" data-rms_delta="0.004009" data-rough_frequency="231.0" data-volume_adjustment="1.82" data-path="/cc0/synths/play_40/square" data-src="square/output.ogg" class="audio-item"></button>
+  </td>
+  <td>
+    <a href="square">/cc0/synths/play_40/square</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <button data-samples_read="94060.0" data-length="0.979792" data-scaled_by="2147483647.0" data-maximum_amplitude="0.315643" data-minimum_amplitude="-0.303009" data-midline_amplitude="0.006317" data-mean_norm="0.051745" data-mean_amplitude="3.4e-05" data-rms_amplitude="0.074983" data-maximum_delta="0.03537" data-minimum_delta="0.0" data-mean_delta="0.000473" data-rms_delta="0.001615" data-rough_frequency="164.0" data-volume_adjustment="3.168" data-path="/cc0/synths/play_40/subpulse" data-src="subpulse/output.ogg" class="audio-item"></button>
+  </td>
+  <td>
+    <a href="subpulse">/cc0/synths/play_40/subpulse</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <button data-samples_read="93566.0" data-length="0.974646" data-scaled_by="2147483647.0" data-maximum_amplitude="0.146637" data-minimum_amplitude="-0.416138" data-midline_amplitude="-0.13475" data-mean_norm="0.043563" data-mean_amplitude="8.6e-05" data-rms_amplitude="0.063124" data-maximum_delta="0.246796" data-minimum_delta="0.0" data-mean_delta="0.002379" data-rms_delta="0.007648" data-rough_frequency="925.0" data-volume_adjustment="2.403" data-path="/cc0/synths/play_40/supersaw" data-src="supersaw/output.ogg" class="audio-item"></button>
+  </td>
+  <td>
+    <a href="supersaw">/cc0/synths/play_40/supersaw</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <button data-samples_read="97304.0" data-length="1.013583" data-scaled_by="2147483647.0" data-maximum_amplitude="0.657288" data-minimum_amplitude="-0.09079" data-midline_amplitude="0.283249" data-mean_norm="0.051328" data-mean_amplitude="-5.6e-05" data-rms_amplitude="0.082184" data-maximum_delta="0.289703" data-minimum_delta="0.0" data-mean_delta="0.002898" data-rms_delta="0.014432" data-rough_frequency="1341.0" data-volume_adjustment="1.521" data-path="/cc0/synths/play_40/tb303" data-src="tb303/output.ogg" class="audio-item"></button>
+  </td>
+  <td>
+    <a href="tb303">/cc0/synths/play_40/tb303</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <button data-samples_read="93388.0" data-length="0.972792" data-scaled_by="2147483647.0" data-maximum_amplitude="0.138031" data-minimum_amplitude="-0.22525" data-midline_amplitude="-0.04361" data-mean_norm="0.036604" data-mean_amplitude="3.0e-05" data-rms_amplitude="0.047262" data-maximum_delta="0.082947" data-minimum_delta="0.0" data-mean_delta="0.001484" data-rms_delta="0.003456" data-rough_frequency="558.0" data-volume_adjustment="4.44" data-path="/cc0/synths/play_40/tech_saws" data-src="tech_saws/output.ogg" class="audio-item"></button>
+  </td>
+  <td>
+    <a href="tech_saws">/cc0/synths/play_40/tech_saws</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <button data-samples_read="94076.0" data-length="0.979958" data-scaled_by="2147483647.0" data-maximum_amplitude="0.401764" data-minimum_amplitude="-0.366608" data-midline_amplitude="0.017578" data-mean_norm="0.138944" data-mean_amplitude="2.8e-05" data-rms_amplitude="0.171435" data-maximum_delta="0.008911" data-minimum_delta="0.0" data-mean_delta="0.000704" data-rms_delta="0.001466" data-rough_frequency="65.0" data-volume_adjustment="2.489" data-path="/cc0/synths/play_40/tri" data-src="tri/output.ogg" class="audio-item"></button>
+  </td>
+  <td>
+    <a href="tri">/cc0/synths/play_40/tri</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <button data-samples_read="95044.0" data-length="0.990042" data-scaled_by="2147483647.0" data-maximum_amplitude="0.429443" data-minimum_amplitude="-0.399292" data-midline_amplitude="0.015076" data-mean_norm="0.018701" data-mean_amplitude="-6.0e-06" data-rms_amplitude="0.039243" data-maximum_delta="0.150055" data-minimum_delta="0.0" data-mean_delta="0.000942" data-rms_delta="0.004362" data-rough_frequency="849.0" data-volume_adjustment="2.329" data-path="/cc0/synths/play_40/winwood_lead" data-src="winwood_lead/output.ogg" class="audio-item"></button>
+  </td>
+  <td>
+    <a href="winwood_lead">/cc0/synths/play_40/winwood_lead</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <button data-samples_read="95558.0" data-length="0.995396" data-scaled_by="2147483647.0" data-maximum_amplitude="0.242889" data-minimum_amplitude="-0.603271" data-midline_amplitude="-0.180191" data-mean_norm="0.051925" data-mean_amplitude="4.0e-05" data-rms_amplitude="0.084761" data-maximum_delta="0.153381" data-minimum_delta="0.0" data-mean_delta="0.00549" data-rms_delta="0.013829" data-rough_frequency="1246.0" data-volume_adjustment="1.658" data-path="/cc0/synths/play_40/zawa" data-src="zawa/output.ogg" class="audio-item"></button>
+  </td>
+  <td>
+    <a href="zawa">/cc0/synths/play_40/zawa</a>
+  </td>
+</tr>
+
+  </tbody>
+</table>
+
+        </article>
+      </main>
+      <footer>
+  <p>Copyright © 2026 Mica Sound / FUJISE Takumi (tkmfujise)</p>
+</footer>
+
+    </div>
+	</body>
+</html>

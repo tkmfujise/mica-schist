@@ -1,0 +1,17 @@
+/cc0/rhythms/straight_8th/100bpm/100bpm.rb
+/cc0/rhythms/straight_8th/110bpm/110bpm.rb
+/cc0/rhythms/straight_8th/120bpm/120bpm.rb
+/cc0/rhythms/straight_8th/130bpm/130bpm.rb
+/cc0/rhythms/straight_8th/140bpm/140bpm.rb
+/cc0/rhythms/straight_8th/150bpm/150bpm.rb
+/cc0/rhythms/straight_8th/160bpm/160bpm.rb
+/cc0/rhythms/straight_8th/170bpm/170bpm.rb
+/cc0/rhythms/straight_8th/180bpm/180bpm.rb
+/cc0/rhythms/straight_8th/190bpm/190bpm.rb
+/cc0/rhythms/straight_8th/200bpm/200bpm.rb
+/cc0/rhythms/straight_8th/210bpm/210bpm.rb
+/cc0/rhythms/straight_8th/220bpm/220bpm.rb
+/cc0/rhythms/straight_8th/60bpm/60bpm.rb
+/cc0/rhythms/straight_8th/70bpm/70bpm.rb
+/cc0/rhythms/straight_8th/80bpm/80bpm.rb
+/cc0/rhythms/straight_8th/90bpm/90bpm.rb

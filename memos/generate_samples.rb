@@ -1,4 +1,4 @@
-mica_dir = '/path/to/mica-sound/content/cc0/sonic_pi/samples'
+mica_dir = '/path/to/mica-sound/content/cc0/samples'
 
 
 path = nil

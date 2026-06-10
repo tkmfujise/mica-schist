@@ -1,5 +1,5 @@
 
-mica_dir = '/path/to/mica-sound/content/cc0/sonic_pi/rhythms'
+mica_dir = '/path/to/mica-sound/content/cc0/rhythms'
 
 
 def generate(bpm)

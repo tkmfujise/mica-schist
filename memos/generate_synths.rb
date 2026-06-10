@@ -1,4 +1,4 @@
-mica_dir = '/path/to/mica-sound/content/cc0/sonic_pi/synths'
+mica_dir = '/path/to/mica-sound/content/cc0/synths'
 
 
 ignoring = %i[sound_in sound_in_stereo]

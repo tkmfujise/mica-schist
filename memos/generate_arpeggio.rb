@@ -1,4 +1,4 @@
-mica_dir = '/path/to/mica-sound/content/cc0/sonic_pi/arpeggio'
+mica_dir = '/path/to/mica-sound/content/cc0/arpeggio'
 
 chords = %i[
   M

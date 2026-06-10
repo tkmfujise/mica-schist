@@ -1,8 +1,8 @@
 # ref: https://github.com/sonic-pi-net/sonic-pi/blob/stable/app/server/ruby/lib/sonicpi/scale.rb
 
 
-mica_dir = '/path/to/mica-sound/content/cc0/sonic_pi/scales'
-mica_dir = '/Users/fujisetakumi/_private/github_projects/mica-sound/content/cc0/sonic_pi/scales'
+mica_dir = '/path/to/mica-sound/content/cc0/scales'
+mica_dir = '/Users/fujisetakumi/_private/github_projects/mica-sound/content/cc0/scales'
 
 
 path = nil

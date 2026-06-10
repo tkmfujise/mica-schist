@@ -1,0 +1,219 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Mica Sound: Sonic Pi Examples</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+		<meta name="author" content="tkmfujise">
+		<meta name="keywords" content="Sonic Pi, Ruby, sound, music, effect, cc0">
+		<meta name="description" content="Sonic Pi Examples">
+    <meta name="google-site-verification" content="1oOV_cc_qhnW_wanEljxYvquGQU5fLwqoNULPyf95YU">
+		<link rel="stylesheet" href="../../../assets/css/almond.min.css">
+		<link rel="stylesheet" href="../../../assets/css/style.css">
+		<link rel="stylesheet" href="../../../assets/css/syntax.gessetti.css">
+    <script src="../../../assets/js/vendor/fuse.js@7.1.0"></script>
+    <script src="../../../assets/js/filter.js"></script>
+    <script src="../../../assets/js/player.js"></script>
+    <script src="../../../assets/js/clipboard.js"></script>
+	</head>
+  <body>
+    <nav class="main-menu closed">
+  <button onclick="document.querySelector('.main-menu').classList.toggle('closed');">
+    <span>Expand/Collapse menu</span>
+  </button>
+  <h2>Gems among stones.</h2>
+  <ul>
+    <li>
+      <a href="../../../">💎 Home 🪨</a>
+    </li>
+
+    <li>
+      <div>Samples</div>
+      <ul>
+        <li><a href="../../samples">All</a></li>
+        <li><a href="../../samples/original">Originals</a></li>
+        <li><a href="../../samples/rate_0.8">rate 0.8</a></li>
+        <li><a href="../../samples/rate_0.6">rate 0.6</a></li>
+        <li><a href="../../samples/rate_0.4">rate 0.4</a></li>
+        <li><a href="../../samples/rate_0.2">rate 0.2</a></li>
+      </ul>
+    </li>
+
+    <li>
+      <div>Synths</div>
+      <ul>
+        <li><a href="../../synths">All</a></li>
+        <li><a href="../../synths/play_30">play 30</a></li>
+        <li><a href="../../synths/play_40">play 40</a></li>
+        <li><a href="../../synths/play_50">play 50</a></li>
+        <li><a href="../../synths/play_60">play 60</a></li>
+        <li><a href="../../synths/play_70">play 70</a></li>
+        <li><a href="../../synths/play_80">play 80</a></li>
+        <li><a href="../../synths/play_90">play 90</a></li>
+      </ul>
+    </li>
+
+    <li>
+      <div>Melody &amp; Harmony</div>
+      <ul>
+        <li><a href="../../arpeggio">Arpeggio</a></li>
+        <li><a href="../../scales">Scales</a></li>
+      </ul>
+    </li>
+
+    <li>
+      <div>Rhythm</div>
+      <ul>
+        <li><a href="..">All</a></li>
+        <li><a href="../straight_8th">Straigth 8th</a></li>
+        <li><a href="../jazz">Jazz</a></li>
+        <li><a href="../blues">Blues</a></li>
+        <li><a href="../funk">Funk</a></li>
+        <li><a href="../samba">Samba</a></li>
+        <li><a href=".">Bossa Nova</a></li>
+        <li><a href="../reggae">Reggae</a></li>
+        <li><a href="../rumba">Rumba</a></li>
+      </ul>
+    </li>
+
+    <li>
+      <div>Mica Sound</div>
+      <ul>
+        <li><a href="../../../cc-by/tkmfujise">All</a></li>
+        <li><a href="../../../cc-by/tkmfujise/bgm">Bgm</a></li>
+        <li><a href="../../../cc-by/tkmfujise/environment">Environment</a></li>
+        <li><a href="../../../cc-by/tkmfujise/nature">Nature</a></li>
+        <li><a href="../../../cc-by/tkmfujise/sfx">Sfx</a></li>
+        <li><a href="../../../cc-by/tkmfujise/voice">Voice</a></li>
+      </ul>
+    </li>
+
+    <li>
+      <div>Others</div>
+      <ul>
+        <li><a href="../../../cc-by-sa/sonic_pi">Official Examples</a></li>
+      </ul>
+    </li>
+
+    <li>
+      <div>Links</div>
+      <ul>
+        <li><a href="../../../about">About</a></li>
+        <li><a rel="external" target="_blank" href="https://github.com/tkmfujise/mica-sound/blob/main/LICENSE.md">License</a></li>
+        <li><a rel="external" target="_blank" href="https://github.com/tkmfujise/mica-sound">GitHub</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+    <div>
+      <header>
+  <div>
+    <a href="../../../">
+      <h1>Mica Sound</h1>
+    </a>
+    <p>Sonic Pi Examples</p>
+  </div>
+</header>
+
+
+      <main>
+        <article>
+          <span class="search-result-count">-</span> sounds.
+
+<form>
+  <p class="search">
+    <button id="shuffle-btn" type="button">Shuffle</button>
+    <input type="search">
+  </p>
+</form>
+
+<div class="sticky">
+  <p>
+    <audio id="main-audio" preload="" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </p>
+
+  <details id="play-history">
+    <summary>Now: <span class="current">--</span></summary>
+    <table>
+      <tbody class="container">
+      </tbody>
+    </table>
+  </details>
+</div>
+
+
+      		<table>
+  <tbody>
+    <tr class="audio-list">
+  <td>
+    <button data-samples_read="946566.0" data-length="9.860062" data-scaled_by="2147483647.0" data-maximum_amplitude="0.693726" data-minimum_amplitude="-0.887543" data-midline_amplitude="-0.096909" data-mean_norm="0.043088" data-mean_amplitude="1.1e-05" data-rms_amplitude="0.086025" data-maximum_delta="0.265289" data-minimum_delta="0.0" data-mean_delta="0.002937" data-rms_delta="0.009437" data-rough_frequency="838.0" data-volume_adjustment="1.127" data-path="/cc0/rhythms/bossa_nova/100bpm" data-src="100bpm/output.ogg" class="audio-item"></button>
+  </td>
+  <td>
+    <a href="100bpm">/cc0/rhythms/bossa_nova/100bpm</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <button data-samples_read="904070.0" data-length="9.417396" data-scaled_by="2147483647.0" data-maximum_amplitude="0.685486" data-minimum_amplitude="-0.868652" data-midline_amplitude="-0.091583" data-mean_norm="0.044908" data-mean_amplitude="-1.4e-05" data-rms_amplitude="0.088014" data-maximum_delta="0.270111" data-minimum_delta="0.0" data-mean_delta="0.003089" data-rms_delta="0.009659" data-rough_frequency="838.0" data-volume_adjustment="1.151" data-path="/cc0/rhythms/bossa_nova/105bpm" data-src="105bpm/output.ogg" class="audio-item"></button>
+  </td>
+  <td>
+    <a href="105bpm">/cc0/rhythms/bossa_nova/105bpm</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <button data-samples_read="865414.0" data-length="9.014729" data-scaled_by="2147483647.0" data-maximum_amplitude="0.692352" data-minimum_amplitude="-0.862183" data-midline_amplitude="-0.084915" data-mean_norm="0.046745" data-mean_amplitude="2.0e-05" data-rms_amplitude="0.090253" data-maximum_delta="0.271088" data-minimum_delta="0.0" data-mean_delta="0.003232" data-rms_delta="0.009887" data-rough_frequency="836.0" data-volume_adjustment="1.16" data-path="/cc0/rhythms/bossa_nova/110bpm" data-src="110bpm/output.ogg" class="audio-item"></button>
+  </td>
+  <td>
+    <a href="110bpm">/cc0/rhythms/bossa_nova/110bpm</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <button data-samples_read="830086.0" data-length="8.646729" data-scaled_by="2147483647.0" data-maximum_amplitude="0.694733" data-minimum_amplitude="-0.859619" data-midline_amplitude="-0.082443" data-mean_norm="0.04865" data-mean_amplitude="-7.0e-05" data-rms_amplitude="0.092567" data-maximum_delta="0.270355" data-minimum_delta="0.0" data-mean_delta="0.003337" data-rms_delta="0.010074" data-rough_frequency="831.0" data-volume_adjustment="1.163" data-path="/cc0/rhythms/bossa_nova/115bpm" data-src="115bpm/output.ogg" class="audio-item"></button>
+  </td>
+  <td>
+    <a href="115bpm">/cc0/rhythms/bossa_nova/115bpm</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <button data-samples_read="797830.0" data-length="8.310729" data-scaled_by="2147483647.0" data-maximum_amplitude="0.677521" data-minimum_amplitude="-0.868683" data-midline_amplitude="-0.095581" data-mean_norm="0.050116" data-mean_amplitude="-0.00015" data-rms_amplitude="0.09398" data-maximum_delta="0.267395" data-minimum_delta="0.0" data-mean_delta="0.003453" data-rms_delta="0.010296" data-rough_frequency="836.0" data-volume_adjustment="1.151" data-path="/cc0/rhythms/bossa_nova/120bpm" data-src="120bpm/output.ogg" class="audio-item"></button>
+  </td>
+  <td>
+    <a href="120bpm">/cc0/rhythms/bossa_nova/120bpm</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <button data-samples_read="768006.0" data-length="8.000063" data-scaled_by="2147483647.0" data-maximum_amplitude="0.685486" data-minimum_amplitude="-0.842224" data-midline_amplitude="-0.078369" data-mean_norm="0.051967" data-mean_amplitude="-6.9e-05" data-rms_amplitude="0.094874" data-maximum_delta="0.270691" data-minimum_delta="0.0" data-mean_delta="0.003604" data-rms_delta="0.010465" data-rough_frequency="842.0" data-volume_adjustment="1.187" data-path="/cc0/rhythms/bossa_nova/125bpm" data-src="125bpm/output.ogg" class="audio-item"></button>
+  </td>
+  <td>
+    <a href="125bpm">/cc0/rhythms/bossa_nova/125bpm</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <button data-samples_read="740614.0" data-length="7.714729" data-scaled_by="2147483647.0" data-maximum_amplitude="0.785339" data-minimum_amplitude="-0.842224" data-midline_amplitude="-0.028442" data-mean_norm="0.052258" data-mean_amplitude="-0.000108" data-rms_amplitude="0.095895" data-maximum_delta="0.270721" data-minimum_delta="0.0" data-mean_delta="0.003738" data-rms_delta="0.010666" data-rough_frequency="849.0" data-volume_adjustment="1.187" data-path="/cc0/rhythms/bossa_nova/130bpm" data-src="130bpm/output.ogg" class="audio-item"></button>
+  </td>
+  <td>
+    <a href="130bpm">/cc0/rhythms/bossa_nova/130bpm</a>
+  </td>
+</tr>
+
+  </tbody>
+</table>
+
+        </article>
+      </main>
+      <footer>
+  <p>Copyright © 2026 Mica Sound / FUJISE Takumi (tkmfujise)</p>
+</footer>
+
+    </div>
+	</body>
+</html>
