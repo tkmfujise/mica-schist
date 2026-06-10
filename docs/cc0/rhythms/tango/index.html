@@ -1,0 +1,212 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Mica Sound: Sonic Pi Examples</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+		<meta name="author" content="tkmfujise">
+		<meta name="keywords" content="Sonic Pi, Ruby, sound, music, effect, cc0">
+		<meta name="description" content="Sonic Pi Examples">
+    <meta name="google-site-verification" content="1oOV_cc_qhnW_wanEljxYvquGQU5fLwqoNULPyf95YU">
+		<link rel="stylesheet" href="../../../assets/css/almond.min.css">
+		<link rel="stylesheet" href="../../../assets/css/style.css">
+		<link rel="stylesheet" href="../../../assets/css/syntax.gessetti.css">
+    <script src="../../../assets/js/vendor/fuse.js@7.1.0"></script>
+    <script src="../../../assets/js/filter.js"></script>
+    <script src="../../../assets/js/player.js"></script>
+    <script src="../../../assets/js/clipboard.js"></script>
+	</head>
+  <body>
+    <nav class="main-menu closed">
+  <button onclick="document.querySelector('.main-menu').classList.toggle('closed');">
+    <span>Expand/Collapse menu</span>
+  </button>
+  <h2>Gems among stones.</h2>
+  <ul>
+    <li>
+      <a href="../../../">💎 Home 🪨</a>
+    </li>
+
+    <li>
+      <div>Samples</div>
+      <ul>
+        <li><a href="../../samples">All</a></li>
+        <li><a href="../../samples/original">Originals</a></li>
+        <li><a href="../../samples/rate_0.8">rate 0.8</a></li>
+        <li><a href="../../samples/rate_0.6">rate 0.6</a></li>
+        <li><a href="../../samples/rate_0.4">rate 0.4</a></li>
+        <li><a href="../../samples/rate_0.2">rate 0.2</a></li>
+      </ul>
+    </li>
+
+    <li>
+      <div>Synths</div>
+      <ul>
+        <li><a href="../../synths">All</a></li>
+        <li><a href="../../synths/play_30">play 30</a></li>
+        <li><a href="../../synths/play_40">play 40</a></li>
+        <li><a href="../../synths/play_50">play 50</a></li>
+        <li><a href="../../synths/play_60">play 60</a></li>
+        <li><a href="../../synths/play_70">play 70</a></li>
+        <li><a href="../../synths/play_80">play 80</a></li>
+        <li><a href="../../synths/play_90">play 90</a></li>
+      </ul>
+    </li>
+
+    <li>
+      <div>Melody &amp; Harmony</div>
+      <ul>
+        <li><a href="../../arpeggio">Arpeggio</a></li>
+        <li><a href="../../scales">Scales</a></li>
+      </ul>
+    </li>
+
+    <li>
+      <div>Rhythm</div>
+      <ul>
+        <li><a href="..">All</a></li>
+        <li><a href="../straight_8th">Straigth 8th</a></li>
+        <li><a href="../jazz">Jazz</a></li>
+        <li><a href="../blues">Blues</a></li>
+        <li><a href="../funk">Funk</a></li>
+        <li><a href="../samba">Samba</a></li>
+        <li><a href="../bossa_nova">Bossa Nova</a></li>
+        <li><a href="../reggae">Reggae</a></li>
+        <li><a href="../rumba">Rumba</a></li>
+        <li><a href=".">Tango</a></li>
+      </ul>
+    </li>
+
+    <li>
+      <div>Mica Sound</div>
+      <ul>
+        <li><a href="../../../cc-by/tkmfujise">All</a></li>
+        <li><a href="../../../cc-by/tkmfujise/bgm">Bgm</a></li>
+        <li><a href="../../../cc-by/tkmfujise/environment">Environment</a></li>
+        <li><a href="../../../cc-by/tkmfujise/nature">Nature</a></li>
+        <li><a href="../../../cc-by/tkmfujise/sfx">Sfx</a></li>
+        <li><a href="../../../cc-by/tkmfujise/voice">Voice</a></li>
+      </ul>
+    </li>
+
+    <li>
+      <div>Others</div>
+      <ul>
+        <li><a href="../../../cc-by-sa/sonic_pi">Official Examples</a></li>
+      </ul>
+    </li>
+
+    <li>
+      <div>Links</div>
+      <ul>
+        <li><a href="../../../about">About</a></li>
+        <li><a rel="external" target="_blank" href="https://github.com/tkmfujise/mica-sound/blob/main/LICENSE.md">License</a></li>
+        <li><a rel="external" target="_blank" href="https://github.com/tkmfujise/mica-sound">GitHub</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+    <div>
+      <header>
+  <div>
+    <a href="../../../">
+      <h1>Mica Sound</h1>
+    </a>
+    <p>Sonic Pi Examples</p>
+  </div>
+</header>
+
+
+      <main>
+        <article>
+          <span class="search-result-count">-</span> sounds.
+
+<form>
+  <p class="search">
+    <button id="shuffle-btn" type="button">Shuffle</button>
+    <input type="search">
+  </p>
+</form>
+
+<div class="sticky">
+  <p>
+    <audio id="main-audio" preload="" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </p>
+
+  <details id="play-history">
+    <summary>Now: <span class="current">--</span></summary>
+    <table>
+      <tbody class="container">
+      </tbody>
+    </table>
+  </details>
+</div>
+
+
+      		<table>
+  <tbody>
+    <tr class="audio-list">
+  <td>
+    <button data-samples_read="942182.0" data-length="9.814396" data-scaled_by="2147483647.0" data-maximum_amplitude="0.354462" data-minimum_amplitude="-0.345001" data-midline_amplitude="0.00473" data-mean_norm="0.022382" data-mean_amplitude="2.9e-05" data-rms_amplitude="0.043083" data-maximum_delta="0.054993" data-minimum_delta="0.0" data-mean_delta="0.001211" data-rms_delta="0.003791" data-rough_frequency="672.0" data-volume_adjustment="2.821" data-path="/cc0/rhythms/tango/100bpm" data-src="100bpm/output.ogg" class="audio-item"></button>
+  </td>
+  <td>
+    <a href="100bpm">/cc0/rhythms/tango/100bpm</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <button data-samples_read="861030.0" data-length="8.969062" data-scaled_by="2147483647.0" data-maximum_amplitude="0.355164" data-minimum_amplitude="-0.360382" data-midline_amplitude="-0.002609" data-mean_norm="0.024449" data-mean_amplitude="2.9e-05" data-rms_amplitude="0.045514" data-maximum_delta="0.059326" data-minimum_delta="0.0" data-mean_delta="0.001319" data-rms_delta="0.003991" data-rough_frequency="669.0" data-volume_adjustment="2.775" data-path="/cc0/rhythms/tango/110bpm" data-src="110bpm/output.ogg" class="audio-item"></button>
+  </td>
+  <td>
+    <a href="110bpm">/cc0/rhythms/tango/110bpm</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <button data-samples_read="793446.0" data-length="8.265063" data-scaled_by="2147483647.0" data-maximum_amplitude="0.36145" data-minimum_amplitude="-0.328339" data-midline_amplitude="0.016556" data-mean_norm="0.026144" data-mean_amplitude="7.4e-05" data-rms_amplitude="0.047174" data-maximum_delta="0.059326" data-minimum_delta="0.0" data-mean_delta="0.001402" data-rms_delta="0.004149" data-rough_frequency="671.0" data-volume_adjustment="2.767" data-path="/cc0/rhythms/tango/120bpm" data-src="120bpm/output.ogg" class="audio-item"></button>
+  </td>
+  <td>
+    <a href="120bpm">/cc0/rhythms/tango/120bpm</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <button data-samples_read="736102.0" data-length="7.667729" data-scaled_by="2147483647.0" data-maximum_amplitude="0.351318" data-minimum_amplitude="-0.330383" data-midline_amplitude="0.010468" data-mean_norm="0.027749" data-mean_amplitude="5.8e-05" data-rms_amplitude="0.048631" data-maximum_delta="0.059357" data-minimum_delta="0.0" data-mean_delta="0.001506" data-rms_delta="0.004301" data-rough_frequency="675.0" data-volume_adjustment="2.846" data-path="/cc0/rhythms/tango/130bpm" data-src="130bpm/output.ogg" class="audio-item"></button>
+  </td>
+  <td>
+    <a href="130bpm">/cc0/rhythms/tango/130bpm</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <button data-samples_read="1165414.0" data-length="12.139729" data-scaled_by="2147483647.0" data-maximum_amplitude="0.358154" data-minimum_amplitude="-0.331665" data-midline_amplitude="0.013245" data-mean_norm="0.018463" data-mean_amplitude="3.4e-05" data-rms_amplitude="0.038932" data-maximum_delta="0.059326" data-minimum_delta="0.0" data-mean_delta="0.000989" data-rms_delta="0.003435" data-rough_frequency="673.0" data-volume_adjustment="2.792" data-path="/cc0/rhythms/tango/80bpm" data-src="80bpm/output.ogg" class="audio-item"></button>
+  </td>
+  <td>
+    <a href="80bpm">/cc0/rhythms/tango/80bpm</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <button data-samples_read="1041382.0" data-length="10.847729" data-scaled_by="2147483647.0" data-maximum_amplitude="0.357208" data-minimum_amplitude="-0.328247" data-midline_amplitude="0.014481" data-mean_norm="0.020501" data-mean_amplitude="-0.000112" data-rms_amplitude="0.041185" data-maximum_delta="0.053925" data-minimum_delta="0.0" data-mean_delta="0.001089" data-rms_delta="0.003578" data-rough_frequency="663.0" data-volume_adjustment="2.799" data-path="/cc0/rhythms/tango/90bpm" data-src="90bpm/output.ogg" class="audio-item"></button>
+  </td>
+  <td>
+    <a href="90bpm">/cc0/rhythms/tango/90bpm</a>
+  </td>
+</tr>
+
+  </tbody>
+</table>
+
+        </article>
+      </main>
+      <footer>
+  <p>Copyright © 2026 Mica Sound / FUJISE Takumi (tkmfujise)</p>
+</footer>
+
+    </div>
+	</body>
+</html>
