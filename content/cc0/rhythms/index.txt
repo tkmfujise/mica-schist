@@ -77,3 +77,12 @@
 /cc0/rhythms/tango/130bpm/130bpm.rb
 /cc0/rhythms/tango/80bpm/80bpm.rb
 /cc0/rhythms/tango/90bpm/90bpm.rb
+/cc0/rhythms/waltz/100bpm/100bpm.rb
+/cc0/rhythms/waltz/110bpm/110bpm.rb
+/cc0/rhythms/waltz/120bpm/120bpm.rb
+/cc0/rhythms/waltz/130bpm/130bpm.rb
+/cc0/rhythms/waltz/140bpm/140bpm.rb
+/cc0/rhythms/waltz/150bpm/150bpm.rb
+/cc0/rhythms/waltz/160bpm/160bpm.rb
+/cc0/rhythms/waltz/170bpm/170bpm.rb
+/cc0/rhythms/waltz/180bpm/180bpm.rb
