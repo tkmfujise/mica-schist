@@ -23,6 +23,11 @@
 /cc0/rhythms/funk/70bpm/70bpm.rb
 /cc0/rhythms/funk/80bpm/80bpm.rb
 /cc0/rhythms/funk/90bpm/90bpm.rb
+/cc0/rhythms/house/110bpm/110bpm.rb
+/cc0/rhythms/house/115bpm/115bpm.rb
+/cc0/rhythms/house/120bpm/120bpm.rb
+/cc0/rhythms/house/125bpm/125bpm.rb
+/cc0/rhythms/house/130bpm/130bpm.rb
 /cc0/rhythms/jazz/120bpm/120bpm.rb
 /cc0/rhythms/jazz/130bpm/130bpm.rb
 /cc0/rhythms/jazz/140bpm/140bpm.rb
