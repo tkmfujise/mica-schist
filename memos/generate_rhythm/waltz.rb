@@ -33,7 +33,7 @@ end
 path = nil
 code = nil
 
-(100..180).step(10).each do |bpm|
+(100..240).step(10).each do |bpm|
   dir = "#{mica_dir}/waltz/#{bpm}bpm"
   
   path = "#{dir}/#{bpm}bpm.rb"

@@ -86,3 +86,9 @@
 /cc0/rhythms/waltz/160bpm/160bpm.rb
 /cc0/rhythms/waltz/170bpm/170bpm.rb
 /cc0/rhythms/waltz/180bpm/180bpm.rb
+/cc0/rhythms/waltz/190bpm/190bpm.rb
+/cc0/rhythms/waltz/200bpm/200bpm.rb
+/cc0/rhythms/waltz/210bpm/210bpm.rb
+/cc0/rhythms/waltz/220bpm/220bpm.rb
+/cc0/rhythms/waltz/230bpm/230bpm.rb
+/cc0/rhythms/waltz/240bpm/240bpm.rb
