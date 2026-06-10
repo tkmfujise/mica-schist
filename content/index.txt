@@ -91,10 +91,6 @@
 /cc0/rhythms/straight_8th/200bpm/200bpm.rb
 /cc0/rhythms/straight_8th/210bpm/210bpm.rb
 /cc0/rhythms/straight_8th/220bpm/220bpm.rb
-/cc0/rhythms/straight_8th/60bpm/60bpm.rb
-/cc0/rhythms/straight_8th/70bpm/70bpm.rb
-/cc0/rhythms/straight_8th/80bpm/80bpm.rb
-/cc0/rhythms/straight_8th/90bpm/90bpm.rb
 /cc0/samples/original/ambi_choir/ambi_choir.rb
 /cc0/samples/original/ambi_dark_woosh/ambi_dark_woosh.rb
 /cc0/samples/original/ambi_drone/ambi_drone.rb
