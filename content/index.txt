@@ -58,8 +58,6 @@
 /cc0/rhythms/reggae/110bpm/110bpm.rb
 /cc0/rhythms/reggae/120bpm/120bpm.rb
 /cc0/rhythms/reggae/130bpm/130bpm.rb
-/cc0/rhythms/reggae/140bpm/140bpm.rb
-/cc0/rhythms/reggae/150bpm/150bpm.rb
 /cc0/rhythms/reggae/80bpm/80bpm.rb
 /cc0/rhythms/reggae/90bpm/90bpm.rb
 /cc0/rhythms/rumba/100bpm/100bpm.rb

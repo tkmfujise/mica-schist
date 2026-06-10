@@ -40,5 +40,5 @@ end
 Eval a code.
 
 ```ruby
-(s = Mica::Sound.new 'cc0/sonic_pi/samples/elec_flip/elec_flip.rb').play
+(s = Mica::Sound.new 'cc0/samples/elec_flip/elec_flip.rb').play
 ```

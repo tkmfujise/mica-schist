@@ -140,22 +140,23 @@ Your browser does not support the audio tag.
 <div class="title">/cc0/rhythms/reggae/90bpm</div>
 <div class="content">
 <pre class="rouge highlight"><code data-lang="ruby"><span class="c1"># Reggae (90 bpm)</span>
-
-<span class="n">hat</span>   <span class="o">=</span> <span class="p">(</span><span class="n">ring</span> <span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">hat</span>   <span class="o">=</span> <span class="p">(</span><span class="n">ring</span> <span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">snare</span> <span class="o">=</span> <span class="p">(</span><span class="n">ring</span> <span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
 <span class="n">kick</span>  <span class="o">=</span> <span class="p">(</span><span class="n">ring</span> <span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">h_amp</span> <span class="o">=</span> <span class="p">(</span><span class="n">ring</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">)</span>
 
 <span class="n">use_bpm</span> <span class="mi">90</span>
 
 <span class="n">define</span> <span class="ss">:reggae</span> <span class="k">do</span>
   <span class="n">tick</span>
-  <span class="n">sample</span> <span class="ss">:drum_cymbal_closed</span><span class="p">,</span> <span class="ss">amp: </span><span class="mf">0.6</span> <span class="k">if</span> <span class="n">hat</span><span class="p">.</span><span class="nf">look</span> <span class="o">==</span> <span class="mi">1</span>
+  <span class="n">sample</span> <span class="ss">:drum_cymbal_closed</span><span class="p">,</span> <span class="ss">amp: </span><span class="n">h_amp</span><span class="p">.</span><span class="nf">look</span> <span class="k">if</span> <span class="n">hat</span><span class="p">.</span><span class="nf">look</span> <span class="o">==</span> <span class="mi">1</span>
   <span class="n">sample</span> <span class="ss">:drum_snare_soft</span><span class="p">,</span>    <span class="ss">amp: </span><span class="mf">1.2</span> <span class="k">if</span> <span class="n">snare</span><span class="p">.</span><span class="nf">look</span> <span class="o">==</span> <span class="mi">1</span>
   <span class="n">sample</span> <span class="ss">:drum_bass_soft</span><span class="p">,</span>     <span class="ss">amp: </span><span class="mf">1.8</span> <span class="k">if</span> <span class="n">kick</span><span class="p">.</span><span class="nf">look</span> <span class="o">==</span> <span class="mi">1</span>
 
   <span class="nb">sleep</span> <span class="mf">1.0</span><span class="o">/</span><span class="mi">3</span>
 <span class="k">end</span>
 
+<span class="n">sample</span> <span class="ss">:drum_cymbal_closed</span>
 <span class="p">(</span><span class="n">hat</span><span class="p">.</span><span class="nf">length</span> <span class="o">*</span> <span class="mi">4</span><span class="p">).</span><span class="nf">times</span> <span class="k">do</span>
   <span class="n">reggae</span>
 <span class="k">end</span></code></pre>
@@ -168,39 +169,39 @@ Your browser does not support the audio tag.
 </div>
 <div class="stat">
 <label>
-  <progress style="accent-color: green" max="1" value="0.622314"></progress>
+  <progress style="accent-color: green" max="1" value="0.52359"></progress>
   : maximum_amplitude
 </label><br>
 <label>
-  <progress style="accent-color: blue" max="1" value="0.038434"></progress>
+  <progress style="accent-color: blue" max="1" value="0.038323"></progress>
   : rms_amplitude
 </label><br>
 <label>
-  <progress style="accent-color: red" max="20" value="16.19175729822553"></progress>
+  <progress style="accent-color: green" max="20" value="13.662552514155989"></progress>
   : crest_factor
 </label><br>
 <label>
-  <progress style="accent-color: green" max="1" value="0.276154"></progress>
+  <progress style="accent-color: green" max="1" value="0.322998"></progress>
   : maximum_delta
 </label><br>
 <label>
-  <progress style="accent-color: blue" max="1" value="0.009592"></progress>
+  <progress style="accent-color: blue" max="1" value="0.009567"></progress>
   : rms_delta
 </label><br>
 <label>
-  <progress style="accent-color: red" max="40" value="28.79003336113428"></progress>
+  <progress style="accent-color: red" max="40" value="33.76168077767325"></progress>
   : delta_crest_factor
 </label><br>
 <label>
-  <progress style="accent-color: green" max="1" value="0.24957069261591297"></progress>
+  <progress style="accent-color: green" max="1" value="0.24964120762988284"></progress>
   : jiggly
 </label><br>
 <label>
-  <progress style="accent-color: green" max="0.8" value="0.2958715596330275"></progress>
+  <progress style="accent-color: green" max="0.8" value="0.259224417267691"></progress>
   : periodicity
 </label><br>
 <label>
-  <progress style="accent-color: blue" max="18000.0" value="1906.0"></progress>
+  <progress style="accent-color: blue" max="18000.0" value="1907.0"></progress>
   : rough_frequency
 </label><br>
 
@@ -208,21 +209,21 @@ Your browser does not support the audio tag.
 <div class="listingblock">
 <div class="content">
 <pre class="rouge highlight"><code data-lang="json"><span class="p">{</span><span class="w">
-  </span><span class="nl">"samples_read"</span><span class="p">:</span><span class="w"> </span><span class="mf">1019430.0</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"length"</span><span class="p">:</span><span class="w"> </span><span class="mf">10.619063</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"samples_read"</span><span class="p">:</span><span class="w"> </span><span class="mf">1020420.0</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"length"</span><span class="p">:</span><span class="w"> </span><span class="mf">10.629375</span><span class="p">,</span><span class="w">
   </span><span class="nl">"scaled_by"</span><span class="p">:</span><span class="w"> </span><span class="mf">2147483647.0</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"maximum_amplitude"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.622314</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"minimum_amplitude"</span><span class="p">:</span><span class="w"> </span><span class="mf">-0.739166</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"midline_amplitude"</span><span class="p">:</span><span class="w"> </span><span class="mf">-0.058426</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"mean_norm"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.012383</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"mean_amplitude"</span><span class="p">:</span><span class="w"> </span><span class="mf">-0.000086</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"rms_amplitude"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.038434</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"maximum_delta"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.276154</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"maximum_amplitude"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.52359</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"minimum_amplitude"</span><span class="p">:</span><span class="w"> </span><span class="mf">-0.710449</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"midline_amplitude"</span><span class="p">:</span><span class="w"> </span><span class="mf">-0.09343</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"mean_norm"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.011969</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"mean_amplitude"</span><span class="p">:</span><span class="w"> </span><span class="mf">-0.000085</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"rms_amplitude"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.038323</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"maximum_delta"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.322998</span><span class="p">,</span><span class="w">
   </span><span class="nl">"minimum_delta"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"mean_delta"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.002838</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"rms_delta"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.009592</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"rough_frequency"</span><span class="p">:</span><span class="w"> </span><span class="mf">1906.0</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"volume_adjustment"</span><span class="p">:</span><span class="w"> </span><span class="mf">1.353</span><span class="w">
+  </span><span class="nl">"mean_delta"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.00248</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"rms_delta"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.009567</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"rough_frequency"</span><span class="p">:</span><span class="w"> </span><span class="mf">1907.0</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"volume_adjustment"</span><span class="p">:</span><span class="w"> </span><span class="mf">1.408</span><span class="w">
 </span><span class="p">}</span></code></pre>
 </div>
 </div>
