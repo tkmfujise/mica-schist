@@ -1,0 +1,5 @@
+/cc0/rhythms/disco/110bpm/110bpm.rb
+/cc0/rhythms/disco/115bpm/115bpm.rb
+/cc0/rhythms/disco/120bpm/120bpm.rb
+/cc0/rhythms/disco/125bpm/125bpm.rb
+/cc0/rhythms/disco/130bpm/130bpm.rb
