@@ -6,7 +6,7 @@ def generate(bpm)
   ring_length = 4 * 2 * 4
   <<~RUBY
     # Trap (#{bpm} bpm)
-    # max-recording-time: #{(60.0/bpm * ring_length * 0.25 * 4).ceil + 1}
+    # max-recording-time: #{(60.0/bpm * ring_length * 0.25 * 2).ceil + 1}
     hat1  = (ring 1,0,1,0)
     hat2  = (ring 1,1,2,0)
     hat3  = (ring 1,0,1,2)
@@ -37,7 +37,7 @@ def generate(bpm)
     end
 
 
-    (hat.length * 4).times do
+    (hat.length * 2).times do
       trap
     end
   RUBY

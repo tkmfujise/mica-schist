@@ -1,5 +1,5 @@
 # Trap (145 bpm)
-# max-recording-time: 15
+# max-recording-time: 8
 hat1  = (ring 1,0,1,0)
 hat2  = (ring 1,1,2,0)
 hat3  = (ring 1,0,1,2)
@@ -30,6 +30,6 @@ define :trap do
 end
 
 
-(hat.length * 4).times do
+(hat.length * 2).times do
   trap
 end
