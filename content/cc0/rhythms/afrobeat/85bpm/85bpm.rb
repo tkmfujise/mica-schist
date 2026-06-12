@@ -1,5 +1,5 @@
-# Afrobeat (105 bpm)
-# max-recording-time: 6
+# Afrobeat (85 bpm)
+# max-recording-time: 7
 hat1   = (ring 1,2,0,1)
 hat2   = (ring 0,1,0,1)
 hat    = hat1 + hat2
@@ -15,7 +15,7 @@ kick1  = (ring 0,1,1,0)
 kick2  = (ring 1,1,0,0)
 kick   = kick1 + kick0 + kick2 + kick0
 
-use_bpm 105
+use_bpm 85
 
 define :afrobeat do
   tick

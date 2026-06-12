@@ -13,7 +13,7 @@ def generate(bpm)
 
     snare0 = (ring 0,0,0,0)
     snare1 = (ring 0,1,1,0)
-    snare2 = (ring 1,0,1,0)
+    snare2 = (ring 0,0,1,0)
     snare  = snare0 + snare1 + snare2 + snare1
     s_amp  = (ring 0.5, 0.8)
 
@@ -43,7 +43,7 @@ end
 path = nil
 code = nil
 
-(100..120).step(5).each do |bpm|
+(80..120).step(5).each do |bpm|
   dir = "#{mica_dir}/afrobeat/#{bpm}bpm"
   
   path = "#{dir}/#{bpm}bpm.rb"

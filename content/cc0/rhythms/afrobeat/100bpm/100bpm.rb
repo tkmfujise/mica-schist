@@ -6,7 +6,7 @@ hat    = hat1 + hat2
 
 snare0 = (ring 0,0,0,0)
 snare1 = (ring 0,1,1,0)
-snare2 = (ring 1,0,1,0)
+snare2 = (ring 0,0,1,0)
 snare  = snare0 + snare1 + snare2 + snare1
 s_amp  = (ring 0.5, 0.8)
 
