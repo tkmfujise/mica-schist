@@ -149,9 +149,9 @@ Your browser does not support the audio tag.
 <div class="content">
 <pre class="rouge highlight"><code data-lang="ruby"><span class="n">use_synth</span> <span class="ss">:dsaw</span>
 <span class="n">with_fx</span> <span class="ss">:lpf</span><span class="p">,</span> <span class="ss">cutoff: </span><span class="mi">120</span> <span class="k">do</span>
-<span class="n">play_pattern_timed</span>  <span class="n">scale</span><span class="p">(</span><span class="ss">:A</span><span class="p">,</span> <span class="ss">:minor</span><span class="p">),</span> <span class="p">[</span><span class="mf">0.25</span><span class="p">]</span>
-<span class="nb">sleep</span> <span class="mf">0.25</span>
-<span class="n">play_pattern_timed</span>  <span class="n">scale</span><span class="p">(</span><span class="ss">:A</span><span class="p">,</span> <span class="ss">:minor</span><span class="p">).</span><span class="nf">reverse</span><span class="p">,</span> <span class="p">[</span><span class="mf">0.25</span><span class="p">]</span>
+  <span class="n">play_pattern_timed</span>  <span class="n">scale</span><span class="p">(</span><span class="ss">:A</span><span class="p">,</span> <span class="ss">:minor</span><span class="p">),</span> <span class="p">[</span><span class="mf">0.25</span><span class="p">]</span>
+  <span class="nb">sleep</span> <span class="mf">0.25</span>
+  <span class="n">play_pattern_timed</span>  <span class="n">scale</span><span class="p">(</span><span class="ss">:A</span><span class="p">,</span> <span class="ss">:minor</span><span class="p">).</span><span class="nf">reverse</span><span class="p">,</span> <span class="p">[</span><span class="mf">0.25</span><span class="p">]</span>
 <span class="k">end</span></code></pre>
 </div>
 </div>

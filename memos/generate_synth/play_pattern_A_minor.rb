@@ -42,7 +42,7 @@ code = nil
 
 def generate(name)
   note_length = 8
-  <<~RUBY.gsub(/^\s+/, '')
+  <<~RUBY
   # max-recording-time: #{(note_length * 0.25 * 2 + 0.25).ceil + 3}
   use_synth :#{name}
   with_fx :lpf, cutoff: 120 do
