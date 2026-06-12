@@ -1,5 +1,5 @@
 # Notes: C Cs E F G A Bb C
-# max-recording-time: 6
+# max-recording-time: 7
 use_synth :piano
 play_pattern_timed  scale(:C, :ahirbhairav), [0.25]
 sleep 0.25

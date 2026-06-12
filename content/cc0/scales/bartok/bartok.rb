@@ -1,6 +1,6 @@
 # Notes: C D E F G Ab Bb C
 # Same scale: hindu, melodic_major
-# max-recording-time: 6
+# max-recording-time: 7
 use_synth :piano
 play_pattern_timed  scale(:C, :bartok), [0.25]
 sleep 0.25

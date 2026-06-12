@@ -1,6 +1,6 @@
 # Notes: C Cs Eb E G G A C
 # Same scale: hicaz_humayun
-# max-recording-time: 6
+# max-recording-time: 7
 use_synth :piano
 play_pattern_timed  scale(:C, :sehnaz), [0.25]
 sleep 0.25

@@ -2,7 +2,6 @@
 
 
 mica_dir = '/path/to/mica-sound/content/cc0/scales'
-mica_dir = '/Users/fujisetakumi/_private/github_projects/mica-sound/content/cc0/scales'
 
 
 path = nil
@@ -16,7 +15,7 @@ def generate(name)
   <<~RUBY.gsub(/^\s+/, '')
   # Notes: #{notes.map{|s| note_info(s).pitch_class }.join(' ')}
   #{same_scales.any? ? '# Same scale: ' + same_scales.join(', ') : ''}
-  # max-recording-time: #{(notes.length * 0.25 * 2 + 0.25).ceil + 1}
+  # max-recording-time: #{(notes.length * 0.25 * 2 + 0.25).ceil + 2}
   use_synth :piano
   play_pattern_timed (scale :C, :#{name}), [0.25]
   sleep 0.25
