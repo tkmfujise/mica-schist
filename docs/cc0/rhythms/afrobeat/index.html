@@ -1,0 +1,209 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Mica Sound: Sonic Pi Examples</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+		<meta name="author" content="tkmfujise">
+		<meta name="keywords" content="Sonic Pi, Ruby, sound, music, effect, cc0">
+		<meta name="description" content="Sonic Pi Examples">
+    <meta name="google-site-verification" content="1oOV_cc_qhnW_wanEljxYvquGQU5fLwqoNULPyf95YU">
+		<link rel="stylesheet" href="../../../assets/css/almond.min.css">
+		<link rel="stylesheet" href="../../../assets/css/style.css">
+		<link rel="stylesheet" href="../../../assets/css/syntax.gessetti.css">
+    <script src="../../../assets/js/vendor/fuse.js@7.1.0"></script>
+    <script src="../../../assets/js/filter.js"></script>
+    <script src="../../../assets/js/player.js"></script>
+    <script src="../../../assets/js/clipboard.js"></script>
+	</head>
+  <body>
+    <nav class="main-menu closed">
+  <button onclick="document.querySelector('.main-menu').classList.toggle('closed');">
+    <span>Expand/Collapse menu</span>
+  </button>
+  <h2>Gems among stones.</h2>
+  <ul>
+    <li>
+      <a href="../../../">💎 Home 🪨</a>
+    </li>
+
+    <li>
+      <div>Samples</div>
+      <ul>
+        <li><a href="../../samples">All</a></li>
+        <li><a href="../../samples/original">Originals</a></li>
+        <li><a href="../../samples/rate_0.8">rate 0.8</a></li>
+        <li><a href="../../samples/rate_0.6">rate 0.6</a></li>
+        <li><a href="../../samples/rate_0.4">rate 0.4</a></li>
+        <li><a href="../../samples/rate_0.2">rate 0.2</a></li>
+      </ul>
+    </li>
+
+    <li>
+      <div>Synths</div>
+      <ul>
+        <li><a href="../../synths">All</a></li>
+        <li><a href="../../synths/play_30">play 30</a></li>
+        <li><a href="../../synths/play_40">play 40</a></li>
+        <li><a href="../../synths/play_50">play 50</a></li>
+        <li><a href="../../synths/play_60">play 60</a></li>
+        <li><a href="../../synths/play_70">play 70</a></li>
+        <li><a href="../../synths/play_80">play 80</a></li>
+        <li><a href="../../synths/play_90">play 90</a></li>
+      </ul>
+    </li>
+
+    <li>
+      <div>Melody &amp; Harmony</div>
+      <ul>
+        <li><a href="../../arpeggio">Arpeggio</a></li>
+        <li><a href="../../scales">Scales</a></li>
+      </ul>
+    </li>
+
+    <li>
+      <div>Rhythm</div>
+      <ul>
+        <li><a href="..">All</a></li>
+        <li><a href="../straight_8th">Straigth 8th</a></li>
+        <li><a href="../jazz">Jazz</a></li>
+        <li><a href="../blues">Blues</a></li>
+        <li><a href="../funk">Funk</a></li>
+        <li><a href="../samba">Samba</a></li>
+        <li><a href="../bossa_nova">Bossa Nova</a></li>
+        <li><a href="../reggae">Reggae</a></li>
+        <li><a href="../rumba">Rumba</a></li>
+        <li><a href="../tango">Tango</a></li>
+        <li><a href="../waltz">Waltz</a></li>
+        <li><a href="../disco">Disco</a></li>
+        <li><a href="../house">House</a></li>
+        <li><a href="../trap">Trap</a></li>
+        <li><a href=".">Afrobeat</a></li>
+      </ul>
+    </li>
+
+    <li>
+      <div>Mica Sound</div>
+      <ul>
+        <li><a href="../../../cc-by/tkmfujise">All</a></li>
+        <li><a href="../../../cc-by/tkmfujise/bgm">Bgm</a></li>
+        <li><a href="../../../cc-by/tkmfujise/environment">Environment</a></li>
+        <li><a href="../../../cc-by/tkmfujise/nature">Nature</a></li>
+        <li><a href="../../../cc-by/tkmfujise/sfx">Sfx</a></li>
+        <li><a href="../../../cc-by/tkmfujise/voice">Voice</a></li>
+      </ul>
+    </li>
+
+    <li>
+      <div>Others</div>
+      <ul>
+        <li><a href="../../../cc-by-sa/sonic_pi">Official Examples</a></li>
+      </ul>
+    </li>
+
+    <li>
+      <div>Links</div>
+      <ul>
+        <li><a href="../../../about">About</a></li>
+        <li><a rel="external" target="_blank" href="https://github.com/tkmfujise/mica-sound/blob/main/LICENSE.md">License</a></li>
+        <li><a rel="external" target="_blank" href="https://github.com/tkmfujise/mica-sound">GitHub</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+    <div>
+      <header>
+  <div>
+    <a href="../../../">
+      <h1>Mica Sound</h1>
+    </a>
+    <p>Sonic Pi Examples</p>
+  </div>
+</header>
+
+
+      <main>
+        <article>
+          <span class="search-result-count">-</span> sounds.
+
+<form>
+  <p class="search">
+    <button id="shuffle-btn" type="button">Shuffle</button>
+    <input type="search">
+  </p>
+</form>
+
+<div class="sticky">
+  <p>
+    <audio id="main-audio" preload="" controls>
+      Your browser does not support the audio tag.
+    </audio>
+  </p>
+
+  <details id="play-history">
+    <summary>Now: <span class="current">--</span></summary>
+    <table>
+      <tbody class="container">
+      </tbody>
+    </table>
+  </details>
+</div>
+
+
+      		<table>
+  <tbody>
+    <tr class="audio-list">
+  <td>
+    <button data-samples_read="929574.0" data-length="9.683063" data-scaled_by="2147483647.0" data-maximum_amplitude="0.628815" data-minimum_amplitude="-0.496185" data-midline_amplitude="0.066315" data-mean_norm="0.040043" data-mean_amplitude="2.2e-05" data-rms_amplitude="0.081404" data-maximum_delta="0.219757" data-minimum_delta="0.0" data-mean_delta="0.006885" data-rms_delta="0.016694" data-rough_frequency="1566.0" data-volume_adjustment="1.59" data-path="/cc0/rhythms/afrobeat/100bpm" data-src="100bpm/output.ogg" class="audio-item"></button>
+  </td>
+  <td>
+    <a href="100bpm">/cc0/rhythms/afrobeat/100bpm</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <button data-samples_read="887078.0" data-length="9.240396" data-scaled_by="2147483647.0" data-maximum_amplitude="0.601257" data-minimum_amplitude="-0.521057" data-midline_amplitude="0.0401" data-mean_norm="0.042042" data-mean_amplitude="-1.2e-05" data-rms_amplitude="0.083255" data-maximum_delta="0.237549" data-minimum_delta="0.0" data-mean_delta="0.007188" data-rms_delta="0.017079" data-rough_frequency="1567.0" data-volume_adjustment="1.663" data-path="/cc0/rhythms/afrobeat/105bpm" data-src="105bpm/output.ogg" class="audio-item"></button>
+  </td>
+  <td>
+    <a href="105bpm">/cc0/rhythms/afrobeat/105bpm</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <button data-samples_read="848420.0" data-length="8.837708" data-scaled_by="2147483647.0" data-maximum_amplitude="0.625702" data-minimum_amplitude="-0.513916" data-midline_amplitude="0.055893" data-mean_norm="0.043863" data-mean_amplitude="-3.0e-06" data-rms_amplitude="0.08619" data-maximum_delta="0.219757" data-minimum_delta="0.0" data-mean_delta="0.007397" data-rms_delta="0.017461" data-rough_frequency="1547.0" data-volume_adjustment="1.598" data-path="/cc0/rhythms/afrobeat/110bpm" data-src="110bpm/output.ogg" class="audio-item"></button>
+  </td>
+  <td>
+    <a href="110bpm">/cc0/rhythms/afrobeat/110bpm</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <button data-samples_read="813092.0" data-length="8.469708" data-scaled_by="2147483647.0" data-maximum_amplitude="0.627777" data-minimum_amplitude="-0.51767" data-midline_amplitude="0.055054" data-mean_norm="0.044858" data-mean_amplitude="-0.000201" data-rms_amplitude="0.087341" data-maximum_delta="0.230377" data-minimum_delta="0.0" data-mean_delta="0.007701" data-rms_delta="0.017906" data-rough_frequency="1566.0" data-volume_adjustment="1.593" data-path="/cc0/rhythms/afrobeat/115bpm" data-src="115bpm/output.ogg" class="audio-item"></button>
+  </td>
+  <td>
+    <a href="115bpm">/cc0/rhythms/afrobeat/115bpm</a>
+  </td>
+</tr>
+<tr class="audio-list">
+  <td>
+    <button data-samples_read="780836.0" data-length="8.133708" data-scaled_by="2147483647.0" data-maximum_amplitude="0.598236" data-minimum_amplitude="-0.514191" data-midline_amplitude="0.042023" data-mean_norm="0.046269" data-mean_amplitude="-5.8e-05" data-rms_amplitude="0.088761" data-maximum_delta="0.263641" data-minimum_delta="0.0" data-mean_delta="0.007898" data-rms_delta="0.018208" data-rough_frequency="1567.0" data-volume_adjustment="1.672" data-path="/cc0/rhythms/afrobeat/120bpm" data-src="120bpm/output.ogg" class="audio-item"></button>
+  </td>
+  <td>
+    <a href="120bpm">/cc0/rhythms/afrobeat/120bpm</a>
+  </td>
+</tr>
+
+  </tbody>
+</table>
+
+        </article>
+      </main>
+      <footer>
+  <p>Copyright © 2026 Mica Sound / FUJISE Takumi (tkmfujise)</p>
+</footer>
+
+    </div>
+	</body>
+</html>
