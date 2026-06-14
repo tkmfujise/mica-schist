@@ -1,12 +1,3 @@
-/cc0/rhythms/afrobeat/100bpm/100bpm.rb
-/cc0/rhythms/afrobeat/105bpm/105bpm.rb
-/cc0/rhythms/afrobeat/110bpm/110bpm.rb
-/cc0/rhythms/afrobeat/115bpm/115bpm.rb
-/cc0/rhythms/afrobeat/120bpm/120bpm.rb
-/cc0/rhythms/afrobeat/80bpm/80bpm.rb
-/cc0/rhythms/afrobeat/85bpm/85bpm.rb
-/cc0/rhythms/afrobeat/90bpm/90bpm.rb
-/cc0/rhythms/afrobeat/95bpm/95bpm.rb
 /cc0/rhythms/blues/100bpm/100bpm.rb
 /cc0/rhythms/blues/110bpm/110bpm.rb
 /cc0/rhythms/blues/120bpm/120bpm.rb
