@@ -1,7 +1,7 @@
 mica_dir = '../content/cc0/synths'
 
 
-scales = [
+synths = [
   :bass_foundation,
   :blade,
   :chipbass,
@@ -54,7 +54,7 @@ def generate(name)
 end
 
 
-scales.each do |name|
+synths .each do |name|
   dir = "#{mica_dir}/play_pattern_A_minor"
   
   path = "#{dir}/#{name}"
