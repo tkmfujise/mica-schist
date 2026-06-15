@@ -74,11 +74,9 @@
 /cc0/samples/rate_0.4/elec_lo_snare/elec_lo_snare.rb
 /cc0/samples/rate_0.4/elec_mid_snare/elec_mid_snare.rb
 /cc0/samples/rate_0.4/elec_ping/elec_ping.rb
-/cc0/samples/rate_0.4/elec_plip/elec_plip.rb
 /cc0/samples/rate_0.4/elec_pop/elec_pop.rb
 /cc0/samples/rate_0.4/elec_snare/elec_snare.rb
 /cc0/samples/rate_0.4/elec_soft_kick/elec_soft_kick.rb
-/cc0/samples/rate_0.4/elec_tick/elec_tick.rb
 /cc0/samples/rate_0.4/elec_triangle/elec_triangle.rb
 /cc0/samples/rate_0.4/elec_twang/elec_twang.rb
 /cc0/samples/rate_0.4/elec_twip/elec_twip.rb

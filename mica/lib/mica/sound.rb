@@ -53,6 +53,12 @@ module Mica
     end
 
 
+    def empty?
+      hash = stat 
+      hash.any? && hash[:samples_read].zero?
+    end
+
+
     private
       def read(path)
         target = Mica.config.contents_dir.join(path)

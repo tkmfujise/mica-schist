@@ -1,0 +1,17 @@
+{
+  "samples_read": 192128.0,
+  "length": 2.001333,
+  "scaled_by": 2147483647.0,
+  "maximum_amplitude": 0.23819,
+  "minimum_amplitude": -0.263824,
+  "midline_amplitude": -0.012817,
+  "mean_norm": 0.064611,
+  "mean_amplitude": -0.000031,
+  "rms_amplitude": 0.089885,
+  "maximum_delta": 0.207428,
+  "minimum_delta": 0.0,
+  "mean_delta": 0.013233,
+  "rms_delta": 0.021674,
+  "rough_frequency": 1842.0,
+  "volume_adjustment": 3.79
+}

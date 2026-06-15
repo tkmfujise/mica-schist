@@ -12,7 +12,7 @@ def generate(name, rate)
 end
 
 
-[0.2, 0.4, 0.6, 0.8].each do |rate|
+[0.2, 0.4, 0.6, 0.8, 1.2, 1.4, 1.6, 1.8, 2.0].each do |rate|
   dir = "#{mica_dir}/rate_#{rate}"
   
   sample_groups.each do |group|

@@ -1,0 +1,2 @@
+# max-recording-time: 5
+sample :mehackit_phone1, rate: 1.8

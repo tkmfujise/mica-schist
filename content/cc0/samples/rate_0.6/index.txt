@@ -67,18 +67,15 @@
 /cc0/samples/rate_0.6/elec_chime/elec_chime.rb
 /cc0/samples/rate_0.6/elec_cymbal/elec_cymbal.rb
 /cc0/samples/rate_0.6/elec_filt_snare/elec_filt_snare.rb
-/cc0/samples/rate_0.6/elec_flip/elec_flip.rb
 /cc0/samples/rate_0.6/elec_fuzz_tom/elec_fuzz_tom.rb
 /cc0/samples/rate_0.6/elec_hi_snare/elec_hi_snare.rb
 /cc0/samples/rate_0.6/elec_hollow_kick/elec_hollow_kick.rb
 /cc0/samples/rate_0.6/elec_lo_snare/elec_lo_snare.rb
 /cc0/samples/rate_0.6/elec_mid_snare/elec_mid_snare.rb
 /cc0/samples/rate_0.6/elec_ping/elec_ping.rb
-/cc0/samples/rate_0.6/elec_plip/elec_plip.rb
 /cc0/samples/rate_0.6/elec_pop/elec_pop.rb
 /cc0/samples/rate_0.6/elec_snare/elec_snare.rb
 /cc0/samples/rate_0.6/elec_soft_kick/elec_soft_kick.rb
-/cc0/samples/rate_0.6/elec_tick/elec_tick.rb
 /cc0/samples/rate_0.6/elec_triangle/elec_triangle.rb
 /cc0/samples/rate_0.6/elec_twang/elec_twang.rb
 /cc0/samples/rate_0.6/elec_twip/elec_twip.rb
@@ -172,7 +169,6 @@
 /cc0/samples/rate_0.6/tabla_ghe6/tabla_ghe6.rb
 /cc0/samples/rate_0.6/tabla_ghe7/tabla_ghe7.rb
 /cc0/samples/rate_0.6/tabla_ghe8/tabla_ghe8.rb
-/cc0/samples/rate_0.6/tabla_ke1/tabla_ke1.rb
 /cc0/samples/rate_0.6/tabla_ke2/tabla_ke2.rb
 /cc0/samples/rate_0.6/tabla_ke3/tabla_ke3.rb
 /cc0/samples/rate_0.6/tabla_na/tabla_na.rb
@@ -184,7 +180,6 @@
 /cc0/samples/rate_0.6/tabla_tas3/tabla_tas3.rb
 /cc0/samples/rate_0.6/tabla_te1/tabla_te1.rb
 /cc0/samples/rate_0.6/tabla_te2/tabla_te2.rb
-/cc0/samples/rate_0.6/tabla_te_m/tabla_te_m.rb
 /cc0/samples/rate_0.6/tabla_te_ne/tabla_te_ne.rb
 /cc0/samples/rate_0.6/tabla_tun1/tabla_tun1.rb
 /cc0/samples/rate_0.6/tabla_tun2/tabla_tun2.rb
