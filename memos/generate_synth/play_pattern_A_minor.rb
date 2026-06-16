@@ -40,28 +40,30 @@ synths = [
 path = nil
 code = nil
 
-def generate(name)
+def generate(name, i)
   note_length = 8
   <<~RUBY
   # max-recording-time: #{(note_length * 0.25 * 2 + 0.25).ceil + 3}
   use_synth :#{name}
   with_fx :lpf, cutoff: 120 do
-    play_pattern_timed  scale(:A, :minor), [0.25]
+    play_pattern_timed  scale(:A#{i}, :minor), [0.25]
     sleep 0.25
-    play_pattern_timed  scale(:A, :minor).reverse, [0.25]
+    play_pattern_timed  scale(:A#{i}, :minor).reverse, [0.25]
   end
   RUBY
 end
 
 
-synths .each do |name|
-  dir = "#{mica_dir}/play_pattern_A_minor"
-  
-  path = "#{dir}/#{name}"
-  FileUtils.mkdir_p path
-  code = generate(name)
-  File.write("#{path}/#{name}.rb", code)
-  ##| puts path
+(2..6).each do |i|
+  synths .each do |name|
+    dir = "#{mica_dir}/play_pattern_A#{i}_minor"
+
+    path = "#{dir}/#{name}"
+    FileUtils.mkdir_p path
+    code = generate(name, i)
+    File.write("#{path}/#{name}.rb", code)
+    ##| puts path
+  end
 end
 
 puts path
