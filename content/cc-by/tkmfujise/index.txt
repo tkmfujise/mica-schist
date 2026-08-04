@@ -17,6 +17,7 @@
 /cc-by/tkmfujise/sfx/bash/bash.rb
 /cc-by/tkmfujise/sfx/dash/dash.rb
 /cc-by/tkmfujise/sfx/fwip/fwip.rb
+/cc-by/tkmfujise/sfx/land_dirt/land_dirt.rb
 /cc-by/tkmfujise/sfx/land_snow/land_snow.rb
 /cc-by/tkmfujise/sfx/plop/plop.rb
 /cc-by/tkmfujise/sfx/poink/poink.rb
