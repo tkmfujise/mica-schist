@@ -1,7 +1,7 @@
-# Sonic Pi Examples
+# Mica Sound
 
-> [!CAUTION]
-> Status: Work in Progress
+Sonic Pi Examples.
+https://tkmfujise.github.io/mica-sound/
 
 
 ## Built With
